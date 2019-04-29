@@ -1,11 +1,13 @@
-﻿using System;
+﻿// Copyright (c) Zhigang Xu.  All rights reserved.
+// Licensed under the MIT License.  See License.txt in the project root for license information.
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EdmLib
 {
+    /// <summary>
+    /// Represents an enum type.
+    /// </summary>
     public class KeEnumType : KeType
     {
         public bool IsFlag { get; set; }

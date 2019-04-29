@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KeEnum.cs" />
+    <Compile Include="KeEnumType.cs" />
     <Compile Include="KeModel.cs" />
     <Compile Include="KePrimitiveType.cs" />
     <Compile Include="KeProperty.cs" />
