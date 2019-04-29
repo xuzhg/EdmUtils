@@ -51,6 +51,7 @@
     <Compile Include="KeType.cs" />
     <Compile Include="KeStructureType.cs" />
     <Compile Include="KeSchema.cs" />
+    <Compile Include="KeTypeReference.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
