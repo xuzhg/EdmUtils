@@ -11,6 +11,22 @@ namespace EdmGui
 {
     static class KeModelExtensions
     {
+        public enum NodeKind
+        {
+            EnumType,
+            ComplexType,
+            EntityType,
+
+            EnumItem
+        }
+
+        public class TypeNodeWrapper
+        {
+            public NodeKind kind { get; set; }
+
+            public KeElement element { get; set; }
+        }
+
         public static void FillTreeView(this KeModel model, TreeView modelTreeView)
         {
             modelTreeView.Nodes.Clear();
@@ -31,12 +47,13 @@ namespace EdmGui
         {
             // Enum types
             TreeNode enumTypesNode = schemaNode.Nodes.Add("Enum Types");
-            enumTypesNode.Tag = "Enum Types";
+            enumTypesNode.Tag = schema;
             enumTypesNode.ContextMenuStrip = ContextMenuEnumTypes.CreateContextMenuForEnumType();
 
             foreach (KeEnumType enumType in schema.EnumTypes)
             {
-
+                TreeNode enumTypeNode = enumTypesNode.Nodes.Add(enumType.Name);
+                enumTypeNode.Tag = enumType;
             }
 
             // Complex types

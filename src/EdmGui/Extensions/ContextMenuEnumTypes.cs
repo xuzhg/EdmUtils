@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EdmGui.Dialog;
+using EdmLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,7 +58,23 @@ namespace EdmGui.Extensions
 
         public static void newEnumTypeMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ok");
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
+            TreeNode treeNode = (TreeNode)(menuItem.GetCurrentParent().Tag);
+            KeSchema schema = treeNode.Tag as KeSchema;
+
+            AddEnumTypeDialog newEnumTypeDialog = new AddEnumTypeDialog(schema);
+            newEnumTypeDialog.StartPosition = FormStartPosition.CenterParent;
+
+            if (newEnumTypeDialog.ShowDialog() == DialogResult.OK)
+            {
+                schema.EnumTypes.Add(new KeEnumType(schema.Namespace, newEnumTypeDialog.EnumName, newEnumTypeDialog.UnderlingTypeName, newEnumTypeDialog.IsFlag));
+            }
+
+            var node = treeNode.Nodes.Add(newEnumTypeDialog.EnumName);
+            treeNode.Expand();
+            //schema.DelaringModel.FillTreeView(treeNode.TreeView);
+            
+            // MessageBox.Show("Ok");
         }
     }
 }

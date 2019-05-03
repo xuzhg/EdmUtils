@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Abc");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("xyz");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Abc");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("xyz");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.enumTypeNamespace = new System.Windows.Forms.TextBox();
+            this.enumTypeName = new System.Windows.Forms.TextBox();
+            this.isFlagCheckBox = new System.Windows.Forms.CheckBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.String = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddEnumOkButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.enumUnderlingTypeCombox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,30 +66,30 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Enum Name:";
             // 
-            // textBox1
+            // enumTypeNamespace
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 2;
+            this.enumTypeNamespace.Location = new System.Drawing.Point(121, 20);
+            this.enumTypeNamespace.Name = "enumTypeNamespace";
+            this.enumTypeNamespace.Size = new System.Drawing.Size(186, 20);
+            this.enumTypeNamespace.TabIndex = 2;
             // 
-            // textBox2
+            // enumTypeName
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 20);
-            this.textBox2.TabIndex = 2;
+            this.enumTypeName.Location = new System.Drawing.Point(121, 57);
+            this.enumTypeName.Name = "enumTypeName";
+            this.enumTypeName.Size = new System.Drawing.Size(186, 20);
+            this.enumTypeName.TabIndex = 2;
             // 
-            // checkBox1
+            // isFlagCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(250, 160);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Is Flag?";
-            this.toolTip1.SetToolTip(this.checkBox1, "the enumeration type allows multiple members to be selected simultaneously.");
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.isFlagCheckBox.AutoSize = true;
+            this.isFlagCheckBox.Location = new System.Drawing.Point(250, 160);
+            this.isFlagCheckBox.Name = "isFlagCheckBox";
+            this.isFlagCheckBox.Size = new System.Drawing.Size(63, 17);
+            this.isFlagCheckBox.TabIndex = 3;
+            this.isFlagCheckBox.Text = "Is Flag?";
+            this.toolTip1.SetToolTip(this.isFlagCheckBox, "the enumeration type allows multiple members to be selected simultaneously.");
+            this.isFlagCheckBox.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
@@ -98,8 +98,8 @@
             this.columnHeader1});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem3,
+            listViewItem4});
             this.listView1.Location = new System.Drawing.Point(3, 16);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(138, 144);
@@ -125,15 +125,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enum members";
             // 
-            // button1
+            // AddEnumOkButton
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(244, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Ok";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddEnumOkButton.Location = new System.Drawing.Point(244, 204);
+            this.AddEnumOkButton.Name = "AddEnumOkButton";
+            this.AddEnumOkButton.Size = new System.Drawing.Size(75, 23);
+            this.AddEnumOkButton.TabIndex = 6;
+            this.AddEnumOkButton.Text = "Ok";
+            this.AddEnumOkButton.UseVisualStyleBackColor = true;
+            this.AddEnumOkButton.Click += new System.EventHandler(this.AddEnumOkButton_Click);
             // 
             // button2
             // 
@@ -154,32 +154,32 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Underlying Integer Type:";
             // 
-            // comboBox1
+            // enumUnderlingTypeCombox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.enumUnderlingTypeCombox.FormattingEnabled = true;
+            this.enumUnderlingTypeCombox.Items.AddRange(new object[] {
             "Edm.Byte",
             "Edm.SByte",
             "Edm.Int16",
             "Edm.Int32",
             "Edm.Int64"});
-            this.comboBox1.Location = new System.Drawing.Point(193, 122);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
+            this.enumUnderlingTypeCombox.Location = new System.Drawing.Point(193, 122);
+            this.enumUnderlingTypeCombox.Name = "enumUnderlingTypeCombox";
+            this.enumUnderlingTypeCombox.Size = new System.Drawing.Size(121, 21);
+            this.enumUnderlingTypeCombox.TabIndex = 8;
             // 
             // AddEnumTypeDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 284);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.enumUnderlingTypeCombox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddEnumOkButton);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.isFlagCheckBox);
+            this.Controls.Add(this.enumTypeName);
+            this.Controls.Add(this.enumTypeNamespace);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -198,17 +198,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox enumTypeNamespace;
+        private System.Windows.Forms.TextBox enumTypeName;
+        private System.Windows.Forms.CheckBox isFlagCheckBox;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader String;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddEnumOkButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox enumUnderlingTypeCombox;
     }
 }

@@ -71,8 +71,9 @@ namespace EdmGui
         {
             if (e.Button == MouseButtons.Right)
             {
-                if (e.Node.Tag != null && e.Node.Tag.ToString() == "Enum Types")
+                if (e.Node.Text == "Enum Types")
                 {
+                    e.Node.ContextMenuStrip.Tag = e.Node;
                     /*
                     AddEnumTypeDialog newEnumTypeDialog = new AddEnumTypeDialog();
                     if (newEnumTypeDialog.ShowDialog() == DialogResult.OK)

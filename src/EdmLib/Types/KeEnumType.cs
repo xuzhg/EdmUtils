@@ -10,6 +10,15 @@ namespace EdmLib
     /// </summary>
     public class KeEnumType : KeType
     {
+        public KeEnumType(string namespaceName, string name, string underlyingTypeName, bool isFlags)
+            : base(namespaceName, name)
+        {
+            UnderingType = KeModel.GetPrimitiveType(underlyingTypeName);
+            IsFlag = isFlags;
+        }
+
+        public override KeElementKind Kind { get; } = KeElementKind.Enum;
+
         public bool IsFlag { get; set; }
 
         public KePrimitiveType UnderingType { get; set; }

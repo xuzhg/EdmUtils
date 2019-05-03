@@ -6,22 +6,22 @@ namespace EdmLib
     /// <summary>
     /// Represents the "Edm.Type".
     /// </summary>
-    public abstract class KeType
+    public abstract class KeType : KeNamedElement
     {
+        public KeType(string namespaceName, string name)
+            : base(name)
+        {
+            Namespace = namespaceName;
+        }
+
         /// <summary>
         /// Gets/sets the namespace.
         /// </summary>
         public string Namespace { get; set; }
 
         /// <summary>
-        /// Gets/sets the type name.
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
         /// Gets/sets the declared schema.
         /// </summary>
         public KeSchema DeclaredSchema { get; set; }
     }
-
 }

@@ -10,9 +10,21 @@ namespace EdmLib
     /// <summary>
     /// Represents a schema
     /// </summary>
-    public class KeSchema
+    public class KeSchema : KeElement
     {
+        public override KeElementKind Kind { get; } = KeElementKind.Schema;
+
+        public KeModel DelaringModel { get; set; }
+
+        /// <summary>
+        /// Schema namespace.
+        /// </summary>
         public string Namespace { get; set; }
+
+        /// <summary>
+        /// Schema alias.
+        /// </summary>
+        public string Alias { get; set; }
 
         public IList<KeEntityType> EntityTypes { get; set; } = new List<KeEntityType>();
 
