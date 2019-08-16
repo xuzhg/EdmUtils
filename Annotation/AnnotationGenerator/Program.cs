@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnnotationGenerator.Serialization;
+using AnnotationGenerator.Vocabulary;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,6 +17,8 @@ namespace AnnotationGenerator
 
             // Load Edm data
 
+            AnnotationGenerator generator = new AnnotationGenerator(model: null);
+
             // for each permission data
             foreach (var permission in permissions)
             {
@@ -24,6 +28,67 @@ namespace AnnotationGenerator
             }
 
             Console.WriteLine("Hello World!");
+
+            GenerateTerm(generator, CreateDefaultTerm());
+
+            Console.WriteLine("Done!");
+
+        }
+
+        private static void GenerateTerm(AnnotationGenerator generator, ITerm term)
+        {
+            generator.Write(term);
+
+            generator.SaveAs(@"D:\temp\openapi\test.xml");
+
+            term.IsInLine = false;
+            generator.Write(term);
+
+            generator.SaveAs(@"D:\temp\openapi\test_Outline.xml");
+        }
+
+        private static ITerm CreateDefaultTerm()
+        {
+            ReadRestrictions term = new ReadRestrictions();
+
+            term.Target = "Ns.Container/Users";
+            term.IsInLine = true;
+
+            ReadRestrictionsType record = new ReadRestrictionsType();
+
+            record.ReadByKeyRestrictions = new ReadByKeyRestrictions();
+
+            PermissionType permission = new PermissionType
+            {
+                SchemeName = "Delegated (work or school account)",
+                Scopes = new List<ScopeType>
+                {
+                    new ScopeType{ Scope = "User.ReadBasic.All"},
+                    new ScopeType{ Scope = "User.Read.All"},
+                    new ScopeType{ Scope = "User.ReadWrite.All"},
+                    new ScopeType{ Scope = "Directory.Read.All"},
+                    new ScopeType{ Scope = "Directory.ReadWrite.All"},
+                    new ScopeType{ Scope = "Directory.AccessAsUser.All"}
+                }
+            };
+            record.ReadByKeyRestrictions.Append(permission);
+
+            permission = new PermissionType
+            {
+                SchemeName = "Application",
+                Scopes = new List<ScopeType>
+                {
+                    new ScopeType{ Scope = "User.Read.All"},
+                    new ScopeType{ Scope = "User.ReadWrite.All"},
+                    new ScopeType{ Scope = "Directory.Read.All"},
+                    new ScopeType{ Scope = "Directory.ReadWrite.All"},
+                }
+            };
+            record.ReadByKeyRestrictions.Append(permission);
+
+            term.Records.Add(record);
+
+            return term;
         }
     }
 

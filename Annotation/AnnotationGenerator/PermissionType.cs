@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AnnotationGenerator
 {
-    class PermissionType
+    class PermissionType1
     {
         public string DelegateWork { get; set; }
         public string DelegatePersonal { get; set; }
