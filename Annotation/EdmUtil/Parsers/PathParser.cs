@@ -41,14 +41,55 @@ namespace Annotation.EdmUtil
         /// </summary>
         public PathParserSettings Settings { get; }
 
+#if false
+        /// <summary>
+        /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
+        /// to segments
+        /// </summary>
+        public virtual IList<PathSegment> Parse(string requestUri)
+        {
+            if (string.IsNullOrEmpty(requestUri))
+            {
+                return null;
+            }
+
+            string[] items = requestUri.Split('/');
+            IList<PathSegment> segments = new List<PathSegment>();
+            foreach (var item in items)
+            {
+                string trimedItem = item.Trim();
+                if (string.IsNullOrEmpty(trimedItem))
+                {
+                    // skip like "~////abc/xyz//
+                    continue;
+                }
+
+                if (segments.Count == 0)
+                {
+                    CreateFirstSegment(trimedItem, model, segments);
+                }
+                else
+                {
+                    CreateNextSegment(trimedItem, model, segments);
+                }
+            }
+
+            return segments;
+        }
+#endif
+
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
         /// </summary>
         public static IList<PathSegment> Parse(string requestUri, IEdmModel model)
         {
-            string[] items = requestUri.Split('/');
+            if (String.IsNullOrEmpty(requestUri))
+            {
+                return null;
+            }
 
+            string[] items = requestUri.Split('/');
             IList<PathSegment> segments = new List<PathSegment>();
             foreach (var item in items)
             {
