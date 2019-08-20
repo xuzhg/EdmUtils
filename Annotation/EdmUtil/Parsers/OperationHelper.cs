@@ -1,4 +1,5 @@
 ﻿
+using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
 using System;
 using System.Collections;
@@ -59,9 +60,10 @@ namespace Annotation.EdmUtil
             return candidates.First();
         }
 
-        public static IEdmOperationImport ResolveOperationImports(string identifer, IList<string> parameterNames, IEdmModel model)
+        public static IEdmOperationImport ResolveOperationImports(string identifer, IList<string> parameterNames, IEdmModel model,
+            bool enableCaseInsensitive = false)
         {
-            IEnumerable<IEdmOperationImport> candidates = model.FindDeclaredOperationImports(identifer);
+            IEnumerable<IEdmOperationImport> candidates = model.ResolveOperationImports(identifer, enableCaseInsensitive);
             if (!candidates.Any())
             {
                 return null;
