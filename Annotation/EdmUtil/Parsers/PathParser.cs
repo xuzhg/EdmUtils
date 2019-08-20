@@ -15,17 +15,17 @@ namespace Annotation.EdmUtil
     /// A parser to parse the requst Uri.
     /// for example: /users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts 
     /// </summary>
-    public class UriParser
+    public class PathParser
     {
         /// <summary>
         /// Initializes a new instance of <see cref="OperationImportSegment"/> class.
         /// </summary>
-        /// <param name="operationImport">The wrapped Edm operation import (function import or action import).</param>
-        public UriParser(IEdmModel model)
-            : this(model, new UriParserSettings())
+        /// <param name="model">The Edm model used in parsing.</param>
+        public PathParser(IEdmModel model)
+            : this(model, new PathParserSettings())
         { }
 
-        public UriParser(IEdmModel model, UriParserSettings settings)
+        public PathParser(IEdmModel model, PathParserSettings settings)
         {
             EdmModel = model ?? throw new ArgumentNullException(nameof(model));
             Settings = settings ?? throw new ArgumentNullException(nameof(settings));
@@ -39,7 +39,7 @@ namespace Annotation.EdmUtil
         /// <summary>
         /// Gets the Uri parser settings.
         /// </summary>
-        public UriParserSettings Settings { get; }
+        public PathParserSettings Settings { get; }
 
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"

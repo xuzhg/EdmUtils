@@ -6,9 +6,9 @@
 namespace Annotation.EdmUtil
 {
     /// <summary>
-    /// The setting for Uri parser
+    /// The setting for Uri path parser
     /// </summary>
-    public class UriParserSettings
+    public class PathParserSettings
     {
         /// <summary>
         /// Gets/sets a boolean to indicate the parser supports the case insensitive.

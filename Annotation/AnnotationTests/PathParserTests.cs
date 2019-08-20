@@ -4,17 +4,16 @@ using System.Collections.Generic;
 using Annotation.EdmUtil;
 using Microsoft.OData.Edm;
 using Xunit;
-using UriParser = Annotation.EdmUtil.UriParser;
 
 namespace AnnotationGenerator.Tests
 {
-    public class UriParserTests
+    public class PathParserTests
     {
         private EdmModel _edmModel;
         private IEdmEntitySet _users;
         private IEdmSingleton _me;
 
-        public UriParserTests()
+        public PathParserTests()
         {
             EdmModel model = new EdmModel();
             var entityType = new EdmEntityType("NS", "user");
@@ -33,7 +32,7 @@ namespace AnnotationGenerator.Tests
         public void ParseEntitySetWorks()
         {
             string requestUri = "users";
-            var segments = UriParser.Parse(requestUri, _edmModel);
+            var segments = PathParser.Parse(requestUri, _edmModel);
 
             Assert.NotNull(segments);
             var pathSegment = Assert.Single<PathSegment>(segments);
@@ -50,7 +49,7 @@ namespace AnnotationGenerator.Tests
         public void CreateFirstSegmentForEntitySetWorks(string identifier, bool enableCaseInsensitive)
         {
             IList<PathSegment> path = new List<PathSegment>();
-            UriParser.CreateFirstSegment(identifier, _edmModel, path, enableCaseInsensitive);
+            PathParser.CreateFirstSegment(identifier, _edmModel, path, enableCaseInsensitive);
 
             Assert.NotEmpty(path);
             var pathSegment = Assert.Single(path);
@@ -62,7 +61,7 @@ namespace AnnotationGenerator.Tests
         public void CreateFirstSegmentForEntitySetDisableCaseInsensitiveThrows()
         {
             IList<PathSegment> path = new List<PathSegment>();
-            Action test = () => UriParser.CreateFirstSegment("UsErs", _edmModel, path, enableCaseInsensitive: false);
+            Action test = () => PathParser.CreateFirstSegment("UsErs", _edmModel, path, enableCaseInsensitive: false);
             var exception = Assert.Throws<Exception>(test);
             Assert.Equal($"Unknow kind of first segment: 'UsErs'", exception.Message);
         }
@@ -71,7 +70,7 @@ namespace AnnotationGenerator.Tests
         public void CreateFirstSegmentForEntitySetWithKeyWorks()
         {
             IList<PathSegment> path = new List<PathSegment>();
-            UriParser.CreateFirstSegment("users({id | userPrincipalName})", _edmModel, path);
+            PathParser.CreateFirstSegment("users({id | userPrincipalName})", _edmModel, path);
             Assert.NotEmpty(path);
             Assert.Equal(2, path.Count);
             var entitySetSegment = Assert.IsType<EntitySetSegment>(path[0]);
@@ -90,7 +89,7 @@ namespace AnnotationGenerator.Tests
         public void CreateFirstSegmentForSingletonWorks(string identifier, bool enableCaseInsensitive)
         {
             IList<PathSegment> path = new List<PathSegment>();
-            UriParser.CreateFirstSegment(identifier, _edmModel, path, enableCaseInsensitive);
+            PathParser.CreateFirstSegment(identifier, _edmModel, path, enableCaseInsensitive);
             Assert.NotEmpty(path);
             var pathSegment = Assert.Single(path);
             var singletonSegment = Assert.IsType<SingletonSegment>(pathSegment);
@@ -101,7 +100,7 @@ namespace AnnotationGenerator.Tests
         public void CreateFirstSegmentForSingletonDisableCaseInsensitiveThrows()
         {
             IList<PathSegment> path = new List<PathSegment>();
-            Action test = () => UriParser.CreateFirstSegment("mE", _edmModel, path, enableCaseInsensitive: false);
+            Action test = () => PathParser.CreateFirstSegment("mE", _edmModel, path, enableCaseInsensitive: false);
             var exception = Assert.Throws<Exception>(test);
             Assert.Equal($"Unknow kind of first segment: 'mE'", exception.Message);
         }
@@ -110,7 +109,7 @@ namespace AnnotationGenerator.Tests
         public void CreateFirstSegmentForSingletonWithParenthesisThrows()
         {
             IList<PathSegment> path = new List<PathSegment>();
-            Action test = () => UriParser.CreateFirstSegment("me({id})", _edmModel, path, enableCaseInsensitive: false);
+            Action test = () => PathParser.CreateFirstSegment("me({id})", _edmModel, path, enableCaseInsensitive: false);
             var exception = Assert.Throws<Exception>(test);
             Assert.Equal("Unknown parentheis '({id})' after a singleton 'me'.", exception.Message);
         }
@@ -124,7 +123,7 @@ namespace AnnotationGenerator.Tests
         {
             IList<PathSegment> path = new List<PathSegment>();
 
-            UriParser.CreateFirstSegment("users", _edmModel, path);
+            PathParser.CreateFirstSegment("users", _edmModel, path);
 
             Assert.NotEmpty(path);
             var pathSegment = Assert.Single(path);
@@ -133,7 +132,7 @@ namespace AnnotationGenerator.Tests
 
             Assert.Same(entitySetSegment.EntitySet, _users);
 
-            UriParser.CreateNextSegment("{id | userPrincipalName}", _edmModel, path);
+            PathParser.CreateNextSegment("{id | userPrincipalName}", _edmModel, path);
 
             Assert.Equal(2, path.Count);
 
