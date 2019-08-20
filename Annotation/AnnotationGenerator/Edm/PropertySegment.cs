@@ -1,11 +1,9 @@
-﻿using Microsoft.OData.Edm;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using Microsoft.OData.Edm;
 
 namespace AnnotationGenerator.Edm
 {
-    class PropertySegment : PathSegment
+    public class PropertySegment : PathSegment
     {
         public PropertySegment(IEdmStructuralProperty property)
             : base(property.Name)
@@ -23,5 +21,8 @@ namespace AnnotationGenerator.Edm
             }
         }
 
+        public override IEdmType EdmType => throw new System.NotImplementedException();
+
+        public override IEdmNavigationSource NavigationSource => throw new System.NotImplementedException();
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.OData.Edm;
 
-namespace AnnotationGenerator.Edm
+namespace Annotation.EdmUtil
 {
     public class SingletonSegment : PathSegment
     {

@@ -1,11 +1,17 @@
 ﻿
 using Microsoft.OData.Edm;
 
-namespace AnnotationGenerator.Edm
+namespace Annotation.EdmUtil
 {
     public class NavigationSegment : PathSegment
     {
         public NavigationSegment(IEdmNavigationProperty property)
+            : base(property.Name)
+        {
+            Property = property;
+        }
+
+        public NavigationSegment(IEdmNavigationProperty property, IEdmNavigationSource source)
             : base(property.Name)
         {
             Property = property;
