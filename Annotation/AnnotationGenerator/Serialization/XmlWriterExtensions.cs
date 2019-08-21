@@ -63,6 +63,31 @@ namespace AnnotationGenerator.Serialization
             }
         }
 
+        public static void WriteCollectionProperty<T>(this XmlWriter writer, string property, IEnumerable<T> collections,
+            Action<XmlWriter, T> itemAction)
+        {
+            if (collections != null && collections.Any())
+            {
+                // <PropertyValue>
+                writer.WriteStartElement("PropertyValue");
+                writer.WriteAttributeString("Property", property);
+
+                // <Collection>
+                writer.WriteStartElement("Collection");
+
+                foreach (var item in collections)
+                {
+                    itemAction(writer, item);
+                }
+
+                // </Collection>
+                writer.WriteEndElement();
+
+                // </PropertyValue>
+                writer.WriteEndElement();
+            }
+        }
+
         public static void WriteRecordProperty<T>(this XmlWriter writer, string property, T value) where T : IRecord
         {
             if (value != null)
@@ -108,6 +133,24 @@ namespace AnnotationGenerator.Serialization
                 foreach (var item in collections)
                 {
                     item.Write(writer);
+                }
+
+                // </Collection>
+                writer.WriteEndElement();
+            }
+        }
+
+        public static void WriteCollection<T>(this XmlWriter writer, IEnumerable<T> collections,
+            Action<XmlWriter, T> itemAction)
+        {
+            if (collections != null && collections.Any())
+            {
+                // <Collection>
+                writer.WriteStartElement("Collection");
+
+                foreach (var item in collections)
+                {
+                    itemAction(writer, item);
                 }
 
                 // </Collection>

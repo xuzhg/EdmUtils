@@ -1,5 +1,4 @@
 ﻿
-using System.Collections.Generic;
 using System.Xml;
 using AnnotationGenerator.Serialization;
 
@@ -8,38 +7,12 @@ namespace AnnotationGenerator.Vocabulary
     /// <summary>
     /// Complex Type: Org.OData.Capabilities.V1.ReadRestrictionsBase
     /// </summary>
-    internal abstract class ReadRestrictionsBase : IRecord
+    internal abstract class ReadRestrictionsBase : PermissionsRecord, IRecord
     {
         /// <summary>
         /// Get the Entities can be retrieved.
         /// </summary>
         public bool? Readable { get; private set; }
-
-        /// <summary>
-        /// Gets the List of required scopes to invoke an action or function
-        /// </summary>
-        public IList<PermissionType> Permissions { get; private set; }
-
-
-        public void Append(PermissionType permission)
-        {
-            if (Permissions == null)
-            {
-                Permissions = new List<PermissionType>();
-            }
-
-            Permissions.Add(permission);
-        }
-
-        /// <summary>
-        /// Gets the Supported or required custom headers.
-        /// </summary>
-        // public IList<CustomParameter> CustomHeaders { get; private set; }
-
-        /// <summary>
-        /// Gets the Supported or required custom query options.
-        /// </summary>
-        // public IList<CustomParameter> CustomQueryOptions { get; private set; }
 
         public virtual void Write(XmlWriter writer)
         {
@@ -66,8 +39,6 @@ namespace AnnotationGenerator.Vocabulary
     //[Term("Org.OData.Capabilities.V1.ReadRestrictions")]
     internal class ReadRestrictionsType : ReadRestrictionsBase
     {
-        public string Target { get; set; }
-
         /// <summary>
         /// Gets the Restrictions for retrieving an entity by key
         /// </summary>
