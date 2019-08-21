@@ -10,9 +10,10 @@ namespace Annotation.EdmUtil
 {
     public static class OperationHelper
     {
-        public static IEdmOperation ResolveOperations(string identifer, IList<string> parameterNames, IEdmType bindingType, IEdmModel model)
+        public static IEdmOperation ResolveOperations(string identifer, IList<string> parameterNames, IEdmType bindingType, IEdmModel model,
+            bool enableCaseInsensitive)
         {
-            IEnumerable<IEdmOperation> candidates = model.FindBoundOperations(identifer, bindingType);
+            IEnumerable<IEdmOperation> candidates = model.ResolveOperations(identifer, bindingType, enableCaseInsensitive);
             if (!candidates.Any())
             {
                 return null;

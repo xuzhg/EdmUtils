@@ -21,7 +21,7 @@ namespace Annotation.EdmUtil
             : base(entitySet?.Name)
         {
             EntitySet = entitySet ?? throw new ArgumentNullException(nameof(entitySet));
-            EdmType = entitySet.EntityType();
+            EdmType = entitySet.Type; // It should be collection
         }
 
         public IEdmEntitySet EntitySet { get; }

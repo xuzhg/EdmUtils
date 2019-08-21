@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
 
@@ -25,6 +26,12 @@ namespace Annotation.EdmUtil
             : this(model, new PathParserSettings())
         { }
 
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="OperationImportSegment"/> class.
+        /// </summary>
+        /// <param name="model">The Edm model used in parsing.</param>
+        /// <param name="settings">The parser settings.</param>
         public PathParser(IEdmModel model, PathParserSettings settings)
         {
             EdmModel = model ?? throw new ArgumentNullException(nameof(model));
@@ -41,48 +48,20 @@ namespace Annotation.EdmUtil
         /// </summary>
         public PathParserSettings Settings { get; }
 
-#if false
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
         /// </summary>
         public virtual IList<PathSegment> Parse(string requestUri)
         {
-            if (string.IsNullOrEmpty(requestUri))
-            {
-                return null;
-            }
-
-            string[] items = requestUri.Split('/');
-            IList<PathSegment> segments = new List<PathSegment>();
-            foreach (var item in items)
-            {
-                string trimedItem = item.Trim();
-                if (string.IsNullOrEmpty(trimedItem))
-                {
-                    // skip like "~////abc/xyz//
-                    continue;
-                }
-
-                if (segments.Count == 0)
-                {
-                    CreateFirstSegment(trimedItem, model, segments);
-                }
-                else
-                {
-                    CreateNextSegment(trimedItem, model, segments);
-                }
-            }
-
-            return segments;
+            return Parse(requestUri, EdmModel, Settings.EnableCaseInsensitive);
         }
-#endif
 
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
         /// </summary>
-        public static IList<PathSegment> Parse(string requestUri, IEdmModel model)
+        public static IList<PathSegment> Parse(string requestUri, IEdmModel model, bool enableCaseInsensitive = false)
         {
             if (String.IsNullOrEmpty(requestUri))
             {
@@ -101,11 +80,11 @@ namespace Annotation.EdmUtil
 
                 if (segments.Count == 0)
                 {
-                    CreateFirstSegment(trimedItem, model, segments);
+                    CreateFirstSegment(trimedItem, model, segments, enableCaseInsensitive);
                 }
                 else
                 {
-                    CreateNextSegment(trimedItem, model, segments);
+                    CreateNextSegment(trimedItem, model, segments, enableCaseInsensitive);
                 }
             }
 
@@ -139,8 +118,6 @@ namespace Annotation.EdmUtil
         internal static void CreateNextSegment(string identifier, IEdmModel model, IList<PathSegment> path,
             bool enableCaseInsensitive = false)
         {
-            PathSegment preSegment = path.Last();
-
             // GET /Users/{id}
             // GET /Users({id})
             // GET /me/outlook/supportedTimeZones(TimeZoneStandard=microsoft.graph.timeZoneStandard'{timezone_format}')
@@ -154,17 +131,14 @@ namespace Annotation.EdmUtil
                 return;
             }
 
-            // type cast, 
-            if (identifier.IndexOf('.') >= 0)
+            // bind to type cast.
+            if (TryBindTypeCastSegment(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
             {
-                if (TryBindTypeCast(preSegment, identifier, model, parenthesisExpressions, path))
-                {
-                    return;
-                }
+                return;
             }
 
             // bound operations
-            if (TryBindOperations(preSegment, identifier, parenthesisExpressions, model, path))
+            if (TryBindOperations(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
             {
                 return;
             }
@@ -256,7 +230,12 @@ namespace Annotation.EdmUtil
             return false;
         }
 
-        private static bool TryBindPropertySegment(string identifier, string parenthesisExpressions, IEdmModel model, IList<PathSegment> path,
+        /// <summary>
+        /// Try to bind the idenfier as property segment,
+        /// Append it into path.
+        /// </summary>
+        private static bool TryBindPropertySegment(string identifier, string parenthesisExpressions, IEdmModel model,
+            IList<PathSegment> path,
             bool enableCaseInsensitive = false)
         {
             PathSegment preSegment = path.Last();
@@ -264,16 +243,8 @@ namespace Annotation.EdmUtil
             {
                 return false;
             }
-            IEdmStructuredType structuredType = preSegment.EdmType as IEdmStructuredType;
-            if (structuredType == null)
-            {
-                IEdmCollectionType collectionType = preSegment.EdmType as IEdmCollectionType;
-                if (collectionType != null)
-                {
-                    structuredType = collectionType.ElementType.Definition as IEdmStructuredType;
-                }
-            }
 
+            IEdmStructuredType structuredType = preSegment.EdmType as IEdmStructuredType;
             if (structuredType == null)
             {
                 return false;
@@ -285,7 +256,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
-            PathSegment segment = null;
+            PathSegment segment;
             if (property.PropertyKind == EdmPropertyKind.Navigation)
             {
                 var navigationProperty = (IEdmNavigationProperty)property;
@@ -293,25 +264,14 @@ namespace Annotation.EdmUtil
                 IEdmNavigationSource navigationSource = null;
                 if (preSegment.NavigationSource != null)
                 {
-                    //  IEdmPathExpression bindingPath;
-                    //  navigationSource = previous.NavigationSource.FindNavigationTarget(navigationProperty, BindingPathHelper.MatchBindingPath, this.parsedSegments, out bindingPath);
+                    IEdmPathExpression bindingPath;
+                    navigationSource = preSegment.NavigationSource.FindNavigationTarget(navigationProperty, path, out bindingPath);
                 }
 
                 // Relationship between TargetMultiplicity and navigation property:
                 //  1) EdmMultiplicity.Many <=> collection navigation property
                 //  2) EdmMultiplicity.ZeroOrOne <=> nullable singleton navigation property
                 //  3) EdmMultiplicity.One <=> non-nullable singleton navigation property
-                //
-                // According to OData Spec CSDL 7.1.3:
-                //  1) non-nullable singleton navigation property => navigation source required
-                //  2) the other cases => navigation source optional
-                if (navigationProperty.TargetMultiplicity() == EdmMultiplicity.One
-                    && navigationSource is IEdmUnknownEntitySet)
-                {
-                    // Specifically not throwing ODataUriParserException since it's more an an internal server error
-                    throw new Exception("TODO: ");
-                }
-
                 segment = new NavigationSegment(navigationProperty, navigationSource);
             }
             else
@@ -323,17 +283,23 @@ namespace Annotation.EdmUtil
 
             if (parenthesisExpressions != null && !property.Type.IsCollection() && !property.Type.AsCollection().ElementType().IsEntity())
             {
-                throw new Exception("TODO: ");
+                throw new Exception($"Invalid '{parenthesisExpressions}' after property '{identifier}'.");
             }
 
             TryBindKeySegment(parenthesisExpressions, path);
-
             return true;
         }
 
-        private static bool TryBindKeySegment(string parenthesisExpressions, IList<PathSegment> path)
+        /// <summary>
+        /// Try to bind the parenthesisExpressions as key,
+        /// parenthesisExpressions should have '(' and ')' wrapped.
+        /// </summary>
+        /// <param name="parenthesisExpressions">'(' and ')' wrapped string.</param>
+        /// <param name="path">the decorated path.</param>
+        internal static bool TryBindKeySegment(string parenthesisExpressions, IList<PathSegment> path)
         {
-            if (parenthesisExpressions == null || path.Count == 0)
+            // key segment cann't be the first segment.
+            if (path.Count == 0 || string.IsNullOrEmpty(parenthesisExpressions))
             {
                 return false;
             }
@@ -341,18 +307,21 @@ namespace Annotation.EdmUtil
             PathSegment preSegment = path.Last();
             if (preSegment.IsSingle)
             {
+                // key segment only apply to collection.
                 return false;
             }
 
             IEdmEntityType targetEntityType;
-            if (preSegment.EdmType == null || !preSegment.EdmType.IsEntityOrEntityCollectionType(out targetEntityType))
+            if (!preSegment.EdmType.IsEntityCollectionType(out targetEntityType))
             {
+                // key segment only apply to collection of entity
                 return false;
             }
 
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> keys, out string remaining);
             if (remaining != null)
             {
+                // not allowed as (key=value)(....)
                 throw new Exception($"Invalid key parathesis {parenthesisExpressions}.");
             }
 
@@ -387,9 +356,20 @@ namespace Annotation.EdmUtil
             return true;
         }
 
-        internal static bool TryBindTypeCast(PathSegment preSegment, string identifier, IEdmModel model, string parenthesisExpressions, IList<PathSegment> path)
+        /// <summary>
+        /// Try to bind namespace-qualified type cast segment.
+        /// </summary>
+        internal static bool TryBindTypeCastSegment(string identifier, string parenthesisExpressions, IEdmModel model,
+            IList<PathSegment> path,
+            bool enableCaseInsensitive)
         {
-            IEdmSchemaType schemaType = model.FindType(identifier);
+            if (identifier == null || identifier.IndexOf('.') < 0)
+            {
+                // type cast should be namespace-qualified name
+                return false;
+            }
+
+            IEdmSchemaType schemaType = model.ResolveType(identifier, enableCaseInsensitive);
             if (schemaType == null)
             {
                 return false;
@@ -401,6 +381,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
+            PathSegment preSegment = path.Last();
             IEdmType previousEdmType = preSegment.EdmType;
             if (previousEdmType.TypeKind == EdmTypeKind.Collection)
             {
@@ -431,12 +412,12 @@ namespace Annotation.EdmUtil
                     }
                     else
                     {
-                        throw new Exception($"Invlid type cast of {identifier}, it should be entity or complex");
+                        throw new Exception($"Invalid type cast of {identifier}, it should be entity or complex.");
                     }
                 }
             }
 
-            TypeSegment typeCast = new TypeSegment(actualTypeOfTheTypeSegment, previousEdmType, preSegment.NavigationSource);
+            TypeSegment typeCast = new TypeSegment(actualTypeOfTheTypeSegment, preSegment.EdmType, preSegment.NavigationSource);
             path.Add(typeCast);
 
             TryBindKeySegment(parenthesisExpressions, path);
@@ -444,16 +425,21 @@ namespace Annotation.EdmUtil
             return true;
         }
 
-        internal static bool TryBindOperations(PathSegment preSegment, string identifier, string parenthesisExpressions, 
-            IEdmModel model, IList<PathSegment> path)
+        /// <summary>
+        /// Try to bind the idenfier as bound operation segment,
+        /// Append it into path.
+        /// </summary>
+        internal static bool TryBindOperations(string identifier, string parenthesisExpressions,
+            IEdmModel model, IList<PathSegment> path, bool enableCaseInsensitive = false)
         {
+            PathSegment preSegment = path.Last();
             IEdmType bindingType = preSegment.EdmType;
 
             // operation
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> parameters, out string remaining);
             IList<string> parameterNames = parameters == null ? null : parameters.Keys.ToList();
 
-            IEdmOperation operation = OperationHelper.ResolveOperations(identifier, parameterNames, bindingType, model);
+            IEdmOperation operation = OperationHelper.ResolveOperations(identifier, parameterNames, bindingType, model, enableCaseInsensitive);
             if (operation != null)
             {
                 path.Add(new OperationSegment(operation));

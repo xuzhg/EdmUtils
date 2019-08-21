@@ -100,10 +100,23 @@ namespace Annotation.EdmUtil.Commons
 
         public static void VerifyIsKeyOrParameterTemplate(this string input)
         {
+            int index = input.IndexOf('\''); // enum value template
+            if (index > 0)
+            {
+                if (index == input.Length - 1 ||
+                    input[index + 1] != '{' ||
+                    !input.EndsWith("}\'"))
+                {
+                    throw new Exception($"Invalid enum value template '{input}'.");
+                }
+
+                return;
+            }
+
             if (String.IsNullOrEmpty(input) ||
                 (input[0] != '{' && input[input.Length - 1] != '}'))
             {
-                throw new Exception($"Invalid value template '{input}', it must wrap with {{ and}}");
+                throw new Exception($"Invalid value template '{input}', it must wrap with {{ and }}");
             }
         }
     }
