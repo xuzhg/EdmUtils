@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Annotation;
 using Annotation.EdmUtil;
 using Microsoft.OData.Edm;
 using Xunit;
@@ -62,6 +63,16 @@ namespace AnnotationGenerator.Tests
 
             Assert.NotNull(segments);
             Assert.Equal(6, segments.Count);
+        }
+
+        [Fact]
+        public void ParseGraphV1RequestUriWithKeysWorks3()
+        {
+            var segments = PathParser.ParsePath("/me/calendar", _edmModel);
+
+            Assert.NotNull(segments);
+            Assert.Equal(2, segments.Count);
+            Assert.Equal(PathKind.SingleNavigation, segments.Kind);
         }
     }
 }

@@ -60,13 +60,10 @@ Loaded CSDL successful!
          Segment Count: 6
 ==>/me/calendar
          Segment Count: 2
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id | userPrincipalName}/calendar
          Segment Count: 3
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{id}/calendar
          Segment Count: 3
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me/calendar/getSchedule
          Segment Count: 3
 ==>/users/{id|userPrincipalName}/calendar/getSchedule
@@ -91,34 +88,22 @@ Loaded CSDL successful!
          Segment Count: 7
 ==>/me/calendar/events
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendar/events
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/calendar/events
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendars/{id}/events
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendars/{id}/events
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendarGroup/calendars/{id}/events
  [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: 'me'.'
 ==>/users/{id | userPrincipalName}/calendarGroup/calendars/{id}/events
  [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: '{id | userPrincipalName}'.'
 ==>/me/calendarGroups/{id}/calendars/{id}/events
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events
          Segment Count: 7
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendarGroups/{id}
          Segment Count: 3
 ==>/users/{id | userPrincipalName}/calendarGroups/{id}
@@ -129,15 +114,12 @@ Loaded CSDL successful!
  [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: '{id | userPrincipalName}'.'
 ==>/me/calendarGroups/{id}/calendars
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendarGroups/{id}/calendars
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/teams/{id}/channels/{id}
          Segment Count: 4
 ==>/teams/{id}/channels
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/workbook/worksheets/{id|name}/charts/{name}/delete
  [UriParseError]: 'Unknow kind of first segment: 'workbook''
 ==>/workbook/worksheets/{id|name}/charts/{name}
@@ -250,24 +232,18 @@ Loaded CSDL successful!
          Segment Count: 4
 ==>/me/contactFolders/{id}/childFolders
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/contactFolders/{id}/childFolders
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/contacts
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id | userPrincipalName}/contacts
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/contactFolders/{id}/contacts
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/contactFolders/{id}/contacts
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/contracts/{id}
          Segment Count: 2
 ==>/contracts
@@ -276,7 +252,6 @@ Loaded CSDL successful!
          Segment Count: 4
 ==>/groups/{id}/conversations/{id}/threads
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/threads/{id}
          Segment Count: 4
 ==>/groups/{id}/conversations/{id}/threads/{id}
@@ -515,19 +490,14 @@ Loaded CSDL successful!
          Segment Count: 5
 ==>/drives/{drive-id}/items/{parent-item-id}/children
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{group-id}/drive/items/{parent-item-id}/children
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/drive/items/{parent-item-id}/children
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{site-id}/drive/items/{parent-item-id}/children
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{user-id}/drive/items/{parent-item-id}/children
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/drives/{driveId}/items/{itemId}/preview
          Segment Count: 5
 ==>/groups/{groupId}/drive/items/{itemId}/preview
@@ -612,13 +582,10 @@ Loaded CSDL successful!
  [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
 ==>/education/classes
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/users
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/schools
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/schools/{id}/classes/{classId}/$ref
  [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{classId}'.'
 ==>/education/schools/{id}/users/{userId}/$ref
@@ -645,7 +612,6 @@ Loaded CSDL successful!
          Segment Count: 4
 ==>/education/me
          Segment Count: 2
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/education/me/classes
          Segment Count: 3
 ==>/education/users/{id}/classes
@@ -744,38 +710,28 @@ Loaded CSDL successful!
          Segment Count: 5
 ==>/me/events/{id}/attachments
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/events/{id}/attachments
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendar/events/{id}/attachments
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendar/events/{id}/attachments
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/events/{id}/attachments
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/calendar/events/{id}/attachments
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendars/{id}/events/{id}/attachments
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/attachments
          Segment Count: 7
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendargroup/calendars/{id}/events/{id}/attachments
  [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
 ==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/attachments
  [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
 ==>/me/calendargroups/{id}/calendars/{id}/events/{id}/attachments
          Segment Count: 8
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/attachments
          Segment Count: 9
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/events/{id}/instances
          Segment Count: 4
 ==>/users/{id | userPrincipalName}/events/{id}/instances
@@ -850,12 +806,8 @@ Loaded CSDL successful!
          Segment Count: 6
 ==>/me/messages/{id}/attachments
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/messages/{id}/attachments
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/workbook/tables/{id|name}/columns/{id|name}/filter/apply
  [UriParseError]: 'Unknow kind of first segment: 'workbook''
 ==>/workbook/worksheets/{id|name}/tables/{id|name}/columns/{id|name}/filter/apply
@@ -892,10 +844,12 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/groups/{id}/conversations
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{id}/events
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{id}/groupLifecyclePolicies
          Segment Count: 3
 ==>/groups/{id}/memberOf
@@ -912,7 +866,8 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/groups/{id}/threads
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{id}/transitiveMemberOf
          Segment Count: 3
 ==>/groups/{id}/transitiveMembers
@@ -955,7 +910,6 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/groups/{id}/settings
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groupSettingTemplates/{id}
          Segment Count: 2
 ==>/groupSettingTemplates
@@ -970,10 +924,8 @@ Loaded CSDL successful!
          Segment Count: 1
 ==>/me/inferenceClassification/overrides
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id}/inferenceClassification/overrides
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/inferenceClassification/overrides/{id}
          Segment Count: 4
 ==>/users/{id}/inferenceClassification/overrides/{id}
@@ -1034,24 +986,18 @@ Loaded CSDL successful!
          Segment Count: 4
 ==>/me/mailFolders/{id}/childFolders
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/mailFolders/{id}/childFolders
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/mailFolders/inbox/messageRules
  [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
 ==>/users/{id | userPrincipalName}/mailFolders/inbox/messageRules
  [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
 ==>/me/mailFolders/{id}/messages
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id | userPrincipalName}/mailFolders/{id}/messages
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/mailFolders/{id}/move
          Segment Count: 4
 ==>/users/{id | userPrincipalName}/mailFolders/{id}/move
@@ -1102,10 +1048,8 @@ Loaded CSDL successful!
          Segment Count: 7
 ==>/me/mailFolders/{id}/messages/{id}/attachments
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/attachments
          Segment Count: 7
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/messages/{id}/move
          Segment Count: 4
 ==>/users/{id | userPrincipalName}/messages/{id}/move
@@ -1178,32 +1122,48 @@ Loaded CSDL successful!
          Segment Count: 8
 ==>/me/messages
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id|userPrincipalName}/messages
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me/mailFolders
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id|userPrincipalName}/mailFolders
          Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me/events
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id|userPrincipalName}/events
          Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me/calendars
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id|userPrincipalName}/calendars
          Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id|userPrincipalName}/contacts
          Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me/contactFolders
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/users/{id|userPrincipalName}/contactFolders
          Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{id}/threads/{id}/posts/{id}/reply
          Segment Count: 7
     [PermssionError]: Invalid path kind Operation in 'PATCH'
@@ -1250,52 +1210,36 @@ Loaded CSDL successful!
  [UriParseError]: 'Invalid value template 'includePersonalNotebooks-value', it must wrap with { and }'
 ==>/me/onenote/notebooks/{id}/sectionGroups
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/notebooks/{id}/sectionGroups
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/notebooks/{id}/sectionGroups
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/notebooks/{id}/sectionGroups
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/notebooks/{id}/sections
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/notebooks/{id}/sections
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/notebooks/{id}/sections
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/notebooks/{id}/sections
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/notebooks
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/notebooks
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/notebooks
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/notebooks
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/pages
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/pages
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/pages
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/pages
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/sectionGroups
          Segment Count: 3
 ==>/users/{id | userPrincipalName}/onenote/sectionGroups
@@ -1348,10 +1292,8 @@ Loaded CSDL successful!
          Segment Count: 5
 ==>/me/outlook/masterCategories
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id|userPrincipalName}/outlook/masterCategories
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/outlook/supportedLanguages
          Segment Count: 3
 ==>/users/{id|userPrincipalName}/outlook/supportedLanguages
@@ -1402,35 +1344,24 @@ Loaded CSDL successful!
          Segment Count: 7
 ==>/users/{id | userPrincipalName}/photo
          Segment Count: 3
-    [PermssionError]: Invalid path kind CollectionNavigation in 'DELETE'
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{id}/photo
          Segment Count: 3
-    [PermssionError]: Invalid path kind CollectionNavigation in 'DELETE'
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/drive/root/createdByUser/photo
          Segment Count: 4
-    [PermssionError]: Invalid path kind CollectionNavigation in 'DELETE'
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/planner/buckets
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/planner/plans
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/planner/tasks
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/planner/tasks/{id}/assignedToTaskBoardFormat
          Segment Count: 4
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/planner/buckets/{id}
          Segment Count: 3
 ==>/planner/buckets/{id}/tasks
          Segment Count: 4
 ==>/planner/tasks/{id}/bucketTaskBoardFormat
          Segment Count: 4
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/groups/{group-id}/planner/plans
          Segment Count: 4
 ==>/planner/plans/{id}
@@ -1443,15 +1374,12 @@ Loaded CSDL successful!
          Segment Count: 4
 ==>/planner/plans/{id}/details
          Segment Count: 4
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/planner/tasks/{id}/progressTaskBoardFormat
          Segment Count: 4
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/planner/tasks/{id}
          Segment Count: 3
 ==>/planner/tasks/{id}/details
          Segment Count: 4
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me/planner/plans
          Segment Count: 3
 ==>/users/{id}/planner/plans
@@ -1470,10 +1398,8 @@ Loaded CSDL successful!
          Segment Count: 9
 ==>/groups/{id}/threads/{id}/posts/{id}/attachments
          Segment Count: 7
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/conversations/{id}/threads/{id}/posts/{id}/attachments
          Segment Count: 9
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/photo/$value
  [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
 ==>/users/{id | userPrincipalName}/photo/$value
@@ -1662,16 +1588,12 @@ Loaded CSDL successful!
          Segment Count: 5
 ==>/me/onenote/sections/{id}/pages
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/sections/{id}/pages
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/sections/{id}/pages
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/sections/{id}/pages
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/sectionGroups/{id}
          Segment Count: 4
 ==>/users/{id | userPrincipalName}/onenote/sectionGroups/{id}
@@ -1682,28 +1604,20 @@ Loaded CSDL successful!
          Segment Count: 5
 ==>/me/onenote/sectionGroups/{id}/sectionGroups
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/sectionGroups/{id}/sectionGroups
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/sectionGroups/{id}/sectionGroups
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/sectionGroups/{id}/sectionGroups
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/sectionGroups/{id}/sections
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/sectionGroups/{id}/sections
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/sectionGroups/{id}/sections
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/sectionGroups/{id}/sections
          Segment Count: 6
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/security/secureScores/{id}
          Segment Count: 3
 ==>/security/securescorecontrolprofiles/{id}
@@ -1840,17 +1754,14 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/appCatalogs/teamsApps
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/teams/{id}/installedApps
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/teams/{id}/installedApps/{id}
          Segment Count: 4
 ==>/teams/{id}/installedApps/{id}/upgrade
          Segment Count: 5
 ==>/teams/{id}/channels/{id}/tabs
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/teams/{id}/channels/{id}/tabs/{id}
          Segment Count: 6
 ==>/users/{id | userPrincipalName}/assignLicense
@@ -1901,7 +1812,6 @@ Loaded CSDL successful!
          Segment Count: 2
 ==>/users/{id | userPrincipalName}/settings/
          Segment Count: 3
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/me
          Segment Count: 1
 ==>/me/getMailTips
@@ -1910,13 +1820,10 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/me/calendarGroups
          Segment Count: 2
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendarGroups
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/calendars
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendargroups/{calendar_group_id}/calendars
          Segment Count: 4
 ==>/me/calendarGroups/{calendar_group_id}/calendars
@@ -1927,7 +1834,6 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/users/{id | userPrincipalName}/contactFolders
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/contactfolders/{Id}/contacts
          Segment Count: 4
 ==>/users/{id | userPrincipalName}/contactfolders/{id}/contacts
@@ -1944,7 +1850,6 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/users/{id | userPrincipalName}/events
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/calendargroup/calendars/{id}/events
  [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
 ==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events
@@ -1963,7 +1868,6 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/users/{id | userPrincipalName}/mailFolders
          Segment Count: 3
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/manager
          Segment Count: 2
 ==>/users/{id | userPrincipalName}/manager
@@ -1990,10 +1894,8 @@ Loaded CSDL successful!
          Segment Count: 1
 ==>/me/contactFolders/{contactFolderId}/contacts
          Segment Count: 4
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts
          Segment Count: 5
-    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/reminderView(startDateTime=startDateTime-value,endDateTime=endDateTime-value)
  [UriParseError]: 'Invalid value template 'startDateTime-value', it must wrap with { and }'
 ==>/me/revokeSignInSessions
@@ -2006,7 +1908,6 @@ Loaded CSDL successful!
          Segment Count: 3
 ==>/me/settings
          Segment Count: 2
-    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
 ==>/workbook/closeSession
  [UriParseError]: 'Unknow kind of first segment: 'workbook''
 ==>/workbook/createSession
@@ -2058,4 +1959,3 @@ Parameter name: bindingType'
 ==>/workbook/worksheets/{id|name}/protection/unprotect
  [UriParseError]: 'Unknow kind of first segment: 'workbook''
 Done!
-

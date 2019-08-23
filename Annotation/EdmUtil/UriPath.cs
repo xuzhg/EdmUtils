@@ -43,10 +43,10 @@ namespace Annotation.EdmUtil
             {
                 if (lastSegment.IsSingle)
                 {
-                    return PathKind.CollectionNavigation;
+                    return PathKind.SingleNavigation;
                 }
 
-                return PathKind.SingleNavigation;
+                return PathKind.CollectionNavigation;
             }
             else if (lastSegment is PropertySegment)
             {
