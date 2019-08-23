@@ -1,0 +1,2061 @@
+CurrentDirectory:E:\github\xuzhg\EdmUtils\Annotation\AnnotationGenerator\bin\Debug\netcoreapp2.1
+Loaded permission successful! Totally: 941
+Loaded CSDL successful!
+==>/security/alerts/{alert_id}
+         Segment Count: 3
+==>/security/alerts
+         Segment Count: 2
+==>/me/events/{id}/attachments/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/events/{id}/attachments/{id}
+         Segment Count: 6
+==>/me/calendar/{id}/events/{id}/attachments/{id}
+ [UriParseError]: 'Unknow kind of segment: '{id}', previous segment: 'calendar'.'
+==>/users/{id | userPrincipalName}/calendar/events/{id}/attachments/{id}
+         Segment Count: 7
+==>/groups/{id}/events/{id}/attachments/{id}
+         Segment Count: 6
+==>/groups/{id}/calendar/events/{id}/attachments/{id}
+         Segment Count: 7
+==>/me/calendars/{id}/events/{id}/attachments/{id}
+         Segment Count: 7
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/attachments/{id}
+         Segment Count: 8
+==>/me/calendargroup/calendars/{id}/events/{id}/attachments/{id}
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/attachments/{id}
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/attachments/{id}
+         Segment Count: 9
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/attachments/{id}
+         Segment Count: 10
+==>/me/messages/{id}/attachments/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/messages/{id}/attachments/{id}
+         Segment Count: 6
+==>/me/mailFolders/{id}/messages/{id}/attachments/{id}
+         Segment Count: 7
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/attachments/{id}
+         Segment Count: 8
+==>/me/mailFolders/{id}/childFolders/{id}/.../messages/{id}/attachments/{id}
+ [UriParseError]: 'Unknow kind of segment: '...', previous segment: '{id}'.'
+==>/users/{id | userPrincipalName}/mailFolders/{id}/childFolders/{id}/messages/{id}/attachments/{id}
+         Segment Count: 10
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/threads/{id}/posts/{id}/attachments/{id}
+         Segment Count: 8
+==>/groups/{id}/conversations/{id}/threads/{id}/posts/{id}/attachments/{id}
+         Segment Count: 10
+==>/me/calendars/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/calendars/{id}
+         Segment Count: 4
+==>/me/calendarGroup/calendars/{id}
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendarGroup/calendars/{id}
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendarGroups/{id}/calendars/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}
+         Segment Count: 6
+==>/me/calendar
+         Segment Count: 2
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/users/{id | userPrincipalName}/calendar
+         Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/groups/{id}/calendar
+         Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/me/calendar/getSchedule
+         Segment Count: 3
+==>/users/{id|userPrincipalName}/calendar/getSchedule
+         Segment Count: 4
+==>/me/calendar/calendarView
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/calendar/calendarView
+         Segment Count: 4
+==>/groups/{id}/calendar/calendarView
+         Segment Count: 4
+==>/me/calendars/{id}/calendarView
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/calendars/{id}/calendarView
+         Segment Count: 5
+==>/me/calendarGroup/calendars/{id}/calendarView
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendarGroup/calendars/{id}/calendarView
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendarGroups/{id}/calendars/{id}/calendarView
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/calendarView
+         Segment Count: 7
+==>/me/calendar/events
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendar/events
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/calendar/events
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendars/{id}/events
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendars/{id}/events
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendarGroup/calendars/{id}/events
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendarGroup/calendars/{id}/events
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendarGroups/{id}/calendars/{id}/events
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events
+         Segment Count: 7
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendarGroups/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/calendarGroups/{id}
+         Segment Count: 4
+==>/me/calendarGroup/calendars
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendarGroup/calendars
+ [UriParseError]: 'Unknow kind of segment: 'calendarGroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendarGroups/{id}/calendars
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendarGroups/{id}/calendars
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/teams/{id}/channels/{id}
+         Segment Count: 4
+==>/teams/{id}/channels
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/workbook/worksheets/{id|name}/charts/{name}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/image
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/image(width=640)
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/image(width=640,height=480)
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/image(width=640,height=480,fittingMode='fit')
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/series
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/setData
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/setPosition
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/valueAxis
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/categoryaxis
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/valueAxis/title
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/title
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/categoryaxis/title
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/dataLabels
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/format/fill/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/title/format/fill/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/legend/format/fill/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/format/fill/setSolidColor
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/title/format/fill/setSolidColor
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/legend/format/fill/setSolidColor
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/valueAxis/format/font
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/format/font
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/categoryaxis/format/font
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/valueAxis/minorGridlines
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/valueAxis/majorGridlines
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/majorGridlines
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/legend
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/format/line/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/categoryaxis/format/line/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/majorgridlines/format/line/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/format/line
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/categoryaxis/format/line
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/axes/seriesAxis/majorgridlines/format/line
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/series/{series-id}/points/{point-id}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/series/{series-id}/points
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/series/{series-id}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/{name}/title
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/me/contacts/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/contacts/{id}
+         Segment Count: 4
+==>/me/contactFolders/{id}/contacts/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/contactFolders/{id}/contacts/{id}
+         Segment Count: 6
+==>/me/contactFolder/{id}/childFolders/{id}/.../contacts/{id}
+ [UriParseError]: 'Unknow kind of segment: 'contactFolder', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/contactFolders/{id}/childFolders/{id}/contacts/{id}
+         Segment Count: 8
+==>/me/contactFolders/{id}/contacts/delta
+         Segment Count: 5
+==>/users/{id}/contactFolders/{id}/contacts/delta
+         Segment Count: 6
+==>/me/contactfolders/{Id}/contacts/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/contactfolders/{id}/contacts/{id}
+         Segment Count: 6
+==>/me/contactFolders/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/contactFolders/{id}
+         Segment Count: 4
+==>/me/contactFolders/delta
+         Segment Count: 3
+==>/users/{id}/contactFolders/delta
+         Segment Count: 4
+==>/me/contactFolders/{id}/childFolders
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/contactFolders/{id}/childFolders
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/contacts
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/contacts
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/contactFolders/{id}/contacts
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/contactFolders/{id}/contacts
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/contracts/{id}
+         Segment Count: 2
+==>/contracts
+         Segment Count: 1
+==>/groups/{id}/conversations/{id}
+         Segment Count: 4
+==>/groups/{id}/conversations/{id}/threads
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/threads/{id}
+         Segment Count: 4
+==>/groups/{id}/conversations/{id}/threads/{id}
+         Segment Count: 6
+==>/groups/{id}/threads/{id}/posts
+         Segment Count: 5
+==>/groups/{id}/conversations/{id}/threads/{id}/posts
+         Segment Count: 7
+==>/groups/{id}/threads/{id}/reply
+         Segment Count: 5
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+==>/groups/{id}/conversations/{id}/threads/{id}/reply
+         Segment Count: 7
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+==>/dataPolicyOperations/{id}
+         Segment Count: 2
+==>/devices/{id}
+         Segment Count: 2
+==>/devices/{id}/memberOf
+         Segment Count: 3
+==>/devices/{id}/registeredOwners
+         Segment Count: 3
+==>/devices/{id}/registeredUsers
+         Segment Count: 3
+==>/devices/{id | userPrincipalName}/transitiveMemberOf
+         Segment Count: 3
+==>/devices
+         Segment Count: 1
+==>/devices/{id}/registeredOwners/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/devices/{id}/registeredUsers/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/directory/deletedItems/{id}
+         Segment Count: 3
+==>/directory/deletedItems/microsoft.graph.group
+ [UriParseError]: 'Unknown path kind!'
+==>/directory/deletedItems/microsoft.graph.user
+ [UriParseError]: 'Unknown path kind!'
+==>/directory/deletedItems/{id}/restore
+         Segment Count: 4
+==>/directory/deletedItems/getUserOwnedObjects
+ [UriParseError]: 'Invalid value template 'getUserOwnedObjects', it must wrap with { and }'
+==>/auditLogs/directoryAudits/{id}
+         Segment Count: 3
+==>/auditLogs/directoryaudits
+         Segment Count: 2
+==>/me/checkMemberGroups
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/checkMemberGroups
+         Segment Count: 3
+==>/groups/{id}/checkMemberGroups
+         Segment Count: 3
+==>/directoryObjects/{id}/checkMemberGroups
+         Segment Count: 3
+==>/directoryObjects/{id}
+         Segment Count: 2
+==>/directoryObjects/getByIds
+         Segment Count: 2
+==>/me/getMemberGroups
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/getMemberGroups
+         Segment Count: 3
+==>/groups/{id}/getMemberGroups
+         Segment Count: 3
+==>/directoryObjects/{id}/getMemberGroups
+         Segment Count: 3
+==>/me/getMemberObjects
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/getMemberObjects
+         Segment Count: 3
+==>/directoryObjects/{id}/getMemberObjects
+         Segment Count: 3
+==>/directoryObjects/validateProperties
+         Segment Count: 2
+==>/directoryRoles/{id}/members/{id}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{id}'.'
+==>/directoryRoles/delta
+         Segment Count: 2
+==>/directoryRoles/{id}
+         Segment Count: 2
+==>/directoryRoles/{id}/members
+         Segment Count: 3
+==>/directoryRoles
+         Segment Count: 1
+==>/directoryRoles/{id}/members/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/directoryRoleTemplates/{id}
+         Segment Count: 2
+==>/directoryRoleTemplates
+         Segment Count: 1
+==>/domains/{id}
+         Segment Count: 2
+==>/domains/{id}/forceDelete
+         Segment Count: 3
+==>/domains/{id}/domainNameReferences
+         Segment Count: 3
+==>/domains/contoso.com/serviceConfigurationRecords
+ [UriParseError]: 'Invalid value template 'contoso.com', it must wrap with { and }'
+==>/domains/{id}/verificationDnsRecords
+         Segment Count: 3
+==>/domains
+         Segment Count: 1
+==>/domains/{id}/verify
+         Segment Count: 3
+==>/drives/{driveId}/items/{itemId}/copy
+         Segment Count: 5
+==>/groups/{groupId}/drive/items/{itemId}/copy
+         Segment Count: 6
+==>/me/drive/items/{item-id}/copy
+         Segment Count: 5
+==>/sites/{siteId}/drive/items/{itemId}/copy
+         Segment Count: 6
+==>/users/{userId}/drive/items/{itemId}/copy
+         Segment Count: 6
+==>/drives/{driveId}/items/{itemId}/createLink
+         Segment Count: 5
+==>/groups/{groupId}/drive/items/{itemId}/createLink
+         Segment Count: 6
+==>/me/drive/items/{itemId}/createLink
+         Segment Count: 5
+==>/sites/{siteId}/drive/items/{itemId}/createLink
+         Segment Count: 6
+==>/users/{userId}/drive/items/{itemId}/createLink
+         Segment Count: 6
+==>/drives/{drive-id}/items/{item-id}
+         Segment Count: 4
+==>/groups/{group-id}/drive/items/{item-id}
+         Segment Count: 5
+==>/me/drive/items/{item-id}
+         Segment Count: 4
+==>/sites/{siteId}/drive/items/{itemId}
+         Segment Count: 5
+==>/users/{userId}/drive/items/{itemId}
+         Segment Count: 5
+==>/drives/{drive-id}/root/delta
+         Segment Count: 4
+==>/groups/{groupId}/drive/root/delta
+         Segment Count: 5
+==>/me/drive/root/delta
+         Segment Count: 4
+==>/sites/{siteId}/drive/root/delta
+         Segment Count: 5
+==>/users/{userId}/drive/root/delta
+         Segment Count: 5
+==>/drive/items/{item-id}/content
+         Segment Count: 4
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/drive/root:/{path and filename}:/content
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/drives/{drive-id}/items/{item-id}/content
+         Segment Count: 5
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/groups/{group-id}/drive/items/{item-id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/me/drive/root:/{item-path}:/content
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/me/drive/items/{item-id}/content
+         Segment Count: 5
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/sites/{siteId}/drive/items/{item-id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{userId}/drive/items/{item-id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/drives/{drive-id}/root:/{item-path}
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: '{drive-id}'.'
+==>/groups/{group-id}/drive/root:/{item-path}
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/me/drive/root:/{item-path}
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/sites/{siteId}/drive/root:/{item-path}
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/users/{userId}/drive/root:/{item-path}
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/drives/{drive-id}/items/{item-id}/invite
+         Segment Count: 5
+==>/groups/{group-id}/drive/items/{item-id}/invite
+         Segment Count: 6
+==>/me/drive/items/{item-id}/invite
+         Segment Count: 5
+==>/sites/{siteId}/drive/items/{itemId}/invite
+         Segment Count: 6
+==>/users/{userId}/drive/items/{itemId}/invite
+         Segment Count: 6
+==>/drives/{drive-id}/items/{item-id}/children
+         Segment Count: 5
+==>/groups/{group-id}/drive/items/{item-id}/children
+         Segment Count: 6
+==>/me/drive/items/{item-id}/children
+         Segment Count: 5
+==>/sites/{site-id}/drive/items/{item-id}/children
+         Segment Count: 6
+==>/users/{user-id}/drive/items/{item-id}/children
+         Segment Count: 6
+==>/drives/{drive-id}/items/{item-id}/permissions
+         Segment Count: 5
+==>/groups/{group-id}/drive/items/{item-id}/permissions
+         Segment Count: 6
+==>/me/drive/items/{item-id}/permissions
+         Segment Count: 5
+==>/me/drive/root:/{path}:/permissions
+ [UriParseError]: 'Unknow kind of segment: 'root:', previous segment: 'drive'.'
+==>/sites/{siteId}/drive/items/{itemId}/permissions
+         Segment Count: 6
+==>/users/{userId}/drive/items/{itemId}/permissions
+         Segment Count: 6
+==>/drives/{drive-id}/items/{item-id}/thumbnails
+         Segment Count: 5
+==>/groups/{group-id}/drive/items/{item-id}/thumbnails
+         Segment Count: 6
+==>/me/drive/items/{item-id}/thumbnails
+         Segment Count: 5
+==>/sites/{site-id}/drive/items/{item-id}/thumbnails
+         Segment Count: 6
+==>/users/{user-id}/drive/items/{item-id}/thumbnails
+         Segment Count: 6
+==>/drives/{drive-id}/items/{item-id}/versions
+         Segment Count: 5
+==>/groups/{group-id}/drive/{item-id}/versions
+ [UriParseError]: 'Unknow kind of segment: '{item-id}', previous segment: 'drive'.'
+==>/me/drive/items/{item-id}/versions
+         Segment Count: 5
+==>/sites/{site-id}/drive/items/{item-id}/versions
+         Segment Count: 6
+==>/users/{user-id}/drive/items/{item-id}/versions
+         Segment Count: 6
+==>/groups/{group-id}/drive/{item-id}
+ [UriParseError]: 'Unknow kind of segment: '{item-id}', previous segment: 'drive'.'
+==>/sites/{site-id}/drive/items/{item-id}
+         Segment Count: 5
+==>/users/{user-id}/drive/items/{item-id}
+         Segment Count: 5
+==>/drives/{drive-id}/items/{parent-item-id}/children
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{group-id}/drive/items/{parent-item-id}/children
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/drive/items/{parent-item-id}/children
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{site-id}/drive/items/{parent-item-id}/children
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{user-id}/drive/items/{parent-item-id}/children
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/drives/{driveId}/items/{itemId}/preview
+         Segment Count: 5
+==>/groups/{groupId}/drive/items/{itemId}/preview
+         Segment Count: 6
+==>/me/drive/items/{itemId}/preview
+         Segment Count: 5
+==>/sites/{siteId}/drive/items/{itemId}/preview
+         Segment Count: 6
+==>/users/{userId}/drive/items/{itemId}/preview
+         Segment Count: 6
+==>/shares/{shareId}/driveItem/preview
+         Segment Count: 4
+==>/drives/{drive-id}/root/search(q='{search-text}')
+ [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+==>/groups/{group-id}/drive/root/search(q='{search-text}')
+ [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+==>/me/drive/root/search(q='{search-text}')
+ [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+==>/sites/{site-id}/drive/root/search(q='{search-text}')
+ [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+==>/users/{user-id}/drive/root/search(q='{search-text}')
+ [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+==>/me/drive/root/subscriptions/socketIo
+ [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+==>/drives/{driveId}/root/subscriptions/socketIo
+ [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+==>/groups/{groupId}/drive/root/subscriptions/socketIo
+ [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+==>/sites/{siteId}/lists/{listId}/drive/root/subscriptions/socketIo
+ [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+==>/drives/{drive-id}/items/{item-id}/versions/{version-id}/content
+         Segment Count: 7
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/groups/{group-id}/drive/{item-id}/versions/{version-id}/content
+ [UriParseError]: 'Unknow kind of segment: '{item-id}', previous segment: 'drive'.'
+==>/me/drive/items/{item-id}/versions/{version-id}/content
+         Segment Count: 7
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/sites/{site-id}/drive/items/{item-id}/versions/{version-id}/content
+         Segment Count: 8
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{user-id}/drive/items/{item-id}/versions/{version-id}/content
+         Segment Count: 8
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/drives/{drive-id}/items/{item-id}/versions/{version-id}
+         Segment Count: 6
+==>/groups/{group-id}/drive/{item-id}/versions/{version-id}
+ [UriParseError]: 'Unknow kind of segment: '{item-id}', previous segment: 'drive'.'
+==>/me/drive/items/{item-id}/versions/{version-id}
+         Segment Count: 6
+==>/sites/{site-id}/drive/items/{item-id}/versions/{version-id}
+         Segment Count: 7
+==>/users/{user-id}/drive/items/{item-id}/versions/{version-id}
+         Segment Count: 7
+==>/drives/{driveId}/items/{itemId}/versions/{version-id}/restoreVersion
+         Segment Count: 7
+==>/groups/{groupId}/drive/items/{itemId}/versions/{version-id}/restoreVersion
+         Segment Count: 8
+==>/me/drive/items/{item-id}/versions/{version-id}/restoreVersion
+         Segment Count: 7
+==>/sites/{siteId}/drive/items/{itemId}/versions/{version-id}/restoreVersion
+         Segment Count: 8
+==>/users/{userId}/drive/items/{itemId}/versions/{version-id}/restoreVersion
+         Segment Count: 8
+==>/education/classes/{id}/members/{userId}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{userId}'.'
+==>/education/classes/{id}/teachers/{userId}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{userId}'.'
+==>/education/classes/{id}
+         Segment Count: 3
+==>/education/classes/{id}/group
+         Segment Count: 4
+==>/education/classes/{id}/members
+         Segment Count: 4
+==>/education/classes/{id}/schools
+         Segment Count: 4
+==>/education/classes/{id}/teachers
+         Segment Count: 4
+==>/education/classes/{id}/members/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/education/classes/{id}/teachers/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/education/classes
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/education/users
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/education/schools
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/education/schools/{id}/classes/{classId}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{classId}'.'
+==>/education/schools/{id}/users/{userId}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{userId}'.'
+==>/education/schools/{id}
+         Segment Count: 3
+==>/education/me/schools
+         Segment Count: 3
+==>/education/users/schools
+ [UriParseError]: 'Invalid value template 'schools', it must wrap with { and }'
+==>/education/schools/{id}/classes
+         Segment Count: 4
+==>/education/schools/{id}/users
+         Segment Count: 4
+==>/education/schools/{id}/classes/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/education/schools/{id}/users/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/education/users/{id}
+         Segment Count: 3
+==>/education/me/user
+         Segment Count: 3
+==>/education/users/{id}/user
+         Segment Count: 4
+==>/education/me
+         Segment Count: 2
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/education/me/classes
+         Segment Count: 3
+==>/education/users/{id}/classes
+         Segment Count: 4
+==>/education/users/{id}/schools
+         Segment Count: 4
+==>/me/events/{id}/accept
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/events/{id}/accept
+         Segment Count: 5
+==>/me/calendar/events/{id}/accept
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendar/events/{id}/accept
+         Segment Count: 6
+==>/me/calendars/{id}/events/{id}/accept
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/accept
+         Segment Count: 7
+==>/me/calendargroup/calendars/{id}/events/{id}/accept
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/accept
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/accept
+         Segment Count: 8
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/accept
+         Segment Count: 9
+==>/me/events/{id}/decline
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/events/{id}/decline
+         Segment Count: 5
+==>/me/calendar/events/{id}/decline
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendar/events/{id}/decline
+         Segment Count: 6
+==>/me/calendars/{id}/events/{id}/decline
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/decline
+         Segment Count: 7
+==>/me/calendargroup/calendars/{id}/events/{id}/decline
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/decline
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/decline
+         Segment Count: 8
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/decline
+         Segment Count: 9
+==>/me/events/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/events/{id}
+         Segment Count: 4
+==>/groups/{id}/events/{id}
+         Segment Count: 4
+==>/me/calendar/events/{id}
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/calendar/events/{id}
+         Segment Count: 5
+==>/groups/{id}/calendar/events/{id}/
+         Segment Count: 5
+==>/me/calendars/{id}/events/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}
+         Segment Count: 6
+==>/me/calendargroup/calendars/{id}/events/{id}
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}
+         Segment Count: 7
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}
+         Segment Count: 8
+==>/me/calendarView/delta
+         Segment Count: 3
+==>/users/{id}/calendarView/delta
+         Segment Count: 4
+==>/me/events/{id}/dismissReminder
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/events/{id}/dismissReminder
+         Segment Count: 5
+==>/me/calendar/events/{id}/dismissReminder
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendar/events/{id}/dismissReminder
+         Segment Count: 6
+==>/me/calendars/{id}/events/{id}/dismissReminder
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/dismissReminder
+         Segment Count: 7
+==>/me/calendargroup/calendars/{id}/events/{id}/dismissReminder
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/dismissReminder
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/dismissReminder
+         Segment Count: 8
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/dismissReminder
+         Segment Count: 9
+==>/groups/{id}/calendar/events/{id}
+         Segment Count: 5
+==>/me/events/{id}/attachments
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/events/{id}/attachments
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendar/events/{id}/attachments
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendar/events/{id}/attachments
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/events/{id}/attachments
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/calendar/events/{id}/attachments
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendars/{id}/events/{id}/attachments
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/attachments
+         Segment Count: 7
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendargroup/calendars/{id}/events/{id}/attachments
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/attachments
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/attachments
+         Segment Count: 8
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/attachments
+         Segment Count: 9
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/events/{id}/instances
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/events/{id}/instances
+         Segment Count: 5
+==>/groups/{id}/events/{id}/instances
+         Segment Count: 5
+==>/me/calendar/events/{id}/instances
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendar/events/{id}/instances
+         Segment Count: 6
+==>/groups/{id}/calendar/events/{id}/instances
+         Segment Count: 6
+==>/me/calendars/{id}/events/{id}/instances
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/instances
+         Segment Count: 7
+==>/me/calendargroup/calendars/{id}/events/{id}/instances
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/instances
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/instances
+         Segment Count: 8
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/instances
+         Segment Count: 9
+==>/me/events/{id}/snoozeReminder
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/events/{id}/snoozeReminder
+         Segment Count: 5
+==>/me/calendar/events/{id}/snoozeReminder
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendar/events/{id}/snoozeReminder
+         Segment Count: 6
+==>/me/calendars/{id}/events/{id}/snoozeReminder
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/snoozeReminder
+         Segment Count: 7
+==>/me/calendargroup/calendars/{id}/events/{id}/snoozeReminder
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/snoozeReminder
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/snoozeReminder
+         Segment Count: 8
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/snoozeReminder
+         Segment Count: 9
+==>/me/events/{id}/tentativelyAccept
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/events/{id}/tentativelyAccept
+         Segment Count: 5
+==>/me/calendar/events/{id}/tentativelyAccept
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendar/events/{id}/tentativelyAccept
+         Segment Count: 6
+==>/me/calendars/{id}/events/{id}/tentativelyAccept
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendars/{id}/events/{id}/tentativelyAccept
+         Segment Count: 7
+==>/me/calendargroup/calendars/{id}/events/{id}/tentativelyAccept
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events/{id}/tentativelyAccept
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events/{id}/tentativelyAccept
+         Segment Count: 8
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/tentativelyAccept
+         Segment Count: 9
+==>/me/messages/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/messages/{id}
+         Segment Count: 4
+==>/me/mailFolders/{id}/messages/{id}
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}
+         Segment Count: 6
+==>/me/messages/{id}/attachments
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/messages/{id}/attachments
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/workbook/tables/{id|name}/columns/{id|name}/filter/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/columns/{id|name}/filter/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/filter/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/columns/{id|name}/filter/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/protection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(<address>)/format/protection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/protection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/groups/{id}/addFavorite
+         Segment Count: 3
+==>/groups/{id}/acceptedSenders/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/groups/{id}/members/{id}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{id}'.'
+==>/groups/{id}/owners/{id}/$ref
+ [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{id}'.'
+==>/groups/{id}/rejectedSenders/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/groups/{id}
+         Segment Count: 2
+==>/groups/delta
+         Segment Count: 2
+==>/groups/{id}/getMemberObjects
+         Segment Count: 3
+==>/groups/{id}/acceptedSenders
+         Segment Count: 3
+==>/groups/{id}/calendarView
+         Segment Count: 3
+==>/groups/{id}/conversations
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/events
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/groupLifecyclePolicies
+         Segment Count: 3
+==>/groups/{id}/memberOf
+         Segment Count: 3
+==>/groups/{id}/members
+         Segment Count: 3
+==>/groups/{id}/owners
+         Segment Count: 3
+==>/groups/{id}/photos
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/joinedGroups/{id}/photos
+ [UriParseError]: 'Unknow kind of segment: 'joinedGroups', previous segment: '{id | userPrincipalName}'.'
+==>/groups/{id}/rejectedSenders
+         Segment Count: 3
+==>/groups/{id}/threads
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/transitiveMemberOf
+         Segment Count: 3
+==>/groups/{id}/transitiveMembers
+         Segment Count: 3
+==>/groups
+         Segment Count: 1
+==>/groups/{id}/members/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/groups/{id}/owners/$ref
+ [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+==>/groups/{id}/removeFavorite
+         Segment Count: 3
+==>/groups/{id}/renew
+         Segment Count: 3
+==>/groups/{id}/resetUnseenCount
+         Segment Count: 3
+==>/groups/{id}/subscribeByMail
+         Segment Count: 3
+==>/groups/{id}/unsubscribeByMail
+         Segment Count: 3
+==>/groups/{id}/validateProperties
+         Segment Count: 3
+==>/groupLifecyclePolicies/{id}/addGroup
+         Segment Count: 3
+==>/groupLifecyclePolicies/{id}
+         Segment Count: 2
+==>/groupLifecyclePolicies
+         Segment Count: 1
+==>/groupLifecyclePolicies/{id}/removeGroup
+         Segment Count: 3
+==>/groupSettings/{id}
+         Segment Count: 2
+==>/groups/{id}/settings/{id}
+         Segment Count: 4
+==>a specific tenant-wide or group setting.
+ [UriParseError]: 'Unknow kind of first segment: 'a specific tenant-wide or group setting.''
+==>/groupSettings
+         Segment Count: 1
+==>groups/{id}/settings
+         Segment Count: 3
+==>/groups/{id}/settings
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groupSettingTemplates/{id}
+         Segment Count: 2
+==>/groupSettingTemplates
+         Segment Count: 1
+==>/workbook/tables/{id|name}/sort/fields/icon
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/sort/fields/icon
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/identityProviders/{id}
+         Segment Count: 2
+==>/identityProviders
+         Segment Count: 1
+==>/me/inferenceClassification/overrides
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id}/inferenceClassification/overrides
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/inferenceClassification/overrides/{id}
+         Segment Count: 4
+==>/users/{id}/inferenceClassification/overrides/{id}
+         Segment Count: 5
+==>/invitations
+         Segment Count: 1
+==>/drives/{drive-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-01-01',endDateTime='2017-01-10',interval='day')
+ [UriParseError]: 'Invalid value template ''2017-01-01'', it must wrap with { and }'
+==>/sites/{site-id}/getActivitiesByInterval(startDateTime='2016',endDateTime='2017',interval='month')
+ [UriParseError]: 'Invalid value template ''2016'', it must wrap with { and }'
+==>/sites/{site-id}/lists/{list-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-05-01',interval='week')
+ [UriParseError]: 'Invalid value template ''2017-05-01'', it must wrap with { and }'
+==>/drives/{drive-id}/items/{item-id}/analytics
+         Segment Count: 5
+==>/sites/{site-id}/analytics
+         Segment Count: 3
+==>/sites/{site-id}/lists/{list-id}/items/{item-id}/analytics
+         Segment Count: 7
+==>https://graph.microsoft.com/v1.0/sites/{site-id}/lists
+ [UriParseError]: 'Unknow kind of first segment: 'https:''
+==>https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}
+ [UriParseError]: 'Unknow kind of first segment: 'https:''
+==>https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items
+ [UriParseError]: 'Unknow kind of first segment: 'https:''
+==>https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items/{item-id}
+ [UriParseError]: 'Unknow kind of first segment: 'https:''
+==>a listItem
+ [UriParseError]: 'Unknow kind of first segment: 'a listItem''
+==>the column values of a listItem
+ [UriParseError]: 'Unknow kind of first segment: 'the column values of a listItem''
+==>specific column values of a listItem
+ [UriParseError]: 'Unknow kind of first segment: 'specific column values of a listItem''
+==>/sites/{site-id}/items/{item-id}/versions
+ [UriParseError]: 'Unknow kind of segment: 'versions', previous segment: '{item-id}'.'
+==>/sites/{site-id}/lists/{list-id}/items/{item-id}/versions
+         Segment Count: 7
+==>https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items/{item-id}/fields
+ [UriParseError]: 'Unknow kind of first segment: 'https:''
+==>/sites/{site-id}/items/{item-id}/versions/{version-id}
+ [UriParseError]: 'Unknow kind of segment: 'versions', previous segment: '{item-id}'.'
+==>/sites/{site-id}/lists/{list-id}/items/{item-id}/versions/{version-id}
+         Segment Count: 8
+==>/sites/{site-id}/items/{item-id}/versions/{version-id}/restoreVersion
+ [UriParseError]: 'Unknow kind of segment: 'versions', previous segment: '{item-id}'.'
+==>/sites/{site-id}/lists/{list-id}/items/{item-id}/versions/{version-id}/restoreVersion
+         Segment Count: 9
+==>/me/mailFolders/{id}/copy
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/mailFolders/{id}/copy
+         Segment Count: 5
+==>/me/mailFolders/{id}
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/mailFolders/{id}
+         Segment Count: 4
+==>/me/mailFolders/delta
+         Segment Count: 3
+==>/users/{id}/mailFolders/delta
+         Segment Count: 4
+==>/me/mailFolders/{id}/childFolders
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/mailFolders/{id}/childFolders
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/mailFolders/inbox/messageRules
+ [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+==>/users/{id | userPrincipalName}/mailFolders/inbox/messageRules
+ [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+==>/me/mailFolders/{id}/messages
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/mailFolders/{id}/move
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/mailFolders/{id}/move
+         Segment Count: 5
+==>/me/messages/{id}/copy
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/copy
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/copy
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/copy
+         Segment Count: 7
+==>/me/messages/{id}/createForward
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/createForward
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/createForward
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/createForward
+         Segment Count: 7
+==>/me/messages/{id}/createReply
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/createReply
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/createReply
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/createReply
+         Segment Count: 7
+==>/me/messages/{id}/createReplyAll
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/createReplyAll
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/createReplyAll
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/createReplyAll
+         Segment Count: 7
+==>/me/mailFolders/{id}/messages/delta
+         Segment Count: 5
+==>/users/{id}/mailFolders/{id}/messages/delta
+         Segment Count: 6
+==>/me/messages/{id}/forward
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/forward
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/forward
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/forward
+         Segment Count: 7
+==>/me/mailFolders/{id}/messages/{id}/attachments
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/attachments
+         Segment Count: 7
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/messages/{id}/move
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/move
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/move
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/move
+         Segment Count: 7
+==>/me/messages/{id}/reply
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/reply
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/reply
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/reply
+         Segment Count: 7
+==>/users/me/messages/{id}/replyAll
+ [UriParseError]: 'Invalid value template 'me', it must wrap with { and }'
+==>/users/{id | userPrincipalName}/messages/{id}/replyAll
+         Segment Count: 5
+==>/me/mailFolders/{id}/messages/{id}/replyAll
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/replyAll
+         Segment Count: 7
+==>/me/messages/{id}/send
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/messages/{id}/send
+         Segment Count: 5
+==>/me/mailFolders/inbox/messageRules/{id}
+ [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+==>/users/{id | userPrincipalName}/mailFolders/inbox/messageRules/{id}
+ [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+==>a resource instance expanded with the extended property which matches a filter on the
+ [UriParseError]: 'Unknow kind of first segment: 'a resource instance expanded with the extended property which matches a filter on the''
+==>a **message** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a **message** instance:''
+==>/users/{id|userPrincipalName}/messages/{id}
+         Segment Count: 4
+==>a **mailFolder** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a **mailFolder** instance:''
+==>/users/{id|userPrincipalName}/mailFolders/{id}
+         Segment Count: 4
+==>an **event** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'an **event** instance:''
+==>/users/{id|userPrincipalName}/events/{id}
+         Segment Count: 4
+==>a **calendar** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a **calendar** instance:''
+==>/users/{id|userPrincipalName}/calendars/{id}
+         Segment Count: 4
+==>a **contact** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a **contact** instance:''
+==>/users/{id|userPrincipalName}/contacts/{id}
+         Segment Count: 4
+==>/users/{id|userPrincipalName}/contactFolders/{id}/contacts/{id}
+         Segment Count: 6
+==>a **contactFolder** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a **contactFolder** instance:''
+==>/me/contactfolders/{id}
+         Segment Count: 3
+==>/users/{id|userPrincipalName}/contactFolders/{id}
+         Segment Count: 4
+==>a group **event** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a group **event** instance:''
+==>a group **post** instance:
+ [UriParseError]: 'Unknow kind of first segment: 'a group **post** instance:''
+==>/groups/{id}/threads/{id}/posts/{id}
+         Segment Count: 6
+==>/groups/{id}/conversations/{id}/threads/{id}/posts/{id}
+         Segment Count: 8
+==>/me/messages
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id|userPrincipalName}/messages
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/mailFolders
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id|userPrincipalName}/mailFolders
+         Segment Count: 3
+==>/me/events
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id|userPrincipalName}/events
+         Segment Count: 3
+==>/me/calendars
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id|userPrincipalName}/calendars
+         Segment Count: 3
+==>/users/{id|userPrincipalName}/contacts
+         Segment Count: 3
+==>/me/contactFolders
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id|userPrincipalName}/contactFolders
+         Segment Count: 3
+==>/groups/{id}/threads/{id}/posts/{id}/reply
+         Segment Count: 7
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+==>/groups/{id}/conversations/{id}/threads/{id}/posts/{id}/reply
+         Segment Count: 9
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+    [PermssionError]: Invalid path kind Operation in 'PATCH'
+==>/workbook/names/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets({id|name})/names/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/me/onenote/notebooks/{id}/copyNotebook
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/onenote/notebooks/{id}/copyNotebook
+         Segment Count: 6
+==>/groups/{id}/onenote/notebooks/{id}/copyNotebook
+         Segment Count: 6
+==>/me/onenote/notebooks/{id}
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/onenote/notebooks/{id}
+         Segment Count: 5
+==>/groups/{id}/onenote/notebooks/{id}
+         Segment Count: 5
+==>/sites/{id}/onenote/notebooks/{id}
+         Segment Count: 5
+==>/me/onenote/notebooks/GetNotebookFromWebUrl
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/onenote/notebooks/GetNotebookFromWebUrl
+         Segment Count: 5
+==>/groups/{id}/onenote/notebooks/GetNotebookFromWebUrl
+         Segment Count: 5
+==>/sites/{id}/onenote/notebooks/GetNotebookFromWebUrl
+         Segment Count: 5
+==>/me/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks=includePersonalNotebooks-value)
+ [UriParseError]: 'Invalid value template 'includePersonalNotebooks-value', it must wrap with { and }'
+==>/users/{id | userPrincipalName}/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks=includePersonalNotebooks-value)
+ [UriParseError]: 'Invalid value template 'includePersonalNotebooks-value', it must wrap with { and }'
+==>/me/onenote/notebooks/{id}/sectionGroups
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/notebooks/{id}/sectionGroups
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/notebooks/{id}/sectionGroups
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/notebooks/{id}/sectionGroups
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/onenote/notebooks/{id}/sections
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/notebooks/{id}/sections
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/notebooks/{id}/sections
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/notebooks/{id}/sections
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/onenote/notebooks
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/notebooks
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/notebooks
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/notebooks
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/onenote/pages
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/pages
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/pages
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/pages
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/onenote/sectionGroups
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/onenote/sectionGroups
+         Segment Count: 4
+==>/groups/{id}/onenote/sectionGroups
+         Segment Count: 4
+==>/sites/{id}/onenote/sectionGroups
+         Segment Count: 4
+==>/me/onenote/sections
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/onenote/sections
+         Segment Count: 4
+==>/groups/{id}/onenote/sections
+         Segment Count: 4
+==>/sites/{id}/onenote/sections
+         Segment Count: 4
+==>/me/onenote/operations/{id}
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/onenote/operations/{id}
+         Segment Count: 5
+==>/groups/{id}/onenote/operations/{id}
+         Segment Count: 5
+==>/sites/{id}/onenote/operations/{id}
+         Segment Count: 5
+==>/devices/{Id}/extensions/{extensionId}
+         Segment Count: 4
+==>/users/{id|userPrincipalName}/events/{id}/extensions/{extensionId}
+         Segment Count: 6
+==>/groups/{id}/extensions/{extensionId}
+         Segment Count: 4
+==>/groups/{id}/events/{id}/extensions/{extensionId}
+         Segment Count: 6
+==>/groups/{id}/threads/{id}/posts/{id}/extensions/{extensionId}
+         Segment Count: 8
+==>/users/{id|userPrincipalName}/messages/{id}/extensions/{extensionId}
+         Segment Count: 6
+==>/organization/{Id}/extensions/{extensionId}
+         Segment Count: 4
+==>/users/{id|userPrincipalName}/contacts/{id}/extensions/{extensionId}
+         Segment Count: 6
+==>/users/{id|userPrincipalName}/extensions/{extensionId}
+         Segment Count: 4
+==>/organization
+         Segment Count: 1
+==>/organization/{id}
+         Segment Count: 2
+==>/me/outlook/masterCategories/{id}
+         Segment Count: 4
+==>/users/{id|userPrincipalName}/outlook/masterCategories/{id}
+         Segment Count: 5
+==>/me/outlook/masterCategories
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id|userPrincipalName}/outlook/masterCategories
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/outlook/supportedLanguages
+         Segment Count: 3
+==>/users/{id|userPrincipalName}/outlook/supportedLanguages
+         Segment Count: 4
+==>/me/outlook/supportedTimeZones
+         Segment Count: 3
+==>/users/{id|userPrincipalName}/outlook/supportedTimeZones
+         Segment Count: 4
+==>/me/outlook/supportedTimeZones(TimeZoneStandard=microsoft.graph.timeZoneStandard'{timezone_format}')
+         Segment Count: 3
+==>/users/{id|userPrincipalName}/outlook/supportedTimeZones(TimeZoneStandard=microsoft.graph.timeZoneStandard'{timezone_format}')
+         Segment Count: 4
+==>/me/onenote/pages/{id}/copyToSection
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/onenote/pages/{id}/copyToSection
+         Segment Count: 6
+==>/groups/{id}/onenote/pages/{id}/copyToSection
+         Segment Count: 6
+==>/me/onenote/pages/{id}
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/onenote/pages/{id}
+         Segment Count: 5
+==>/groups/{id}/onenote/pages/{id}
+         Segment Count: 5
+==>/sites/{id}/onenote/pages/{id}
+         Segment Count: 5
+==>/me/onenote/pages/{id}/content
+         Segment Count: 5
+    [PermssionError]: Invalid path kind Property in 'PATCH'
+==>/users/{id | userPrincipalName}/onenote/pages/{id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'PATCH'
+==>/groups/{id}/onenote/pages/{id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'PATCH'
+==>/sites/{id}/onenote/pages/{id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'PATCH'
+==>/drives/{drive-id}/items/{item-id}/permissions/{perm-id}
+         Segment Count: 6
+==>/groups/{group-id}/drive/items/{item-id}/permissions/{perm-id}
+         Segment Count: 7
+==>/me/drive/items/{item-id}/permissions/{perm-id}
+         Segment Count: 6
+==>/sites/{site-id}/drive/items/{item-id}/permissions/{perm-id}
+         Segment Count: 7
+==>/users/{user-id}/drive/items/{item-id}/permissions/{perm-id}
+         Segment Count: 7
+==>/users/{id | userPrincipalName}/photo
+         Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'DELETE'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/groups/{id}/photo
+         Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'DELETE'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/drive/root/createdByUser/photo
+         Segment Count: 4
+    [PermssionError]: Invalid path kind CollectionNavigation in 'DELETE'
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/planner/buckets
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/planner/plans
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/planner/tasks
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/planner/tasks/{id}/assignedToTaskBoardFormat
+         Segment Count: 4
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/planner/buckets/{id}
+         Segment Count: 3
+==>/planner/buckets/{id}/tasks
+         Segment Count: 4
+==>/planner/tasks/{id}/bucketTaskBoardFormat
+         Segment Count: 4
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/groups/{group-id}/planner/plans
+         Segment Count: 4
+==>/planner/plans/{id}
+         Segment Count: 3
+==>/planner/plans/{plan-id}
+         Segment Count: 3
+==>/planner/plans/{plan-id}/buckets
+         Segment Count: 4
+==>/planner/plans/{plan-id}/tasks
+         Segment Count: 4
+==>/planner/plans/{id}/details
+         Segment Count: 4
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/planner/tasks/{id}/progressTaskBoardFormat
+         Segment Count: 4
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/planner/tasks/{id}
+         Segment Count: 3
+==>/planner/tasks/{id}/details
+         Segment Count: 4
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/me/planner/plans
+         Segment Count: 3
+==>/users/{id}/planner/plans
+         Segment Count: 4
+==>/drive/root/createdByUser/planner/plans
+         Segment Count: 5
+==>/me/planner/tasks
+         Segment Count: 3
+==>/users/{id}/planner/tasks
+         Segment Count: 4
+==>/drive/root/createdByUser/planner/tasks
+         Segment Count: 5
+==>/groups/{id}/threads/{id}/posts/{id}/forward
+         Segment Count: 7
+==>/groups/{id}/conversations/{id}/threads/{id}/posts/{id}/forward
+         Segment Count: 9
+==>/groups/{id}/threads/{id}/posts/{id}/attachments
+         Segment Count: 7
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/conversations/{id}/threads/{id}/posts/{id}/attachments
+         Segment Count: 9
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/users/{id | userPrincipalName}/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/groups/{id}/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/me/contacts/{id}/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/users/{id | userPrincipalName}/contacts/{id}/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/me/contactfolders/{contactFolderId}/contacts/{id}/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/users/{id | userPrincipalName}/contactfolders/{contactFolderId}/contacts/{id}/photo/$value
+ [UriParseError]: 'Unknow kind of segment: '$value', previous segment: 'photo'.'
+==>/me/activities/{id}
+         Segment Count: 3
+==>/me/activities/{id}/historyItems/{id}
+         Segment Count: 5
+==>/me/activities
+         Segment Count: 2
+==>/me/activities/recent
+         Segment Count: 3
+==>/workbook/names/{name}/range/boundingRect
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/boundingRect
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/boundingRect
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/insert
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/insert
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/insert
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/intersection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/intersection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/intersection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/merge
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/merge
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/merge
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/offsetRange
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/offsetRange
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/offsetRange
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/row
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/row
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/row
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/unmerge
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/unmerge
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/unmerge
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/borders/{sideIndex}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/borders/{sideIndex}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/borders/{sideIndex}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/borders
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/borders
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/borders
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/fill/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/fill/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/fill/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/fill
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/fill
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/fill
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/font
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/font
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/font
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/autofitColumns
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/autofitColumns
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/autofitColumns
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format/autofitRows
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format/autofitRows
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format/autofitRows
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/format
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/format
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/format
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/names/{name}/range/sort/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range(address='<address>')/sort/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/range/sort/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/reports/getTeamsDeviceUsageDistributionUserCounts(period='{period_value}')
+ [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+==>/reports/getTeamsDeviceUsageUserCounts(period='{period_value}')
+ [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+==>/reports/getTeamsDeviceUsageUserDetail(period='{period_value}')
+ [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+==>/reports/getTeamsDeviceUsageUserDetail(date={date_value})
+         Segment Count: 2
+==>/reports/getTeamsUserActivityCounts(period='{period_value}')
+ [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+==>/reports/getTeamsUserActivityUserCounts(period='{period_value}')
+ [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+==>/reports/getTeamsUserActivityUserDetail(period='{period_value}')
+ [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+==>/reports/getTeamsUserActivityUserDetail(date={date_value})
+         Segment Count: 2
+==>/me/onenote/resources/{id}/content
+         Segment Count: 5
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{id | userPrincipalName}/onenote/resources/{id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/groups/{id}/onenote/resources/{id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/sites/{id}/onenote/resources/{id}/content
+         Segment Count: 6
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/schemaExtensions/{id}
+         Segment Count: 2
+==>/schemaExtensions
+         Segment Count: 1
+==>/me/onenote/sections/{id}/copyToNotebook
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/onenote/sections/{id}/copyToNotebook
+         Segment Count: 6
+==>/groups/{id}/onenote/sections/{id}/copyToNotebook
+         Segment Count: 6
+==>/me/onenote/sections/{id}/copyToSectionGroup
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/onenote/sections/{id}/copyToSectionGroup
+         Segment Count: 6
+==>/groups/{id}/onenote/sections/{id}/copyToSectionGroup
+         Segment Count: 6
+==>/me/onenote/sections/{id}
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/onenote/sections/{id}
+         Segment Count: 5
+==>/groups/{id}/onenote/sections/{id}
+         Segment Count: 5
+==>/sites/{id}/onenote/sections/{id}
+         Segment Count: 5
+==>/me/onenote/sections/{id}/pages
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/sections/{id}/pages
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/sections/{id}/pages
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/sections/{id}/pages
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/onenote/sectionGroups/{id}
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/onenote/sectionGroups/{id}
+         Segment Count: 5
+==>/groups/{id}/onenote/sectionGroups/{id}
+         Segment Count: 5
+==>/sites/{id}/onenote/sectionGroups/{id}
+         Segment Count: 5
+==>/me/onenote/sectionGroups/{id}/sectionGroups
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/sectionGroups/{id}/sectionGroups
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/sectionGroups/{id}/sectionGroups
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/sectionGroups/{id}/sectionGroups
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/onenote/sectionGroups/{id}/sections
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/onenote/sectionGroups/{id}/sections
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/groups/{id}/onenote/sectionGroups/{id}/sections
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/sites/{id}/onenote/sectionGroups/{id}/sections
+         Segment Count: 6
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/security/secureScores/{id}
+         Segment Count: 3
+==>/security/securescorecontrolprofiles/{id}
+         Segment Count: 3
+==>/security/secureScoreControlProfiles/{id}
+         Segment Count: 3
+==>/security/secureScoreControlProfiles
+         Segment Count: 2
+==>/security/secureScores
+         Segment Count: 2
+==>/shares/{shareIdOrEncodedSharingUrl}
+         Segment Count: 2
+==>/auditLogs/signIns/{id}
+         Segment Count: 3
+==>auditLogs/signIns
+         Segment Count: 2
+==>instances of a supported resource that have a numeric extended property matching a filter. The filter uses an `eq` operator on the
+ [UriParseError]: 'Unknow kind of first segment: 'instances of a supported resource that have a numeric extended property matching a filter. The filter uses an `eq` operator on the''
+==>**message** instances:
+ [UriParseError]: 'Unknow kind of first segment: '**message** instances:''
+==>**mailFolder** instances:
+ [UriParseError]: 'Unknow kind of first segment: '**mailFolder** instances:''
+==>**event** instances:
+ [UriParseError]: 'Unknow kind of first segment: '**event** instances:''
+==>**calendar** instances:
+ [UriParseError]: 'Unknow kind of first segment: '**calendar** instances:''
+==>**contact** instances:
+ [UriParseError]: 'Unknow kind of first segment: '**contact** instances:''
+==>/users/{id|userPrincipalName}/contactFolders/{id}/contacts
+         Segment Count: 5
+==>**contactFolder** instances:
+ [UriParseError]: 'Unknow kind of first segment: '**contactFolder** instances:''
+==>/me/contactfolders
+         Segment Count: 2
+==>group **event** instances:
+ [UriParseError]: 'Unknow kind of first segment: 'group **event** instances:''
+==>group **post** instances:
+ [UriParseError]: 'Unknow kind of first segment: 'group **post** instances:''
+==>instances of the **message** or **event** resource that have a string-typed extended property matching a filter. The filter uses an `eq` operator on the
+ [UriParseError]: 'Unknow kind of first segment: 'instances of the **message** or **event** resource that have a string-typed extended property matching a filter. The filter uses an `eq` operator on the''
+==>/subscribedSkus/{id}
+         Segment Count: 2
+==>/subscribedSkus
+         Segment Count: 1
+==>/subscriptions/{id}
+         Segment Count: 2
+==>/subscriptions
+         Segment Count: 1
+==>/workbook/tables/{id|name}/clearFilters
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/clearFilters
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/convertToRange
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/convertToRange
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/columns
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/rows
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/rows
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/rows/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/rows/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/reapplyFilters
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/reapplyFilters
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/columns/{id|name}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/{id|name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/columns/{id|name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/columns/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/columns/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/rows/{index}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/rows/{index}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/rows/{index}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/rows/{index}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/sort/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/sort/apply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/sort/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/sort/clear
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/sort
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/sort
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{id|name}/sort/reapply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/tables/{id|name}/sort/reapply
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/teams/{id}/archive
+         Segment Count: 3
+==>/teams/{id}/clone
+         Segment Count: 3
+==>/teams/{id}
+         Segment Count: 2
+==>/teams/{id}/unarchive
+         Segment Count: 3
+==>/appCatalogs/teamsApps/{id}
+         Segment Count: 3
+==>/appCatalogs/teamsApps
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/teams/{id}/installedApps
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/teams/{id}/installedApps/{id}
+         Segment Count: 4
+==>/teams/{id}/installedApps/{id}/upgrade
+         Segment Count: 5
+==>/teams/{id}/channels/{id}/tabs
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/teams/{id}/channels/{id}/tabs/{id}
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/assignLicense
+         Segment Count: 3
+==>/users/{id | userPrincipalName}
+         Segment Count: 2
+==>/users/delta
+         Segment Count: 2
+==>/users/{id}/exportPersonalData
+         Segment Count: 3
+==>/me/findMeetingTimes
+         Segment Count: 2
+==>/users/{id|userPrincipalName}/findMeetingTimes
+         Segment Count: 3
+==>/me/mailboxSettings
+         Segment Count: 2
+    [PermssionError]: Invalid path kind Property in 'GET'
+    [PermssionError]: Invalid path kind Property in 'PATCH'
+==>/users/{id|userPrincipalName}/mailboxSettings
+         Segment Count: 3
+    [PermssionError]: Invalid path kind Property in 'GET'
+    [PermssionError]: Invalid path kind Property in 'PATCH'
+==>/me/mailboxSettings/automaticRepliesSetting
+         Segment Count: 3
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{id|userPrincipalName}/mailboxSettings/automaticRepliesSetting
+         Segment Count: 4
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/me/mailboxSettings/language
+         Segment Count: 3
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{id|userPrincipalName}/mailboxSettings/language
+         Segment Count: 4
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/me/mailboxSettings/timeZone
+         Segment Count: 3
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{id|userPrincipalName}/mailboxSettings/timeZone
+         Segment Count: 4
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/me/mailboxSettings/workingHours
+         Segment Count: 3
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/users/{id|userPrincipalName}/mailboxSettings/workingHours
+         Segment Count: 4
+    [PermssionError]: Invalid path kind Property in 'GET'
+==>/me/settings/
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/settings/
+         Segment Count: 3
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/me
+         Segment Count: 1
+==>/me/getMailTips
+         Segment Count: 2
+==>/users/{id|userPrincipalName}/getMailTips
+         Segment Count: 3
+==>/me/calendarGroups
+         Segment Count: 2
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendarGroups
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/calendars
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendargroups/{calendar_group_id}/calendars
+         Segment Count: 4
+==>/me/calendarGroups/{calendar_group_id}/calendars
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/calendarGroups/{calendar_group_id}/calendars
+         Segment Count: 5
+==>/users/{id | userPrincipalName}/calendarView
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/contactFolders
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/contactfolders/{Id}/contacts
+         Segment Count: 4
+==>/users/{id | userPrincipalName}/contactfolders/{id}/contacts
+         Segment Count: 5
+==>/me/contactFolder/{id}/childFolders/{id}/.../contacts
+ [UriParseError]: 'Unknow kind of segment: 'contactFolder', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/contactFolders/{id}/childFolders/{id}/contacts
+         Segment Count: 7
+==>/users/{id | userPrincipalName}/createdObjects
+         Segment Count: 3
+==>/me/directReports
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/directReports
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/events
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/calendargroup/calendars/{id}/events
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: 'me'.'
+==>/users/{id | userPrincipalName}/calendargroup/calendars/{id}/events
+ [UriParseError]: 'Unknow kind of segment: 'calendargroup', previous segment: '{id | userPrincipalName}'.'
+==>/me/calendargroups/{id}/calendars/{id}/events
+         Segment Count: 6
+==>/users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events
+         Segment Count: 7
+==>/me/joinedTeams
+         Segment Count: 2
+==>/users/{id}/joinedTeams
+         Segment Count: 3
+==>/me/licenseDetails
+         Segment Count: 2
+==>/users/{id}/licenseDetails
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/mailFolders
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/me/manager
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/manager
+         Segment Count: 3
+==>/me/memberOf
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/memberOf
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/messages
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/ownedDevices
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/ownedObjects
+         Segment Count: 3
+==>/me/people
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/people
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/registeredDevices
+         Segment Count: 3
+==>/users/{id | userPrincipalName}/transitiveMemberOf
+         Segment Count: 3
+==>/users
+         Segment Count: 1
+==>/me/contactFolders/{contactFolderId}/contacts
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
+==>/users/{id | userPrincipalName}/reminderView(startDateTime=startDateTime-value,endDateTime=endDateTime-value)
+ [UriParseError]: 'Invalid value template 'startDateTime-value', it must wrap with { and }'
+==>/me/revokeSignInSessions
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/revokeSignInSessions
+         Segment Count: 3
+==>/me/sendMail
+         Segment Count: 2
+==>/users/{id | userPrincipalName}/sendMail
+         Segment Count: 3
+==>/me/settings
+         Segment Count: 2
+    [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
+==>/workbook/closeSession
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/createSession
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/tables/{table-id}/add
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/refreshSession
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/me/drive/root/workbook/worksheets/{id}/pivotTables/{id}
+         Segment Count: 8
+==>/me/drive/root/workbook/worksheets/{id}/pivotTables/{id}/refresh
+         Segment Count: 9
+==>/me/drive/root/workbook/worksheets/{id}/pivotTables/refreshAll
+         Segment Count: 8
+==>/me/drive/root/workbook/worksheets/{id}/range/resizedRange(deltaRows={n}, deltaColumns={n})
+ [UriParseError]: 'Value cannot be null.
+Parameter name: bindingType'
+==>/me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView
+ [UriParseError]: 'Value cannot be null.
+Parameter name: bindingType'
+==>me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/itemAt(index={n})
+ [UriParseError]: 'Value cannot be null.
+Parameter name: bindingType'
+==>me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/rows
+ [UriParseError]: 'Value cannot be null.
+Parameter name: bindingType'
+==>/me/drive/root/workbook/worksheets/{id}/pivotTables
+         Segment Count: 7
+==>/workbook/worksheets/{id|name}/cell(row={row},column={column})
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/delete
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets({id|name})/names
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/charts/
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/range
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/protection
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/protection/protect
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+==>/workbook/worksheets/{id|name}/protection/unprotect
+ [UriParseError]: 'Unknow kind of first segment: 'workbook''
+Done!
+
