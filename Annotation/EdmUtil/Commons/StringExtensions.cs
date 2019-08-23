@@ -64,9 +64,9 @@ namespace Annotation.EdmUtil.Commons
                         throw new Exception($"Invalid string '{input}', has multiple items without '='.");
                     }
 
-                    VerifyIsKeyOrParameterTemplate(subItems[0]);
+                    // VerifyIsKeyOrParameterTemplate(subItems[0]);
 
-                    pairs[String.Empty] = subItems[0];
+                    pairs[String.Empty] = subItems[0].Trim();
                 }
                 else if (subItems.Length == 2)
                 {
@@ -75,8 +75,8 @@ namespace Annotation.EdmUtil.Commons
                         throw new Exception($"Invalid string '{input}', has empty key in '{item}'.");
                     }
 
-                    VerifyIsKeyOrParameterTemplate(subItems[1]);
-                    pairs[subItems[0]] = subItems[1];
+                    // VerifyIsKeyOrParameterTemplate(subItems[1]);
+                    pairs[subItems[0].Trim()] = subItems[1].Trim();
                 }
                 else
                 {
@@ -117,6 +117,15 @@ namespace Annotation.EdmUtil.Commons
                 (input[0] != '{' && input[input.Length - 1] != '}'))
             {
                 throw new Exception($"Invalid value template '{input}', it must wrap with {{ and }}");
+            }
+        }
+
+        public static void VerifyIsKeyValueTemplate(this string input)
+        {
+            if (String.IsNullOrEmpty(input) ||
+                (input[0] != '{' && input[input.Length - 1] != '}'))
+            {
+                throw new Exception($"Invalid key value template '{input}', it must wrap with {{ and }}");
             }
         }
     }

@@ -5341,6 +5341,29 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/domains/serviceConfigurationRecords">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Directory.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Directory.Read.All" />
+                <PropertyValue Property="Scope" String="Domain.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/domains/verificationDnsRecords">
     <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
       <Record>
@@ -7807,6 +7830,325 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/drives/root/search(q)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/groups/drive/root/search(q)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/me/drive/root/search(q)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/sites/drive/root/search(q)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/users/drive/root/search(q)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.Read.All" />
+                <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="Sites.Read.All" />
+                <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/me/drive/root/subscriptions">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                    <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/drives/root/subscriptions">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                    <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/groups/drive/root/subscriptions">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                    <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/sites/lists/drive/root/subscriptions">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                    <PropertyValue Property="Scope" String="Sites.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="Files.Read" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite" />
+                    <PropertyValue Property="Scope" String="Files.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/drives/items/versions">
     <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
       <Record>
@@ -8485,6 +8827,33 @@
               </Collection>
             </PropertyValue>
           </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/education/users">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="EduRoster.ReadBasic" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Application" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="EduRoster.Read.All" />
+                    <PropertyValue Property="Scope" String="EduRoster.ReadWrite.All" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
         </PropertyValue>
       </Record>
     </Annotation>
@@ -13024,6 +13393,66 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/groups/acceptedSenders">
+    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Group.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Group.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/groups/rejectedSenders">
+    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Group.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Group.ReadWrite.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/groups">
     <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
       <Record>
@@ -15356,6 +15785,114 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/me/mailFolders/messageRules">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/users/mailFolders/messageRules">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.InsertRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/me/mailFolders/messages">
     <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
       <Record>
@@ -16748,6 +17285,34 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/users/messages/replyAll">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Mail.Send" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Mail.Send" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Mail.Send" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/me/mailFolders/messages/replyAll">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
       <Record>
@@ -16853,6 +17418,174 @@
             <PropertyValue Property="Scopes">
               <Collection>
                 <PropertyValue Property="Scope" String="Mail.Send" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/me/mailFolders/messageRules">
+    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Application" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/users/mailFolders/messageRules">
+    <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
+      <Record>
+        <PropertyValue Property="ReadByKeyRestrictions">
+          <Record>
+            <PropertyValue Property="Permissions">
+              <Collection>
+                <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+                  </Collection>
+                </PropertyValue>
+                <PropertyValue Property="SchemeName" String="Application" />
+                <PropertyValue Property="Scopes">
+                  <Collection>
+                    <PropertyValue Property="Scope" String="MailboxSettings.Read" />
+                  </Collection>
+                </PropertyValue>
+              </Collection>
+            </PropertyValue>
+          </Record>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+    <Annotation Term="Org.OData.Capabilities.V1.UpdateRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="MailboxSettings.ReadWrite" />
               </Collection>
             </PropertyValue>
           </Collection>
@@ -19136,7 +19869,7 @@
       </Record>
     </Annotation>
   </Annotations>
-  <Annotations Target="microsoft.graph/me/onenote/notebooks/getNotebookFromWebUrl">
+  <Annotations Target="microsoft.graph/me/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks)">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
       <Record>
         <PropertyValue Property="Permissions">
@@ -19149,6 +19882,15 @@
                 <PropertyValue Property="Scope" String="Notes.ReadWrite" />
                 <PropertyValue Property="Scope" String="Notes.Read.All" />
                 <PropertyValue Property="Scope" String="Notes.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Notes.Create" />
+                <PropertyValue Property="Scope" String="Notes.Read" />
+                <PropertyValue Property="Scope" String="Notes.ReadWrite" />
               </Collection>
             </PropertyValue>
             <PropertyValue Property="SchemeName" String="Application" />
@@ -19163,7 +19905,7 @@
       </Record>
     </Annotation>
   </Annotations>
-  <Annotations Target="microsoft.graph/users/onenote/notebooks/getNotebookFromWebUrl">
+  <Annotations Target="microsoft.graph/users/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks)">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
       <Record>
         <PropertyValue Property="Permissions">
@@ -19176,60 +19918,15 @@
                 <PropertyValue Property="Scope" String="Notes.ReadWrite" />
                 <PropertyValue Property="Scope" String="Notes.Read.All" />
                 <PropertyValue Property="Scope" String="Notes.ReadWrite.All" />
+                <PropertyValue Property="Scope" String="" />
               </Collection>
             </PropertyValue>
-            <PropertyValue Property="SchemeName" String="Application" />
-            <PropertyValue Property="Scopes">
-              <Collection>
-                <PropertyValue Property="Scope" String="Notes.Read.All" />
-                <PropertyValue Property="Scope" String="Notes.ReadWrite.All" />
-              </Collection>
-            </PropertyValue>
-          </Collection>
-        </PropertyValue>
-      </Record>
-    </Annotation>
-  </Annotations>
-  <Annotations Target="microsoft.graph/groups/onenote/notebooks/getNotebookFromWebUrl">
-    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
-      <Record>
-        <PropertyValue Property="Permissions">
-          <Collection>
-            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
             <PropertyValue Property="Scopes">
               <Collection>
                 <PropertyValue Property="Scope" String="Notes.Create" />
                 <PropertyValue Property="Scope" String="Notes.Read" />
                 <PropertyValue Property="Scope" String="Notes.ReadWrite" />
-                <PropertyValue Property="Scope" String="Notes.Read.All" />
-                <PropertyValue Property="Scope" String="Notes.ReadWrite.All" />
-              </Collection>
-            </PropertyValue>
-            <PropertyValue Property="SchemeName" String="Application" />
-            <PropertyValue Property="Scopes">
-              <Collection>
-                <PropertyValue Property="Scope" String="Notes.Read.All" />
-                <PropertyValue Property="Scope" String="Notes.ReadWrite.All" />
-              </Collection>
-            </PropertyValue>
-          </Collection>
-        </PropertyValue>
-      </Record>
-    </Annotation>
-  </Annotations>
-  <Annotations Target="microsoft.graph/sites/onenote/notebooks/getNotebookFromWebUrl">
-    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
-      <Record>
-        <PropertyValue Property="Permissions">
-          <Collection>
-            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
-            <PropertyValue Property="Scopes">
-              <Collection>
-                <PropertyValue Property="Scope" String="Notes.Create" />
-                <PropertyValue Property="Scope" String="Notes.Read" />
-                <PropertyValue Property="Scope" String="Notes.ReadWrite" />
-                <PropertyValue Property="Scope" String="Notes.Read.All" />
-                <PropertyValue Property="Scope" String="Notes.ReadWrite.All" />
               </Collection>
             </PropertyValue>
             <PropertyValue Property="SchemeName" String="Application" />
@@ -23525,7 +24222,139 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/reports/getTeamsDeviceUsageDistributionUserCounts(period)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/reports/getTeamsDeviceUsageUserCounts(period)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/reports/getTeamsDeviceUsageUserDetail(period)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/reports/getTeamsDeviceUsageUserDetail(date)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/reports/getTeamsUserActivityCounts(period)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/reports/getTeamsUserActivityUserCounts(period)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Reports.Read.All" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/reports/getTeamsUserActivityUserDetail(period)">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
       <Record>
         <PropertyValue Property="Permissions">
@@ -27718,6 +28547,38 @@
     </Annotation>
   </Annotations>
   <Annotations Target="microsoft.graph/me/drive/root/workbook/worksheets/pivotTables/refreshAll">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/me/drive/root/workbook/worksheets/range()/resizedRange(deltaRows,deltaColumns)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/me/drive/root/workbook/worksheets/range(address)/visibleView()">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
       <Record>
         <PropertyValue Property="Permissions">

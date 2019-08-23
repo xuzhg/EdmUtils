@@ -283,9 +283,11 @@ Loaded CSDL successful!
 ==>/devices
          Segment Count: 1
 ==>/devices/{id}/registeredOwners/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/devices/{id}/registeredUsers/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/directory/deletedItems/{id}
          Segment Count: 3
 ==>/directory/deletedItems/microsoft.graph.group
@@ -295,7 +297,8 @@ Loaded CSDL successful!
 ==>/directory/deletedItems/{id}/restore
          Segment Count: 4
 ==>/directory/deletedItems/getUserOwnedObjects
- [UriParseError]: 'Invalid value template 'getUserOwnedObjects', it must wrap with { and }'
+         Segment Count: 3
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/auditLogs/directoryAudits/{id}
          Segment Count: 3
 ==>/auditLogs/directoryaudits
@@ -339,7 +342,8 @@ Loaded CSDL successful!
 ==>/directoryRoles
          Segment Count: 1
 ==>/directoryRoles/{id}/members/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/directoryRoleTemplates/{id}
          Segment Count: 2
 ==>/directoryRoleTemplates
@@ -351,7 +355,7 @@ Loaded CSDL successful!
 ==>/domains/{id}/domainNameReferences
          Segment Count: 3
 ==>/domains/contoso.com/serviceConfigurationRecords
- [UriParseError]: 'Invalid value template 'contoso.com', it must wrap with { and }'
+         Segment Count: 3
 ==>/domains/{id}/verificationDnsRecords
          Segment Count: 3
 ==>/domains
@@ -511,23 +515,23 @@ Loaded CSDL successful!
 ==>/shares/{shareId}/driveItem/preview
          Segment Count: 4
 ==>/drives/{drive-id}/root/search(q='{search-text}')
- [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+         Segment Count: 4
 ==>/groups/{group-id}/drive/root/search(q='{search-text}')
- [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+         Segment Count: 5
 ==>/me/drive/root/search(q='{search-text}')
- [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+         Segment Count: 4
 ==>/sites/{site-id}/drive/root/search(q='{search-text}')
- [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+         Segment Count: 5
 ==>/users/{user-id}/drive/root/search(q='{search-text}')
- [UriParseError]: 'Invalid value template ''{search-text}'', it must wrap with { and }'
+         Segment Count: 5
 ==>/me/drive/root/subscriptions/socketIo
- [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+         Segment Count: 5
 ==>/drives/{driveId}/root/subscriptions/socketIo
- [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+         Segment Count: 5
 ==>/groups/{groupId}/drive/root/subscriptions/socketIo
- [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+         Segment Count: 6
 ==>/sites/{siteId}/lists/{listId}/drive/root/subscriptions/socketIo
- [UriParseError]: 'Invalid value template 'socketIo', it must wrap with { and }'
+         Segment Count: 8
 ==>/drives/{drive-id}/items/{item-id}/versions/{version-id}/content
          Segment Count: 7
     [PermssionError]: Invalid path kind Property in 'GET'
@@ -577,9 +581,11 @@ Loaded CSDL successful!
 ==>/education/classes/{id}/teachers
          Segment Count: 4
 ==>/education/classes/{id}/members/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/classes/{id}/teachers/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/classes
          Segment Count: 2
 ==>/education/users
@@ -595,15 +601,17 @@ Loaded CSDL successful!
 ==>/education/me/schools
          Segment Count: 3
 ==>/education/users/schools
- [UriParseError]: 'Invalid value template 'schools', it must wrap with { and }'
+         Segment Count: 3
 ==>/education/schools/{id}/classes
          Segment Count: 4
 ==>/education/schools/{id}/users
          Segment Count: 4
 ==>/education/schools/{id}/classes/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/schools/{id}/users/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/education/users/{id}
          Segment Count: 3
 ==>/education/me/user
@@ -825,13 +833,15 @@ Loaded CSDL successful!
 ==>/groups/{id}/addFavorite
          Segment Count: 3
 ==>/groups/{id}/acceptedSenders/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/members/{id}/$ref
  [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{id}'.'
 ==>/groups/{id}/owners/{id}/$ref
  [UriParseError]: 'Unknow kind of segment: '$ref', previous segment: '{id}'.'
 ==>/groups/{id}/rejectedSenders/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}
          Segment Count: 2
 ==>/groups/delta
@@ -875,9 +885,11 @@ Loaded CSDL successful!
 ==>/groups
          Segment Count: 1
 ==>/groups/{id}/members/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/owners/$ref
- [UriParseError]: 'Invalid value template '$ref', it must wrap with { and }'
+         Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/removeFavorite
          Segment Count: 3
 ==>/groups/{id}/renew
@@ -933,11 +945,11 @@ Loaded CSDL successful!
 ==>/invitations
          Segment Count: 1
 ==>/drives/{drive-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-01-01',endDateTime='2017-01-10',interval='day')
- [UriParseError]: 'Invalid value template ''2017-01-01'', it must wrap with { and }'
+ [UriParseError]: 'Sequence contains no elements'
 ==>/sites/{site-id}/getActivitiesByInterval(startDateTime='2016',endDateTime='2017',interval='month')
- [UriParseError]: 'Invalid value template ''2016'', it must wrap with { and }'
+ [UriParseError]: 'Sequence contains no elements'
 ==>/sites/{site-id}/lists/{list-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-05-01',interval='week')
- [UriParseError]: 'Invalid value template ''2017-05-01'', it must wrap with { and }'
+ [UriParseError]: 'Sequence contains no elements'
 ==>/drives/{drive-id}/items/{item-id}/analytics
          Segment Count: 5
 ==>/sites/{site-id}/analytics
@@ -989,9 +1001,9 @@ Loaded CSDL successful!
 ==>/users/{id | userPrincipalName}/mailFolders/{id}/childFolders
          Segment Count: 5
 ==>/me/mailFolders/inbox/messageRules
- [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+         Segment Count: 4
 ==>/users/{id | userPrincipalName}/mailFolders/inbox/messageRules
- [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+         Segment Count: 5
 ==>/me/mailFolders/{id}/messages
          Segment Count: 4
     [PermssionError]: Invalid path kind CollectionNavigation in 'PATCH'
@@ -1067,7 +1079,7 @@ Loaded CSDL successful!
 ==>/users/{id | userPrincipalName}/mailFolders/{id}/messages/{id}/reply
          Segment Count: 7
 ==>/users/me/messages/{id}/replyAll
- [UriParseError]: 'Invalid value template 'me', it must wrap with { and }'
+         Segment Count: 5
 ==>/users/{id | userPrincipalName}/messages/{id}/replyAll
          Segment Count: 5
 ==>/me/mailFolders/{id}/messages/{id}/replyAll
@@ -1079,9 +1091,9 @@ Loaded CSDL successful!
 ==>/users/{id | userPrincipalName}/messages/{id}/send
          Segment Count: 5
 ==>/me/mailFolders/inbox/messageRules/{id}
- [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+         Segment Count: 5
 ==>/users/{id | userPrincipalName}/mailFolders/inbox/messageRules/{id}
- [UriParseError]: 'Invalid value template 'inbox', it must wrap with { and }'
+         Segment Count: 6
 ==>a resource instance expanded with the extended property which matches a filter on the
  [UriParseError]: 'Unknow kind of first segment: 'a resource instance expanded with the extended property which matches a filter on the''
 ==>a **message** instance:
@@ -1198,16 +1210,20 @@ Loaded CSDL successful!
          Segment Count: 5
 ==>/me/onenote/notebooks/GetNotebookFromWebUrl
          Segment Count: 4
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/users/{id | userPrincipalName}/onenote/notebooks/GetNotebookFromWebUrl
          Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/groups/{id}/onenote/notebooks/GetNotebookFromWebUrl
          Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/sites/{id}/onenote/notebooks/GetNotebookFromWebUrl
          Segment Count: 5
+    [PermssionError]: Invalid path kind SingleNavigation in 'POST'
 ==>/me/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks=includePersonalNotebooks-value)
- [UriParseError]: 'Invalid value template 'includePersonalNotebooks-value', it must wrap with { and }'
+         Segment Count: 4
 ==>/users/{id | userPrincipalName}/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks=includePersonalNotebooks-value)
- [UriParseError]: 'Invalid value template 'includePersonalNotebooks-value', it must wrap with { and }'
+         Segment Count: 5
 ==>/me/onenote/notebooks/{id}/sectionGroups
          Segment Count: 5
 ==>/users/{id | userPrincipalName}/onenote/notebooks/{id}/sectionGroups
@@ -1535,19 +1551,19 @@ Loaded CSDL successful!
 ==>/workbook/tables/{id|name}/columns/{id|name}/range/sort/apply
  [UriParseError]: 'Unknow kind of first segment: 'workbook''
 ==>/reports/getTeamsDeviceUsageDistributionUserCounts(period='{period_value}')
- [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+         Segment Count: 2
 ==>/reports/getTeamsDeviceUsageUserCounts(period='{period_value}')
- [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+         Segment Count: 2
 ==>/reports/getTeamsDeviceUsageUserDetail(period='{period_value}')
- [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+         Segment Count: 2
 ==>/reports/getTeamsDeviceUsageUserDetail(date={date_value})
          Segment Count: 2
 ==>/reports/getTeamsUserActivityCounts(period='{period_value}')
- [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+         Segment Count: 2
 ==>/reports/getTeamsUserActivityUserCounts(period='{period_value}')
- [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+         Segment Count: 2
 ==>/reports/getTeamsUserActivityUserDetail(period='{period_value}')
- [UriParseError]: 'Invalid value template ''{period_value}'', it must wrap with { and }'
+         Segment Count: 2
 ==>/reports/getTeamsUserActivityUserDetail(date={date_value})
          Segment Count: 2
 ==>/me/onenote/resources/{id}/content
@@ -1897,7 +1913,7 @@ Loaded CSDL successful!
 ==>/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts
          Segment Count: 5
 ==>/users/{id | userPrincipalName}/reminderView(startDateTime=startDateTime-value,endDateTime=endDateTime-value)
- [UriParseError]: 'Invalid value template 'startDateTime-value', it must wrap with { and }'
+ [UriParseError]: 'Sequence contains no elements'
 ==>/me/revokeSignInSessions
          Segment Count: 2
 ==>/users/{id | userPrincipalName}/revokeSignInSessions
@@ -1925,17 +1941,13 @@ Loaded CSDL successful!
 ==>/me/drive/root/workbook/worksheets/{id}/pivotTables/refreshAll
          Segment Count: 8
 ==>/me/drive/root/workbook/worksheets/{id}/range/resizedRange(deltaRows={n}, deltaColumns={n})
- [UriParseError]: 'Value cannot be null.
-Parameter name: bindingType'
+         Segment Count: 8
 ==>/me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView
- [UriParseError]: 'Value cannot be null.
-Parameter name: bindingType'
+         Segment Count: 8
 ==>me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/itemAt(index={n})
- [UriParseError]: 'Value cannot be null.
-Parameter name: bindingType'
+ [UriParseError]: 'Unknow kind of segment: 'itemAt', previous segment: 'visibleView'.'
 ==>me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/rows
- [UriParseError]: 'Value cannot be null.
-Parameter name: bindingType'
+ [UriParseError]: 'Unknow kind of segment: 'rows', previous segment: 'visibleView'.'
 ==>/me/drive/root/workbook/worksheets/{id}/pivotTables
          Segment Count: 7
 ==>/workbook/worksheets/{id|name}/cell(row={row},column={column})

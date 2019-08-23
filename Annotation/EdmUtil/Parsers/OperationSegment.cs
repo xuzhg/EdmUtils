@@ -17,11 +17,15 @@ namespace Annotation.EdmUtil
         /// Initializes a new instance of <see cref="OperationSegment"/> class.
         /// </summary>
         /// <param name="operation">The wrapped Edm operation (function or action).</param>
-        public OperationSegment(IEdmOperation operation)
+        /// <param name="entitySet">The wrapped entity set.</param>
+        public OperationSegment(IEdmOperation operation, IEdmEntitySetBase entitySet)
             : base(operation?.Name)
         {
             Operation = operation ?? throw new ArgumentNullException(nameof(operation));
-            // EdmType = entitySet.EntityType();
+
+            EdmType = operation.ReturnType?.Definition;
+
+            NavigationSource = entitySet;
 
             Target = operation.TargetName();
         }

@@ -74,5 +74,15 @@ namespace AnnotationGenerator.Tests
             Assert.Equal(2, segments.Count);
             Assert.Equal(PathKind.SingleNavigation, segments.Kind);
         }
+
+        [Fact]
+        public void ParseGraphV1RequestUriWithKeysWorks4()
+        {
+            var segments = PathParser.ParsePath("/me/drive/root/workbook/worksheets/{id}/range/resizedRange(deltaRows={n}, deltaColumns={n})", _edmModel);
+
+            Assert.NotNull(segments);
+            Assert.Equal(8, segments.Count);
+            Assert.Equal(PathKind.Operation, segments.Kind);
+        }
     }
 }

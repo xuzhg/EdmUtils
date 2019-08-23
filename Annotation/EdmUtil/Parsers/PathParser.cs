@@ -448,7 +448,14 @@ namespace Annotation.EdmUtil
             IEdmOperation operation = OperationHelper.ResolveOperations(identifier, parameterNames, bindingType, model, enableCaseInsensitive);
             if (operation != null)
             {
-                path.Add(new OperationSegment(operation));
+                IEdmEntitySetBase targetset = null;
+                if (operation.ReturnType != null)
+                {
+                    IEdmNavigationSource source = preSegment == null ? null : preSegment.NavigationSource;
+                    targetset = operation.GetTargetEntitySet(source, model);
+                }
+
+                path.Add(new OperationSegment(operation, targetset));
 
                 if (remaining != null && operation.IsFunction())
                 {

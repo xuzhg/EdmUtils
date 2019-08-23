@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.OData.Edm;
+using Microsoft.OData.Edm.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -127,6 +128,36 @@ namespace Annotation.EdmUtil.Commons
 
             return Enumerable.Empty<IEdmOperation>();
         }
+
+        internal static IEdmEntitySetBase GetTargetEntitySet(this IEdmOperation operation, IEdmNavigationSource source, IEdmModel model)
+        {
+            if (source == null)
+            {
+                return null;
+            }
+
+            if (operation.IsBound && operation.Parameters.Any())
+            {
+                IEdmOperationParameter parameter;
+                Dictionary<IEdmNavigationProperty, IEdmPathExpression> path;
+                IEdmEntityType lastEntityType;
+
+                if (operation.TryGetRelativeEntitySetPath(model, out parameter, out path, out lastEntityType, out IEnumerable<EdmError>  _))
+                {
+                    IEdmNavigationSource target = source;
+
+                    foreach (var navigation in path)
+                    {
+                        target = target.FindNavigationTarget(navigation.Key, navigation.Value);
+                    }
+
+                    return target as IEdmEntitySetBase;
+                }
+            }
+
+            return null;
+        }
+
 
         public static IEdmNavigationSource FindNavigationTarget(this IEdmNavigationSource navigationSource,
             IEdmNavigationProperty navigationProperty, IList<PathSegment> parsedSegments, out IEdmPathExpression bindingPath)
