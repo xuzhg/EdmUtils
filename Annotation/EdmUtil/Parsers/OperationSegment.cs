@@ -21,7 +21,9 @@ namespace Annotation.EdmUtil
             : base(operation?.Name)
         {
             Operation = operation ?? throw new ArgumentNullException(nameof(operation));
-           // EdmType = entitySet.EntityType();
+            // EdmType = entitySet.EntityType();
+
+            Target = operation.TargetName();
         }
 
         public IEdmOperation Operation { get; }
@@ -31,5 +33,7 @@ namespace Annotation.EdmUtil
         public override IEdmType EdmType { get; }
 
         public override IEdmNavigationSource NavigationSource { get; }
+
+        public override string Target { get; }
     }
 }

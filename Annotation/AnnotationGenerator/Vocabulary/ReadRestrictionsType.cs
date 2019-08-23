@@ -9,6 +9,8 @@ namespace AnnotationGenerator.Vocabulary
     /// </summary>
     internal abstract class ReadRestrictionsBase : PermissionsRecord, IRecord
     {
+        public string TermName => "Org.OData.Capabilities.V1.ReadRestrictions";
+
         /// <summary>
         /// Get the Entities can be retrieved.
         /// </summary>
@@ -22,6 +24,8 @@ namespace AnnotationGenerator.Vocabulary
             // Permissions
             writer.WriteCollectionProperty("Permissions", Permissions);
         }
+
+
     }
 
     /// <summary>

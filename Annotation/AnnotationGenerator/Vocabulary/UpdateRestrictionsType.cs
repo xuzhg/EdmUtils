@@ -10,6 +10,8 @@ namespace AnnotationGenerator.Vocabulary
     /// </summary>
     internal class UpdateRestrictionsType : PermissionsRecord, IRecord
     {
+        public string TermName => "Org.OData.Capabilities.V1.UpdateRestrictions";
+
         /// <summary>
         /// Gets the Updatable value, if true, entities can be updated.
         /// The default value is true;
@@ -48,5 +50,6 @@ namespace AnnotationGenerator.Vocabulary
             // LongDescription
             writer.WriteStringProperty("LongDescription", LongDescription);
         }
+
     }
 }

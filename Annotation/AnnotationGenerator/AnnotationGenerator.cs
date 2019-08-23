@@ -1,19 +1,22 @@
-﻿using AnnotationGenerator.Serialization;
+﻿using Annotation;
+using Annotation.EdmUtil;
+using AnnotationGenerator.Serialization;
+using AnnotationGenerator.Terms;
 using AnnotationGenerator.Vocabulary;
 using Microsoft.OData.Edm;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace AnnotationGenerator
 {
-    class AnnotationGenerator
+    class AnnotationGenerator : IDisposable
     {
-        protected MemoryStream stream;
+        protected Stream stream;
         protected XmlWriter writer;
         protected IEdmModel model;
 
@@ -30,9 +33,74 @@ namespace AnnotationGenerator
             writer = XmlWriter.Create(stream, settings);
         }
 
-        public void Generator(ReadRestrictionsType read)
+        public AnnotationGenerator(string output)
         {
+            stream = new FileStream(output, FileMode.Create);
 
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Indent = true
+            };
+
+            writer = XmlWriter.Create(stream, settings);
+
+            // <Schema>
+            writer.WriteStartElement("Schema");
+        }
+
+        public void Add(UriPath path, IList<Permission> permissions)
+        {
+            PathKind kind = path.Kind;
+            string target = path.GetTargetString();
+
+            IList<IRecord> records = new List<IRecord>();
+            foreach (var perm in permissions)
+            {
+                PermissionsRecord permissionRecord;
+                try
+                {
+                    permissionRecord = PermissionHelper.ConvertToRecord(kind, perm);
+
+                    records.Add(permissionRecord as IRecord);
+                }
+                catch (Exception ex)
+                {
+                    var color = Console.BackgroundColor;
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("    [PermssionError]: " + ex.Message);
+                    Console.BackgroundColor = color;
+                }
+            }
+
+            if (records.Count == 0)
+            {
+                return;
+            }
+
+            Write(target, records);
+        }
+
+        public void Write(string target, IList<IRecord> records)
+        {
+            // </Annotations>
+            writer.WriteStartElement("Annotations");
+            writer.WriteAttributeString("Target", target);
+
+            foreach (var record in records)
+            {
+                // <Annotation Term="Org.OData.Cap...V1.ReadRestrictions">
+                writer.WriteStartElement("Annotation");
+
+                writer.WriteAttributeString("Term", record.TermName);
+
+                writer.WriteRecord(record);
+
+                // </Annotation>
+                writer.WriteEndElement();
+            }
+
+            // </Annotations>
+            writer.WriteEndElement();
         }
 
         public void Write(ITerm term)
@@ -90,31 +158,20 @@ namespace AnnotationGenerator
 
             writer = XmlWriter.Create(stream, settings);
         }
-    }
 
-    public interface ITerm
-    {
-        string Target { get; set; }
+        public void Dispose()
+        {
+            if (writer != null)
+            {
+                // </Schema>
+                writer.WriteEndElement();
 
-        bool IsInLine { get; set; }
-
-        string TermName { get; }
-
-        bool IsCollection { get; }
-
-        IList<IRecord> Records { get; set; }
-    }
-
-    public class ReadRestrictions : ITerm
-    {
-        public string TermName => "Org.OData.Capabilities.V1.ReadRestrictions";
-
-        public string Target { get; set; }
-
-        public bool IsInLine { get; set; }
-
-        public bool IsCollection => false;
-
-        public IList<IRecord> Records { get; set; } = new List<IRecord>();
+                writer.Flush();
+                writer.Dispose();
+                stream.Dispose();
+                writer = null;
+                stream = null;
+            }
+        }
     }
 }

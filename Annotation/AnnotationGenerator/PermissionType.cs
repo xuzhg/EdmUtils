@@ -4,11 +4,14 @@ using System.Text;
 
 namespace AnnotationGenerator
 {
-    class PermissionType1
+    public class Permission
     {
-        public string DelegateWork { get; set; }
-        public string DelegatePersonal { get; set; }
-        public string Application { get; set; }
-        public string Verb { get; set; }
+        public string HttpVerb { get; set; }
+
+        public IList<string> DelegatedWork { get; set; }
+
+        public IList<string> DelegatedPersonal { get; set; }
+
+        public IList<string> Application { get; set; }
     }
 }

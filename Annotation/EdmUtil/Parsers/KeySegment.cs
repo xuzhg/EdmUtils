@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
@@ -50,5 +51,7 @@ namespace Annotation.EdmUtil
         public override IEdmType EdmType { get; }
 
         public override IEdmNavigationSource NavigationSource { get;}
+
+        public override string Target => throw new NotImplementedException();
     }
 }

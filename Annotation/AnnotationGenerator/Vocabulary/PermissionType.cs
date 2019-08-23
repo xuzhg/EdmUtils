@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.Xml;
 using AnnotationGenerator.Serialization;
@@ -10,6 +11,8 @@ namespace AnnotationGenerator.Vocabulary
     /// </summary>
     internal class PermissionType : IRecord
     {
+        public string TermName => throw new NotImplementedException();
+
         /// <summary>
         /// Gets the auth flow scheme name.
         /// </summary>

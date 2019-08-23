@@ -54,5 +54,14 @@ namespace AnnotationGenerator.Tests
             Assert.NotNull(segments);
             Assert.Equal(6, segments.Count);
         }
+
+        [Fact]
+        public void ParseGraphV1RequestUriWithKeysWorks2()
+        {
+            var segments = PathParser.Parse("/me/calendar/{id}/events/{id}/attachments/{id}", _edmModel);
+
+            Assert.NotNull(segments);
+            Assert.Equal(6, segments.Count);
+        }
     }
 }

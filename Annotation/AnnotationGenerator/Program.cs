@@ -1,38 +1,125 @@
-﻿using AnnotationGenerator.Serialization;
+﻿using Annotation.EdmUtil;
+using AnnotationGenerator.Terms;
 using AnnotationGenerator.Vocabulary;
+using Microsoft.OData.Edm;
+using Microsoft.OData.Edm.Csdl;
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Linq;
 
 namespace AnnotationGenerator
 {
     class Program
     {
+        // args[0] : the api permssion file, it's json
+        // args[1] : the related csdl file, it's xml
+        // args[2] : the output file
         static void Main(string[] args)
         {
-            // Load the permission data : Dictionary<string, PermissionType>
-            IDictionary<string, PermissionType> permissions = new Dictionary<string, PermissionType>();
-            // Key: the request Uri
-            // Value: PermissionType
-
-            // Load Edm data
-
-            AnnotationGenerator generator = new AnnotationGenerator(model: null);
-
-            // for each permission data
-            foreach (var permission in permissions)
+            string permissionFileName;
+            string csdlFileName;
+            string output;
+            if (args.Length != 3)
             {
-                // Do Uri parser
+                string currentPath = Directory.GetCurrentDirectory();
+                Console.WriteLine("CurrentDirectory:" + currentPath);
+                int start = currentPath.IndexOf(@"\Annotation\AnnotationGenerator");
+                currentPath = currentPath.Substring(0, start + 1);
 
-                // Generator the annotation
+                permissionFileName = currentPath + @"docs\apiPermissions.txt";
+                csdlFileName = currentPath + @"docs\graph.v1.0.xml";
+                output = currentPath + @"docs\output.xml";
+            }
+            else
+            {
+                permissionFileName = args[0];
+                csdlFileName = args[1];
+                output = args[2];
             }
 
-            Console.WriteLine("Hello World!");
+            // Load the permission data : Dictionary<string, PermissionType>
+            IDictionary<string, IList<Permission>> permissions = PermissionHelper.Load(permissionFileName);
+            if (permissions != null && permissions != null)
+            {
+                Console.WriteLine($"Loaded permission successful! Totally: {permissions.Count}");
+            }
+            else
+            {
+                Console.WriteLine("Read permission failed!");
+                return;
+            }
 
-            GenerateTerm(generator, CreateDefaultTerm());
+            // load csdl file
+            IEdmModel edmModel = LoadEdmModel(csdlFileName);
+            if (edmModel != null)
+            {
+                Console.WriteLine("Loaded CSDL successful!");
+            }
+            else
+            {
+                Console.WriteLine("Read CSDL failed!");
+                return;
+            }
+
+            string entityContainerNamespace = edmModel.EntityContainer == null ? "UnknownNamespace" :
+                edmModel.EntityContainer.Namespace;
+
+            using (AnnotationGenerator generator = new AnnotationGenerator(output))
+            {
+                // for each permission data
+                foreach (var permission in permissions)
+                {
+                    Console.WriteLine("==>" + permission.Key);
+
+                    // Do Uri parser
+                    var path = ParseRequestUri(permission.Key, edmModel);
+                    if (path == null)
+                    {
+                        continue;
+                    }
+                    Console.WriteLine("\t Segment Count: " + path.Count);
+
+                    generator.Add(path, permission.Value);
+                }
+
+            }
+
+           // GenerateTerm(generator, CreateDefaultTerm());
 
             Console.WriteLine("Done!");
+        }
 
+        public static UriPath ParseRequestUri(string requestUri, IEdmModel model)
+        {
+            UriPath path;
+            try
+            {
+                path = PathParser.ParsePath(requestUri, model);
+            }
+            catch
+            {
+                try
+                {
+                    path = PathParser.ParsePath(requestUri, model, true);
+                }
+                catch(Exception innerEx)
+                {
+                    var color = Console.BackgroundColor;
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($" [UriParseError]: '{innerEx.Message}'");
+                    Console.BackgroundColor = color;
+                    return null;
+                }
+            }
+
+            return path;
+        }
+
+        public static IEdmModel LoadEdmModel(string fileName)
+        {
+            string csdl = File.ReadAllText(fileName);
+            return CsdlReader.Parse(XElement.Parse(csdl).CreateReader());
         }
 
         private static void GenerateTerm(AnnotationGenerator generator, ITerm term)

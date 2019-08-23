@@ -27,6 +27,8 @@ namespace Annotation.EdmUtil
             EdmType = actualType;
             NavigationSource = navigationSource;
             IsSingle = actualType.TypeKind != EdmTypeKind.Collection;
+
+            Target = actualType.FullTypeName();
         }
 
         public IEdmType ActualType { get; }
@@ -38,5 +40,7 @@ namespace Annotation.EdmUtil
         public override IEdmType EdmType { get; }
 
         public override IEdmNavigationSource NavigationSource { get;}
+
+        public override string Target { get; }
     }
 }

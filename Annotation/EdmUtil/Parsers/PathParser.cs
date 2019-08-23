@@ -57,6 +57,12 @@ namespace Annotation.EdmUtil
             return Parse(requestUri, EdmModel, Settings.EnableCaseInsensitive);
         }
 
+        public static UriPath ParsePath(string requestUri, IEdmModel model, bool enableCaseInsensitive = false)
+        {
+            var segments = Parse(requestUri, model, enableCaseInsensitive);
+            return new UriPath(segments);
+        }
+
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
@@ -149,7 +155,7 @@ namespace Annotation.EdmUtil
                 return;
             }
 
-            throw new Exception($"Unknow kind of segment: {identifier}");
+            throw new Exception($"Unknow kind of segment: '{identifier}', previous segment: '{path.Last().Identifier}'.");
         }
 
         /// <summary>

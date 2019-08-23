@@ -41,5 +41,7 @@ namespace Annotation.EdmUtil
         public override IEdmType EdmType { get; }
 
         public override IEdmNavigationSource NavigationSource { get; }
+
+        public override string Target => Property.Name;
     }
 }

@@ -10,6 +10,8 @@ namespace AnnotationGenerator.Vocabulary
     /// </summary>
     internal class DeleteRestrictionsType : PermissionsRecord, IRecord
     {
+        public string TermName => "Org.OData.Capabilities.V1.DeleteRestrictions";
+
         /// <summary>
         /// Gets the Deletable value.
         /// </summary>

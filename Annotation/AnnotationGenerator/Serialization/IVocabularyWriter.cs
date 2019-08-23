@@ -7,6 +7,7 @@ namespace AnnotationGenerator.Serialization
 {
     public interface IRecord
     {
+        string TermName { get; }
         void Write(XmlWriter writer);
     }
 }

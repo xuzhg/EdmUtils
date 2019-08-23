@@ -30,6 +30,8 @@ namespace Annotation.EdmUtil
             {
                 IsSingle = !operationImport.Operation.ReturnType.IsCollection();
             }
+
+            Target = operationImport.Operation.TargetName();
         }
 
         public IEdmOperationImport OperationImport { get; }
@@ -39,5 +41,7 @@ namespace Annotation.EdmUtil
         public override IEdmType EdmType { get; }
 
         public override IEdmNavigationSource NavigationSource { get; }
+
+        public override string Target { get; }
     }
 }

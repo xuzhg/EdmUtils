@@ -28,5 +28,7 @@ namespace Annotation.EdmUtil
         public abstract IEdmType EdmType { get; }
 
         public abstract IEdmNavigationSource NavigationSource { get; }
+
+        public abstract string Target { get; }
     }
 }

@@ -5,11 +5,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 
 namespace Annotation.EdmUtil
 {
     public static class OperationHelper
     {
+        public static string TargetName(this IEdmOperation operation)
+        {
+            if (operation.IsFunction())
+            {
+                IEdmFunction function = (IEdmFunction)operation;
+                int skip = 0;
+                if (function.IsBound)
+                {
+                    skip = 1;
+                }
+
+                return function.Name + "(" + String.Join(",", function.Parameters.Skip(skip).Select(p => p.Name)) + ")";
+            }
+            else
+                return operation.Name; ;
+        }
+
         public static IEdmOperation ResolveOperations(string identifer, IList<string> parameterNames, IEdmType bindingType, IEdmModel model,
             bool enableCaseInsensitive)
         {

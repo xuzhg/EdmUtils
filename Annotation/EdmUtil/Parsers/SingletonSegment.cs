@@ -22,6 +22,7 @@ namespace Annotation.EdmUtil
         {
             Singleton = singleton ?? throw new ArgumentNullException(nameof(singleton));
             EdmType = singleton.EntityType();
+            Target = singleton.Container.Namespace + "/" + singleton.Name;
         }
 
         public IEdmSingleton Singleton { get; }
@@ -31,5 +32,7 @@ namespace Annotation.EdmUtil
         public override IEdmType EdmType { get; }
 
         public override IEdmNavigationSource NavigationSource => Singleton;
+
+        public override string Target { get; }
     }
 }

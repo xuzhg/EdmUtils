@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Xml;
 using AnnotationGenerator.Serialization;
 
@@ -9,6 +10,8 @@ namespace AnnotationGenerator.Vocabulary
     /// </summary>
     internal class ScopeType : IRecord
     {
+        public string TermName => throw new NotImplementedException();
+
         /// <summary>
         /// Gets the names of the scope.
         /// </summary>
