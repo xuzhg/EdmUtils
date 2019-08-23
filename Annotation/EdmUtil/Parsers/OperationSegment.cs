@@ -28,11 +28,16 @@ namespace Annotation.EdmUtil
             NavigationSource = entitySet;
 
             Target = operation.TargetName();
+
+            if (EdmType != null)
+            {
+                IsSingle = EdmType.TypeKind != EdmTypeKind.Collection;
+            }
         }
 
         public IEdmOperation Operation { get; }
 
-        public override bool IsSingle => false;
+        public override bool IsSingle { get; }
 
         public override IEdmType EdmType { get; }
 

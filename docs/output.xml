@@ -28381,6 +28381,37 @@
       </Record>
     </Annotation>
   </Annotations>
+  <Annotations Target="microsoft.graph/users/reminderView(StartDateTime,EndDateTime)">
+    <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Calendars.Read" />
+                <PropertyValue Property="Scope" String="Calendars.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Delegated (personal Microsoft account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Calendars.Read" />
+                <PropertyValue Property="Scope" String="Calendars.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="SchemeName" String="Application" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Calendars.Read" />
+                <PropertyValue Property="Scope" String="Calendars.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
   <Annotations Target="microsoft.graph/me/revokeSignInSessions">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
       <Record>
@@ -28580,6 +28611,22 @@
   </Annotations>
   <Annotations Target="microsoft.graph/me/drive/root/workbook/worksheets/range(address)/visibleView()">
     <Annotation Term="Org.OData.Capabilities.V1.OperationRestrictions">
+      <Record>
+        <PropertyValue Property="Permissions">
+          <Collection>
+            <PropertyValue Property="SchemeName" String="Delegated (work or school account)" />
+            <PropertyValue Property="Scopes">
+              <Collection>
+                <PropertyValue Property="Scope" String="Files.ReadWrite" />
+              </Collection>
+            </PropertyValue>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Annotation>
+  </Annotations>
+  <Annotations Target="microsoft.graph/me/drive/root/workbook/worksheets/range(address)/visibleView()/rows">
+    <Annotation Term="Org.OData.Capabilities.V1.ReadRestrictions">
       <Record>
         <PropertyValue Property="Permissions">
           <Collection>

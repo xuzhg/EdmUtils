@@ -1913,7 +1913,7 @@ Loaded CSDL successful!
 ==>/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts
          Segment Count: 5
 ==>/users/{id | userPrincipalName}/reminderView(startDateTime=startDateTime-value,endDateTime=endDateTime-value)
- [UriParseError]: 'Sequence contains no elements'
+         Segment Count: 3
 ==>/me/revokeSignInSessions
          Segment Count: 2
 ==>/users/{id | userPrincipalName}/revokeSignInSessions
@@ -1947,7 +1947,7 @@ Loaded CSDL successful!
 ==>me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/itemAt(index={n})
  [UriParseError]: 'Unknow kind of segment: 'itemAt', previous segment: 'visibleView'.'
 ==>me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/rows
- [UriParseError]: 'Unknow kind of segment: 'rows', previous segment: 'visibleView'.'
+         Segment Count: 9
 ==>/me/drive/root/workbook/worksheets/{id}/pivotTables
          Segment Count: 7
 ==>/workbook/worksheets/{id|name}/cell(row={row},column={column})
@@ -1971,3 +1971,4 @@ Loaded CSDL successful!
 ==>/workbook/worksheets/{id|name}/protection/unprotect
  [UriParseError]: 'Unknow kind of first segment: 'workbook''
 Done!
+

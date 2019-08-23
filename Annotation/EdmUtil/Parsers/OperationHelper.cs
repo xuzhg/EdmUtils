@@ -40,7 +40,7 @@ namespace Annotation.EdmUtil
             bool hasParameters = parameterNames.Count() > 0;
             if (hasParameters)
             {
-                candidates = candidates.Where(o => o.IsFunction()).FilterOperationsByParameterNames(parameterNames); // remove actions
+                candidates = candidates.Where(o => o.IsFunction()).FilterOperationsByParameterNames(parameterNames, true); // remove actions
             }
             else if (bindingType != null)
             {
@@ -101,7 +101,7 @@ namespace Annotation.EdmUtil
             }
             else
             {
-                candidates = candidates.Where(i => i.IsFunctionImport()).FilterOperationImportsByParameterNames(parameterNames);
+                candidates = candidates.Where(i => i.IsFunctionImport()).FilterOperationImportsByParameterNames(parameterNames, true);
             }
 
             // If parameter count is zero and there is one function import whoese parameter count is zero, return this function import.
@@ -123,14 +123,15 @@ namespace Annotation.EdmUtil
             return candidates.First();
         }
 
-        internal static IEnumerable<IEdmOperation> FilterOperationsByParameterNames(this IEnumerable<IEdmOperation> operations, IEnumerable<string> parameters)
+        internal static IEnumerable<IEdmOperation> FilterOperationsByParameterNames(this IEnumerable<IEdmOperation> operations, IEnumerable<string> parameters,
+            bool enableCaseInsensitive)
         {
             IList<string> parameterNameList = parameters.ToList();
 
             // TODO: update code that is duplicate between operation and operation import, add more tests.
             foreach (IEdmOperation operation in operations)
             {
-                if (!ParametersSatisfyFunction(operation, parameterNameList))
+                if (!ParametersSatisfyFunction(operation, parameterNameList, enableCaseInsensitive))
                 {
                     continue;
                 }
@@ -140,13 +141,13 @@ namespace Annotation.EdmUtil
         }
 
         internal static IEnumerable<IEdmOperationImport> FilterOperationImportsByParameterNames(this IEnumerable<IEdmOperationImport> operationImports,
-            IEnumerable<string> parameterNames)
+            IEnumerable<string> parameterNames, bool enableCaseInsensitive)
         {
             IList<string> parameterNameList = parameterNames.ToList();
 
             foreach (IEdmOperationImport operationImport in operationImports)
             {
-                if (!ParametersSatisfyFunction(operationImport.Operation, parameterNameList))
+                if (!ParametersSatisfyFunction(operationImport.Operation, parameterNameList, enableCaseInsensitive))
                 {
                     continue;
                 }
@@ -155,7 +156,7 @@ namespace Annotation.EdmUtil
             }
         }
 
-        private static bool ParametersSatisfyFunction(IEdmOperation operation, IList<string> parameterNameList)
+        private static bool ParametersSatisfyFunction(IEdmOperation operation, IList<string> parameterNameList, bool enableCaseInsensitive)
         {
             IEnumerable<IEdmOperationParameter> parametersToMatch = operation.Parameters;
 
@@ -169,13 +170,16 @@ namespace Annotation.EdmUtil
 
             // if any required parameters are missing, don't consider it a match.
             if (functionParameters.Where(
-                p => !(p is IEdmOptionalParameter)).Any(p => parameterNameList.All(k => !string.Equals(k, p.Name))))
+                p => !(p is IEdmOptionalParameter)).Any(p => parameterNameList.All(k => !string.Equals(k, p.Name,
+                enableCaseInsensitive ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal
+                ))))
             {
                 return false;
             }
 
             // if any specified parameters don't match, don't consider it a match.
-            if (parameterNameList.Any(k => functionParameters.All(p => !string.Equals(k, p.Name))))
+            if (parameterNameList.Any(k => functionParameters.All(p => !string.Equals(k, p.Name,
+                enableCaseInsensitive ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal))))
             {
                 return false;
             }

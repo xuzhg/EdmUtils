@@ -28,7 +28,7 @@ namespace AnnotationGenerator.Tests
             var pathSegment = Assert.Single<PathSegment>(segments);
             var entitySetSegment = Assert.IsType<EntitySetSegment>(pathSegment);
 
-   //         Assert.Same(entitySetSegment.EntitySet, _users);
+            //         Assert.Same(entitySetSegment.EntitySet, _users);
         }
 
         [Theory]
@@ -83,6 +83,26 @@ namespace AnnotationGenerator.Tests
             Assert.NotNull(segments);
             Assert.Equal(8, segments.Count);
             Assert.Equal(PathKind.Operation, segments.Kind);
+        }
+
+        [Fact]
+        public void ParseGraphV1RequestUriWithKeysWorks5()
+        {
+            var segments = PathParser.ParsePath("/users/{id | userPrincipalName}/reminderView(startDateTime=startDateTime-value,endDateTime=endDateTime-value)", _edmModel);
+
+            Assert.NotNull(segments);
+            Assert.Equal(3, segments.Count);
+            Assert.Equal(PathKind.Operation, segments.Kind);
+        }
+
+        [Fact]
+        public void ParseGraphV1RequestUriWithKeysWorks6()
+        {
+            var segments = PathParser.ParsePath("me/drive/root/workbook/worksheets/{id}/range(address={address})/visibleView/rows", _edmModel);
+
+            Assert.NotNull(segments);
+            Assert.Equal(9, segments.Count);
+            Assert.Equal(PathKind.CollectionNavigation, segments.Kind);
         }
     }
 }
