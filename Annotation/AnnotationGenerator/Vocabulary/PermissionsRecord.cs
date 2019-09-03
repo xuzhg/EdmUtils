@@ -1,5 +1,9 @@
-﻿
-using System.Collections;
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
+using AnnotationGenerator.MD;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -29,7 +33,7 @@ namespace AnnotationGenerator.Vocabulary
             Permissions.Add(permission);
         }
 
-        public virtual void InitializeFrom(Permission permission)
+        public virtual void InitializeFrom(ApiPermissionType permission)
         {
             Permissions = new List<PermissionType>();
 

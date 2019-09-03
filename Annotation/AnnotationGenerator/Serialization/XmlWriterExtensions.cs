@@ -123,6 +123,23 @@ namespace AnnotationGenerator.Serialization
             }
         }
 
+        public static void WriteRecord<T>(this XmlWriter writer, T value, string recordType) where T : IRecord
+        {
+            if (value != null)
+            {
+                // <Record>
+                writer.WriteStartElement("Record");
+
+                // Type attribute
+                writer.WriteAttributeString("Type", recordType);
+
+                value.Write(writer);
+
+                // </Record>
+                writer.WriteEndElement();
+            }
+        }
+
         public static void WriteCollection<T>(this XmlWriter writer, IEnumerable<T> collections) where T : IRecord
         {
             if (collections != null && collections.Any())

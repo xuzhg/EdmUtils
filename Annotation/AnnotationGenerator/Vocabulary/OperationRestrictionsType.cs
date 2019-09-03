@@ -16,7 +16,5 @@ namespace AnnotationGenerator.Vocabulary
             // Permissions
             writer.WriteCollectionProperty("Permissions", Permissions);
         }
-
-    
     }
 }

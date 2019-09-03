@@ -1,12 +1,18 @@
-﻿using Annotation.EdmUtil;
-using AnnotationGenerator.Terms;
-using AnnotationGenerator.Vocabulary;
-using Microsoft.OData.Edm;
-using Microsoft.OData.Edm.Csdl;
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Linq;
+using Annotation.EdmUtil;
+using AnnotationGenerator.MD;
+using AnnotationGenerator.Terms;
+using AnnotationGenerator.Vocabulary;
+using Microsoft.OData.Edm;
+using Microsoft.OData.Edm.Csdl;
 
 namespace AnnotationGenerator
 {
@@ -27,7 +33,7 @@ namespace AnnotationGenerator
                 int start = currentPath.IndexOf(@"\Annotation\AnnotationGenerator");
                 currentPath = currentPath.Substring(0, start + 1);
 
-                permissionFileName = currentPath + @"docs\apiPermissions.txt";
+                permissionFileName = currentPath + @"docs\apiPermissionsAndScopes.txt";
                 csdlFileName = currentPath + @"docs\graph.v1.0.xml";
                 output = currentPath + @"docs\output.xml";
             }
@@ -39,10 +45,21 @@ namespace AnnotationGenerator
             }
 
             // Load the permission data : Dictionary<string, PermissionType>
-            IDictionary<string, IList<Permission>> permissions = PermissionHelper.Load(permissionFileName);
+            /*
+            IDictionary<string, IList<ApiPermissionType>> permissions = ApiPermissionHelper.Load(permissionFileName);
             if (permissions != null && permissions != null)
             {
                 Console.WriteLine($"Loaded permission successful! Totally: {permissions.Count}");
+            }
+            else
+            {
+                Console.WriteLine("Read permission failed!");
+                return;
+            }*/
+            ApiPermissionsWrapper wrapper = ApiPermissionHelper.LoadAll(permissionFileName);
+            if (wrapper != null)
+            {
+                Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme.Count}");
             }
             else
             {
@@ -62,13 +79,13 @@ namespace AnnotationGenerator
                 return;
             }
 
-            string entityContainerNamespace = edmModel.EntityContainer == null ? "UnknownNamespace" :
-                edmModel.EntityContainer.Namespace;
-
-            using (AnnotationGenerator generator = new AnnotationGenerator(output))
+            using (AnnotationGenerator generator = new AnnotationGenerator(output, edmModel))
             {
+                // for each ApiPermissionsByScheme
+                generator.Add(wrapper.PermissionsByScheme);
+
                 // for each permission data
-                foreach (var permission in permissions)
+                foreach (var permission in wrapper.ApiPermissions)
                 {
                     Console.WriteLine("==>" + permission.Key);
 

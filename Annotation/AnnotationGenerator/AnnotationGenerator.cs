@@ -1,16 +1,20 @@
-﻿using Annotation;
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml;
+using Annotation;
 using Annotation.EdmUtil;
+using AnnotationGenerator.MD;
 using AnnotationGenerator.Serialization;
 using AnnotationGenerator.Terms;
 using AnnotationGenerator.Vocabulary;
 using Microsoft.OData.Edm;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Xml;
 
 namespace AnnotationGenerator
 {
@@ -33,8 +37,10 @@ namespace AnnotationGenerator
             writer = XmlWriter.Create(stream, settings);
         }
 
-        public AnnotationGenerator(string output)
+        public AnnotationGenerator(string output, IEdmModel model)
         {
+            this.model = model;
+
             stream = new FileStream(output, FileMode.Create);
 
             XmlWriterSettings settings = new XmlWriterSettings
@@ -48,7 +54,7 @@ namespace AnnotationGenerator
             writer.WriteStartElement("Schema");
         }
 
-        public void Add(UriPath path, IList<Permission> permissions)
+        public void Add(UriPath path, IList<ApiPermissionType> permissions)
         {
             PathKind kind = path.Kind;
             string target = path.GetTargetString();
@@ -59,7 +65,7 @@ namespace AnnotationGenerator
                 PermissionsRecord permissionRecord;
                 try
                 {
-                    permissionRecord = PermissionHelper.ConvertToRecord(kind, perm);
+                    permissionRecord = ApiPermissionHelper.ConvertToRecord(kind, perm);
 
                     records.Add(permissionRecord as IRecord);
                 }
@@ -78,6 +84,65 @@ namespace AnnotationGenerator
             }
 
             Write(target, records);
+        }
+
+        public void Add(IDictionary<string, IList<ApiPermissionsBySchemeType>> permissionsByScheme)
+        {
+            Console.WriteLine("[ ApiPermissionsByScheme ] starting ...");
+
+            if (permissionsByScheme == null || !permissionsByScheme.Any())
+            {
+                return;
+            }
+
+            if (this.model.EntityContainer == null)
+            {
+                Console.WriteLine("The EntityContainer is null at current model, cannot apply the permissions by scheme");
+                return;
+            }
+
+            string entitySetFullName = this.model.EntityContainer.FullName();
+
+            // <Annotations Target="...">
+            writer.WriteStartElement("Annotations");
+            writer.WriteAttributeString("Target", entitySetFullName);
+
+            // <Annotation Term="Org.OData.Authorization.V1.Authorizationss">
+            writer.WriteStartElement("Annotation");
+            writer.WriteAttributeString("Term", "Org.OData.Authorization.V1.Authorizations");
+
+            writer.WriteStartElement("Collection");
+
+            foreach (var perm in permissionsByScheme)
+            {
+                Console.WriteLine("==>" + perm.Key);
+
+                IRecord record;
+                try
+                {
+                    record = ApiPermissionHelper.ConvertToRecord(perm);
+
+                    writer.WriteRecord(record, "Org.OData.Authorization.V1.OAuth2Implicit");
+                }
+                catch (Exception ex)
+                {
+                    var color = Console.BackgroundColor;
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("    [PermssionError]: " + ex.Message);
+                    Console.BackgroundColor = color;
+                }
+            }
+
+            // </Collection>
+            writer.WriteEndElement();
+
+            // </Annotation>
+            writer.WriteEndElement();
+
+            // </Annotations>
+            writer.WriteEndElement();
+
+            Console.WriteLine("[ ApiPermissionsByScheme ] Done!");
         }
 
         public void Write(string target, IList<IRecord> records)
