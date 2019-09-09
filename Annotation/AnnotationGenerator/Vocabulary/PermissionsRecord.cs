@@ -4,6 +4,7 @@
 // ------------------------------------------------------------
 
 using AnnotationGenerator.MD;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -83,6 +84,32 @@ namespace AnnotationGenerator.Vocabulary
             p.Scopes = scopes.Select(s => new ScopeType
             {
                 Scope = s.Trim()
+            }).ToList();
+
+            return p;
+        }
+
+        private static PermissionType ConvertFromPerm(string name, IList<PermissionScopeType> scopes)
+        {
+            if (scopes == null || scopes.Count == 0)
+            {
+                return null;
+            }
+
+            if (scopes.Count == 1 && scopes[0].ScopeName == "Not supported.")
+            {
+                return null;
+            }
+
+            PermissionType p = new PermissionType
+            {
+                SchemeName = name
+            };
+
+            p.Scopes = scopes.Select(s => new ScopeType
+            {
+                Scope = s.ScopeName.Trim(),
+                RestrictedProperties = s.RestrictedProperties.Any() ? String.Join(",", s.RestrictedProperties) : null
             }).ToList();
 
             return p;

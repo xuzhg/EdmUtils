@@ -33,7 +33,7 @@ namespace AnnotationGenerator.Vocabulary
             writer.WriteStringProperty("SchemeName", SchemeName);
 
             // Scopes
-            writer.WriteCollectionProperty("Scopes", Scopes);
+            writer.WriteCollectionProperty("Scopes", Scopes, (w, t) => w.WriteRecord(t));
         }
     }
 }

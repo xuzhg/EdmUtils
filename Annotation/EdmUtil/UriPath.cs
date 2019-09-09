@@ -36,6 +36,20 @@ namespace Annotation.EdmUtil
 
         public PathKind Kind { get; }
 
+        private string _targetString;
+
+        public string TargetString
+        {
+            get
+            {
+                if (_targetString == null)
+                {
+                    _targetString = this.GetTargetString();
+                }
+
+                return _targetString;
+            }
+        }
         private static PathKind CalculatePathKind(IList<PathSegment> segments)
         {
             PathSegment lastSegment = segments.Last();

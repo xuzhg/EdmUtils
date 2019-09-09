@@ -3,7 +3,9 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AnnotationGenerator.MD
 {
@@ -27,10 +29,17 @@ namespace AnnotationGenerator.MD
     {
         public string HttpVerb { get; set; }
 
-        public IList<string> DelegatedWork { get; set; }
+        public IList<PermissionScopeType> DelegatedWork { get; set; }
 
-        public IList<string> DelegatedPersonal { get; set; }
+        public IList<PermissionScopeType> DelegatedPersonal { get; set; }
 
-        public IList<string> Application { get; set; }
+        public IList<PermissionScopeType> Application { get; set; }
+    }
+
+    public class PermissionScopeType
+    {
+        public string ScopeName { get; set; }
+
+        public HashSet<string> RestrictedProperties { get; set; } = new HashSet<string>();
     }
 }

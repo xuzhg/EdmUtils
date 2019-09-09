@@ -4,9 +4,9 @@
 // ------------------------------------------------------------
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Annotation;
 using AnnotationGenerator.MD;
 using AnnotationGenerator.Serialization;
@@ -235,8 +235,9 @@ namespace AnnotationGenerator
                             throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
                         }
 
-                        ApiPermissionType permission = permissionObj.ToObject<ApiPermissionType>();
-                        subPermissions.Add(permission);
+                        ApiPermissionTypeInternal permission = permissionObj.ToObject<ApiPermissionTypeInternal>();
+
+                        subPermissions.Add(ConvertTo(permission));
                     }
 
                     wrapper.ApiPermissions[property.Name.Trim()] = subPermissions;
@@ -285,6 +286,29 @@ namespace AnnotationGenerator
                 Console.WriteLine(ex.Message);
                 return null;
             }
+
+            return wrapper;
+        }
+
+        private class ApiPermissionTypeInternal
+        {
+            public string HttpVerb { get; set; }
+
+            public IList<string> DelegatedWork { get; set; }
+
+            public IList<string> DelegatedPersonal { get; set; }
+
+            public IList<string> Application { get; set; }
+        }
+
+        private static ApiPermissionType ConvertTo(ApiPermissionTypeInternal permInternal)
+        {
+            ApiPermissionType wrapper = new ApiPermissionType();
+            wrapper.HttpVerb = permInternal.HttpVerb;
+
+            wrapper.DelegatedWork = permInternal.DelegatedWork.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
+            wrapper.DelegatedPersonal = permInternal.DelegatedPersonal.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
+            wrapper.Application = permInternal.Application.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
 
             return wrapper;
         }

@@ -14,7 +14,7 @@ namespace AnnotationGenerator.Vocabulary
         /// <summary>
         /// Get the Entities can be retrieved.
         /// </summary>
-        public bool? Readable { get; private set; }
+        public bool? Readable { get; set; }
 
         public virtual void Write(XmlWriter writer)
         {
@@ -24,8 +24,6 @@ namespace AnnotationGenerator.Vocabulary
             // Permissions
             writer.WriteCollectionProperty("Permissions", Permissions);
         }
-
-
     }
 
     /// <summary>

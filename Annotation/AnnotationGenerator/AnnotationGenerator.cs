@@ -4,6 +4,7 @@
 // ------------------------------------------------------------
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace AnnotationGenerator
         protected Stream stream;
         protected XmlWriter writer;
         protected IEdmModel model;
+
+        public IDictionary<string, Exception> PermissionsError { get; set; } = new Dictionary<string, Exception>();
 
         public AnnotationGenerator(IEdmModel model)
         {
@@ -84,6 +87,152 @@ namespace AnnotationGenerator
             }
 
             Write(target, records);
+        }
+
+        public void Add(IDictionary<UriPath, IList<ApiPermissionType>> permissions)
+        {
+            IDictionary<string, IList<IRecord>> targetStringMerged = new Dictionary<string, IList<IRecord>>();
+            foreach (var permission in permissions)
+            {
+                UriPath path = permission.Key;
+                PathKind kind = path.Kind;
+                string target = path.GetTargetString();
+
+                IList<IRecord> records;
+                if (!targetStringMerged.TryGetValue(target, out records))
+                {
+                    records = new List<IRecord>();
+                    targetStringMerged[target] = records;
+                }
+
+                foreach (var perm in permission.Value)
+                {
+                    PermissionsRecord permissionRecord;
+                    try
+                    {
+                        permissionRecord = ApiPermissionHelper.ConvertToRecord(kind, perm);
+
+                        ReadRestrictionsType readRest = permissionRecord as ReadRestrictionsType;
+                        if (readRest != null)
+                        {
+                            var existingReadRest = records.FirstOrDefault(r => r is ReadRestrictionsType);
+                            if (existingReadRest != null)
+                            {
+                                MergeReadRest(existingReadRest as ReadRestrictionsType, readRest, target);
+                                continue;
+                            }
+                        }
+
+                        // TODO: verify only one Restriction existing for one target?
+
+                        records.Add(permissionRecord as IRecord);
+                    }
+                    catch (Exception ex)
+                    {
+                        var color = Console.BackgroundColor;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("    [PermssionError]: " + ex.Message);
+                        Console.BackgroundColor = color;
+
+                        PermissionsError[target] = ex;
+                    }
+                }
+            }
+
+            foreach (var item in targetStringMerged)
+            {
+                Write(item.Key, item.Value);
+            }
+        }
+
+        public void Add(IDictionary<string, IList<ApiPermissionType>> apiPermissions)
+        {
+            IDictionary<string, IList<IRecord>> targetStringMerged = new Dictionary<string, IList<IRecord>>();
+            foreach (var permission in apiPermissions)
+            {
+                // Do Uri parser
+                var path = ParseRequestUri(permission.Key, this.model);
+                if (path == null)
+                {
+                    continue;
+                }
+
+                PathKind kind = path.Kind;
+                string target = path.GetTargetString();
+
+                IList<IRecord> records;
+                if (!targetStringMerged.TryGetValue(target, out records))
+                {
+                    records = new List<IRecord>();
+                    targetStringMerged[target] = records;
+                }
+
+                foreach (var perm in permission.Value)
+                {
+                    PermissionsRecord permissionRecord;
+                    try
+                    {
+                        permissionRecord = ApiPermissionHelper.ConvertToRecord(kind, perm);
+
+                        ReadRestrictionsType readRest = permissionRecord as ReadRestrictionsType;
+                        if (readRest != null)
+                        {
+                            var existingReadRest = records.FirstOrDefault(r => r is ReadRestrictionsType);
+                            if (existingReadRest != null)
+                            {
+                                MergeReadRest(existingReadRest as ReadRestrictionsType, readRest, target);
+                                continue;
+                            }
+                        }
+
+                        // TODO: verify only one Restriction existing for one target?
+
+                        records.Add(permissionRecord as IRecord);
+                    }
+                    catch (Exception ex)
+                    {
+                        var color = Console.BackgroundColor;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("    [PermssionError]: " + ex.Message);
+                        Console.BackgroundColor = color;
+                    }
+                }
+            }
+
+            foreach (var item in targetStringMerged)
+            {
+                Write(item.Key, item.Value);
+            }
+        }
+
+        public static void MergeReadRest(ReadRestrictionsType existing, ReadRestrictionsType newRead, string target)
+        {
+            if (existing.ReadByKeyRestrictions != null && newRead.ReadByKeyRestrictions != null)
+            {
+                throw new Exception($"Found mutltiple read by key restrctions for one target '{target}'.");
+            }
+
+            if (existing.ReadByKeyRestrictions == null && newRead.ReadByKeyRestrictions == null)
+            {
+                throw new Exception($"Found mutltiple read restrctions for one target '{target}'.");
+            }
+
+            if (existing.ReadByKeyRestrictions != null)
+            {
+                existing.Readable = newRead.Readable;
+
+                if (newRead.Permissions != null)
+                {
+                    foreach (var item in newRead.Permissions)
+                    {
+                        existing.Append(item);
+                    }
+                }
+            }
+            else // newRead.ReadByKeyRestrictions != null
+            {
+                existing.ReadByKeyRestrictions = newRead.ReadByKeyRestrictions;
+            }
         }
 
         public void Add(IDictionary<string, IList<ApiPermissionsBySchemeType>> permissionsByScheme)
@@ -237,6 +386,32 @@ namespace AnnotationGenerator
                 writer = null;
                 stream = null;
             }
+        }
+
+        public static UriPath ParseRequestUri(string requestUri, IEdmModel model)
+        {
+            UriPath path;
+            try
+            {
+                path = PathParser.ParsePath(requestUri, model);
+            }
+            catch
+            {
+                try
+                {
+                    path = PathParser.ParsePath(requestUri, model, true);
+                }
+                catch (Exception innerEx)
+                {
+                    var color = Console.BackgroundColor;
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($" [UriParseError]: '{innerEx.Message}'");
+                    Console.BackgroundColor = color;
+                    return null;
+                }
+            }
+
+            return path;
         }
     }
 }
