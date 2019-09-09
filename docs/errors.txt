@@ -259,6 +259,8 @@
 258) /workbook/worksheets/{id|name}/protection:==> Unknow kind of first segment: 'workbook'
 259) /workbook/worksheets/{id|name}/protection/protect:==> Unknow kind of first segment: 'workbook'
 260) /workbook/worksheets/{id|name}/protection/unprotect:==> Unknow kind of first segment: 'workbook'
+
+
 ***********[[Permission Parse Error]]***********
 1) microsoft.graph/users/mailFolders/childFolders/messages/attachments:==> Invalid path kind SingleNavigation in 'POST'
 2) microsoft.graph/me/calendars:==> Invalid path kind CollectionNavigation in 'PATCH'

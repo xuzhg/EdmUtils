@@ -22,7 +22,7 @@ namespace AnnotationGenerator.Vocabulary
             writer.WriteBooleanProperty("Readable", Readable);
 
             // Permissions
-            writer.WriteCollectionProperty("Permissions", Permissions);
+            writer.WriteCollectionProperty("Permissions", Permissions, (w, t) => w.WriteRecord(t));
         }
     }
 

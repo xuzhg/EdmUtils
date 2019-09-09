@@ -26,7 +26,7 @@ namespace AnnotationGenerator.Vocabulary
             writer.WriteBooleanProperty("Insertable", Insertable);
 
             // Permissions
-            writer.WriteCollectionProperty("Permissions", Permissions);
+            writer.WriteCollectionProperty("Permissions", Permissions, (w, t) => w.WriteRecord(t));
 
             // Description
             writer.WriteStringProperty("Description", Description);
@@ -34,7 +34,5 @@ namespace AnnotationGenerator.Vocabulary
             // LongDescription
             writer.WriteStringProperty("LongDescription", LongDescription);
         }
-
-        
     }
 }
