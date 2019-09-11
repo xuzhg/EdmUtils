@@ -129,10 +129,10 @@ namespace AnnotationGenerator
                     }
                     catch (Exception ex)
                     {
-                        var color = Console.BackgroundColor;
-                        Console.BackgroundColor = ConsoleColor.Red;
+                        //var color = Console.BackgroundColor;
+                        //Console.BackgroundColor = ConsoleColor.Red;
                         Console.WriteLine("    [PermssionError]: " + ex.Message);
-                        Console.BackgroundColor = color;
+                        //Console.BackgroundColor = color;
 
                         PermissionsError[target] = ex;
                     }

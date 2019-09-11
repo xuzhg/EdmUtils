@@ -23,6 +23,7 @@ namespace AnnotationGenerator
             {
                 case PathKind.EntitySet:
                 case PathKind.CollectionNavigation:
+                case PathKind.Property:
                     return new ReadRestrictionsType();
 
                 case PathKind.Entity:
@@ -38,7 +39,7 @@ namespace AnnotationGenerator
                     return new OperationRestrictionsType();
 
                 default:
-                    throw new Exception($"Invalid path kind {pathKind} in 'GET'");
+                    throw new Exception($"Invalid path kind '{pathKind}' in 'GET'");
             }
         }
 
@@ -48,6 +49,7 @@ namespace AnnotationGenerator
             {
                 case PathKind.Entity:
                 case PathKind.SingleNavigation:
+                case PathKind.Property:
                     return new UpdateRestrictionsType();
 
                 case PathKind.Operation:
@@ -56,7 +58,7 @@ namespace AnnotationGenerator
                 case PathKind.EntitySet:
                 case PathKind.CollectionNavigation:
                 default:
-                    throw new Exception($"Invalid path kind {pathKind} in 'PATCH'");
+                    throw new Exception($"Invalid path kind '{pathKind}' in 'PATCH'");
             }
         }
 
@@ -75,8 +77,9 @@ namespace AnnotationGenerator
                 case PathKind.Entity:
                 case PathKind.SingleNavigation:
                 case PathKind.Singleton:
+                case PathKind.Property:
                 default:
-                    throw new Exception($"Invalid path kind {pathKind} in 'POST'");
+                    throw new Exception($"Invalid path kind '{pathKind}' in 'POST'");
             }
         }
 
@@ -93,8 +96,9 @@ namespace AnnotationGenerator
                 case PathKind.Singleton:
                 case PathKind.Operation:
                 case PathKind.OperationImport:
+                case PathKind.Property:
                 default:
-                    throw new Exception($"Invalid path kind {pathKind} in 'DELETE'");
+                    throw new Exception($"Invalid path kind '{pathKind}' in 'DELETE'");
             }
         }
 
