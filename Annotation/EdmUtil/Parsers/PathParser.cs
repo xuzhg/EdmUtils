@@ -6,7 +6,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
 
@@ -67,6 +66,9 @@ namespace Annotation.EdmUtil
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
         /// </summary>
+        /// <param name="requestUri">the request uri string.</param>
+        /// <param name="requestUri">the IEdm model.</param>
+        /// <param name="enableCaseInsensitive">the enable case insensitive.</param>
         public static IList<PathSegment> Parse(string requestUri, IEdmModel model, bool enableCaseInsensitive = false)
         {
             if (String.IsNullOrEmpty(requestUri))
@@ -118,7 +120,7 @@ namespace Annotation.EdmUtil
                 return;
             }
 
-            throw new Exception($"Unknow kind of first segment: '{identifier}'");
+            throw new Exception($"Unknown kind of first segment: '{identifier}'");
         }
 
         internal static void CreateNextSegment(string identifier, IEdmModel model, IList<PathSegment> path,
@@ -155,7 +157,7 @@ namespace Annotation.EdmUtil
                 return;
             }
 
-            throw new Exception($"Unknow kind of segment: '{identifier}', previous segment: '{path.Last().Identifier}'.");
+            throw new Exception($"Unknown kind of segment: '{identifier}', previous segment: '{path.Last().Identifier}'.");
         }
 
         /// <summary>
@@ -173,14 +175,14 @@ namespace Annotation.EdmUtil
 
             if (entitySet != null)
             {
-                path.Add(new EntitySetSegment(entitySet));
+                path.Add(new EntitySetSegment(entitySet, identifier));
 
                 // can append parenthesis after entity set. it should be the key
                 if (parenthesisExpressions != null)
                 {
                     if (!TryBindKeySegment(parenthesisExpressions, path))
                     {
-                        throw new Exception($"Unknown parentheis '{parenthesisExpressions}' after an entity set '{identifier}'.");
+                        throw new Exception($"Unknown parenthesis '{parenthesisExpressions}' after an entity set '{identifier}'.");
                     }
                 }
 
@@ -188,12 +190,12 @@ namespace Annotation.EdmUtil
             }
             else if (singleton != null)
             {
-                path.Add(new SingletonSegment(singleton));
+                path.Add(new SingletonSegment(singleton, identifier));
 
                 // can't append parenthesis after singleton
                 if (parenthesisExpressions != null)
                 {
-                    throw new Exception($"Unknown parentheis '{parenthesisExpressions}' after a singleton '{identifier}'.");
+                    throw new Exception($"Unknown parenthesis '{parenthesisExpressions}' after a singleton '{identifier}'.");
                 }
 
                 return true;
@@ -213,7 +215,7 @@ namespace Annotation.EdmUtil
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> parameters, out string remaining);
             IList<string> parameterNames = parameters == null ? null : parameters.Keys.ToList();
 
-            IEdmOperationImport operationImport = OperationHelper.ResolveOperationImports(identifier, parameterNames, model);
+            IEdmOperationImport operationImport = OperationHelper.ResolveOperationImports(identifier, parameterNames, model, enableCaseInsensitive);
             if (operationImport != null)
             {
                 operationImport.TryGetStaticEntitySet(model, out IEdmEntitySetBase entitySetBase);
@@ -325,12 +327,6 @@ namespace Annotation.EdmUtil
             }
 
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> keys, out string remaining);
-            if (remaining != null)
-            {
-                // not allowed as (key=value)(....)
-                throw new Exception($"Invalid key parathesis {parenthesisExpressions}.");
-            }
-
             var typeKeys = targetEntityType.Key().ToList();
             if (typeKeys.Count != keys.Count)
             {
@@ -356,6 +352,12 @@ namespace Annotation.EdmUtil
                         return false;
                     }
                 }
+            }
+
+            if (remaining != null)
+            {
+                // not allowed as (key=value)(....)
+                throw new Exception($"Invalid key parathesis '{parenthesisExpressions}'.");
             }
 
             path.Add(new KeySegment(keys, targetEntityType, preSegment.NavigationSource));

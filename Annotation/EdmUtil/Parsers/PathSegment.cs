@@ -23,10 +23,19 @@ namespace Annotation.EdmUtil
 
         public string Identifier { get; }
 
+        /// <summary>
+        /// Gets a value indicating whether the output value is single value or collection value of this segment.
+        /// </summary>
         public abstract bool IsSingle { get;}
 
+        /// <summary>
+        /// Gets the target Edm type of this segment.
+        /// </summary>
         public abstract IEdmType EdmType { get; }
 
+        /// <summary>
+        /// Gets the target navigation source of this segment.
+        /// </summary>
         public abstract IEdmNavigationSource NavigationSource { get; }
 
         public abstract string Target { get; }

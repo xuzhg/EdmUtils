@@ -19,7 +19,7 @@ namespace Annotation.EdmUtil.Commons
             {
                 if (identifier[identifier.Length - 1] != ')')
                 {
-                    throw new Exception($"Invalid identifier {identifier}, can't find the ')'");
+                    throw new Exception($"Invalid identifier {identifier}, can't find the end character ')'");
                 }
 
                 // split the string to grab the identifier and remove the parentheses

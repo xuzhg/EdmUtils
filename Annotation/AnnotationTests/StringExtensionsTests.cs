@@ -19,7 +19,7 @@ namespace AnnotationGenerator.Tests
             Action test = () => input.ExtractParenthesis(out string parenthesisExpressions);
 
             var exception = Assert.Throws<Exception>(test);
-            Assert.Equal($"Invalid identifier {input}, can't find the ')'", exception.Message);
+            Assert.Equal($"Invalid identifier {input}, can't find the end character ')'", exception.Message);
         }
 
         [Fact]

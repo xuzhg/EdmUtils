@@ -45,7 +45,9 @@ namespace Annotation.EdmUtil
 
         public IDictionary<string, string> Values { get; }
 
-        // Key is always single value.
+        /// <summary>
+        /// KeySegment is always single value. So IsSingle is always is true.
+        /// </summary>
         public override bool IsSingle => true;
 
         public override IEdmType EdmType { get; }

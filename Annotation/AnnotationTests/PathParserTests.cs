@@ -75,7 +75,7 @@ namespace AnnotationGenerator.Tests
             IList<PathSegment> path = new List<PathSegment>();
             Action test = () => PathParser.CreateFirstSegment("UsErs", _edmModel, path, enableCaseInsensitive: false);
             var exception = Assert.Throws<Exception>(test);
-            Assert.Equal($"Unknow kind of first segment: 'UsErs'", exception.Message);
+            Assert.Equal($"Unknown kind of first segment: 'UsErs'", exception.Message);
         }
 
         [Fact]
@@ -114,7 +114,7 @@ namespace AnnotationGenerator.Tests
             IList<PathSegment> path = new List<PathSegment>();
             Action test = () => PathParser.CreateFirstSegment("mE", _edmModel, path, enableCaseInsensitive: false);
             var exception = Assert.Throws<Exception>(test);
-            Assert.Equal($"Unknow kind of first segment: 'mE'", exception.Message);
+            Assert.Equal($"Unknown kind of first segment: 'mE'", exception.Message);
         }
 
         [Fact]
@@ -123,7 +123,7 @@ namespace AnnotationGenerator.Tests
             IList<PathSegment> path = new List<PathSegment>();
             Action test = () => PathParser.CreateFirstSegment("me({id})", _edmModel, path, enableCaseInsensitive: false);
             var exception = Assert.Throws<Exception>(test);
-            Assert.Equal("Unknown parentheis '({id})' after a singleton 'me'.", exception.Message);
+            Assert.Equal("Unknown parenthesis '({id})' after a singleton 'me'.", exception.Message);
         }
 
         #endregion

@@ -18,7 +18,21 @@ namespace Annotation.EdmUtil
         /// </summary>
         /// <param name="entitySet">The wrapped entity set.</param>
         public EntitySetSegment(IEdmEntitySet entitySet)
-            : base(entitySet?.Name)
+            : this(entitySet, entitySet.Name)
+        {
+            EntitySet = entitySet ?? throw new ArgumentNullException(nameof(entitySet));
+            EdmType = entitySet.Type; // It should be collection
+
+            Target = entitySet.Container.Namespace + "/" + entitySet.Name;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="EntitySetSegment"/> class.
+        /// </summary>
+        /// <param name="entitySet">The wrapped entity set.</param>
+        /// <param name="literal">The literal string in the request uri.</param>
+        public EntitySetSegment(IEdmEntitySet entitySet, string literal)
+            : base(literal)
         {
             EntitySet = entitySet ?? throw new ArgumentNullException(nameof(entitySet));
             EdmType = entitySet.Type; // It should be collection
@@ -28,6 +42,9 @@ namespace Annotation.EdmUtil
 
         public IEdmEntitySet EntitySet { get; }
 
+        /// <summary>
+        /// EntitySet is always collection value. So IsSingle is always is false.
+        /// </summary>
         public override bool IsSingle => false;
 
         public override IEdmType EdmType { get; }

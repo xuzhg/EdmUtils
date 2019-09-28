@@ -10,6 +10,7 @@ using Microsoft.OData.Edm;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading;
 
@@ -70,11 +71,19 @@ namespace AnnotationGenerator.MD
                 index++;
 
                 // only process the property
-                if (item.Key.Kind != PathKind.Property)
+                if (item.Key.Kind == PathKind.Property ||
+                    item.Key.Kind == PathKind.CollectionNavigation)
                 {
-                    continue;
+                    TryFindPreviousPath(item, processed);
                 }
-                TryFindPreviousPath(item, processed);
+
+                if (item.Key.Kind == PathKind.SingleNavigation)
+                {
+                    if (!(item.Key.LastSegment is KeySegment))
+                    {
+                        TryFindPreviousPath(item, processed);
+                    }
+                }
             }
 
             ApiPermissionsProcessed = processed;
@@ -96,7 +105,6 @@ namespace AnnotationGenerator.MD
             }
         }
 
-
         private void TryFindPreviousPath(KeyValuePair<UriPath, IList<ApiPermissionType>> append,
             KeyValuePair<UriPath, IList<ApiPermissionType>> loopUp, string propertyName)
         {
@@ -105,7 +113,8 @@ namespace AnnotationGenerator.MD
                 var sameHttpVerbs = append.Value.Where(a => a.HttpVerb == item.HttpVerb).ToList();
                 if (sameHttpVerbs.Count > 1)
                 {
-                    throw new Exception("TODO: Find mulitple Http Verbs.");
+                    // throw new Exception("TODO: Find mulitple Http Verbs.");
+                    Console.WriteLine("TODO: Find mulitple Http Verbs.");
                 }
                 else if (sameHttpVerbs.Count == 1)
                 {
