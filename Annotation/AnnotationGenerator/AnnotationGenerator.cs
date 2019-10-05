@@ -4,7 +4,6 @@
 // ------------------------------------------------------------
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -135,66 +134,6 @@ namespace AnnotationGenerator
                         //Console.BackgroundColor = color;
 
                         PermissionsError[target] = ex;
-                    }
-                }
-            }
-
-            foreach (var item in targetStringMerged)
-            {
-                Write(item.Key, item.Value);
-            }
-        }
-
-        public void Add(IDictionary<string, IList<ApiPermissionType>> apiPermissions)
-        {
-            IDictionary<string, IList<IRecord>> targetStringMerged = new Dictionary<string, IList<IRecord>>();
-            foreach (var permission in apiPermissions)
-            {
-                // Do Uri parser
-                var path = ParseRequestUri(permission.Key, this.model);
-                if (path == null)
-                {
-                    continue;
-                }
-
-                PathKind kind = path.Kind;
-                string target = path.GetTargetString();
-
-                IList<IRecord> records;
-                if (!targetStringMerged.TryGetValue(target, out records))
-                {
-                    records = new List<IRecord>();
-                    targetStringMerged[target] = records;
-                }
-
-                foreach (var perm in permission.Value)
-                {
-                    PermissionsRecord permissionRecord;
-                    try
-                    {
-                        permissionRecord = ApiPermissionHelper.ConvertToRecord(kind, perm);
-
-                        ReadRestrictionsType readRest = permissionRecord as ReadRestrictionsType;
-                        if (readRest != null)
-                        {
-                            var existingReadRest = records.FirstOrDefault(r => r is ReadRestrictionsType);
-                            if (existingReadRest != null)
-                            {
-                                MergeReadRest(existingReadRest as ReadRestrictionsType, readRest, target);
-                                continue;
-                            }
-                        }
-
-                        // TODO: verify only one Restriction existing for one target?
-
-                        records.Add(permissionRecord as IRecord);
-                    }
-                    catch (Exception ex)
-                    {
-                        var color = Console.BackgroundColor;
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.WriteLine("    [PermssionError]: " + ex.Message);
-                        Console.BackgroundColor = color;
                     }
                 }
             }
@@ -386,32 +325,6 @@ namespace AnnotationGenerator
                 writer = null;
                 stream = null;
             }
-        }
-
-        public static UriPath ParseRequestUri(string requestUri, IEdmModel model)
-        {
-            UriPath path;
-            try
-            {
-                path = PathParser.ParsePath(requestUri, model);
-            }
-            catch
-            {
-                try
-                {
-                    path = PathParser.ParsePath(requestUri, model, true);
-                }
-                catch (Exception innerEx)
-                {
-                    var color = Console.BackgroundColor;
-                    Console.BackgroundColor = ConsoleColor.Blue;
-                    Console.WriteLine($" [UriParseError]: '{innerEx.Message}'");
-                    Console.BackgroundColor = color;
-                    return null;
-                }
-            }
-
-            return path;
         }
     }
 }

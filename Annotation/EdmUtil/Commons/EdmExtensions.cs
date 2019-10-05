@@ -51,9 +51,14 @@ namespace Annotation.EdmUtil.Commons
             return types.SingleOrDefault();
         }
 
-        public static IEdmNavigationSource ResolveNavigationSource(this IEdmModel model,
-            string identifier,
-            bool enableCaseInsensitive = false)
+        /// <summary>
+        /// Resolve the navigation source using the input identifier
+        /// </summary>
+        /// <param name="model">The Edm model.</param>
+        /// <param name="identifier">The indentifier</param>
+        /// <param name="enableCaseInsensitive">Enable case insensitive</param>
+        /// <returns>Null or the found navigation source.</returns>
+        public static IEdmNavigationSource ResolveNavigationSource(this IEdmModel model, string identifier, bool enableCaseInsensitive = false)
         {
             IEdmNavigationSource navSource = model.FindDeclaredNavigationSource(identifier);
             if (navSource != null || !enableCaseInsensitive)
@@ -72,7 +77,7 @@ namespace Annotation.EdmUtil.Commons
 
             if (result.Count > 1)
             {
-                throw new Exception($"More than one navigation sources match the name '{identifier}' were found in model.");
+                throw new Exception($"More than one navigation sources match the name '{identifier}' found in model.");
             }
 
             return result.SingleOrDefault();

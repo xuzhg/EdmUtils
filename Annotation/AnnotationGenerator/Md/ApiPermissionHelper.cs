@@ -247,11 +247,11 @@ namespace AnnotationGenerator
                     wrapper.ApiPermissions[property.Name.Trim()] = subPermissions;
                 }
 
-                // PermissionsByScheme
-                JProperty permissionsByScheme = jObj.Property("PermissionsByScheme");
+                // PermissionSchemes
+                JProperty permissionsByScheme = jObj.Property("PermissionSchemes");
                 if (apiPermProperty == null)
                 {
-                    throw new Exception($"Invalid format, Need a top level property named 'permissionsByScheme'.");
+                    throw new Exception($"Invalid format, Need a top level property named 'PermissionSchemes'.");
                 }
 
                 JObject permissionsBySchemeValue = permissionsByScheme.Value as JObject;

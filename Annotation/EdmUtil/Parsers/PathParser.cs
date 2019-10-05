@@ -15,53 +15,58 @@ namespace Annotation.EdmUtil
     /// A parser to parse the requst Uri.
     /// for example: /users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts 
     /// </summary>
-    public class PathParser
+    public static class PathParser
     {
-        /// <summary>
-        /// Initializes a new instance of <see cref="OperationImportSegment"/> class.
-        /// </summary>
-        /// <param name="model">The Edm model used in parsing.</param>
-        public PathParser(IEdmModel model)
-            : this(model, new PathParserSettings())
-        { }
-
-
-        /// <summary>
-        /// Initializes a new instance of <see cref="OperationImportSegment"/> class.
-        /// </summary>
-        /// <param name="model">The Edm model used in parsing.</param>
-        /// <param name="settings">The parser settings.</param>
-        public PathParser(IEdmModel model, PathParserSettings settings)
+        public static UriPath ParsePath(string requestUri, IEdmModel model)
         {
-            EdmModel = model ?? throw new ArgumentNullException(nameof(model));
-            Settings = settings ?? throw new ArgumentNullException(nameof(settings));
+            return ParsePath(requestUri, model, PathParserSettings.Default);
         }
-
-        /// <summary>
-        /// Gets the Edm model.
-        /// </summary>
-        public IEdmModel EdmModel { get; }
-
-        /// <summary>
-        /// Gets the Uri parser settings.
-        /// </summary>
-        public PathParserSettings Settings { get; }
 
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
         /// </summary>
-        public virtual IList<PathSegment> Parse(string requestUri)
+        /// <param name="requestUri">the request uri string.</param>
+        /// <param name="model">the IEdm model.</param>
+        /// <param name="settings">the setting.</param>
+        public static UriPath ParsePath(string requestUri, IEdmModel model, PathParserSettings settings)
         {
-            return Parse(requestUri, EdmModel, Settings.EnableCaseInsensitive);
-        }
+            if (model == null || settings == null || String.IsNullOrEmpty(requestUri))
+            {
+                return null;
+            }
 
+            // TODO: process the one-drive uri escape function call
+
+            string[] items = requestUri.Split('/');
+            IList<PathSegment> segments = new List<PathSegment>();
+            foreach (var item in items)
+            {
+                string trimedItem = item.Trim();
+                if (string.IsNullOrEmpty(trimedItem))
+                {
+                    continue;
+                }
+
+                if (segments.Count == 0)
+                {
+                    CreateFirstSegment(trimedItem, model, segments, settings);
+                }
+                else
+                {
+                    CreateNextSegment(trimedItem, model, segments, settings);
+                }
+            }
+
+            return new UriPath(segments);
+        }
+/*
         public static UriPath ParsePath(string requestUri, IEdmModel model, bool enableCaseInsensitive = false)
         {
             var segments = Parse(requestUri, model, enableCaseInsensitive);
             return new UriPath(segments);
         }
-
+        
         /// <summary>
         /// Parse the string like "/users/{id | userPrincipalName}/contactFolders/{contactFolderId}/contacts"
         /// to segments
@@ -97,25 +102,26 @@ namespace Annotation.EdmUtil
             }
 
             return segments;
-        }
+        }*/
 
         internal static void CreateFirstSegment(string identifier, // the whole identifier of this segment
             IEdmModel model,
-            IList<PathSegment> path,
-            bool enableCaseInsensitive = false)
+            IList<PathSegment> path, // because it may include the key segment
+            PathParserSettings settings)
         {
             // We only process the singleton/entityset/operationimport
+
             // the identifier maybe include the key, for example: ~/users({id})
             identifier = identifier.ExtractParenthesis(out string parenthesisExpressions);
 
             // Try to bind entity set or singleton
-            if (TryBindNavigationSource(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
+            if (TryBindNavigationSource(identifier, parenthesisExpressions, model, path, settings))
             {
                 return;
             }
 
             // Try to bind operation import
-            if (TryBindOperationImport(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
+            if (TryBindOperationImport(identifier, parenthesisExpressions, model, path, settings))
             {
                 return;
             }
@@ -123,8 +129,7 @@ namespace Annotation.EdmUtil
             throw new Exception($"Unknown kind of first segment: '{identifier}'");
         }
 
-        internal static void CreateNextSegment(string identifier, IEdmModel model, IList<PathSegment> path,
-            bool enableCaseInsensitive = false)
+        internal static void CreateNextSegment(string identifier, IEdmModel model, IList<PathSegment> path, PathParserSettings settings)
         {
             // GET /Users/{id}
             // GET /Users({id})
@@ -134,19 +139,19 @@ namespace Annotation.EdmUtil
             identifier = identifier.ExtractParenthesis(out string parenthesisExpressions);
 
             // can be "property, navproperty"
-            if (TryBindPropertySegment(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
+            if (TryBindPropertySegment(identifier, parenthesisExpressions, model, path, settings))
             {
                 return;
             }
 
             // bind to type cast.
-            if (TryBindTypeCastSegment(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
+            if (TryBindTypeCastSegment(identifier, parenthesisExpressions, model, path, settings))
             {
                 return;
             }
 
             // bound operations
-            if (TryBindOperations(identifier, parenthesisExpressions, model, path, enableCaseInsensitive))
+            if (TryBindOperations(identifier, parenthesisExpressions, model, path, settings))
             {
                 return;
             }
@@ -167,9 +172,9 @@ namespace Annotation.EdmUtil
         internal static bool TryBindNavigationSource(string identifier,
             string parenthesisExpressions, // the potention parenthesis expression after identifer
             IEdmModel model,
-            IList<PathSegment> path, bool enableCaseInsensitive)
+            IList<PathSegment> path, PathParserSettings settings)
         {
-            IEdmNavigationSource source = model.ResolveNavigationSource(identifier, enableCaseInsensitive);
+            IEdmNavigationSource source = model.ResolveNavigationSource(identifier, settings.EnableCaseInsensitive);
             IEdmEntitySet entitySet = source as IEdmEntitySet;
             IEdmSingleton singleton = source as IEdmSingleton;
 
@@ -209,13 +214,13 @@ namespace Annotation.EdmUtil
         /// Append it into path.
         /// </summary>
         private static bool TryBindOperationImport(string identifier, string parenthesisExpressions,
-            IEdmModel model, IList<PathSegment> path, bool enableCaseInsensitive = false)
+            IEdmModel model, IList<PathSegment> path, PathParserSettings settings)
         {
             // split the parameter key/value pair
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> parameters, out string remaining);
             IList<string> parameterNames = parameters == null ? null : parameters.Keys.ToList();
 
-            IEdmOperationImport operationImport = OperationHelper.ResolveOperationImports(identifier, parameterNames, model, enableCaseInsensitive);
+            IEdmOperationImport operationImport = OperationHelper.ResolveOperationImports(identifier, parameterNames, model, settings.EnableCaseInsensitive);
             if (operationImport != null)
             {
                 operationImport.TryGetStaticEntitySet(model, out IEdmEntitySetBase entitySetBase);
@@ -244,7 +249,7 @@ namespace Annotation.EdmUtil
         /// </summary>
         private static bool TryBindPropertySegment(string identifier, string parenthesisExpressions, IEdmModel model,
             IList<PathSegment> path,
-            bool enableCaseInsensitive = false)
+            PathParserSettings settings)
         {
             PathSegment preSegment = path.Last();
             if (!preSegment.IsSingle)
@@ -258,7 +263,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
-            IEdmProperty property = structuredType.ResolveProperty(identifier, enableCaseInsensitive);
+            IEdmProperty property = structuredType.ResolveProperty(identifier, settings.EnableCaseInsensitive);
             if (property == null)
             {
                 return false;
@@ -369,7 +374,7 @@ namespace Annotation.EdmUtil
         /// </summary>
         internal static bool TryBindTypeCastSegment(string identifier, string parenthesisExpressions, IEdmModel model,
             IList<PathSegment> path,
-            bool enableCaseInsensitive)
+            PathParserSettings settings)
         {
             if (identifier == null || identifier.IndexOf('.') < 0)
             {
@@ -377,7 +382,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
-            IEdmSchemaType schemaType = model.ResolveType(identifier, enableCaseInsensitive);
+            IEdmSchemaType schemaType = model.ResolveType(identifier, settings.EnableCaseInsensitive);
             if (schemaType == null)
             {
                 return false;
@@ -438,7 +443,7 @@ namespace Annotation.EdmUtil
         /// Append it into path.
         /// </summary>
         internal static bool TryBindOperations(string identifier, string parenthesisExpressions,
-            IEdmModel model, IList<PathSegment> path, bool enableCaseInsensitive = false)
+            IEdmModel model, IList<PathSegment> path, PathParserSettings settings)
         {
             PathSegment preSegment = path.Last();
             IEdmType bindingType = preSegment.EdmType;
@@ -447,7 +452,7 @@ namespace Annotation.EdmUtil
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> parameters, out string remaining);
             IList<string> parameterNames = parameters == null ? null : parameters.Keys.ToList();
 
-            IEdmOperation operation = OperationHelper.ResolveOperations(identifier, parameterNames, bindingType, model, enableCaseInsensitive);
+            IEdmOperation operation = OperationHelper.ResolveOperations(identifier, parameterNames, bindingType, model, settings.EnableCaseInsensitive);
             if (operation != null)
             {
                 IEdmEntitySetBase targetset = null;

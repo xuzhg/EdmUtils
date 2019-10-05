@@ -52,10 +52,15 @@ namespace AnnotationGenerator.MD
         {
             IDictionary<UriPath, IList<ApiPermissionType>> processed = new Dictionary<UriPath, IList<ApiPermissionType>>();
 
+            PathParserSettings settings = new PathParserSettings
+            {
+                EnableCaseInsensitive = true
+            };
+
             foreach (var permission in ApiPermissions)
             {
                 // Do Uri parser & save the invalid Uri into dictionary
-                var path = ParseRequestUri(permission.Key, model);
+                var path = ParseRequestUri(permission.Key, model, settings);
                 if (path == null)
                 {
                     continue;
@@ -150,7 +155,7 @@ namespace AnnotationGenerator.MD
             }
         }
 
-        public UriPath ParseRequestUri(string requestUri, IEdmModel model)
+        public UriPath ParseRequestUri(string requestUri, IEdmModel model, PathParserSettings settings)
         {
             UriPath path;
             try
@@ -161,7 +166,7 @@ namespace AnnotationGenerator.MD
             {
                 try
                 {
-                    path = PathParser.ParsePath(requestUri, model, true);
+                    path = PathParser.ParsePath(requestUri, model, settings);
                 }
                 catch (Exception innerEx)
                 {

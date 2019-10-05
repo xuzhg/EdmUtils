@@ -21,6 +21,9 @@ namespace Annotation.EdmUtil
             Identifier = identifier;
         }
 
+        /// <summary>
+        /// Gets the Uri string literal of this segment.
+        /// </summary>
         public string Identifier { get; }
 
         /// <summary>

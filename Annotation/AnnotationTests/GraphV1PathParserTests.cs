@@ -22,10 +22,10 @@ namespace AnnotationGenerator.Tests
         public void ParseEntitySetWorks()
         {
             string requestUri = "users";
-            var segments = PathParser.Parse(requestUri, _edmModel);
+            var path = PathParser.ParsePath(requestUri, _edmModel);
 
-            Assert.NotNull(segments);
-            var pathSegment = Assert.Single<PathSegment>(segments);
+            Assert.NotNull(path);
+            var pathSegment = Assert.Single<PathSegment>(path.Segments);
             var entitySetSegment = Assert.IsType<EntitySetSegment>(pathSegment);
 
             //         Assert.Same(entitySetSegment.EntitySet, _users);
@@ -41,7 +41,7 @@ namespace AnnotationGenerator.Tests
         [InlineData("/drives/{drive-id}/items/{item-id}/permissions/{perm-id}", 6)]
         public void ParseGraphV1RequestUriWorks(string requestUri, int count)
         {
-            var segments = PathParser.Parse(requestUri, _edmModel);
+            var segments = PathParser.ParsePath(requestUri, _edmModel);
 
             Assert.NotNull(segments);
             Assert.Equal(count, segments.Count);
@@ -50,7 +50,7 @@ namespace AnnotationGenerator.Tests
         [Fact]
         public void ParseGraphV1RequestUriWithKeysWorks()
         {
-            var segments = PathParser.Parse("/drives/{drive-id}/items/{item-id}/permissions/{perm-id}", _edmModel);
+            var segments = PathParser.ParsePath("/drives/{drive-id}/items/{item-id}/permissions/{perm-id}", _edmModel);
 
             Assert.NotNull(segments);
             Assert.Equal(6, segments.Count);
@@ -59,7 +59,7 @@ namespace AnnotationGenerator.Tests
         [Fact]
         public void ParseGraphV1RequestUriWithKeysWorks2()
         {
-            var segments = PathParser.Parse("/me/calendar/{id}/events/{id}/attachments/{id}", _edmModel);
+            var segments = PathParser.ParsePath("/me/calendar/{id}/events/{id}/attachments/{id}", _edmModel);
 
             Assert.NotNull(segments);
             Assert.Equal(6, segments.Count);

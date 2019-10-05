@@ -10,6 +10,8 @@ namespace Annotation.EdmUtil
     /// </summary>
     public class PathParserSettings
     {
+        internal static PathParserSettings Default = new PathParserSettings();
+
         /// <summary>
         /// Gets/sets a boolean to indicate the parser supports the case insensitive.
         /// </summary>

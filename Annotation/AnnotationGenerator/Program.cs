@@ -17,37 +17,46 @@ namespace AnnotationGenerator
 {
     class Program
     {
+
+
         // args[0] : the api permssion file, it's json
         // args[1] : the related csdl file, it's xml
         // args[2] : the output file
         static void Main(string[] args)
         {
-            string permissionFileName;
-            string csdlFileName;
-            string output;
-            string errorOutput;
+            IList<InputArg> inputArgs;
             if (args.Length != 3)
             {
-                string currentPath = Directory.GetCurrentDirectory();
-                Console.WriteLine("CurrentDirectory:" + currentPath);
-                int start = currentPath.IndexOf(@"\Annotation\AnnotationGenerator");
-                currentPath = currentPath.Substring(0, start + 1);
-
-                permissionFileName = currentPath + @"docs\apiPermissionsAndScopes.txt";
-                csdlFileName = currentPath + @"docs\graph.v1.0.xml";
-                output = currentPath + @"docs\output.xml";
-                errorOutput = currentPath + @"docs\errors.txt";
+                inputArgs = RetrieveAllDocs();
             }
             else
             {
-                permissionFileName = args[0];
-                csdlFileName = args[1];
-                output = args[2];
-                errorOutput = @".\error.txt";
+                // read from args
+                inputArgs = new List<InputArg>
+                {
+                    new InputArg
+                    {
+                        PermissionFileName = args[0],
+                        CsdlFileName = args[1],
+                        Output = args[2],
+                        ErrorOutput = @".\error.txt"
+                    }
+                };
             }
 
+            foreach (var inputArg in inputArgs)
+            {
+                ProcessPermission(inputArg);
+            }
+
+            Console.WriteLine("Done!");
+        }
+
+        private static void ProcessPermission(InputArg inputArg)
+        {
             // Load the permission data : Dictionary<string, PermissionType>
-            ApiPermissionsWrapper wrapper = ApiPermissionHelper.LoadAll(permissionFileName);
+            Console.WriteLine($"Processing : {inputArg.PermissionFileName}");
+            ApiPermissionsWrapper wrapper = ApiPermissionHelper.LoadAll(inputArg.PermissionFileName);
             if (wrapper != null)
             {
                 Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme.Count}");
@@ -59,7 +68,8 @@ namespace AnnotationGenerator
             }
 
             // load csdl file
-            IEdmModel edmModel = LoadEdmModel(csdlFileName);
+            Console.WriteLine($"Processing : {inputArg.CsdlFileName}");
+            IEdmModel edmModel = LoadEdmModel(inputArg.CsdlFileName);
             if (edmModel != null)
             {
                 Console.WriteLine("Loaded CSDL successful!");
@@ -72,7 +82,7 @@ namespace AnnotationGenerator
 
             wrapper.Process(edmModel);
 
-            using (AnnotationGenerator generator = new AnnotationGenerator(output, edmModel))
+            using (AnnotationGenerator generator = new AnnotationGenerator(inputArg.Output, edmModel))
             {
                 // for each ApiPermissionsByScheme
                 generator.Add(wrapper.PermissionsByScheme);
@@ -81,12 +91,8 @@ namespace AnnotationGenerator
                 generator.Add(wrapper.ApiPermissionsProcessed);
 
                 // for each Uri parse error:
-                OutputUriErrors(errorOutput, wrapper.UriParserError, generator.PermissionsError);
+                OutputUriErrors(inputArg.ErrorOutput, wrapper.UriParserError, generator.PermissionsError);
             }
-
-           // GenerateTerm(generator, CreateDefaultTerm());
-
-            Console.WriteLine("Done!");
         }
 
         public static IEdmModel LoadEdmModel(string fileName)
@@ -130,6 +136,62 @@ namespace AnnotationGenerator
             generator.Write(term);
 
             generator.SaveAs(@"D:\temp\openapi\test_Outline.xml");
+        }
+
+        class InputArg
+        {
+            public string PermissionFileName { get; set; }
+            public string CsdlFileName { get; set; }
+            public string Output { get; set; }
+            public string ErrorOutput { get; set; }
+        }
+
+        private static IList<InputArg> RetrieveAllDocs()
+        {
+            string currentPath = Directory.GetCurrentDirectory();
+            Console.WriteLine("CurrentDirectory:" + currentPath);
+            int start = currentPath.IndexOf(@"\Annotation\AnnotationGenerator");
+            currentPath = currentPath.Substring(0, start + 1) + @"docs\";
+
+            IList<InputArg> inputArgs = new List<InputArg>();
+
+            IDictionary<string, string> xmlDics = new Dictionary<string, string>();
+            foreach (var xmlFile in Directory.EnumerateFiles(currentPath, "*.xml"))
+            {
+                FileInfo fileInfo = new FileInfo(xmlFile);
+                var items = fileInfo.Name.Split("-");
+
+                // Only process the file name has '-', for example: graph-beta.xml
+                if (items.Length == 2)
+                {
+                    xmlDics[items[1]] = xmlFile;
+                }
+            }
+
+            foreach (var file in Directory.EnumerateFiles(currentPath, "*.json"))
+            {
+                FileInfo fileInfo = new FileInfo(file);
+
+                var items = fileInfo.Name.Split("-");
+                if (items.Length != 2)
+                {
+                    Console.WriteLine($"skip {fileInfo.Name} because the file name doesnot have '-'");
+                    continue;
+                }
+
+                string replaced = items[1].Replace(".json", ".xml");
+                if (xmlDics.TryGetValue(replaced, out string value))
+                {
+                    inputArgs.Add(new InputArg
+                    {
+                        PermissionFileName = file,
+                        CsdlFileName = value,
+                        Output = file.Replace(".json", ".out"),
+                        ErrorOutput = file.Replace(".json", ".err")
+                    });
+                }
+            }
+            return inputArgs;
         }
 
         private static ITerm CreateDefaultTerm()

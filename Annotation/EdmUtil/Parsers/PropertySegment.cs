@@ -27,8 +27,14 @@ namespace Annotation.EdmUtil
             NavigationSource = navigationSource;
         }
 
+        /// <summary>
+        /// Gets the Edm property assigned to this segment.
+        /// </summary>
         public IEdmStructuralProperty Property { get; }
 
+        /// <summary>
+        /// Gets a boolean value indicating whether this segment is single value out.
+        /// </summary>
         public override bool IsSingle { get; }
 
         public override IEdmType EdmType { get; }
