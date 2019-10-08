@@ -21425,7 +21425,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21436,7 +21436,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21447,7 +21447,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21466,7 +21466,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Calendars.Read" />
-                    <PropertyValue Property="RestrictedProperties" String="childFolders,messageRules,messages" />
+                    <PropertyValue Property="RestrictedProperties" String="childFolders,messagerules,messages" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21477,7 +21477,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Contacts.Read" />
-                    <PropertyValue Property="RestrictedProperties" String="childFolders,messageRules,messages" />
+                    <PropertyValue Property="RestrictedProperties" String="childFolders,messagerules,messages" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21488,7 +21488,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Contacts.Read" />
-                    <PropertyValue Property="RestrictedProperties" String="childFolders,messageRules,messages" />
+                    <PropertyValue Property="RestrictedProperties" String="childFolders,messagerules,messages" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21505,15 +21505,15 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.ReadBasic" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.Read" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                     </Collection>
                   </PropertyValue>
@@ -21524,15 +21524,15 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.ReadBasic" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.Read" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                     </Collection>
                   </PropertyValue>
@@ -21543,15 +21543,15 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.ReadBasic.All" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.Read" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                        <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                        <PropertyValue Property="RestrictedProperties" String="messagerules" />
                       </Record>
                     </Collection>
                   </PropertyValue>
@@ -21572,7 +21572,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21583,7 +21583,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21594,7 +21594,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21613,7 +21613,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21624,7 +21624,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21635,7 +21635,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21654,7 +21654,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21665,7 +21665,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21676,7 +21676,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21695,7 +21695,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21706,7 +21706,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -21717,7 +21717,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Mail.ReadWrite" />
-                    <PropertyValue Property="RestrictedProperties" String="messageRules" />
+                    <PropertyValue Property="RestrictedProperties" String="messagerules" />
                   </Record>
                 </Collection>
               </PropertyValue>
@@ -34634,7 +34634,7 @@
                 <Collection>
                   <Record>
                     <PropertyValue Property="Scope" String="Application.ReadWrite.All" />
-                    <PropertyValue Property="RestrictedProperties" String="appRoleAssignments,createdObjects,memberOf,oauth2PermissionGrants,ownedObjects,owners" />
+                    <PropertyValue Property="RestrictedProperties" String="appRoleAssignments,createdObjects,memberOf,oAuth2Permissiongrants,ownedObjects,owners" />
                   </Record>
                   <Record>
                     <PropertyValue Property="Scope" String="Directory.Read.All" />
@@ -34670,11 +34670,11 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="Application.ReadWrite.OwnedBy" />
-                        <PropertyValue Property="RestrictedProperties" String="appRoleAssignments,createdObjects,memberOf,oauth2PermissionGrants,ownedObjects,owners" />
+                        <PropertyValue Property="RestrictedProperties" String="appRoleAssignments,createdObjects,memberOf,oAuth2Permissiongrants,ownedObjects,owners" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Application.ReadWrite.All" />
-                        <PropertyValue Property="RestrictedProperties" String="appRoleAssignments,createdObjects,memberOf,oauth2PermissionGrants,ownedObjects,owners" />
+                        <PropertyValue Property="RestrictedProperties" String="appRoleAssignments,createdObjects,memberOf,oAuth2Permissiongrants,ownedObjects,owners" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Directory.Read.All" />
@@ -39244,35 +39244,35 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="User.Read" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="User.ReadWrite" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,licenseDetails,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,licenseDetails,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="User.ReadBasic.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,createdObjects,devices,directReports,joinedTeams,licenseDetails,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,createdObjects,devices,directReports,joinedTeams,licenseDetails,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="User.Read.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,activities,mailFolders,calendars,contactFolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,devices,memberOf,people,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,activities,mailFolders,calendars,contactfolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,memberOf,people,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="User.ReadWrite.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,devices,memberOf,people,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,memberOf,people,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Directory.Read.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,people" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,people" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Directory.ReadWrite.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,people" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,people" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Directory.AccessAsUser.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,people" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,people" />
                       </Record>
                     </Collection>
                   </PropertyValue>
@@ -39283,11 +39283,11 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="User.Read" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="User.ReadWrite" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,licenseDetails,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,licenseDetails,manager,memberOf,ownedDevices,ownedObjects,people,registeredDevices,transitiveMemberOf" />
                       </Record>
                     </Collection>
                   </PropertyValue>
@@ -39298,19 +39298,19 @@
                     <Collection>
                       <Record>
                         <PropertyValue Property="Scope" String="User.Read.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,devices,memberOf,people,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,memberOf,people,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="User.ReadWrite.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,devices,memberOf,people,transitiveMemberOf" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,memberOf,people,transitiveMemberOf" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Directory.Read.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,people" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,people" />
                       </Record>
                       <Record>
                         <PropertyValue Property="Scope" String="Directory.ReadWrite.All" />
-                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactFolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,devices,joinedTeams,people" />
+                        <PropertyValue Property="RestrictedProperties" String="calendar,chats,contacts,drive,drives,events,messages,planner,photo,activities,mailFolders,calendars,contactfolders,mailboxSettings,settings,agreementAcceptances,calendarGroups,calendarView,contactFolders,devices,joinedTeams,people" />
                       </Record>
                     </Collection>
                   </PropertyValue>

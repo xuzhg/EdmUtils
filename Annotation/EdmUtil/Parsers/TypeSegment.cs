@@ -16,15 +16,27 @@ namespace Annotation.EdmUtil
         /// <summary>
         /// Initializes a new instance of <see cref="TypeSegment"/> class.
         /// </summary>
-        /// <param name="actualType">The actual type.</param>
-        /// <param name="expectedType">The expected type.</param>
+        /// <param name="actualType">The actual type, from the Uri.</param>
+        /// <param name="expectedType">The expected type, from the Edm model.</param>
         /// <param name="navigationSource">The navigation source.</param>
         public TypeSegment(IEdmType actualType, IEdmType expectedType, IEdmNavigationSource navigationSource)
-            : base(actualType?.FullTypeName())
+            : this(actualType, expectedType, navigationSource, actualType?.FullTypeName())
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="TypeSegment"/> class.
+        /// </summary>
+        /// <param name="actualType">The actual type, from the Uri.</param>
+        /// <param name="expectedType">The expected type, from the Edm model.</param>
+        /// <param name="navigationSource">The navigation source.</param>
+        /// <param name="identifier">The request Uri segment literal string.</param>
+        public TypeSegment(IEdmType actualType, IEdmType expectedType, IEdmNavigationSource navigationSource, string identifier)
+            : base(identifier)
         {
             ActualType = actualType ?? throw new ArgumentNullException(nameof(actualType));
             ExpectedType = expectedType ?? throw new ArgumentNullException(nameof(expectedType));
-            EdmType = actualType;
+
             NavigationSource = navigationSource;
             IsSingle = actualType.TypeKind != EdmTypeKind.Collection;
 
@@ -37,7 +49,7 @@ namespace Annotation.EdmUtil
 
         public override bool IsSingle { get; }
 
-        public override IEdmType EdmType { get; }
+        public override IEdmType EdmType => ActualType;
 
         public override IEdmNavigationSource NavigationSource { get;}
 

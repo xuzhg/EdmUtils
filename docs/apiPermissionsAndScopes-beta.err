@@ -10,7 +10,7 @@
 9) /bookingBusinesses/Contosolunchdelivery@M365B489948.onmicrosoft.com/appointments/AAMkADKnAAA=:==> Unknown kind of segment: 'AAMkADKnAAA=', previous segment: 'appointments'.
 10) /me/calendars/AAMkAGViNDU7zAAAAAGtlAAA=/events:==> Unknown kind of segment: 'AAMkAGViNDU7zAAAAAGtlAAA=', previous segment: 'calendars'.
 11) /me/calendarGroup/calendars:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-12) /me/calendargroups/AAMkADYAAAR9NR5AAA=/calendars:==> Unknown kind of segment: 'AAMkADYAAAR9NR5AAA=', previous segment: 'calendarGroups'.
+12) /me/calendargroups/AAMkADYAAAR9NR5AAA=/calendars:==> Unknown kind of segment: 'AAMkADYAAAR9NR5AAA=', previous segment: 'calendargroups'.
 13) /app/calls/{id}/updateMetadata:==> Unknown kind of segment: 'updateMetadata', previous segment: '{id}'.
 14) /workbook/worksheets/{id|name}/charts/{name}/delete:==> Unknown kind of first segment: 'workbook'
 15) /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{name}'.
@@ -161,13 +161,13 @@
 160) /me/outlook/taskFolders/AAMkADIyAAAhrbPWAAA=/tasks:==> Unknown kind of segment: 'AAMkADIyAAAhrbPWAAA=', previous segment: 'taskFolders'.
 161) /me/taskfolders('AAMkADIyAAAhrbPXAAA=')/tasks:==> Unknown kind of segment: 'taskfolders', previous segment: 'me'.
 162) /me/outlook/taskFolders/AAMkADIyAAAhrbPWAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbPWAAA=', previous segment: 'taskFolders'.
-163) /me/outlook/taskgroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
+163) /me/outlook/taskgroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskgroups'.
 164) /me/outlook/taskGroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
 165) /me/outlook/taskGroups/AAMkADIyAAAhrbe-AAA=/taskFolders:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
 166) /me/taskgroups/AAMkADIyAAAhrbe-AAA'/taskfolders:==> Unknown kind of segment: 'taskgroups', previous segment: 'me'.
 167) /me/drive/root/items/{item-id}/permissions/{perm-id}:==> Unknown kind of segment: 'items', previous segment: 'root'.
 168) /users/{id|userPrincipalName}/photo/$value:==> Unknown kind of segment: '$value', previous segment: 'photo'.
-169) /places/microsoft.graph.room:==> Unknown path kind!
+169) /places/microsoft.graph.room:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
 170) /groups/0d75b8dc-c42d-44dd-890a-751a99c0589f/threads/AAQkAD8EJUmcWwTJi06Cew==/posts/AQMkADgAAAIJbQAAAA==:==> Invalid parameter at AAQkAD8EJUmcWwTJi06Cew==
 171) /privilegedApproval{request-id}:==> Unknown kind of first segment: 'privilegedApproval{request-id}'
 172) /me/photo/$value:==> Unknown kind of segment: '$value', previous segment: 'photo'.

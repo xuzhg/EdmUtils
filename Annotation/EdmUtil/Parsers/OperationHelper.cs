@@ -1,11 +1,13 @@
-﻿
-using Annotation.EdmUtil.Commons;
-using Microsoft.OData.Edm;
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
+using Annotation.EdmUtil.Commons;
+using Microsoft.OData.Edm;
 
 namespace Annotation.EdmUtil
 {
@@ -97,7 +99,7 @@ namespace Annotation.EdmUtil
                     throw new Exception($"Multiple action import overloads for '{identifer}' were found.");
                 }
 
-                return candidates.Single();
+                return candidates.SingleOrDefault();
             }
             else
             {

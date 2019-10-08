@@ -1,4 +1,8 @@
-﻿
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
 using Microsoft.OData.Edm;
 using Microsoft.OData.Edm.Validation;
 using System;

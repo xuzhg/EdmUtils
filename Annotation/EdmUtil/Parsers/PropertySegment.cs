@@ -19,7 +19,18 @@ namespace Annotation.EdmUtil
         /// <param name="property">The wrapped structural property.</param>
         /// <param name="navigationSource">The navigation source.</param>
         public PropertySegment(IEdmStructuralProperty property, IEdmNavigationSource navigationSource)
-            : base(property?.Name)
+            : this(property, navigationSource, property?.Name)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="PropertySegment"/> class.
+        /// </summary>
+        /// <param name="property">The wrapped structural property.</param>
+        /// <param name="navigationSource">The navigation source.</param>
+        /// <param name="identifier">The uri segment literal string.</param>
+        public PropertySegment(IEdmStructuralProperty property, IEdmNavigationSource navigationSource, string identifier)
+            : base(identifier)
         {
             Property = property ?? throw new ArgumentNullException(nameof(property));
             IsSingle = !property.Type.IsCollection();

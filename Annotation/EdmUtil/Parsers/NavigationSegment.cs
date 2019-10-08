@@ -26,7 +26,18 @@ namespace Annotation.EdmUtil
         /// <param name="property">The key/value pairs for the key segment.</param>
         /// <param name="navigationSource">The related navigation source.</param>
         public NavigationSegment(IEdmNavigationProperty property, IEdmNavigationSource navigationSource)
-            : base(property?.Name)
+            : this(property, navigationSource, property?.Name)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="NavigationSegment"/> class.
+        /// </summary>
+        /// <param name="property">The key/value pairs for the key segment.</param>
+        /// <param name="navigationSource">The related navigation source.</param>
+        /// <param name="identifier">The uri segment literal string.</param>
+        public NavigationSegment(IEdmNavigationProperty property, IEdmNavigationSource navigationSource, string identifier)
+            : base(identifier)
         {
             Property = property ?? throw new ArgumentNullException(nameof(property));
             NavigationSource = navigationSource;

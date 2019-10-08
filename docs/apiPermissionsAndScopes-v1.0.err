@@ -1,7 +1,7 @@
 ***********[[Uri Parse Error]]***********
 1) /me/calendars/AAMkAGViNDU7zAAAAAGtlAAA=/events:==> Unknown kind of segment: 'AAMkAGViNDU7zAAAAAGtlAAA=', previous segment: 'calendars'.
 2) /me/calendarGroup/calendars:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-3) /me/calendargroups/AAMkADYAAAR9NR5AAA=/calendars:==> Unknown kind of segment: 'AAMkADYAAAR9NR5AAA=', previous segment: 'calendarGroups'.
+3) /me/calendargroups/AAMkADYAAAR9NR5AAA=/calendars:==> Unknown kind of segment: 'AAMkADYAAAR9NR5AAA=', previous segment: 'calendargroups'.
 4) /workbook/worksheets/{id|name}/charts/{name}/delete:==> Unknown kind of first segment: 'workbook'
 5) /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{name}'.
 6) /workbook/worksheets/{id|name}/charts/{name}:==> Unknown kind of first segment: 'workbook'
@@ -31,7 +31,7 @@
 30) /workbook/worksheets/{id|name}/charts/{name}/series/itemAt:==> Unknown kind of first segment: 'workbook'
 31) /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/series/itemAt:==> Sequence contains no elements
 32) /workbook/worksheets/{id|name}/charts/{name}/title:==> Unknown kind of first segment: 'workbook'
-33) /directory/deletedItems/microsoft.graph.group:==> Unknown path kind!
+33) /directory/deletedItems/microsoft.graph.group:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
 34) /directoryRoles/{id}/members/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
 35) /me/drive/root:/{item-path}:/createUploadSession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
 36) /me/drive/root:/{path_to_parent}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.

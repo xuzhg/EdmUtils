@@ -5,20 +5,49 @@
 
 namespace Annotation
 {
+    /// <summary>
+    /// Represents the kind of a OData path.
+    /// </summary>
     public enum PathKind
     {
+        /// <summary>
+        /// Entity set, for example: ~/users
+        /// </summary>
         EntitySet,
+
+        /// <summary>
+        /// Singleton, for example: ~/me
+        /// </summary>
         Singleton,
+
+        /// <summary>
+        /// Single entity, for example: ~/users({id})
+        /// </summary>
         Entity,
-       // Navigation,
+
+        /// <summary>
+        /// Single navigation, for example: ~/users({id})/contact
+        /// </summary>
         SingleNavigation,
+
+        /// <summary>
+        /// Collection navigation, for example: ~/users({id})/contacts
+        /// </summary>
         CollectionNavigation,
+
+        /// <summary>
+        /// Property access, for example: ~/users({id})/name
+        /// </summary>
         Property,
+
+        /// <summary>
+        /// Bound operation (function/action), for example: ~/users({id})/ms.graph.getById
+        /// </summary>
         Operation,
-     //   Action,
-     //   Function,
-    //    ActionImport,
-    //    FunctionImport,
+
+        /// <summary>
+        /// Unbound operation (function/action), for example: ~/resetDatabase(...)
+        /// </summary>
         OperationImport
     }
 }

@@ -43,7 +43,7 @@ namespace Annotation.EdmUtil
         public IEdmEntitySet EntitySet { get; }
 
         /// <summary>
-        /// EntitySet is always collection value. So IsSingle is always is false.
+        /// EntitySet is always collection value. So IsSingle is always false.
         /// </summary>
         public override bool IsSingle => false;
 
