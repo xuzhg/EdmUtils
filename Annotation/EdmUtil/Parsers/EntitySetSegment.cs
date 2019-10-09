@@ -40,6 +40,9 @@ namespace Annotation.EdmUtil
             Target = entitySet.Container.Namespace + "/" + entitySet.Name;
         }
 
+        /// <inheritdoc/>
+        public override SegmentKind Kind => SegmentKind.EntitySet;
+
         public IEdmEntitySet EntitySet { get; }
 
         /// <summary>
@@ -52,5 +55,23 @@ namespace Annotation.EdmUtil
         public override IEdmNavigationSource NavigationSource => EntitySet;
 
         public override string Target { get; }
+
+        /// <summary>
+        /// Gets the Uri literal for the entity set segment.
+        /// It should be the name of the entity set.
+        /// </summary>
+        public override string UriLiteral => EntitySet.Name;
+
+        /// <inheritdoc/>
+        public override bool Match(PathSegment other)
+        {
+            EntitySetSegment otherEntitySetSegment = other as EntitySetSegment;
+            if (otherEntitySetSegment == null)
+            {
+                return false;
+            }
+
+            return ReferenceEquals(EntitySet, otherEntitySetSegment.EntitySet);
+        }
     }
 }

@@ -1,6 +1,8 @@
-﻿
-using System;
-using System.Collections.Generic;
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
 using Annotation;
 using Annotation.EdmUtil;
 using Microsoft.OData.Edm;
@@ -29,6 +31,39 @@ namespace AnnotationGenerator.Tests
             var entitySetSegment = Assert.IsType<EntitySetSegment>(pathSegment);
 
             //         Assert.Same(entitySetSegment.EntitySet, _users);
+        }
+
+        [Theory]
+        [InlineData("/users/{user-id}", "/users/{Id|userPrincipalName}")]
+        public void ParseAndCompareTwoRequestUriSame(string requestUri1, string requestUri2)
+        {
+            var path1 = PathParser.ParsePath(requestUri1, _edmModel);
+            var path2 = PathParser.ParsePath(requestUri2, _edmModel);
+
+            Assert.NotSame(path1, path2);
+            Assert.False(path1.EqualsTo(null));
+            Assert.False(path2.EqualsTo(null));
+
+            Assert.True(path1.EqualsTo(path1));
+            Assert.True(path2.EqualsTo(path2));
+            Assert.True(path1.EqualsTo(path2));
+
+            Assert.Equal("~/users/{id}", path1.ToString());
+            Assert.Equal("~/users/{id}", path2.ToString());
+        }
+
+        [Fact]
+        public void StartsWithTwoRequestUriSame()
+        {
+            var path1 = PathParser.ParsePath("/users/{user-id}", _edmModel);
+            var path2 = PathParser.ParsePath("/users/{user-id}/photo", _edmModel);
+
+            Assert.False(path1.StartsWith(path2));
+            Assert.True(path2.StartsWith(path1));
+            Assert.True(path1.StartsWith(path1));
+
+            Assert.Equal("~/users/{id}", path1.ToString());
+            Assert.Equal("~/users/{id}/photo", path2.ToString());
         }
 
         [Theory]

@@ -38,6 +38,9 @@ namespace Annotation.EdmUtil
             NavigationSource = navigationSource;
         }
 
+        /// <inheritdoc/>
+        public override SegmentKind Kind => SegmentKind.Property;
+
         /// <summary>
         /// Gets the Edm property assigned to this segment.
         /// </summary>
@@ -53,5 +56,23 @@ namespace Annotation.EdmUtil
         public override IEdmNavigationSource NavigationSource { get; }
 
         public override string Target => Property.Name;
+
+        /// <summary>
+        /// Gets the Uri literal for the property segment.
+        /// It should be the name of the property.
+        /// </summary>
+        public override string UriLiteral => Property.Name;
+
+        /// <inheritdoc/>
+        public override bool Match(PathSegment other)
+        {
+            PropertySegment otherPropertySegment = other as PropertySegment;
+            if (otherPropertySegment == null)
+            {
+                return false;
+            }
+
+            return ReferenceEquals(Property, otherPropertySegment.Property);
+        }
     }
 }

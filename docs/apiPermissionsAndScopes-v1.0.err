@@ -186,56 +186,26 @@
 
 
 ***********[[Permission Parse Error]]***********
-1) microsoft.graph/devices/transitiveMemberOf:==> Found mutltiple read restrctions for one target 'microsoft.graph/devices/transitiveMemberOf'.
-2) microsoft.graph/devices/registeredOwners:==> Invalid path kind 'SingleNavigation' in 'POST'
-3) microsoft.graph/devices/registeredUsers:==> Invalid path kind 'SingleNavigation' in 'POST'
-4) microsoft.graph/directory/deletedItems:==> Invalid path kind 'SingleNavigation' in 'POST'
-5) microsoft.graph/directoryRoles/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-6) microsoft.graph/domains:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/domains'.
-7) microsoft.graph/domains/domainNameReferences:==> Found mutltiple read restrctions for one target 'microsoft.graph/domains/domainNameReferences'.
-8) microsoft.graph/domains/serviceConfigurationRecords:==> Found mutltiple read restrctions for one target 'microsoft.graph/domains/serviceConfigurationRecords'.
-9) microsoft.graph/domains/verificationDnsRecords:==> Found mutltiple read restrctions for one target 'microsoft.graph/domains/verificationDnsRecords'.
-10) microsoft.graph/drives/items/createUploadSession:==> Unknown http verb PUT
-11) microsoft.graph/drives/items:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/drives/items'.
-12) microsoft.graph/drives/items/content:==> Unknown http verb PUT
-13) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
-14) microsoft.graph/education/classes:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes'.
-15) microsoft.graph/education/classes/group:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/group'.
-16) microsoft.graph/education/classes/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-17) microsoft.graph/education/classes/schools:==> Found mutltiple read restrctions for one target 'microsoft.graph/education/classes/schools'.
-18) microsoft.graph/education/classes/teachers:==> Invalid path kind 'SingleNavigation' in 'POST'
-19) microsoft.graph/education/schools/classes:==> Invalid path kind 'SingleNavigation' in 'POST'
-20) microsoft.graph/education/schools/users:==> Invalid path kind 'SingleNavigation' in 'POST'
-21) microsoft.graph/groups/acceptedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
-22) microsoft.graph/groups/rejectedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
-23) microsoft.graph/groups:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/groups'.
-24) microsoft.graph/groups/calendarView:==> Found mutltiple read restrctions for one target 'microsoft.graph/groups/calendarView'.
-25) microsoft.graph/groups/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-26) microsoft.graph/groups/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
-27) microsoft.graph/identityProviders:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/identityProviders'.
-28) microsoft.graph/me/mailFolders:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/mailFolders'.
-29) microsoft.graph/me/contactFolders:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/contactFolders'.
-30) microsoft.graph/me/messages:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-31) microsoft.graph/me/events:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-32) microsoft.graph/devices:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/devices'.
-33) microsoft.graph/me/outlook/masterCategories:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/outlook/masterCategories'.
-34) microsoft.graph/users/photo:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/users/photo'.
-35) microsoft.graph/planner/tasks/assignedToTaskBoardFormat:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/assignedToTaskBoardFormat'.
-36) microsoft.graph/planner/buckets:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/buckets'.
-37) microsoft.graph/planner/buckets/tasks:==> Found mutltiple read restrctions for one target 'microsoft.graph/planner/buckets/tasks'.
-38) microsoft.graph/planner/tasks/bucketTaskBoardFormat:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/bucketTaskBoardFormat'.
-39) microsoft.graph/planner/plans/details:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/plans/details'.
-40) microsoft.graph/planner/tasks/progressTaskBoardFormat:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/progressTaskBoardFormat'.
-41) microsoft.graph/planner/tasks:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks'.
-42) microsoft.graph/planner/tasks/details:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/details'.
-43) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
-44) microsoft.graph/me/activities:==> Unknown http verb PUT
-45) microsoft.graph/me/drive/items/workbook/worksheets/range(address):==> Invalid path kind 'Operation' in 'PATCH'
-46) microsoft.graph/schemaExtensions:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/schemaExtensions'.
-47) microsoft.graph/Security/secureScoreControlProfiles:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/Security/secureScoreControlProfiles'.
-48) microsoft.graph/sites:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/sites'.
-49) microsoft.graph/groups/team:==> Unknown http verb PUT
-50) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
-51) microsoft.graph/me/settings:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/settings'.
-52) microsoft.graph/me:==> Invalid path kind 'Singleton' in 'PATCH'
-53) microsoft.graph/me/drive/root/workbook/worksheets/range(address)/visibleView()/rows:==> Found mutltiple read restrctions for one target 'microsoft.graph/me/drive/root/workbook/worksheets/range(address)/visibleView()/rows'.
+1) microsoft.graph/devices/registeredOwners:==> Invalid path kind 'SingleNavigation' in 'POST'
+2) microsoft.graph/devices/registeredUsers:==> Invalid path kind 'SingleNavigation' in 'POST'
+3) microsoft.graph/directory/deletedItems:==> Invalid path kind 'SingleNavigation' in 'POST'
+4) microsoft.graph/directoryRoles/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+5) microsoft.graph/drives/items/createUploadSession:==> Unknown http verb PUT
+6) microsoft.graph/drives/items/content:==> Unknown http verb PUT
+7) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
+8) microsoft.graph/education/classes/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+9) microsoft.graph/education/classes/teachers:==> Invalid path kind 'SingleNavigation' in 'POST'
+10) microsoft.graph/education/schools/classes:==> Invalid path kind 'SingleNavigation' in 'POST'
+11) microsoft.graph/education/schools/users:==> Invalid path kind 'SingleNavigation' in 'POST'
+12) microsoft.graph/groups/acceptedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
+13) microsoft.graph/groups/rejectedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
+14) microsoft.graph/groups/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+15) microsoft.graph/groups/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
+16) microsoft.graph/me/events:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+17) microsoft.graph/me/messages:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+18) microsoft.graph/me/activities:==> Unknown http verb PUT
+19) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
+20) microsoft.graph/me/drive/items/workbook/worksheets/range(address):==> Invalid path kind 'Operation' in 'PATCH'
+21) microsoft.graph/groups/team:==> Unknown http verb PUT
+22) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
+23) microsoft.graph/me:==> Invalid path kind 'Singleton' in 'PATCH'

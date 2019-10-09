@@ -3,13 +3,17 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.XPath;
 
 namespace Annotation.EdmUtil
 {
-    public class UriPath
+    public class UriPath// : IEquatable<UriPath>
     {
+        private string _pathLiteral;
+
         /// <summary>
         /// The segments that make up this path.
         /// </summary>
@@ -43,6 +47,16 @@ namespace Annotation.EdmUtil
 
         private string _targetString;
 
+        public override string ToString()
+        {
+            if (_pathLiteral == null)
+            {
+                _pathLiteral = "~/" + string.Join("/", segments.Select(s => s.UriLiteral));
+            }
+
+            return _pathLiteral;
+        }
+
         public string TargetString
         {
             get
@@ -55,6 +69,7 @@ namespace Annotation.EdmUtil
                 return _targetString;
             }
         }
+
         private static PathKind CalculatePathKind(IList<PathSegment> segments)
         {
             PathSegment lastSegment = segments.Last();
@@ -74,6 +89,10 @@ namespace Annotation.EdmUtil
             else if (lastSegment is OperationSegment)
             {
                 return PathKind.Operation;
+            }
+            else if (lastSegment.Kind == SegmentKind.Type)
+            {
+                return PathKind.TypeCast;
             }
             else
             {
@@ -112,5 +131,26 @@ namespace Annotation.EdmUtil
                 }
             }
         }
+/*
+        public bool Equals(UriPath other)
+        {
+            if (other == null || this.Count != other.Count)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < Count; i++)
+            {
+                PathSegment originalSegment = segments[i];
+                PathSegment otherSegment = other.Segments[i];
+
+                if (!originalSegment.Match(otherSegment))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }*/
     }
 }

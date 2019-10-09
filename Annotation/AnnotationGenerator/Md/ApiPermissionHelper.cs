@@ -5,13 +5,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Annotation;
 using AnnotationGenerator.MD;
 using AnnotationGenerator.Serialization;
 using AnnotationGenerator.Vocabulary;
-using Newtonsoft.Json.Linq;
 
 namespace AnnotationGenerator
 {
@@ -156,165 +153,8 @@ namespace AnnotationGenerator
 
                 record.Scopes.Add(scope);
             }
-            
+
             return record;
-        }
-
-        public static IDictionary<string, IList<ApiPermissionType>> Load(string fileName)
-        {
-            IDictionary<string, IList<ApiPermissionType>> permissions = new Dictionary<string, IList<ApiPermissionType>>();
-            try
-            {
-                string json = File.ReadAllText(fileName);
-                JObject jObj = JObject.Parse(json);
-                foreach (var property in jObj.Properties())
-                {
-                    JArray array = property.Value as JArray;
-                    if (array == null)
-                    {
-                        throw new Exception($"Not valid format, Need an array value of the property: {property.Name}");
-                    }
-
-                    IList<ApiPermissionType> subPermissions = new List<ApiPermissionType>();
-                    foreach (var item in array)
-                    {
-                        JObject permissionObj = item as JObject;
-                        if (permissionObj == null)
-                        {
-                            throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
-                        }
-
-                        ApiPermissionType permission = permissionObj.ToObject<ApiPermissionType>();
-                        subPermissions.Add(permission);
-                    }
-
-                    permissions[property.Name.Trim()] = subPermissions;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return permissions;
-            }
-
-            return permissions;
-        }
-
-        public static ApiPermissionsWrapper LoadAll(string fileName)
-        {
-            ApiPermissionsWrapper wrapper = new ApiPermissionsWrapper();
-            try
-            {
-                string json = File.ReadAllText(fileName);
-                JObject jObj = JObject.Parse(json);
-
-                // ApiPermissions
-                JProperty apiPermProperty = jObj.Property("ApiPermissions");
-                if (apiPermProperty == null)
-                {
-                    throw new Exception($"Invalid format, Need a top level property named 'ApiPermissions'.");
-                }
-
-                JObject apiPermPropertyValue = apiPermProperty.Value as JObject;
-                if (apiPermPropertyValue == null)
-                {
-                    throw new Exception($"Invalid format, Need an object value of the property: 'ApiPermissions'.");
-                }
-
-                wrapper.ApiPermissions = new Dictionary<string, IList<ApiPermissionType>>();
-                foreach (var property in apiPermPropertyValue.Properties())
-                {
-                    JArray array = property.Value as JArray;
-                    if (array == null)
-                    {
-                        throw new Exception($"Invalid format, Need an array value of the property: {property.Name}");
-                    }
-
-                    IList<ApiPermissionType> subPermissions = new List<ApiPermissionType>();
-                    foreach (var item in array)
-                    {
-                        JObject permissionObj = item as JObject;
-                        if (permissionObj == null)
-                        {
-                            throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
-                        }
-
-                        ApiPermissionTypeInternal permission = permissionObj.ToObject<ApiPermissionTypeInternal>();
-
-                        subPermissions.Add(ConvertTo(permission));
-                    }
-
-                    wrapper.ApiPermissions[property.Name.Trim()] = subPermissions;
-                }
-
-                // PermissionSchemes
-                JProperty permissionsByScheme = jObj.Property("PermissionSchemes");
-                if (apiPermProperty == null)
-                {
-                    throw new Exception($"Invalid format, Need a top level property named 'PermissionSchemes'.");
-                }
-
-                JObject permissionsBySchemeValue = permissionsByScheme.Value as JObject;
-                if (permissionsBySchemeValue == null)
-                {
-                    throw new Exception($"Invalid format, Need an object value of the property: 'PermissionsByScheme'.");
-                }
-
-                wrapper.PermissionsByScheme = new Dictionary<string, IList<ApiPermissionsBySchemeType>>();
-                foreach (var property in permissionsBySchemeValue.Properties())
-                {
-                    JArray array = property.Value as JArray;
-                    if (array == null)
-                    {
-                        throw new Exception($"Invalid format, Need an array value of the property: {property.Name}");
-                    }
-
-                    IList<ApiPermissionsBySchemeType> subPermissionsByScheme = new List<ApiPermissionsBySchemeType>();
-                    foreach (var item in array)
-                    {
-                        JObject subPermissionsBySchemeObj = item as JObject;
-                        if (subPermissionsBySchemeObj == null)
-                        {
-                            throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
-                        }
-
-                        ApiPermissionsBySchemeType subPermObject = subPermissionsBySchemeObj.ToObject<ApiPermissionsBySchemeType>();
-                        subPermissionsByScheme.Add(subPermObject);
-                    }
-
-                    wrapper.PermissionsByScheme[property.Name.Trim()] = subPermissionsByScheme;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
-            }
-
-            return wrapper;
-        }
-
-        private class ApiPermissionTypeInternal
-        {
-            public string HttpVerb { get; set; }
-
-            public IList<string> DelegatedWork { get; set; }
-
-            public IList<string> DelegatedPersonal { get; set; }
-
-            public IList<string> Application { get; set; }
-        }
-
-        private static ApiPermissionType ConvertTo(ApiPermissionTypeInternal permInternal)
-        {
-            ApiPermissionType wrapper = new ApiPermissionType();
-            wrapper.HttpVerb = permInternal.HttpVerb;
-
-            wrapper.DelegatedWork = permInternal.DelegatedWork.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
-            wrapper.DelegatedPersonal = permInternal.DelegatedPersonal.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
-            wrapper.Application = permInternal.Application.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
-
-            return wrapper;
         }
     }
 }

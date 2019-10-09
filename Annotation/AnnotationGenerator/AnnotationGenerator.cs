@@ -26,25 +26,10 @@ namespace AnnotationGenerator
 
         public IDictionary<string, Exception> PermissionsError { get; set; } = new Dictionary<string, Exception>();
 
-        public AnnotationGenerator(IEdmModel model)
-        {
-            stream = new MemoryStream();
-            this.model = model;
-
-            XmlWriterSettings settings = new XmlWriterSettings
-            {
-                Indent = true
-            };
-
-            writer = XmlWriter.Create(stream, settings);
-        }
-
         public AnnotationGenerator(string output, IEdmModel model)
         {
             this.model = model;
-
             stream = new FileStream(output, FileMode.Create);
-
             XmlWriterSettings settings = new XmlWriterSettings
             {
                 Indent = true
@@ -56,37 +41,6 @@ namespace AnnotationGenerator
             writer.WriteStartElement("Schema");
         }
 
-        public void Add(UriPath path, IList<ApiPermissionType> permissions)
-        {
-            PathKind kind = path.Kind;
-            string target = path.GetTargetString();
-
-            IList<IRecord> records = new List<IRecord>();
-            foreach (var perm in permissions)
-            {
-                PermissionsRecord permissionRecord;
-                try
-                {
-                    permissionRecord = ApiPermissionHelper.ConvertToRecord(kind, perm);
-
-                    records.Add(permissionRecord as IRecord);
-                }
-                catch (Exception ex)
-                {
-                    var color = Console.BackgroundColor;
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.WriteLine("    [PermssionError]: " + ex.Message);
-                    Console.BackgroundColor = color;
-                }
-            }
-
-            if (records.Count == 0)
-            {
-                return;
-            }
-
-            Write(target, records);
-        }
 
         public void Add(IDictionary<UriPath, IList<ApiPermissionType>> permissions)
         {

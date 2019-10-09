@@ -17,8 +17,6 @@ namespace AnnotationGenerator
 {
     class Program
     {
-
-
         // args[0] : the api permssion file, it's json
         // args[1] : the related csdl file, it's xml
         // args[2] : the output file
@@ -56,7 +54,7 @@ namespace AnnotationGenerator
         {
             // Load the permission data : Dictionary<string, PermissionType>
             Console.WriteLine($"Processing : {inputArg.PermissionFileName}");
-            ApiPermissionsWrapper wrapper = ApiPermissionHelper.LoadAll(inputArg.PermissionFileName);
+            ApiPermissionsWrapper wrapper = ApiPermissionsWrapper.LoadAll(inputArg.PermissionFileName);
             if (wrapper != null)
             {
                 Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme.Count}");
@@ -138,13 +136,7 @@ namespace AnnotationGenerator
             generator.SaveAs(@"D:\temp\openapi\test_Outline.xml");
         }
 
-        class InputArg
-        {
-            public string PermissionFileName { get; set; }
-            public string CsdlFileName { get; set; }
-            public string Output { get; set; }
-            public string ErrorOutput { get; set; }
-        }
+
 
         private static IList<InputArg> RetrieveAllDocs()
         {
@@ -237,6 +229,14 @@ namespace AnnotationGenerator
 
             return term;
         }
+    }
+
+    class InputArg
+    {
+        public string PermissionFileName { get; set; }
+        public string CsdlFileName { get; set; }
+        public string Output { get; set; }
+        public string ErrorOutput { get; set; }
     }
 
     /*

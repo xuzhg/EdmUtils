@@ -43,6 +43,9 @@ namespace Annotation.EdmUtil
             Target = actualType.FullTypeName();
         }
 
+        /// <inheritdoc/>
+        public override SegmentKind Kind => SegmentKind.Type;
+
         public IEdmType ActualType { get; }
 
         public IEdmType ExpectedType { get; }
@@ -54,5 +57,25 @@ namespace Annotation.EdmUtil
         public override IEdmNavigationSource NavigationSource { get;}
 
         public override string Target { get; }
+
+        /// <summary>
+        /// Gets the Uri literal for the Type segment.
+        /// It should be the name of the Type.
+        /// </summary>
+        public override string UriLiteral => ActualType.FullTypeName();
+
+        /// <inheritdoc/>
+        public override bool Match(PathSegment other)
+        {
+            TypeSegment otherTypeSegment = other as TypeSegment;
+            if (otherTypeSegment == null)
+            {
+                return false;
+            }
+
+            // Compare the key segment using It's declaring type.
+            return ReferenceEquals(ActualType, otherTypeSegment.ActualType) &&
+                ReferenceEquals(ExpectedType, otherTypeSegment.ExpectedType);
+        }
     }
 }

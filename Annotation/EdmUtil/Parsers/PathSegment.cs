@@ -4,6 +4,7 @@
 // ------------------------------------------------------------
 
 using Microsoft.OData.Edm;
+using System.Runtime;
 
 namespace Annotation.EdmUtil
 {
@@ -22,9 +23,19 @@ namespace Annotation.EdmUtil
         }
 
         /// <summary>
-        /// Gets the Uri string literal of this segment.
+        /// Gets the Uri string literal from Request Uri, it maybe case sensitive, and with other key patterns.
         /// </summary>
         public string Identifier { get; }
+        
+        /// <summary>
+        /// Gets the normal uri literal
+        /// </summary>
+        public abstract string UriLiteral { get; }
+
+        /// <summary>
+        /// Gets the segment kind.
+        /// </summary>
+        public abstract SegmentKind Kind { get; }
 
         /// <summary>
         /// Gets a value indicating whether the output value is single value or collection value of this segment.
@@ -42,5 +53,14 @@ namespace Annotation.EdmUtil
         public abstract IEdmNavigationSource NavigationSource { get; }
 
         public abstract string Target { get; }
+
+        
+
+        /// <summary>
+        /// Compare the input segment with this segment.
+        /// </summary>
+        /// <param name="other">The segment to compare</param>
+        /// <returns>true for same, false for non-same</returns>
+        public abstract bool Match(PathSegment other);
     }
 }

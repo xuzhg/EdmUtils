@@ -48,6 +48,11 @@ namespace Annotation
         /// <summary>
         /// Unbound operation (function/action), for example: ~/resetDatabase(...)
         /// </summary>
-        OperationImport
+        OperationImport,
+
+        /// <summary>
+        /// Type cast
+        /// </summary>
+        TypeCast
     }
 }

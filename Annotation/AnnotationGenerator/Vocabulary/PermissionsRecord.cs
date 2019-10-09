@@ -45,26 +45,26 @@ namespace AnnotationGenerator.Vocabulary
             //    { "Application", "Application" }
             //};
 
-            PermissionType p = ConvertFromPerm("Delegated (work or school account)", permission.DelegatedWork);
+            PermissionType p = ConvertFromPerm("Delegated (work or school account)", permission.DelegatedWork, permission.DelegatedWorkRestrictedProperties);
             if (p != null)
             {
                 Permissions.Add(p);
             }
 
-            p = ConvertFromPerm("Delegated (personal Microsoft account)", permission.DelegatedPersonal);
+            p = ConvertFromPerm("Delegated (personal Microsoft account)", permission.DelegatedPersonal, permission.DelegatedPersonalRestrictedProperties);
             if (p != null)
             {
                 Permissions.Add(p);
             }
 
-            p = ConvertFromPerm("Application", permission.Application);
+            p = ConvertFromPerm("Application", permission.Application, permission.ApplicationRestrictedProperties);
             if (p != null)
             {
                 Permissions.Add(p);
             }
         }
 
-        private static PermissionType ConvertFromPerm(string name, IList<string> scopes)
+        private static PermissionType ConvertFromPerm(string name, IList<string> scopes, IDictionary<string, HashSet<string>> restricted)
         {
             if (scopes == null || scopes.Count == 0)
             {
@@ -81,9 +81,23 @@ namespace AnnotationGenerator.Vocabulary
                 SchemeName = name
             };
 
+            Func<string, IDictionary<string, HashSet<string>>, string> func = (sc, res) =>
+            {
+                if (res.TryGetValue(sc, out HashSet<string> value))
+                {
+                    if (value.Count > 0)
+                    {
+                        return String.Join(",", value);
+                    }
+                }
+
+                return null;
+            };
+
             p.Scopes = scopes.Select(s => new ScopeType
             {
-                Scope = s.Trim()
+                Scope = s.Trim(),
+                RestrictedProperties = func(s, restricted)
             }).ToList();
 
             return p;

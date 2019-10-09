@@ -34,6 +34,9 @@ namespace Annotation.EdmUtil
             Target = operationImport.Operation.TargetName();
         }
 
+        /// <inheritdoc/>
+        public override SegmentKind Kind => SegmentKind.OpertionImport;
+
         public IEdmOperationImport OperationImport { get; }
 
         public override bool IsSingle { get; } = false;
@@ -43,5 +46,23 @@ namespace Annotation.EdmUtil
         public override IEdmNavigationSource NavigationSource { get; }
 
         public override string Target { get; }
+
+        /// <summary>
+        /// Gets the Uri literal for the operationImport segment.
+        /// It should be the name of the operationImport.
+        /// </summary>
+        public override string UriLiteral => OperationImport.Name;
+
+        /// <inheritdoc/>
+        public override bool Match(PathSegment other)
+        {
+            OperationImportSegment otherOperationImportSegment = other as OperationImportSegment;
+            if (otherOperationImportSegment == null)
+            {
+                return false;
+            }
+
+            return ReferenceEquals(OperationImport, otherOperationImportSegment.OperationImport);
+        }
     }
 }

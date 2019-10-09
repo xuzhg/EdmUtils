@@ -14,12 +14,6 @@ namespace Annotation.EdmUtil
     /// </summary>
     public class NavigationSegment : PathSegment
     {
-        public NavigationSegment(IEdmNavigationProperty property)
-            : base(property.Name)
-        {
-            Property = property;
-        }
-
         /// <summary>
         /// Initializes a new instance of <see cref="NavigationSegment"/> class.
         /// </summary>
@@ -39,13 +33,16 @@ namespace Annotation.EdmUtil
         public NavigationSegment(IEdmNavigationProperty property, IEdmNavigationSource navigationSource, string identifier)
             : base(identifier)
         {
-            Property = property ?? throw new ArgumentNullException(nameof(property));
+            NavigationProperty = property ?? throw new ArgumentNullException(nameof(property));
             NavigationSource = navigationSource;
             IsSingle = !property.Type.IsCollection();
             EdmType = property.Type.Definition;
         }
 
-        public IEdmNavigationProperty Property { get; }
+        /// <inheritdoc/>
+        public override SegmentKind Kind => SegmentKind.Navigation;
+
+        public IEdmNavigationProperty NavigationProperty { get; }
 
         public override bool IsSingle { get; }
 
@@ -53,6 +50,24 @@ namespace Annotation.EdmUtil
 
         public override IEdmNavigationSource NavigationSource { get; }
 
-        public override string Target => Property.Name;
+        public override string Target => NavigationProperty.Name;
+
+        /// <summary>
+        /// Gets the Uri literal for the navigation segment.
+        /// It should be the name of the navigation.
+        /// </summary>
+        public override string UriLiteral => NavigationProperty.Name;
+
+        /// <inheritdoc/>
+        public override bool Match(PathSegment other)
+        {
+            NavigationSegment otherNavigationSegment = other as NavigationSegment;
+            if (otherNavigationSegment == null)
+            {
+                return false;
+            }
+
+            return ReferenceEquals(NavigationProperty, otherNavigationSegment.NavigationProperty);
+        }
     }
 }

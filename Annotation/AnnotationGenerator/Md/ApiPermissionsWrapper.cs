@@ -3,19 +3,54 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
-using Annotation;
-using Annotation.EdmUtil;
-using AnnotationGenerator.Vocabulary;
-using Microsoft.OData.Edm;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Dynamic;
+using System.IO;
 using System.Linq;
-using System.Threading;
+using Annotation.EdmUtil;
+using Microsoft.OData.Edm;
+using Newtonsoft.Json.Linq;
 
 namespace AnnotationGenerator.MD
 {
+    public class ApiPermissionItem
+    {
+        public ApiPermissionItem(string requestUri, IList<ApiPermissionType> permissions)
+        {
+            RequestUri = requestUri;
+            Permissions = permissions;
+        }
+
+        public string RequestUri { get; }
+
+        public IList<ApiPermissionType> Permissions { get; }
+
+        public bool IsValid => RequestPath != null;
+
+        public UriPath RequestPath { get; private set; }
+
+        public string PaserError { get; private set; }
+
+        public void ProcessByEdmModel(IEdmModel model, PathParserSettings settings)
+        {
+            RequestPath = null;
+            try
+            {
+                RequestPath = PathParser.ParsePath(RequestUri, model, settings);
+            }
+            catch (Exception innerEx)
+            {
+                PaserError = innerEx.Message;
+                RequestPath = null;
+            }
+        }
+    }
+
+    public class PermissionSchemeItem
+    {
+
+    }
+
     /// <summary>
     /// {
     ///   "ApiPermissions": {
@@ -27,7 +62,7 @@ namespace AnnotationGenerator.MD
     ///         }
     ///       ]
     ///    },
-    ///    "PermissionsByScheme": {
+    ///    "PermissionSchemes": {
     ///       "DelegatedWork": [
     ///         {
     ///           "Name": "AccessReview.Read.All",
@@ -40,18 +75,55 @@ namespace AnnotationGenerator.MD
     /// </summary>
     public class ApiPermissionsWrapper
     {
-        public IDictionary<string, IList<ApiPermissionType>> ApiPermissions { get; set; }
+        public IDictionary<string, IList<ApiPermissionType>> ApiPermissions { get; private set; }
 
-        public IDictionary<string, IList<ApiPermissionsBySchemeType>> PermissionsByScheme { get; set; }
+        public IDictionary<string, IList<ApiPermissionsBySchemeType>> PermissionsByScheme { get; private set; }
 
-        public IDictionary<string, Exception> UriParserError { get; set; } = new Dictionary<string, Exception>();
+        public IDictionary<string, Exception> UriParserError { get; private set; } = new Dictionary<string, Exception>();
 
-        public IDictionary<UriPath, IList<ApiPermissionType>> ApiPermissionsProcessed { get; set; }
+        public IList<string> MergedRequests { get; } = new List<string>();
 
+        public IDictionary<UriPath, IList<ApiPermissionType>> ApiPermissionsProcessed { get; private set; }
+
+        /// <summary>
+        /// Load all Permissions, it's a JSON object, includes two properties;
+        /// {
+        ///     "ApiPermissions" : {}
+        ///     "PermissionSchemes" {}
+        /// }
+        /// </summary>
+        /// <param name="fileName">The permissions files.</param>
+        /// <returns>the ApiPermissionsWrapper</returns>
+        public static ApiPermissionsWrapper LoadAll(string fileName)
+        {
+            ApiPermissionsWrapper wrapper = new ApiPermissionsWrapper();
+            try
+            {
+                string json = File.ReadAllText(fileName);
+                JObject jObj = JObject.Parse(json);
+
+                // ApiPermissions
+                wrapper.ApiPermissions = LoadTopLevelProperty<ApiPermissionType>(jObj, "ApiPermissions");
+
+                // PermissionSchemes
+                wrapper.PermissionsByScheme = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+            return wrapper;
+        }
+
+        /// <summary>
+        /// Process the permissions by the IEdmModel.
+        /// </summary>
+        /// <param name="model">The Edm Model.</param>
         public void Process(IEdmModel model)
         {
-            IDictionary<UriPath, IList<ApiPermissionType>> processed = new Dictionary<UriPath, IList<ApiPermissionType>>();
-
+            IDictionary<UriPath, IList<ApiPermissionType>> processed = new Dictionary<UriPath, IList<ApiPermissionType>>(new UriPathEqualityComparer());
             PathParserSettings settings = new PathParserSettings
             {
                 EnableCaseInsensitive = true
@@ -60,34 +132,44 @@ namespace AnnotationGenerator.MD
             foreach (var permission in ApiPermissions)
             {
                 // Do Uri parser & save the invalid Uri into dictionary
-                var path = ParseRequestUri(permission.Key, model, settings);
+                UriPath path;
+                try
+                {
+                    path = PathParser.ParsePath(permission.Key, model, settings);
+                }
+                catch (Exception innerEx)
+                {
+                    UriParserError[permission.Key] = innerEx;
+                    path = null;
+                }
+
                 if (path == null)
                 {
                     continue;
                 }
 
-                processed[path] = permission.Value;
+                if (processed.TryGetValue(path, out IList<ApiPermissionType> value))
+                {
+                    MergePermissions(value, permission.Value);
+                    MergedRequests.Add(permission.Key);
+                }
+                else
+                {
+                    processed[path] = permission.Value;
+                }
             }
 
             int index = 0;
-            // for each property segment
+            // for each property, navigation property segment
             foreach (var item in processed)
             {
                 index++;
 
-                // only process the property
-                if (item.Key.Kind == PathKind.Property ||
-                    item.Key.Kind == PathKind.CollectionNavigation)
+                PathSegment lastSegment = item.Key.LastSegment;
+                if (lastSegment.Kind == SegmentKind.Property || lastSegment.Kind == SegmentKind.Navigation)
                 {
+                    // only process the property
                     TryFindPreviousPath(item, processed);
-                }
-
-                if (item.Key.Kind == PathKind.SingleNavigation)
-                {
-                    if (!(item.Key.LastSegment is KeySegment))
-                    {
-                        TryFindPreviousPath(item, processed);
-                    }
                 }
             }
 
@@ -96,15 +178,27 @@ namespace AnnotationGenerator.MD
 
         private void TryFindPreviousPath(KeyValuePair<UriPath, IList<ApiPermissionType>> loopUp, IDictionary<UriPath, IList<ApiPermissionType>> processed)
         {
-            string loopTarget = loopUp.Key.TargetString;
-            int start = loopTarget.LastIndexOf('/'); // ~/users/mailsettings
-            loopTarget = loopTarget.Substring(0, start); // ~/users
+            UriPath path = loopUp.Key;
+            int count = path.Count;
+            IList<PathSegment> segments = new List<PathSegment>();
+            int skip = 2;
+            if (path.Segments[path.Count - 1].Kind != SegmentKind.Key)
+            {
+                skip = 1;
+            }
 
-            string propertyName = loopUp.Key.LastSegment.Identifier;
+            for (int i = 0; i < count - skip; i++)
+            {
+                // get rid of the "last key segment and last property (nav) segment)
+                segments.Add(path.Segments[i]);
+            }
+
+            UriPath newPath = new UriPath(segments);
+
+            string propertyName = loopUp.Key.LastSegment.UriLiteral;
 
             // find all target string is same as the loop target string (prefix)
-            var found = processed.Where(p => p.Key.GetTargetString() == loopTarget).ToList();
-            foreach(var foundItem in found)
+            foreach (var foundItem in processed.Where(p => p.Key.EqualsTo(newPath)))
             {
                 TryFindPreviousPath(foundItem, loopUp, propertyName);
             }
@@ -132,50 +226,170 @@ namespace AnnotationGenerator.MD
         {
             foreach(var scope in append.DelegatedWork)
             {
-                if (!loopUp.DelegatedWork.Any(a => a.ScopeName == scope.ScopeName))
+                if (!loopUp.DelegatedWork.Any(a => a == scope))
                 {
-                    scope.RestrictedProperties.Add(propertyName);
+                    HashSet<string> restricted;
+                    if (!append.DelegatedWorkRestrictedProperties.TryGetValue(scope, out restricted))
+                    {
+                        restricted = new HashSet<string>();
+                        append.DelegatedWorkRestrictedProperties[scope] = restricted;
+                    }
+                    restricted.Add(propertyName);
                 }
             }
 
             foreach(var scope in append.DelegatedPersonal)
             {
-                if (!loopUp.DelegatedPersonal.Any(a => a.ScopeName == scope.ScopeName))
+                if (!loopUp.DelegatedPersonal.Any(a => a == scope))
                 {
-                    scope.RestrictedProperties.Add(propertyName);
+                    HashSet<string> restricted;
+                    if (!append.DelegatedPersonalRestrictedProperties.TryGetValue(scope, out restricted))
+                    {
+                        restricted = new HashSet<string>();
+                        append.DelegatedPersonalRestrictedProperties[scope] = restricted;
+                    }
+                    restricted.Add(propertyName);
                 }
             }
 
             foreach (var scope in append.Application)
             {
-                if (!loopUp.Application.Any(a => a.ScopeName == scope.ScopeName))
+                if (!loopUp.Application.Any(a => a == scope))
                 {
-                    scope.RestrictedProperties.Add(propertyName);
+                    HashSet<string> restricted;
+                    if (!append.ApplicationRestrictedProperties.TryGetValue(scope, out restricted))
+                    {
+                        restricted = new HashSet<string>();
+                        append.ApplicationRestrictedProperties[scope] = restricted;
+                    }
+                    restricted.Add(propertyName);
                 }
             }
         }
 
-        public UriPath ParseRequestUri(string requestUri, IEdmModel model, PathParserSettings settings)
+        private static void MergePermissions(IList<ApiPermissionType> source, IList<ApiPermissionType> newPermissions)
         {
-            UriPath path;
-            try
+            foreach (var permType in newPermissions)
             {
-                path = PathParser.ParsePath(requestUri, model);
+                ApiPermissionType sameHttpVerbPermission = source.FirstOrDefault(s => s.HttpVerb == permType.HttpVerb);
+                if (sameHttpVerbPermission != null)
+                {
+                    sameHttpVerbPermission.DelegatedWork = sameHttpVerbPermission.DelegatedWork.Union(permType.DelegatedWork).ToList();
+                    sameHttpVerbPermission.DelegatedPersonal = sameHttpVerbPermission.DelegatedPersonal.Union(permType.DelegatedPersonal).ToList();
+                    sameHttpVerbPermission.Application = sameHttpVerbPermission.Application.Union(permType.Application).ToList();
+                }
+                else
+                {
+                    source.Add(permType);
+                }
             }
-            catch
+        }
+
+        private static IDictionary<string, IList<T>> LoadTopLevelProperty<T>(JObject topLevelObject, string propertyName)
+        {
+            JProperty property = topLevelObject.Property(propertyName);
+            if (property == null)
             {
-                try
-                {
-                    path = PathParser.ParsePath(requestUri, model, settings);
-                }
-                catch (Exception innerEx)
-                {
-                    UriParserError[requestUri] = innerEx;
-                    return null;
-                }
+                throw new Exception($"Invalid format, Need a top level property named '{propertyName}'.");
             }
 
-            return path;
+            JObject propertyValue = property.Value as JObject;
+            if (propertyValue == null)
+            {
+                throw new Exception($"Invalid format, Need an object value of the property: '{propertyName}'.");
+            }
+
+            var dict = new Dictionary<string, IList<T>>();
+            foreach (var subProperty in propertyValue.Properties())
+            {
+                JArray array = subProperty.Value as JArray;
+                if (array == null)
+                {
+                    throw new Exception($"Invalid format, Need an array value of the property: {subProperty.Name}");
+                }
+
+                IList<T> subPropertyList = new List<T>();
+                foreach (var item in array)
+                {
+                    JObject subPermissionsBySchemeObj = item as JObject;
+                    if (subPermissionsBySchemeObj == null)
+                    {
+                        throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
+                    }
+
+                    T subPermObject = subPermissionsBySchemeObj.ToObject<T>();
+                    subPropertyList.Add(subPermObject);
+                }
+
+                dict[subProperty.Name.Trim()] = subPropertyList;
+            }
+
+            return dict;
+        }
+
+        private static IDictionary<string, IList<T1>> LoadTopLevelProperty<T1, T2>(JObject topLevelObject, string propertyName, Func<T2, T1> convertTo)
+        {
+            JProperty property = topLevelObject.Property(propertyName);
+            if (property == null)
+            {
+                throw new Exception($"Invalid format, Need a top level property named '{propertyName}'.");
+            }
+
+            JObject propertyValue = property.Value as JObject;
+            if (propertyValue == null)
+            {
+                throw new Exception($"Invalid format, Need an object value of the property: '{propertyName}'.");
+            }
+
+            var dict = new Dictionary<string, IList<T1>>();
+            foreach (var subProperty in propertyValue.Properties())
+            {
+                JArray array = subProperty.Value as JArray;
+                if (array == null)
+                {
+                    throw new Exception($"Invalid format, Need an array value of the property: {subProperty.Name}");
+                }
+
+                IList<T1> subPropertyList = new List<T1>();
+                foreach (var item in array)
+                {
+                    JObject subPermissionsBySchemeObj = item as JObject;
+                    if (subPermissionsBySchemeObj == null)
+                    {
+                        throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
+                    }
+
+                    T2 subPermObject = subPermissionsBySchemeObj.ToObject<T2>();
+                    subPropertyList.Add(convertTo(subPermObject));
+                }
+
+                dict[subProperty.Name.Trim()] = subPropertyList;
+            }
+
+            return dict;
+        }
+
+        private static ApiPermissionType ConvertTo(ApiPermissionTypeInternal permInternal)
+        {
+            ApiPermissionType wrapper = new ApiPermissionType();
+            wrapper.HttpVerb = permInternal.HttpVerb;
+
+       //     wrapper.DelegatedWork = permInternal.DelegatedWork.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
+      //      wrapper.DelegatedPersonal = permInternal.DelegatedPersonal.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
+      //      wrapper.Application = permInternal.Application.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
+
+            return wrapper;
+        }
+
+        internal class ApiPermissionTypeInternal
+        {
+            public string HttpVerb { get; set; }
+
+            public IList<string> DelegatedWork { get; set; }
+
+            public IList<string> DelegatedPersonal { get; set; }
+
+            public IList<string> Application { get; set; }
         }
     }
 }

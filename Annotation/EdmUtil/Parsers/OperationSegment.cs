@@ -35,6 +35,9 @@ namespace Annotation.EdmUtil
             }
         }
 
+        /// <inheritdoc/>
+        public override SegmentKind Kind => SegmentKind.Operation;
+
         public IEdmOperation Operation { get; }
 
         public override bool IsSingle { get; }
@@ -44,5 +47,23 @@ namespace Annotation.EdmUtil
         public override IEdmNavigationSource NavigationSource { get; }
 
         public override string Target { get; }
+
+        /// <summary>
+        /// Gets the Uri literal for the operation segment.
+        /// It should be the name of the operation.
+        /// </summary>
+        public override string UriLiteral => Operation.FullName();
+
+        /// <inheritdoc/>
+        public override bool Match(PathSegment other)
+        {
+            OperationSegment otherOperationSegment = other as OperationSegment;
+            if (otherOperationSegment == null)
+            {
+                return false;
+            }
+
+            return ReferenceEquals(Operation, otherOperationSegment.Operation);
+        }
     }
 }

@@ -24,390 +24,318 @@
 23) /workbook/worksheets/{id|name}/charts/{name}/axes/valueaxis/title:==> Unknown kind of first segment: 'workbook'
 24) /workbook/worksheets/{id|name}/charts/add:==> Unknown kind of first segment: 'workbook'
 25) /workbook/worksheets/{id|name}/charts/ItemAt:==> Unknown kind of first segment: 'workbook'
-26) /workbook/worksheets/{id|name}/charts/{name}/datalabels:==> Unknown kind of first segment: 'workbook'
-27) /workbook/worksheets/{id|name}/charts/{name}/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-28) /workbook/worksheets/{id|name}/charts/{name}/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-29) /workbook/worksheets/{id|name}/charts/{name}/axes/valueaxis/format/font:==> Unknown kind of first segment: 'workbook'
-30) /workbook/worksheets/{id|name}/charts/{name}/axes/valueaxis/minorgridlines:==> Unknown kind of first segment: 'workbook'
-31) /workbook/worksheets/{id|name}/charts/{name}/legend:==> Unknown kind of first segment: 'workbook'
-32) /workbook/worksheets/{id|name}/charts/{name}/axes/seriesaxis/format/line/clear:==> Unknown kind of first segment: 'workbook'
-33) /workbook/worksheets/{id|name}/charts/{name}/axes/seriesaxis/format/line:==> Unknown kind of first segment: 'workbook'
-34) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points/{undefined}:==> Unknown kind of first segment: 'workbook'
-35) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points:==> Unknown kind of first segment: 'workbook'
-36) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points/ItemAt:==> Unknown kind of first segment: 'workbook'
-37) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}:==> Unknown kind of first segment: 'workbook'
-38) /workbook/worksheets/{id|name}/charts/{name}/series/ItemAt:==> Unknown kind of first segment: 'workbook'
-39) /workbook/worksheets/{id|name}/charts/{name}/title:==> Unknown kind of first segment: 'workbook'
-40) /teams/{id}/channels/{id}/messages/{id}/hostedImages/{id}:==> Unknown kind of segment: 'hostedImages', previous segment: '{id}'.
-41) /teams/{id}/channels/{id}/messages/{id}/hostedImages/{id}/$value:==> Unknown kind of segment: 'hostedImages', previous segment: '{id}'.
-42) /teams/{id}/channels/{id}/messages/{id}/hostedImages:==> Unknown kind of segment: 'hostedImages', previous segment: '{id}'.
-43) /connectorGroups/{id}/members/{id}:==> Unknown kind of first segment: 'connectorGroups'
-44) /connectors/{id}/memberOf:==> Unknown kind of first segment: 'connectors'
-45) /connectors:==> Unknown kind of first segment: 'connectors'
-46) /connectorGroups/{id}:==> Unknown kind of first segment: 'connectorGroups'
-47) /connectorGroups/{id}/applications:==> Unknown kind of first segment: 'connectorGroups'
-48) /connectorGroups/{id}/members:==> Unknown kind of first segment: 'connectorGroups'
-49) /connectorGroups:==> Unknown kind of first segment: 'connectorGroups'
-50) /connectorGroups/{id}/members/$ref:==> Unknown kind of first segment: 'connectorGroups'
-51) /me/contacts/AAMkAGI2THk0AAA=:==> Unknown kind of segment: 'AAMkAGI2THk0AAA=', previous segment: 'contacts'.
-52) /me/contacts/AAMkADh6v5AAAvgTCEAAA=:==> Unknown kind of segment: 'AAMkADh6v5AAAvgTCEAAA=', previous segment: 'contacts'.
-53) /groups/0d75b8dc-c42d-44dd-890a-751a99c0589f/threads/AAQkAD8EJUmcWwTJi06Cew==/posts:==> Invalid parameter at AAQkAD8EJUmcWwTJi06Cew==
-54) /directoryObject/ffab4dce-9b82-49a6-b7c7-1a143106598c:==> Unknown kind of first segment: 'directoryObject'
-55) /directoryroles/{id}/members/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
-56) /drive/root:/{item-path}:/createUploadSession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-57) /me/drive/root:/{path_to_parent}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-58) /drives/{drive-id}/root:/{path-relative-to-root}:/children:==> Unknown kind of segment: 'root:', previous segment: '{drive-id}'.
-59) /me/drive/items/{item-id}/thumbnails/{thumb-id}/{size}:==> Unknown kind of segment: '{size}', previous segment: '{thumb-id}'.
-60) /me/drive/items/{item-id}/thumbnails/{thumb-id}/{size}/content:==> Unknown kind of segment: '{size}', previous segment: '{thumb-id}'.
-61) /drives/{drive-id}/items/{parent-id}:/{filename}:/content:==> Unknown kind of segment: '{filename}:', previous segment: '{parent-id}:'.
-62) /me/drive/root:/FolderA/FileB.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-63) /education/classes/{id}/assignments/{id}/categories/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
-64) /education/classes/11021/assignments/19002/categories/ec98f158-341d-4fea-9f8c-14a250d489ac/$ref:==> Unknown kind of segment: '$ref', previous segment: 'ec98f158-341d-4fea-9f8c-14a250d489ac'.
-65) /educationClasses/assignments/{id}/resources/{id}:==> Unknown kind of first segment: 'educationClasses'
-66) /education/classes/{id}/members/{userId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{userId}'.
-67) /education/classes/{id}/teachers/{userId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{userId}'.
-68) /education/classes/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-69) /education/schools/{id}/classes/{classId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{classId}'.
-70) /education/schools/{id}/users/{userId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{userId}'.
-71) /education/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-72) /educationClasses/assignments/{id}/submissions/{id}/resources:==> Unknown kind of first segment: 'educationClasses'
-73) /education/classes/{id}/assignments/{id}/submissions/{id}/recall:==> Unknown kind of segment: 'recall', previous segment: '{id}'.
-74) /education/classes/11021/assignments/19002/submissions/850f51b7/recall:==> Unknown kind of segment: 'recall', previous segment: '850f51b7'.
-75) /education/classes/{id}/assignments/{id}/submissions/{id}/release:==> Unknown kind of segment: 'release', previous segment: '{id}'.
-76) /education/classes/11021/assignments/19002/submissions/850f51b7/release:==> Unknown kind of segment: 'release', previous segment: '850f51b7'.
-77) /educationClasses/assignments/{id}/submissions/{id}/resources/{id}:==> Unknown kind of first segment: 'educationClasses'
-78) /synchronizationProfiles/{id}/errors:==> Unknown kind of first segment: 'synchronizationProfiles'
-79) /synchronizationProfiles/{id}:==> Unknown kind of first segment: 'synchronizationProfiles'
-80) /synchronizationProfiles:==> Unknown kind of first segment: 'synchronizationProfiles'
-81) /synchronizationProfiles/{id}/pause:==> Unknown kind of first segment: 'synchronizationProfiles'
-82) /synchronizationProfiles/{id}/reset:==> Unknown kind of first segment: 'synchronizationProfiles'
-83) /synchronizationProfiles/{id}/resume:==> Unknown kind of first segment: 'synchronizationProfiles'
-84) /synchronizationProfiles/{id}/start:==> Unknown kind of first segment: 'synchronizationProfiles'
-85) /synchronizationProfiles/{id}/uploadUrl:==> Unknown kind of first segment: 'synchronizationProfiles'
-86) /synchronizationProfiles/{id}/profileStatus:==> Unknown kind of first segment: 'synchronizationProfiles'
-87) /education/me/delta:==> Unknown kind of segment: 'delta', previous segment: 'me'.
-88) /me/events/AAMkAGIAAAoZDOFAAA=/:==> Unknown kind of segment: 'AAMkAGIAAAoZDOFAAA=', previous segment: 'events'.
-89) /me/events/AAMkAGI1AAAoZDOFAAA=/:==> Unknown kind of segment: 'AAMkAGI1AAAoZDOFAAA=', previous segment: 'events'.
-90) /me/events/AAMkADAGAADDdm4NAAA=/:==> Unknown kind of segment: 'AAMkADAGAADDdm4NAAA=', previous segment: 'events'.
-91) /me/events/AAMkAGUzYRgWAAA=/instances:==> Unknown kind of segment: 'AAMkAGUzYRgWAAA=', previous segment: 'events'.
-92) /me/events/{AAMkAGI1AAAt9AHjAAA=}/attachments:==> Unknown kind of segment: '{AAMkAGI1AAAt9AHjAAA=}', previous segment: 'events'.
-93) /me/events/AAMkAGE1M88AADUv0uAAAG=/attachments:==> Unknown kind of segment: 'AAMkAGE1M88AADUv0uAAAG=', previous segment: 'events'.
-94) /me/messages/AAMkADYAAAImV_lAAA=:==> Unknown kind of segment: 'AAMkADYAAAImV_lAAA=', previous segment: 'messages'.
-95) /me/messages/AAMkADYAAAImV_jAAA=/:==> Unknown kind of segment: 'AAMkADYAAAImV_jAAA=', previous segment: 'messages'.
-96) /workbook/tables/{id|name}/columns/{id|name}/filter/apply:==> Unknown kind of first segment: 'workbook'
-97) /workbook/tables/{id|name}/columns/{id|name}/filter/clear:==> Unknown kind of first segment: 'workbook'
-98) /workbook/names/{name}/range/format/protection:==> Unknown kind of first segment: 'workbook'
-99) me/devices/{id}/command/{id}/responsePayload:==> Unknown kind of segment: 'command', previous segment: '{id}'.
-100) /groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/conversations/AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgAQABuXO3guDWBMpyKF7LsVwfU=:==> Unknown kind of segment: 'AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgAQABuXO3guDWBMpyKF7LsVwfU=', previous segment: 'conversations'.
-101) /groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/events/AQMkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NwAzZWYARgAAA_b2VnUAiWNLj0xeSOs499YHAMT2RdsuOqRIlQZ4vOzp66YAAAIBDQAAAMT2RdsuOqRIlQZ4vOzp66YAAAIJOgAAAA==:==> Invalid parameter at AQMkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NwAzZWYARgAAA_b2VnUAiWNLj0xeSOs499YHAMT2RdsuOqRIlQZ4vOzp66YAAAIBDQAAAMT2RdsuOqRIlQZ4vOzp66YAAAIJOgAAAA==
-102) /groups/{id}/members/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
-103) /groups/{id}/owners/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
-104) /groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/threads/AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgMkABAAG5c7eC4NYEynIoXsuxXB9RAAG5c7eC4NYEynIoXsuxXB9Q==:==> Invalid parameter at AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgMkABAAG5c7eC4NYEynIoXsuxXB9RAAG5c7eC4NYEynIoXsuxXB9Q==
-105) /workbook/tables/{id|name}/sort/fields/icon:==> Unknown kind of first segment: 'workbook'
-106) /me/drive/items/{id}/workbook/tables/{id|name}/sort/fields/icon:==> Unknown kind of segment: 'icon', previous segment: 'fields'.
-107) /drives/{drive-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-01-01',endDateTime='2017-01-10',interval='day'):==> Sequence contains no elements
-108) /drives/{drive-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-01-01',endDateTime='2017-01-3',interval='day'):==> Sequence contains no elements
-109) /sites/{site-id}/items/{item-id}/versions:==> Unknown kind of segment: 'versions', previous segment: '{item-id}'.
-110) /sites/{site-id}/items/{item-id}/versions/{version-id}:==> Unknown kind of segment: 'versions', previous segment: '{item-id}'.
-111) /sites/{site-id}/items/{item-id}/versions/{version-id}/restoreVersion:==> Unknown kind of segment: 'versions', previous segment: '{item-id}'.
-112) /locatedRiskEvents/{id}:==> Unknown kind of first segment: 'locatedRiskEvents'
-113) /locatedRiskEvents/27b91217-a6ca-edff-da2b-c46feaf0228f-a6653179-3c7b-4e99-bb4c-dddeb18adfc1-42445d4d-fe22-9840-cf9d-72f6ce8cd056:==> Unknown kind of first segment: 'locatedRiskEvents'
-114) /me/mailfolders/AQMkADYAAAIBDAAAAA==/childfolders:==> Invalid parameter at AQMkADYAAAIBDAAAAA==
-115) /me/messages/AAMkADA1MTAAAH5JaLAAA=/createForward:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaLAAA=', previous segment: 'messages'.
-116) /me/messages/AAMkADA1MTAAAAqldOAAA=/createReply:==> Unknown kind of segment: 'AAMkADA1MTAAAAqldOAAA=', previous segment: 'messages'.
-117) /me/messages/AAMkADA1MTAAAH5JaKAAA=/createReplyAll:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaKAAA=', previous segment: 'messages'.
-118) /me/messages/AAMkADA1MTAAAH5JaLAAA=/forward:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaLAAA=', previous segment: 'messages'.
-119) /me/messages/{id}/$value:==> Unknown kind of segment: '$value', previous segment: '{id}'.
-120) /me/messages/AAMkAGI1AAAoZCfHAAA=:==> Unknown kind of segment: 'AAMkAGI1AAAoZCfHAAA=', previous segment: 'messages'.
-121) /me/messages/AAMkAGI1AAAoZCfHAAA=/:==> Unknown kind of segment: 'AAMkAGI1AAAoZCfHAAA=', previous segment: 'messages'.
-122) /me/messages/AAMkADhAAATs28OAAA=/move:==> Unknown kind of segment: 'AAMkADhAAATs28OAAA=', previous segment: 'messages'.
-123) /me/messages/AAMkADA1MTAAAAqldOAAA=/reply:==> Unknown kind of segment: 'AAMkADA1MTAAAAqldOAAA=', previous segment: 'messages'.
-124) /me/messages/AAMkADA1MTAAAH5JaKAAA=/replyAll:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaKAAA=', previous segment: 'messages'.
-125) /workbook/names/add:==> Unknown kind of first segment: 'workbook'
-126) /workbook/names/{name}:==> Unknown kind of first segment: 'workbook'
-127) /workbook/names:==> Unknown kind of first segment: 'workbook'
-128) /workbook/names/{name}/Range:==> Unknown kind of first segment: 'workbook'
-129) /onenote/notebooks/getrecentnotebooks(includePersonalNotebooks=true):==> Unknown kind of first segment: 'onenote'
-130) ~/onPremisesPublishingProfiles/{publishingType}/agents/{id1}/agentGroups/{id2}/$ref:==> Unknown kind of first segment: '~'
-131) /onPremisesPublishingProfiles/provisioning/agents/1234b780-965f-4149-85c5-a8c73e58b67d/agentGroups/8832388F-3814-4952-B288-FFB62081FE25/$ref:==> Unknown kind of segment: '$ref', previous segment: '8832388F-3814-4952-B288-FFB62081FE25'.
-132) ~/onPremisesPublishingProfiles/{publishingType}/agents/{id1}/:==> Unknown kind of first segment: '~'
-133) ~/onPremisesPublishingProfiles/{publishingType}/agents:==> Unknown kind of first segment: '~'
-134) ~/onPremisesPublishingProfiles/{publishingType}/agents/{id1}/agentGroups/$ref:==> Unknown kind of first segment: '~'
-135) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id1}:==> Unknown kind of first segment: '~'
-136) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id}:==> Unknown kind of first segment: '~'
-137) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups:==> Unknown kind of first segment: '~'
-138) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id}/agents:==> Unknown kind of first segment: '~'
-139) ~/onPremisesPublishingProfiles/{publishingType}/:==> Unknown kind of first segment: '~'
-140) ~/onPremisesPublishingProfiles/{publishingType}/hybridAgentUpdaterConfiguration:==> Unknown kind of first segment: '~'
-141) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions/Com.Contoso.Referral/:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
-142) /groups/f5480dfd-7d77-4d0b-ba2e-3391953cc74a/events/AAMkADVlN17IsAAA=/extensions/Com.Contoso.Referral:==> Unknown kind of segment: 'AAMkADVlN17IsAAA=', previous segment: 'events'.
-143) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='/extensions/Com.Contoso.Referral:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='
-144) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='/extensions/Microsoft.OutlookServices.OpenTypeExtension.Com.Contoso.Referral'):==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='
-145) /groups/f5480dfd-7d77-4d0b-ba2e-3391953cc74a/events/AAMkADVl17IsAAA=/extensions/Com.Contoso.Deal:==> Unknown kind of segment: 'AAMkADVl17IsAAA=', previous segment: 'events'.
-146) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
-147) /groups/37df2ff0-0de0-4c33-8aee-75289364aef6/threads/AAQkADJizZJpEWwqDHsEpV_KA==/posts/AAMkADJiUg96QZUkA-ICwMubAADDEd7UAAA=/extensions/Microsoft.OutlookServices.OpenTypeExtension.Com.Contoso.Estimate:==> Invalid parameter at AAQkADJizZJpEWwqDHsEpV_KA==
-148) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
-149) /groups/f5480dfd-7d77-4d0b-ba2e-3391953cc74a/events/AAMkADVl17IsAAA=/extensions:==> Unknown kind of segment: 'AAMkADVl17IsAAA=', previous segment: 'events'.
-150) /groups/37df2ff0-0de0-4c33-8aee-75289364aef6/threads/AAQkADJizZJpEWwqDHsEpV_KA==/posts/AAMkADJiUg96QZUkA-ICwMubAAC1heiSAAA=/reply:==> Invalid parameter at AAQkADJizZJpEWwqDHsEpV_KA==
-151) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions/Com.Contoso.Referral:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
-152) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions/Microsoft.OutlookServices.OpenTypeExtension.Com.Contoso.Referral:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
-153) /me/tasks('AAMkADA1MT15rfAAA=')/complete:==> Unknown kind of segment: 'tasks', previous segment: 'me'.
-154) /me/outlook/tasks/AAMkADIyAAAhrb_QAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrb_QAAA=', previous segment: 'tasks'.
-155) /me/outlook/tasks/AAMkADA1MTrgAAA=:==> Unknown kind of segment: 'AAMkADA1MTrgAAA=', previous segment: 'tasks'.
-156) /me/outlook/tasks/AAMkADA1MHgwAAA=:==> Unknown kind of segment: 'AAMkADA1MHgwAAA=', previous segment: 'tasks'.
-157) /me/outlook/tasks/AAMkADA1MTHgwAAA=:==> Unknown kind of segment: 'AAMkADA1MTHgwAAA=', previous segment: 'tasks'.
-158) /me/outlook/taskFolders/AAMkADIyAAAhrbPXAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbPXAAA=', previous segment: 'taskFolders'.
-159) /me/outlook/taskFolders/AAMkADIyAAAAABrJAAA=:==> Unknown kind of segment: 'AAMkADIyAAAAABrJAAA=', previous segment: 'taskFolders'.
-160) /me/outlook/taskFolders/AAMkADIyAAAhrbPWAAA=/tasks:==> Unknown kind of segment: 'AAMkADIyAAAhrbPWAAA=', previous segment: 'taskFolders'.
-161) /me/taskfolders('AAMkADIyAAAhrbPXAAA=')/tasks:==> Unknown kind of segment: 'taskfolders', previous segment: 'me'.
-162) /me/outlook/taskFolders/AAMkADIyAAAhrbPWAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbPWAAA=', previous segment: 'taskFolders'.
-163) /me/outlook/taskgroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskgroups'.
-164) /me/outlook/taskGroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
-165) /me/outlook/taskGroups/AAMkADIyAAAhrbe-AAA=/taskFolders:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
-166) /me/taskgroups/AAMkADIyAAAhrbe-AAA'/taskfolders:==> Unknown kind of segment: 'taskgroups', previous segment: 'me'.
-167) /me/drive/root/items/{item-id}/permissions/{perm-id}:==> Unknown kind of segment: 'items', previous segment: 'root'.
-168) /users/{id|userPrincipalName}/photo/$value:==> Unknown kind of segment: '$value', previous segment: 'photo'.
-169) /places/microsoft.graph.room:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-170) /groups/0d75b8dc-c42d-44dd-890a-751a99c0589f/threads/AAQkAD8EJUmcWwTJi06Cew==/posts/AQMkADgAAAIJbQAAAA==:==> Invalid parameter at AAQkAD8EJUmcWwTJi06Cew==
-171) /privilegedApproval{request-id}:==> Unknown kind of first segment: 'privilegedApproval{request-id}'
-172) /me/photo/$value:==> Unknown kind of segment: '$value', previous segment: 'photo'.
-173) /me/photos/48x48/$value:==> Unknown kind of segment: '$value', previous segment: '48x48'.
-174) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}/agentGroups{id2}/$ref:==> Unknown kind of first segment: '~'
-175) /onPremisesPublishingProfiles/provisioning/publishedResources/1234b780-965f-4149-85c5-a8c73e58b67d/agentGroups/8832388F-3814-4952-B288-FFB62081FE25/$ref:==> Unknown kind of segment: '$ref', previous segment: '8832388F-3814-4952-B288-FFB62081FE25'.
-176) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}/agentGroups/{id2}/$ref:==> Unknown kind of first segment: '~'
-177) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}:==> Unknown kind of first segment: '~'
-178) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources:==> Unknown kind of first segment: '~'
-179) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}/agentGroups/$ref:==> Unknown kind of first segment: '~'
-180) /workbook/names/{name}/range/BoundingRect:==> Unknown kind of first segment: 'workbook'
-181) /me/drive/items/{id}/workbook/names/{name}/range/BoundingRect:==> Sequence contains no elements
-182) /workbook/names/{name}/range/Cell:==> Unknown kind of first segment: 'workbook'
-183) /me/drive/items/{id}/workbook/names/{name}/range/Cell:==> Sequence contains no elements
-184) /workbook/names/{name}/range/clear:==> Unknown kind of first segment: 'workbook'
-185) /workbook/names/{name}/range/Column:==> Unknown kind of first segment: 'workbook'
-186) /me/drive/items/{id}/workbook/names/{name}/range/Column:==> Sequence contains no elements
-187) /workbook/names/{name}/range/delete:==> Unknown kind of first segment: 'workbook'
-188) /workbook/names/{name}/range/EntireColumn:==> Unknown kind of first segment: 'workbook'
-189) /workbook/names/{name}/range/EntireRow:==> Unknown kind of first segment: 'workbook'
-190) /workbook/worksheets/{id|name}/range(address='<address>'):==> Unknown kind of first segment: 'workbook'
-191) /workbook/names/{name}/range/insert:==> Unknown kind of first segment: 'workbook'
-192) /workbook/names/{name}/range/Intersection:==> Unknown kind of first segment: 'workbook'
-193) /me/drive/items/{id}/workbook/names/{name}/range/Intersection:==> Sequence contains no elements
-194) /workbook/names/{name}/range/LastCell:==> Unknown kind of first segment: 'workbook'
-195) /workbook/names/{name}/range/LastColumn:==> Unknown kind of first segment: 'workbook'
-196) /workbook/names/{name}/range/LastRow:==> Unknown kind of first segment: 'workbook'
-197) /workbook/names/{name}/range/merge:==> Unknown kind of first segment: 'workbook'
-198) /workbook/names/{name}/range/OffsetRange:==> Unknown kind of first segment: 'workbook'
-199) /me/drive/items/{id}/workbook/names/{name}/range/OffsetRange:==> Sequence contains no elements
-200) /workbook/names/{name}/range/Row:==> Unknown kind of first segment: 'workbook'
-201) /me/drive/items/{id}/workbook/names/{name}/range/Row:==> Sequence contains no elements
-202) /workbook/names/{name}/range/unmerge:==> Unknown kind of first segment: 'workbook'
-203) /workbook/names/{name}/range:==> Unknown kind of first segment: 'workbook'
-204) /workbook/names/{name}/range/UsedRange:==> Unknown kind of first segment: 'workbook'
-205) /workbook/names/{name}/range/format/borders(<sideIndex>):==> Unknown kind of first segment: 'workbook'
-206) /workbook/names/{name}/range/format/borders:==> Unknown kind of first segment: 'workbook'
-207) /workbook/names/{name}/range/format/borders/ItemAt:==> Unknown kind of first segment: 'workbook'
-208) /workbook/names/{name}/range/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-209) /workbook/names/{name}/range/format/fill:==> Unknown kind of first segment: 'workbook'
-210) /workbook/names/{name}/range/format/font:==> Unknown kind of first segment: 'workbook'
-211) /workbook/names/{name}/range/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-212) /workbook/names/{name}/range/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-213) /workbook/names/{name}/range/format:==> Unknown kind of first segment: 'workbook'
-214) /workbook/names/{name}/range/sort/apply:==> Unknown kind of first segment: 'workbook'
-215) /reports/getCredentialUsageSummary:==> Sequence contains no elements
-216) /me/messages/AAMkAGE1M2_bs88AACHsLqWAAA=/:==> Unknown kind of segment: 'AAMkAGE1M2_bs88AACHsLqWAAA=', previous segment: 'messages'.
-217) /sites/{hostname}:/{server-relative-path}:==> Unknown kind of segment: '{server-relative-path}', previous segment: '{hostname}:'.
-218) /sites/{hostname}:/{relative-path}:==> Unknown kind of segment: '{relative-path}', previous segment: '{hostname}:'.
-219) application/{id}/synchronization/templates/{templateId}:==> Unknown kind of first segment: 'application'
-220) /workbook/tables/{id|name}/clearFilters:==> Unknown kind of first segment: 'workbook'
-221) /workbook/tables/{id|name}/convertToRange:==> Unknown kind of first segment: 'workbook'
-222) /workbook/tables/{id|name}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
-223) /workbook/tables/{id|name}/delete:==> Unknown kind of first segment: 'workbook'
-224) /me/drive/items/{id}/workbook/tables/{id|name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id|name}'.
-225) /workbook/tables/{id|name}:==> Unknown kind of first segment: 'workbook'
-226) /workbook/tables/{id|name}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
-227) /workbook/tables/{id|name}/columns:==> Unknown kind of first segment: 'workbook'
-228) /workbook/tables/{id|name}/rows:==> Unknown kind of first segment: 'workbook'
-229) /workbook/tables:==> Unknown kind of first segment: 'workbook'
-230) /workbook/tables/{id|name}/rows/add:==> Unknown kind of first segment: 'workbook'
-231) /workbook/tables/{id|name}/Range:==> Unknown kind of first segment: 'workbook'
-232) /workbook/tables/{id|name}/reapplyFilters:==> Unknown kind of first segment: 'workbook'
-233) /workbook/tables/{id|name}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
-234) /workbook/tables/add:==> Unknown kind of first segment: 'workbook'
-235) /workbook/tables/{id|name}/columns/{id|name}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
-236) /workbook/tables/{id|name}/columns/{id|name}/delete:==> Unknown kind of first segment: 'workbook'
-237) /me/drive/items/{id}/workbook/tables/{id|name}/columns/{id|name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id|name}'.
-238) /workbook/tables/{id|name}/columns/{id|name}:==> Unknown kind of first segment: 'workbook'
-239) /workbook/tables/{id|name}/columns/{id|name}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
-240) /workbook/tables/{id|name}/columns/{id|name}/Range:==> Unknown kind of first segment: 'workbook'
-241) /workbook/tables/{id|name}/columns/{id|name}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
-242) /workbook/tables/{id|name}/columns/add:==> Unknown kind of first segment: 'workbook'
-243) /workbook/tables/{id|name}/columns/ItemAt:==> Unknown kind of first segment: 'workbook'
-244) /workbook/tables/{id|name}/rows/{index}/delete:==> Unknown kind of first segment: 'workbook'
-245) /me/drive/items/{id}/workbook/tables/{id|name}/rows/{index}/delete:==> Unknown kind of segment: 'delete', previous segment: '{index}'.
-246) /workbook/tables/{id|name}/rows/{index}:==> Unknown kind of first segment: 'workbook'
-247) /workbook/tables/{id|name}/rows/{index}/Range:==> Unknown kind of first segment: 'workbook'
-248) /workbook/tables/{id|name}/rows/ItemAt:==> Unknown kind of first segment: 'workbook'
-249) /workbook/tables/{id|name}/sort/apply:==> Unknown kind of first segment: 'workbook'
-250) /workbook/tables/{id|name}/sort/clear:==> Unknown kind of first segment: 'workbook'
-251) /workbook/tables/{id|name}/sort:==> Unknown kind of first segment: 'workbook'
-252) /workbook/tables/{id|name}/sort/reapply:==> Unknown kind of first segment: 'workbook'
-253) /trustFramework/policies/{id}/$value:==> Unknown kind of segment: '$value', previous segment: '{id}'.
-254) /trustFramework/policies/B2C_1A_SocialAndLocalAccounts_Base/$value:==> Unknown kind of segment: '$value', previous segment: 'B2C_1A_SocialAndLocalAccounts_Base'.
-255) /trustFramework/policies/B2C_1A_Test/$value:==> Unknown kind of segment: '$value', previous segment: 'B2C_1A_Test'.
-256) /me/scopedAdministratorOf:==> Unknown kind of segment: 'scopedAdministratorOf', previous segment: 'me'.
-257) /me/trendingAround:==> Unknown kind of segment: 'trendingAround', previous segment: 'me'.
-258) /me/workingWith:==> Unknown kind of segment: 'workingWith', previous segment: 'me'.
-259) /users/{id}/manager/$ref:==> Unknown kind of segment: '$ref', previous segment: 'manager'.
-260) /workbook/closeSession:==> Unknown kind of first segment: 'workbook'
-261) /workbook/createSession:==> Unknown kind of first segment: 'workbook'
-262) /workbook/worksheets:==> Unknown kind of first segment: 'workbook'
-263) /workbook/tables/$/add:==> Unknown kind of first segment: 'workbook'
-264) /me/drive/items/{id}/workbook/tables/$/add:==> Unknown kind of segment: 'add', previous segment: '$'.
-265) /workbook/refreshSession:==> Unknown kind of first segment: 'workbook'
-266) /workbook/application/calculate:==> Unknown kind of first segment: 'workbook'
-267) /workbook/application:==> Unknown kind of first segment: 'workbook'
-268) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView:==> Sequence contains no elements
-269) me/drive/root/workbook/worksheets/{id}/range(addres={address})/visibleView/itemAt(index={n}):==> Sequence contains no elements
-270) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView/itemAt(index=0):==> Sequence contains no elements
-271) me/drive/root/workbook/worksheets/{id}/range(addres={address})/visibleView/rows:==> Sequence contains no elements
-272) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView/rows:==> Sequence contains no elements
-273) me/drive/root/workbook/worksheets/{id}/range(addres={address})/visibleView/range:==> Sequence contains no elements
-274) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView/range:==> Sequence contains no elements
-275) /workbook/worksheets/{id|name}/Cell(row={row},column={column}):==> Unknown kind of first segment: 'workbook'
-276) /workbook/worksheets/{id|name}/delete:==> Unknown kind of first segment: 'workbook'
-277) /me/drive/items/{id}/workbook/worksheets/{id|name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id|name}'.
-278) /workbook/worksheets/{id|name}:==> Unknown kind of first segment: 'workbook'
-279) /workbook/worksheets({id|name})/names:==> Unknown kind of first segment: 'workbook'
-280) /workbook/worksheets/{id|name}/tables:==> Unknown kind of first segment: 'workbook'
-281) /workbook/worksheets/{id|name}/charts/:==> Unknown kind of first segment: 'workbook'
-282) /workbook/worksheets/{id|name}/tables/add:==> Unknown kind of first segment: 'workbook'
-283) /me/drive/items/{id}/workbook/worksheets/{id|name}/tables/$/add:==> Unknown kind of segment: 'add', previous segment: '$'.
-284) /workbook/worksheets/{id|name}/Range:==> Unknown kind of first segment: 'workbook'
-285) /workbook/worksheets/{id|name}/UsedRange:==> Unknown kind of first segment: 'workbook'
-286) /workbook/worksheets/:==> Unknown kind of first segment: 'workbook'
-287) /workbook/worksheets/{id|name}/protection:==> Unknown kind of first segment: 'workbook'
-288) /workbook/worksheets/{id|name}/protection/protect:==> Unknown kind of first segment: 'workbook'
-289) /workbook/worksheets/{id|name}/protection/unprotect:==> Unknown kind of first segment: 'workbook'
+26) /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/ItemAt:==> Sequence contains no elements
+27) /workbook/worksheets/{id|name}/charts/{name}/datalabels:==> Unknown kind of first segment: 'workbook'
+28) /workbook/worksheets/{id|name}/charts/{name}/format/fill/clear:==> Unknown kind of first segment: 'workbook'
+29) /workbook/worksheets/{id|name}/charts/{name}/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
+30) /workbook/worksheets/{id|name}/charts/{name}/axes/valueaxis/format/font:==> Unknown kind of first segment: 'workbook'
+31) /workbook/worksheets/{id|name}/charts/{name}/axes/valueaxis/minorgridlines:==> Unknown kind of first segment: 'workbook'
+32) /workbook/worksheets/{id|name}/charts/{name}/legend:==> Unknown kind of first segment: 'workbook'
+33) /workbook/worksheets/{id|name}/charts/{name}/axes/seriesaxis/format/line/clear:==> Unknown kind of first segment: 'workbook'
+34) /workbook/worksheets/{id|name}/charts/{name}/axes/seriesaxis/format/line:==> Unknown kind of first segment: 'workbook'
+35) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points/{undefined}:==> Unknown kind of first segment: 'workbook'
+36) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points:==> Unknown kind of first segment: 'workbook'
+37) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points/ItemAt:==> Unknown kind of first segment: 'workbook'
+38) /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/series/{undefined}/points/ItemAt:==> Sequence contains no elements
+39) /workbook/worksheets/{id|name}/charts/{name}/series/{undefined}:==> Unknown kind of first segment: 'workbook'
+40) /workbook/worksheets/{id|name}/charts/{name}/series/ItemAt:==> Unknown kind of first segment: 'workbook'
+41) /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/series/ItemAt:==> Sequence contains no elements
+42) /workbook/worksheets/{id|name}/charts/{name}/title:==> Unknown kind of first segment: 'workbook'
+43) /teams/{id}/channels/{id}/messages/{id}/hostedImages/{id}:==> Unknown kind of segment: 'hostedImages', previous segment: '{id}'.
+44) /teams/{id}/channels/{id}/messages/{id}/hostedImages/{id}/$value:==> Unknown kind of segment: 'hostedImages', previous segment: '{id}'.
+45) /teams/{id}/channels/{id}/messages/{id}/hostedImages:==> Unknown kind of segment: 'hostedImages', previous segment: '{id}'.
+46) /connectorGroups/{id}/members/{id}:==> Unknown kind of first segment: 'connectorGroups'
+47) /connectors/{id}/memberOf:==> Unknown kind of first segment: 'connectors'
+48) /connectors:==> Unknown kind of first segment: 'connectors'
+49) /connectorGroups/{id}:==> Unknown kind of first segment: 'connectorGroups'
+50) /connectorGroups/{id}/applications:==> Unknown kind of first segment: 'connectorGroups'
+51) /connectorGroups/{id}/members:==> Unknown kind of first segment: 'connectorGroups'
+52) /connectorGroups:==> Unknown kind of first segment: 'connectorGroups'
+53) /connectorGroups/{id}/members/$ref:==> Unknown kind of first segment: 'connectorGroups'
+54) /me/contacts/AAMkAGI2THk0AAA=:==> Unknown kind of segment: 'AAMkAGI2THk0AAA=', previous segment: 'contacts'.
+55) /me/contacts/AAMkADh6v5AAAvgTCEAAA=:==> Unknown kind of segment: 'AAMkADh6v5AAAvgTCEAAA=', previous segment: 'contacts'.
+56) /groups/0d75b8dc-c42d-44dd-890a-751a99c0589f/threads/AAQkAD8EJUmcWwTJi06Cew==/posts:==> Invalid parameter at AAQkAD8EJUmcWwTJi06Cew==
+57) /directoryObject/ffab4dce-9b82-49a6-b7c7-1a143106598c:==> Unknown kind of first segment: 'directoryObject'
+58) /directoryroles/{id}/members/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
+59) /drive/root:/{item-path}:/createUploadSession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+60) /me/drive/root:/{path_to_parent}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+61) /drives/{drive-id}/root:/{path-relative-to-root}:/children:==> Unknown kind of segment: 'root:', previous segment: '{drive-id}'.
+62) /me/drive/items/{item-id}/thumbnails/{thumb-id}/{size}:==> Unknown kind of segment: '{size}', previous segment: '{thumb-id}'.
+63) /me/drive/items/{item-id}/thumbnails/{thumb-id}/{size}/content:==> Unknown kind of segment: '{size}', previous segment: '{thumb-id}'.
+64) /drives/{drive-id}/items/{parent-id}:/{filename}:/content:==> Unknown kind of segment: '{filename}:', previous segment: '{parent-id}:'.
+65) /me/drive/root:/FolderA/FileB.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+66) /education/classes/{id}/assignments/{id}/categories/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
+67) /education/classes/11021/assignments/19002/categories/ec98f158-341d-4fea-9f8c-14a250d489ac/$ref:==> Unknown kind of segment: '$ref', previous segment: 'ec98f158-341d-4fea-9f8c-14a250d489ac'.
+68) /educationClasses/assignments/{id}/resources/{id}:==> Unknown kind of first segment: 'educationClasses'
+69) /education/classes/{id}/members/{userId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{userId}'.
+70) /education/classes/{id}/teachers/{userId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{userId}'.
+71) /education/classes/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+72) /education/schools/{id}/classes/{classId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{classId}'.
+73) /education/schools/{id}/users/{userId}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{userId}'.
+74) /education/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+75) /educationClasses/assignments/{id}/submissions/{id}/resources:==> Unknown kind of first segment: 'educationClasses'
+76) /education/classes/{id}/assignments/{id}/submissions/{id}/recall:==> Unknown kind of segment: 'recall', previous segment: '{id}'.
+77) /education/classes/11021/assignments/19002/submissions/850f51b7/recall:==> Unknown kind of segment: 'recall', previous segment: '850f51b7'.
+78) /education/classes/{id}/assignments/{id}/submissions/{id}/release:==> Unknown kind of segment: 'release', previous segment: '{id}'.
+79) /education/classes/11021/assignments/19002/submissions/850f51b7/release:==> Unknown kind of segment: 'release', previous segment: '850f51b7'.
+80) /educationClasses/assignments/{id}/submissions/{id}/resources/{id}:==> Unknown kind of first segment: 'educationClasses'
+81) /synchronizationProfiles/{id}/errors:==> Unknown kind of first segment: 'synchronizationProfiles'
+82) /synchronizationProfiles/{id}:==> Unknown kind of first segment: 'synchronizationProfiles'
+83) /synchronizationProfiles:==> Unknown kind of first segment: 'synchronizationProfiles'
+84) /synchronizationProfiles/{id}/pause:==> Unknown kind of first segment: 'synchronizationProfiles'
+85) /synchronizationProfiles/{id}/reset:==> Unknown kind of first segment: 'synchronizationProfiles'
+86) /synchronizationProfiles/{id}/resume:==> Unknown kind of first segment: 'synchronizationProfiles'
+87) /synchronizationProfiles/{id}/start:==> Unknown kind of first segment: 'synchronizationProfiles'
+88) /synchronizationProfiles/{id}/uploadUrl:==> Unknown kind of first segment: 'synchronizationProfiles'
+89) /synchronizationProfiles/{id}/profileStatus:==> Unknown kind of first segment: 'synchronizationProfiles'
+90) /education/me/delta:==> Unknown kind of segment: 'delta', previous segment: 'me'.
+91) /me/events/AAMkAGIAAAoZDOFAAA=/:==> Unknown kind of segment: 'AAMkAGIAAAoZDOFAAA=', previous segment: 'events'.
+92) /me/events/AAMkAGI1AAAoZDOFAAA=/:==> Unknown kind of segment: 'AAMkAGI1AAAoZDOFAAA=', previous segment: 'events'.
+93) /me/events/AAMkADAGAADDdm4NAAA=/:==> Unknown kind of segment: 'AAMkADAGAADDdm4NAAA=', previous segment: 'events'.
+94) /me/events/AAMkAGUzYRgWAAA=/instances:==> Unknown kind of segment: 'AAMkAGUzYRgWAAA=', previous segment: 'events'.
+95) /me/events/{AAMkAGI1AAAt9AHjAAA=}/attachments:==> Unknown kind of segment: '{AAMkAGI1AAAt9AHjAAA=}', previous segment: 'events'.
+96) /me/events/AAMkAGE1M88AADUv0uAAAG=/attachments:==> Unknown kind of segment: 'AAMkAGE1M88AADUv0uAAAG=', previous segment: 'events'.
+97) /me/messages/AAMkADYAAAImV_lAAA=:==> Unknown kind of segment: 'AAMkADYAAAImV_lAAA=', previous segment: 'messages'.
+98) /me/messages/AAMkADYAAAImV_jAAA=/:==> Unknown kind of segment: 'AAMkADYAAAImV_jAAA=', previous segment: 'messages'.
+99) /workbook/tables/{id|name}/columns/{id|name}/filter/apply:==> Unknown kind of first segment: 'workbook'
+100) /workbook/tables/{id|name}/columns/{id|name}/filter/clear:==> Unknown kind of first segment: 'workbook'
+101) /workbook/names/{name}/range/format/protection:==> Unknown kind of first segment: 'workbook'
+102) me/devices/{id}/command/{id}/responsePayload:==> Unknown kind of segment: 'command', previous segment: '{id}'.
+103) /groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/conversations/AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgAQABuXO3guDWBMpyKF7LsVwfU=:==> Unknown kind of segment: 'AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgAQABuXO3guDWBMpyKF7LsVwfU=', previous segment: 'conversations'.
+104) /groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/events/AQMkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NwAzZWYARgAAA_b2VnUAiWNLj0xeSOs499YHAMT2RdsuOqRIlQZ4vOzp66YAAAIBDQAAAMT2RdsuOqRIlQZ4vOzp66YAAAIJOgAAAA==:==> Invalid parameter at AQMkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NwAzZWYARgAAA_b2VnUAiWNLj0xeSOs499YHAMT2RdsuOqRIlQZ4vOzp66YAAAIBDQAAAMT2RdsuOqRIlQZ4vOzp66YAAAIJOgAAAA==
+105) /groups/{id}/members/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
+106) /groups/{id}/owners/{id}/$ref:==> Unknown kind of segment: '$ref', previous segment: '{id}'.
+107) /groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/threads/AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgMkABAAG5c7eC4NYEynIoXsuxXB9RAAG5c7eC4NYEynIoXsuxXB9Q==:==> Invalid parameter at AAQkAGI5MWY5ZmUyLTJiNzYtNDE0ZC04OWEwLWM3M2FjYmM3NzNlZgMkABAAG5c7eC4NYEynIoXsuxXB9RAAG5c7eC4NYEynIoXsuxXB9Q==
+108) /workbook/tables/{id|name}/sort/fields/icon:==> Unknown kind of first segment: 'workbook'
+109) /me/drive/items/{id}/workbook/tables/{id|name}/sort/fields/icon:==> Unknown kind of segment: 'icon', previous segment: 'fields'.
+110) /drives/{drive-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-01-01',endDateTime='2017-01-10',interval='day'):==> Sequence contains no elements
+111) /drives/{drive-id}/items/{item-id}/getActivitiesByInterval(startDateTime='2017-01-01',endDateTime='2017-01-3',interval='day'):==> Sequence contains no elements
+112) /sites/{site-id}/items/{item-id}/versions:==> Unknown kind of segment: 'versions', previous segment: '{item-id}'.
+113) /sites/{site-id}/items/{item-id}/versions/{version-id}:==> Unknown kind of segment: 'versions', previous segment: '{item-id}'.
+114) /sites/{site-id}/items/{item-id}/versions/{version-id}/restoreVersion:==> Unknown kind of segment: 'versions', previous segment: '{item-id}'.
+115) /locatedRiskEvents/{id}:==> Unknown kind of first segment: 'locatedRiskEvents'
+116) /locatedRiskEvents/27b91217-a6ca-edff-da2b-c46feaf0228f-a6653179-3c7b-4e99-bb4c-dddeb18adfc1-42445d4d-fe22-9840-cf9d-72f6ce8cd056:==> Unknown kind of first segment: 'locatedRiskEvents'
+117) /me/mailfolders/AQMkADYAAAIBDAAAAA==/childfolders:==> Invalid parameter at AQMkADYAAAIBDAAAAA==
+118) /me/messages/AAMkADA1MTAAAH5JaLAAA=/createForward:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaLAAA=', previous segment: 'messages'.
+119) /me/messages/AAMkADA1MTAAAAqldOAAA=/createReply:==> Unknown kind of segment: 'AAMkADA1MTAAAAqldOAAA=', previous segment: 'messages'.
+120) /me/messages/AAMkADA1MTAAAH5JaKAAA=/createReplyAll:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaKAAA=', previous segment: 'messages'.
+121) /me/messages/AAMkADA1MTAAAH5JaLAAA=/forward:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaLAAA=', previous segment: 'messages'.
+122) /me/messages/{id}/$value:==> Unknown kind of segment: '$value', previous segment: '{id}'.
+123) /me/messages/AAMkAGI1AAAoZCfHAAA=:==> Unknown kind of segment: 'AAMkAGI1AAAoZCfHAAA=', previous segment: 'messages'.
+124) /me/messages/AAMkAGI1AAAoZCfHAAA=/:==> Unknown kind of segment: 'AAMkAGI1AAAoZCfHAAA=', previous segment: 'messages'.
+125) /me/messages/AAMkADhAAATs28OAAA=/move:==> Unknown kind of segment: 'AAMkADhAAATs28OAAA=', previous segment: 'messages'.
+126) /me/messages/AAMkADA1MTAAAAqldOAAA=/reply:==> Unknown kind of segment: 'AAMkADA1MTAAAAqldOAAA=', previous segment: 'messages'.
+127) /me/messages/AAMkADA1MTAAAH5JaKAAA=/replyAll:==> Unknown kind of segment: 'AAMkADA1MTAAAH5JaKAAA=', previous segment: 'messages'.
+128) /workbook/names/add:==> Unknown kind of first segment: 'workbook'
+129) /workbook/names/{name}:==> Unknown kind of first segment: 'workbook'
+130) /workbook/names:==> Unknown kind of first segment: 'workbook'
+131) /workbook/names/{name}/Range:==> Unknown kind of first segment: 'workbook'
+132) /onenote/notebooks/getrecentnotebooks(includePersonalNotebooks=true):==> Unknown kind of first segment: 'onenote'
+133) ~/onPremisesPublishingProfiles/{publishingType}/agents/{id1}/agentGroups/{id2}/$ref:==> Unknown kind of first segment: '~'
+134) /onPremisesPublishingProfiles/provisioning/agents/1234b780-965f-4149-85c5-a8c73e58b67d/agentGroups/8832388F-3814-4952-B288-FFB62081FE25/$ref:==> Unknown kind of segment: '$ref', previous segment: '8832388F-3814-4952-B288-FFB62081FE25'.
+135) ~/onPremisesPublishingProfiles/{publishingType}/agents/{id1}/:==> Unknown kind of first segment: '~'
+136) ~/onPremisesPublishingProfiles/{publishingType}/agents:==> Unknown kind of first segment: '~'
+137) ~/onPremisesPublishingProfiles/{publishingType}/agents/{id1}/agentGroups/$ref:==> Unknown kind of first segment: '~'
+138) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id1}:==> Unknown kind of first segment: '~'
+139) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id}:==> Unknown kind of first segment: '~'
+140) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups:==> Unknown kind of first segment: '~'
+141) ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id}/agents:==> Unknown kind of first segment: '~'
+142) ~/onPremisesPublishingProfiles/{publishingType}/:==> Unknown kind of first segment: '~'
+143) ~/onPremisesPublishingProfiles/{publishingType}/hybridAgentUpdaterConfiguration:==> Unknown kind of first segment: '~'
+144) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions/Com.Contoso.Referral/:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
+145) /groups/f5480dfd-7d77-4d0b-ba2e-3391953cc74a/events/AAMkADVlN17IsAAA=/extensions/Com.Contoso.Referral:==> Unknown kind of segment: 'AAMkADVlN17IsAAA=', previous segment: 'events'.
+146) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='/extensions/Com.Contoso.Referral:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='
+147) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='/extensions/Microsoft.OutlookServices.OpenTypeExtension.Com.Contoso.Referral'):==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl==='
+148) /groups/f5480dfd-7d77-4d0b-ba2e-3391953cc74a/events/AAMkADVl17IsAAA=/extensions/Com.Contoso.Deal:==> Unknown kind of segment: 'AAMkADVl17IsAAA=', previous segment: 'events'.
+149) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
+150) /groups/37df2ff0-0de0-4c33-8aee-75289364aef6/threads/AAQkADJizZJpEWwqDHsEpV_KA==/posts/AAMkADJiUg96QZUkA-ICwMubAADDEd7UAAA=/extensions/Microsoft.OutlookServices.OpenTypeExtension.Com.Contoso.Estimate:==> Invalid parameter at AAQkADJizZJpEWwqDHsEpV_KA==
+151) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
+152) /groups/f5480dfd-7d77-4d0b-ba2e-3391953cc74a/events/AAMkADVl17IsAAA=/extensions:==> Unknown kind of segment: 'AAMkADVl17IsAAA=', previous segment: 'events'.
+153) /groups/37df2ff0-0de0-4c33-8aee-75289364aef6/threads/AAQkADJizZJpEWwqDHsEpV_KA==/posts/AAMkADJiUg96QZUkA-ICwMubAAC1heiSAAA=/reply:==> Invalid parameter at AAQkADJizZJpEWwqDHsEpV_KA==
+154) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions/Com.Contoso.Referral:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
+155) /me/messages/AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===/extensions/Microsoft.OutlookServices.OpenTypeExtension.Com.Contoso.Referral:==> Invalid parameter at AAMkAGE1M2IyNGNmLTI5MTktNDUyZi1iOTVl===
+156) /me/tasks('AAMkADA1MT15rfAAA=')/complete:==> Unknown kind of segment: 'tasks', previous segment: 'me'.
+157) /me/outlook/tasks/AAMkADIyAAAhrb_QAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrb_QAAA=', previous segment: 'tasks'.
+158) /me/outlook/tasks/AAMkADA1MTrgAAA=:==> Unknown kind of segment: 'AAMkADA1MTrgAAA=', previous segment: 'tasks'.
+159) /me/outlook/tasks/AAMkADA1MHgwAAA=:==> Unknown kind of segment: 'AAMkADA1MHgwAAA=', previous segment: 'tasks'.
+160) /me/outlook/tasks/AAMkADA1MTHgwAAA=:==> Unknown kind of segment: 'AAMkADA1MTHgwAAA=', previous segment: 'tasks'.
+161) /me/outlook/taskFolders/AAMkADIyAAAhrbPXAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbPXAAA=', previous segment: 'taskFolders'.
+162) /me/outlook/taskFolders/AAMkADIyAAAAABrJAAA=:==> Unknown kind of segment: 'AAMkADIyAAAAABrJAAA=', previous segment: 'taskFolders'.
+163) /me/outlook/taskFolders/AAMkADIyAAAhrbPWAAA=/tasks:==> Unknown kind of segment: 'AAMkADIyAAAhrbPWAAA=', previous segment: 'taskFolders'.
+164) /me/taskfolders('AAMkADIyAAAhrbPXAAA=')/tasks:==> Unknown kind of segment: 'taskfolders', previous segment: 'me'.
+165) /me/outlook/taskFolders/AAMkADIyAAAhrbPWAAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbPWAAA=', previous segment: 'taskFolders'.
+166) /me/outlook/taskgroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskgroups'.
+167) /me/outlook/taskGroups/AAMkADIyAAAhrbe-AAA=:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
+168) /me/outlook/taskGroups/AAMkADIyAAAhrbe-AAA=/taskFolders:==> Unknown kind of segment: 'AAMkADIyAAAhrbe-AAA=', previous segment: 'taskGroups'.
+169) /me/taskgroups/AAMkADIyAAAhrbe-AAA'/taskfolders:==> Unknown kind of segment: 'taskgroups', previous segment: 'me'.
+170) /me/drive/root/items/{item-id}/permissions/{perm-id}:==> Unknown kind of segment: 'items', previous segment: 'root'.
+171) /users/{id|userPrincipalName}/photo/$value:==> Unknown kind of segment: '$value', previous segment: 'photo'.
+172) /places/microsoft.graph.room:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+173) /places/microsoft.graph.roomlist:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+174) /groups/0d75b8dc-c42d-44dd-890a-751a99c0589f/threads/AAQkAD8EJUmcWwTJi06Cew==/posts/AQMkADgAAAIJbQAAAA==:==> Invalid parameter at AAQkAD8EJUmcWwTJi06Cew==
+175) /privilegedApproval{request-id}:==> Unknown kind of first segment: 'privilegedApproval{request-id}'
+176) /me/photo/$value:==> Unknown kind of segment: '$value', previous segment: 'photo'.
+177) /me/photos/48x48/$value:==> Unknown kind of segment: '$value', previous segment: '48x48'.
+178) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}/agentGroups{id2}/$ref:==> Unknown kind of first segment: '~'
+179) /onPremisesPublishingProfiles/provisioning/publishedResources/1234b780-965f-4149-85c5-a8c73e58b67d/agentGroups/8832388F-3814-4952-B288-FFB62081FE25/$ref:==> Unknown kind of segment: '$ref', previous segment: '8832388F-3814-4952-B288-FFB62081FE25'.
+180) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}/agentGroups/{id2}/$ref:==> Unknown kind of first segment: '~'
+181) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}:==> Unknown kind of first segment: '~'
+182) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources:==> Unknown kind of first segment: '~'
+183) ~/onPremisesPublishingProfiles/{publishingType}/publishedResources/{id1}/agentGroups/$ref:==> Unknown kind of first segment: '~'
+184) /workbook/names/{name}/range/BoundingRect:==> Unknown kind of first segment: 'workbook'
+185) /me/drive/items/{id}/workbook/names/{name}/range/BoundingRect:==> Sequence contains no elements
+186) /workbook/names/{name}/range/Cell:==> Unknown kind of first segment: 'workbook'
+187) /me/drive/items/{id}/workbook/names/{name}/range/Cell:==> Sequence contains no elements
+188) /workbook/names/{name}/range/clear:==> Unknown kind of first segment: 'workbook'
+189) /workbook/names/{name}/range/Column:==> Unknown kind of first segment: 'workbook'
+190) /me/drive/items/{id}/workbook/names/{name}/range/Column:==> Sequence contains no elements
+191) /workbook/names/{name}/range/delete:==> Unknown kind of first segment: 'workbook'
+192) /workbook/names/{name}/range/EntireColumn:==> Unknown kind of first segment: 'workbook'
+193) /workbook/names/{name}/range/EntireRow:==> Unknown kind of first segment: 'workbook'
+194) /workbook/worksheets/{id|name}/range(address='<address>'):==> Unknown kind of first segment: 'workbook'
+195) /workbook/names/{name}/range/insert:==> Unknown kind of first segment: 'workbook'
+196) /workbook/names/{name}/range/Intersection:==> Unknown kind of first segment: 'workbook'
+197) /me/drive/items/{id}/workbook/names/{name}/range/Intersection:==> Sequence contains no elements
+198) /workbook/names/{name}/range/LastCell:==> Unknown kind of first segment: 'workbook'
+199) /workbook/names/{name}/range/LastColumn:==> Unknown kind of first segment: 'workbook'
+200) /workbook/names/{name}/range/LastRow:==> Unknown kind of first segment: 'workbook'
+201) /workbook/names/{name}/range/merge:==> Unknown kind of first segment: 'workbook'
+202) /workbook/names/{name}/range/OffsetRange:==> Unknown kind of first segment: 'workbook'
+203) /me/drive/items/{id}/workbook/names/{name}/range/OffsetRange:==> Sequence contains no elements
+204) /workbook/names/{name}/range/Row:==> Unknown kind of first segment: 'workbook'
+205) /me/drive/items/{id}/workbook/names/{name}/range/Row:==> Sequence contains no elements
+206) /workbook/names/{name}/range/unmerge:==> Unknown kind of first segment: 'workbook'
+207) /workbook/names/{name}/range:==> Unknown kind of first segment: 'workbook'
+208) /workbook/names/{name}/range/UsedRange:==> Unknown kind of first segment: 'workbook'
+209) /workbook/names/{name}/range/format/borders(<sideIndex>):==> Unknown kind of first segment: 'workbook'
+210) /workbook/names/{name}/range/format/borders:==> Unknown kind of first segment: 'workbook'
+211) /workbook/names/{name}/range/format/borders/ItemAt:==> Unknown kind of first segment: 'workbook'
+212) /me/drive/items/{id}/workbook/names/{name}/range/format/borders/ItemAt:==> Sequence contains no elements
+213) /workbook/names/{name}/range/format/fill/clear:==> Unknown kind of first segment: 'workbook'
+214) /workbook/names/{name}/range/format/fill:==> Unknown kind of first segment: 'workbook'
+215) /workbook/names/{name}/range/format/font:==> Unknown kind of first segment: 'workbook'
+216) /workbook/names/{name}/range/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
+217) /workbook/names/{name}/range/format/autofitRows:==> Unknown kind of first segment: 'workbook'
+218) /workbook/names/{name}/range/format:==> Unknown kind of first segment: 'workbook'
+219) /workbook/names/{name}/range/sort/apply:==> Unknown kind of first segment: 'workbook'
+220) /reports/getCredentialUsageSummary:==> Sequence contains no elements
+221) /me/messages/AAMkAGE1M2_bs88AACHsLqWAAA=/:==> Unknown kind of segment: 'AAMkAGE1M2_bs88AACHsLqWAAA=', previous segment: 'messages'.
+222) /sites/{hostname}:/{server-relative-path}:==> Unknown kind of segment: '{server-relative-path}', previous segment: '{hostname}:'.
+223) /sites/{hostname}:/{relative-path}:==> Unknown kind of segment: '{relative-path}', previous segment: '{hostname}:'.
+224) application/{id}/synchronization/templates/{templateId}:==> Unknown kind of first segment: 'application'
+225) /workbook/tables/{id|name}/clearFilters:==> Unknown kind of first segment: 'workbook'
+226) /workbook/tables/{id|name}/convertToRange:==> Unknown kind of first segment: 'workbook'
+227) /workbook/tables/{id|name}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
+228) /workbook/tables/{id|name}/delete:==> Unknown kind of first segment: 'workbook'
+229) /me/drive/items/{id}/workbook/tables/{id|name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id|name}'.
+230) /workbook/tables/{id|name}:==> Unknown kind of first segment: 'workbook'
+231) /workbook/tables/{id|name}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
+232) /workbook/tables/{id|name}/columns:==> Unknown kind of first segment: 'workbook'
+233) /workbook/tables/{id|name}/rows:==> Unknown kind of first segment: 'workbook'
+234) /workbook/tables:==> Unknown kind of first segment: 'workbook'
+235) /workbook/tables/{id|name}/rows/add:==> Unknown kind of first segment: 'workbook'
+236) /workbook/tables/{id|name}/Range:==> Unknown kind of first segment: 'workbook'
+237) /workbook/tables/{id|name}/reapplyFilters:==> Unknown kind of first segment: 'workbook'
+238) /workbook/tables/{id|name}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
+239) /workbook/tables/add:==> Unknown kind of first segment: 'workbook'
+240) /workbook/tables/{id|name}/columns/{id|name}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
+241) /workbook/tables/{id|name}/columns/{id|name}/delete:==> Unknown kind of first segment: 'workbook'
+242) /me/drive/items/{id}/workbook/tables/{id|name}/columns/{id|name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id|name}'.
+243) /workbook/tables/{id|name}/columns/{id|name}:==> Unknown kind of first segment: 'workbook'
+244) /workbook/tables/{id|name}/columns/{id|name}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
+245) /workbook/tables/{id|name}/columns/{id|name}/Range:==> Unknown kind of first segment: 'workbook'
+246) /workbook/tables/{id|name}/columns/{id|name}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
+247) /workbook/tables/{id|name}/columns/add:==> Unknown kind of first segment: 'workbook'
+248) /workbook/tables/{id|name}/columns/ItemAt:==> Unknown kind of first segment: 'workbook'
+249) /me/drive/items/{id}/workbook/tables/{id|name}/columns/ItemAt:==> Sequence contains no elements
+250) /workbook/tables/{id|name}/rows/{index}/delete:==> Unknown kind of first segment: 'workbook'
+251) /me/drive/items/{id}/workbook/tables/{id|name}/rows/{index}/delete:==> Unknown kind of segment: 'delete', previous segment: '{index}'.
+252) /workbook/tables/{id|name}/rows/{index}:==> Unknown kind of first segment: 'workbook'
+253) /workbook/tables/{id|name}/rows/{index}/Range:==> Unknown kind of first segment: 'workbook'
+254) /workbook/tables/{id|name}/rows/ItemAt:==> Unknown kind of first segment: 'workbook'
+255) /me/drive/items/{id}/workbook/tables/{id|name}/rows/ItemAt:==> Sequence contains no elements
+256) /workbook/tables/{id|name}/sort/apply:==> Unknown kind of first segment: 'workbook'
+257) /workbook/tables/{id|name}/sort/clear:==> Unknown kind of first segment: 'workbook'
+258) /workbook/tables/{id|name}/sort:==> Unknown kind of first segment: 'workbook'
+259) /workbook/tables/{id|name}/sort/reapply:==> Unknown kind of first segment: 'workbook'
+260) /trustFramework/policies/{id}/$value:==> Unknown kind of segment: '$value', previous segment: '{id}'.
+261) /trustFramework/policies/B2C_1A_SocialAndLocalAccounts_Base/$value:==> Unknown kind of segment: '$value', previous segment: 'B2C_1A_SocialAndLocalAccounts_Base'.
+262) /trustFramework/policies/B2C_1A_Test/$value:==> Unknown kind of segment: '$value', previous segment: 'B2C_1A_Test'.
+263) /me/scopedAdministratorOf:==> Unknown kind of segment: 'scopedAdministratorOf', previous segment: 'me'.
+264) /me/trendingAround:==> Unknown kind of segment: 'trendingAround', previous segment: 'me'.
+265) /me/workingWith:==> Unknown kind of segment: 'workingWith', previous segment: 'me'.
+266) /users/{id}/manager/$ref:==> Unknown kind of segment: '$ref', previous segment: 'manager'.
+267) /workbook/closeSession:==> Unknown kind of first segment: 'workbook'
+268) /workbook/createSession:==> Unknown kind of first segment: 'workbook'
+269) /workbook/worksheets:==> Unknown kind of first segment: 'workbook'
+270) /workbook/tables/$/add:==> Unknown kind of first segment: 'workbook'
+271) /me/drive/items/{id}/workbook/tables/$/add:==> Unknown kind of segment: 'add', previous segment: '$'.
+272) /workbook/refreshSession:==> Unknown kind of first segment: 'workbook'
+273) /workbook/application/calculate:==> Unknown kind of first segment: 'workbook'
+274) /workbook/application:==> Unknown kind of first segment: 'workbook'
+275) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView:==> Sequence contains no elements
+276) me/drive/root/workbook/worksheets/{id}/range(addres={address})/visibleView/itemAt(index={n}):==> Sequence contains no elements
+277) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView/itemAt(index=0):==> Sequence contains no elements
+278) me/drive/root/workbook/worksheets/{id}/range(addres={address})/visibleView/rows:==> Sequence contains no elements
+279) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView/rows:==> Sequence contains no elements
+280) me/drive/root/workbook/worksheets/{id}/range(addres={address})/visibleView/range:==> Sequence contains no elements
+281) /drive/root/workbook/worksheets/{id}/range(addres='A1:Z10')/visibleView/range:==> Sequence contains no elements
+282) /workbook/worksheets/{id|name}/Cell(row={row},column={column}):==> Unknown kind of first segment: 'workbook'
+283) /workbook/worksheets/{id|name}/delete:==> Unknown kind of first segment: 'workbook'
+284) /me/drive/items/{id}/workbook/worksheets/{id|name}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id|name}'.
+285) /workbook/worksheets/{id|name}:==> Unknown kind of first segment: 'workbook'
+286) /workbook/worksheets({id|name})/names:==> Unknown kind of first segment: 'workbook'
+287) /workbook/worksheets/{id|name}/tables:==> Unknown kind of first segment: 'workbook'
+288) /workbook/worksheets/{id|name}/charts/:==> Unknown kind of first segment: 'workbook'
+289) /workbook/worksheets/{id|name}/tables/add:==> Unknown kind of first segment: 'workbook'
+290) /me/drive/items/{id}/workbook/worksheets/{id|name}/tables/$/add:==> Unknown kind of segment: 'add', previous segment: '$'.
+291) /workbook/worksheets/{id|name}/Range:==> Unknown kind of first segment: 'workbook'
+292) /workbook/worksheets/{id|name}/UsedRange:==> Unknown kind of first segment: 'workbook'
+293) /workbook/worksheets/:==> Unknown kind of first segment: 'workbook'
+294) /workbook/worksheets/{id|name}/protection:==> Unknown kind of first segment: 'workbook'
+295) /workbook/worksheets/{id|name}/protection/protect:==> Unknown kind of first segment: 'workbook'
+296) /workbook/worksheets/{id|name}/protection/unprotect:==> Unknown kind of first segment: 'workbook'
 
 
 ***********[[Permission Parse Error]]***********
-1) microsoft.graph/accessReviews/reviewers:==> Found mutltiple read restrctions for one target 'microsoft.graph/accessReviews/reviewers'.
-2) microsoft.graph/accessReviews:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/accessReviews'.
-3) microsoft.graph/accessReviews/decisions:==> Found mutltiple read restrctions for one target 'microsoft.graph/accessReviews/decisions'.
-4) microsoft.graph/accessReviews/myDecisions:==> Found mutltiple read restrctions for one target 'microsoft.graph/accessReviews/myDecisions'.
-5) microsoft.graph/administrativeUnits/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-6) microsoft.graph/anonymousIpRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/anonymousIpRiskEvents'.
-7) microsoft.graph/applications/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
-8) microsoft.graph/reports/applicationSignInDetailedSummary:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/reports/applicationSignInDetailedSummary'.
-9) microsoft.graph/bookingBusinesses:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/bookingBusinesses'.
-10) microsoft.graph/bookingBusinesses/calendarView:==> Found mutltiple read restrctions for one target 'microsoft.graph/bookingBusinesses/calendarView'.
-11) microsoft.graph/bookingBusinesses/customers:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/bookingBusinesses/customers'.
-12) microsoft.graph/bookingBusinesses/services:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/bookingBusinesses/services'.
-13) microsoft.graph/bookingBusinesses/staffMembers:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/bookingBusinesses/staffMembers'.
-14) microsoft.graph/bookingCurrencies:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/bookingCurrencies'.
-15) microsoft.graph/app/calls:==> Invalid path kind 'SingleNavigation' in 'POST'
-16) microsoft.graph/app/calls/participants:==> Invalid path kind 'SingleNavigation' in 'POST'
-17) microsoft.graph/teams/channels/messages:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/teams/channels/messages'.
-18) microsoft.graph/teams/channels/messages/replies:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/teams/channels/messages/replies'.
-19) microsoft.graph/me/drive/items/workbook/worksheets/charts:==> Invalid path kind 'SingleNavigation' in 'POST'
-20) microsoft.graph/me/drive/items/workbook/worksheets/charts/series/points:==> Invalid path kind 'SingleNavigation' in 'POST'
-21) microsoft.graph/me/drive/items/workbook/worksheets/charts/series:==> Invalid path kind 'SingleNavigation' in 'POST'
-22) microsoft.graph/devices/registeredOwners:==> Invalid path kind 'SingleNavigation' in 'POST'
-23) microsoft.graph/devices/registeredUsers:==> Invalid path kind 'SingleNavigation' in 'POST'
-24) microsoft.graph/directoryRoles/scopedMembers:==> Found mutltiple read restrctions for one target 'microsoft.graph/directoryRoles/scopedMembers'.
-25) microsoft.graph/directoryRoles/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-26) microsoft.graph/domains:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/domains'.
-27) microsoft.graph/domains/domainNameReferences:==> Found mutltiple read restrctions for one target 'microsoft.graph/domains/domainNameReferences'.
-28) microsoft.graph/domains/verificationDnsRecords:==> Found mutltiple read restrctions for one target 'microsoft.graph/domains/verificationDnsRecords'.
-29) microsoft.graph/drives/items/createUploadSession:==> Unknown http verb PUT
-30) microsoft.graph/drives/items:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/drives/items'.
-31) microsoft.graph/drives/items/content:==> Unknown http verb PUT
-32) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
-33) microsoft.graph/me/drive/items/unfollow:==> Invalid path kind 'Operation' in 'DELETE'
-34) microsoft.graph/education/classes/assignments/categories:==> Found mutltiple read restrctions for one target 'microsoft.graph/education/classes/assignments/categories'.
-35) microsoft.graph/education/classes/assignments:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/assignments'.
-36) microsoft.graph/education/classes/assignments/resources:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/assignments/resources'.
-37) microsoft.graph/education/classes/assignments/submissions:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/assignments/submissions'.
-38) microsoft.graph/education/classes/group:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/group'.
-39) microsoft.graph/education/classes:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes'.
-40) microsoft.graph/education/classes/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-41) microsoft.graph/education/classes/schools:==> Found mutltiple read restrctions for one target 'microsoft.graph/education/classes/schools'.
-42) microsoft.graph/education/classes/teachers:==> Invalid path kind 'SingleNavigation' in 'POST'
-43) microsoft.graph/education/schools/administrativeUnit:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/schools/administrativeUnit'.
-44) microsoft.graph/education/schools/classes:==> Invalid path kind 'SingleNavigation' in 'POST'
-45) microsoft.graph/education/schools/users:==> Invalid path kind 'SingleNavigation' in 'POST'
-46) microsoft.graph/education/classes/assignments/submissions/submittedResources:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/assignments/submissions/submittedResources'.
-47) microsoft.graph/education/classes/assignments/submissions/resources:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/education/classes/assignments/submissions/resources'.
-48) microsoft.graph/education/synchronizationProfiles:==> Unknown http verb PUT
-49) microsoft.graph/education/me/assignments:==> Found mutltiple read restrctions for one target 'microsoft.graph/education/me/assignments'.
-50) microsoft.graph/me/events:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-51) microsoft.graph/privilegedAccess/resources:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/privilegedAccess/resources'.
-52) microsoft.graph/privilegedAccess/roleAssignments:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/privilegedAccess/roleAssignments'.
-53) microsoft.graph/privilegedAccess/roleAssignmentRequests:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/privilegedAccess/roleAssignmentRequests'.
-54) microsoft.graph/privilegedAccess/resources/roleDefinitions:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/privilegedAccess/resources/roleDefinitions'.
-55) microsoft.graph/privilegedAccess/roleSettings:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/privilegedAccess/roleSettings'.
-56) microsoft.graph/privilegedAccess/resources/roleSettings:==> Found mutltiple read restrctions for one target 'microsoft.graph/privilegedAccess/resources/roleSettings'.
-57) microsoft.graph/groups/acceptedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
-58) microsoft.graph/groups/rejectedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
-59) microsoft.graph/groups:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/groups'.
-60) microsoft.graph/groups/calendarView:==> Found mutltiple read restrctions for one target 'microsoft.graph/groups/calendarView'.
-61) microsoft.graph/groups/members:==> Invalid path kind 'SingleNavigation' in 'POST'
-62) microsoft.graph/groups/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
-63) microsoft.graph/identityProviders:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/identityProviders'.
-64) microsoft.graph/identityRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/identityRiskEvents'.
-65) microsoft.graph/impossibleTravelRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/impossibleTravelRiskEvents'.
-66) microsoft.graph/leakedCredentialsRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/leakedCredentialsRiskEvents'.
-67) microsoft.graph/me/mailFolders:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/mailFolders'.
-68) microsoft.graph/me/mailFolders/childFolders:==> Found mutltiple read restrctions for one target 'microsoft.graph/me/mailFolders/childFolders'.
-69) microsoft.graph/me/mailFolders/messages:==> Found mutltiple read restrctions for one target 'microsoft.graph/me/mailFolders/messages'.
-70) microsoft.graph/malwareRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/malwareRiskEvents'.
-71) microsoft.graph/me/messages:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-72) microsoft.graph/me/mailFolders/messageRules:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-73) microsoft.graph/me/contactFolders:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/contactFolders'.
-74) microsoft.graph/onPremisesPublishingProfiles/agents/agentGroups:==> Invalid path kind 'SingleNavigation' in 'POST'
-75) microsoft.graph/devices:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/devices'.
-76) microsoft.graph/me/outlook/masterCategories:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/outlook/masterCategories'.
-77) microsoft.graph/users/photo:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/users/photo'.
-78) microsoft.graph/places:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/places'.
-79) microsoft.graph/places/microsoft.graph.roomList/rooms:==> Found mutltiple read restrctions for one target 'microsoft.graph/places/microsoft.graph.roomList/rooms'.
-80) microsoft.graph/planner/tasks/assignedToTaskBoardFormat:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/assignedToTaskBoardFormat'.
-81) microsoft.graph/planner/buckets:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/buckets'.
-82) microsoft.graph/planner/buckets/tasks:==> Found mutltiple read restrctions for one target 'microsoft.graph/planner/buckets/tasks'.
-83) microsoft.graph/planner/tasks/bucketTaskBoardFormat:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/bucketTaskBoardFormat'.
-84) microsoft.graph/groups/planner/plans:==> Found mutltiple read restrctions for one target 'microsoft.graph/groups/planner/plans'.
-85) microsoft.graph/planner/plans:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/plans'.
-86) microsoft.graph/planner/plans/buckets:==> Found mutltiple read restrctions for one target 'microsoft.graph/planner/plans/buckets'.
-87) microsoft.graph/planner/plans/tasks:==> Found mutltiple read restrctions for one target 'microsoft.graph/planner/plans/tasks'.
-88) microsoft.graph/planner/plans/details:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/plans/details'.
-89) microsoft.graph/planner/tasks:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks'.
-90) microsoft.graph/planner/tasks/details:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/planner/tasks/details'.
-91) microsoft.graph/applications/policies:==> Invalid path kind 'SingleNavigation' in 'POST'
-92) microsoft.graph/privilegedRoles/settings:==> Unknown http verb PUT
-93) microsoft.graph/programs/controls:==> Found mutltiple read restrctions for one target 'microsoft.graph/programs/controls'.
-94) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
-95) microsoft.graph/me/activities:==> Unknown http verb PUT
-96) microsoft.graph/onPremisesPublishingProfiles/publishedResources/agentGroups:==> Invalid path kind 'SingleNavigation' in 'POST'
-97) microsoft.graph/me/drive/items/workbook/worksheets/range(address):==> Invalid path kind 'Operation' in 'PATCH'
-98) microsoft.graph/me/drive/items/workbook/names/range()/format/borders:==> Invalid path kind 'SingleNavigation' in 'POST'
-99) microsoft.graph/riskDetections:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/riskDetections'.
-100) microsoft.graph/riskyUsers/history:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/riskyUsers/history'.
-101) microsoft.graph/riskyUsers:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/riskyUsers'.
-102) microsoft.graph/teams/schedule:==> Unknown http verb PUT
-103) microsoft.graph/teams/schedule/schedulingGroups:==> Unknown http verb PUT
-104) microsoft.graph/schemaExtensions:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/schemaExtensions'.
-105) microsoft.graph/teams/schedule/shifts:==> Unknown http verb PUT
-106) microsoft.graph/sites:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/sites'.
-107) microsoft.graph/suspiciousIpRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/suspiciousIpRiskEvents'.
-108) microsoft.graph/servicePrincipals/synchronization/jobs/schema:==> Unknown http verb PUT
-109) microsoft.graph/applications/synchronization/templates:==> Unknown http verb PUT
-110) microsoft.graph/me/drive/items/workbook/tables/columns:==> Invalid path kind 'SingleNavigation' in 'POST'
-111) microsoft.graph/me/drive/items/workbook/tables/rows:==> Invalid path kind 'SingleNavigation' in 'POST'
-112) microsoft.graph/groups/team:==> Unknown http verb PUT
-113) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
-114) microsoft.graph/teams/schedule/timesOff:==> Unknown http verb PUT
-115) microsoft.graph/teams/schedule/timeOffReasons:==> Unknown http verb PUT
-116) microsoft.graph/trustFramework/policies:==> Found mutltiple read restrctions for one target 'microsoft.graph/trustFramework/policies'.
-117) microsoft.graph/unfamiliarLocationRiskEvents:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/unfamiliarLocationRiskEvents'.
-118) microsoft.graph/me/settings:==> Found mutltiple read by key restrctions for one target 'microsoft.graph/me/settings'.
-119) microsoft.graph/me:==> Invalid path kind 'Singleton' in 'PATCH'
-120) microsoft.graph/me/people:==> Found mutltiple read restrctions for one target 'microsoft.graph/me/people'.
+1) microsoft.graph/administrativeUnits/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+2) microsoft.graph/applications/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
+3) microsoft.graph/app/calls:==> Invalid path kind 'SingleNavigation' in 'POST'
+4) microsoft.graph/devices/registeredOwners:==> Invalid path kind 'SingleNavigation' in 'POST'
+5) microsoft.graph/devices/registeredUsers:==> Invalid path kind 'SingleNavigation' in 'POST'
+6) microsoft.graph/directoryRoles/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+7) microsoft.graph/drives/items/createUploadSession:==> Unknown http verb PUT
+8) microsoft.graph/drives/items/content:==> Unknown http verb PUT
+9) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
+10) microsoft.graph/me/drive/items/unfollow:==> Invalid path kind 'Operation' in 'DELETE'
+11) microsoft.graph/education/classes/assignments/categories:==> Invalid path kind 'SingleNavigation' in 'POST'
+12) microsoft.graph/education/classes/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+13) microsoft.graph/education/classes/teachers:==> Invalid path kind 'SingleNavigation' in 'POST'
+14) microsoft.graph/education/schools/classes:==> Invalid path kind 'SingleNavigation' in 'POST'
+15) microsoft.graph/education/schools/users:==> Invalid path kind 'SingleNavigation' in 'POST'
+16) microsoft.graph/education/synchronizationProfiles:==> Unknown http verb PUT
+17) microsoft.graph/me/events:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+18) microsoft.graph/groups/acceptedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
+19) microsoft.graph/groups/rejectedSenders:==> Invalid path kind 'SingleNavigation' in 'POST'
+20) microsoft.graph/groups/members:==> Invalid path kind 'SingleNavigation' in 'POST'
+21) microsoft.graph/groups/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
+22) microsoft.graph/me/mailFolders/messageRules:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+23) microsoft.graph/me/messages:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+24) microsoft.graph/onPremisesPublishingProfiles/agents/agentGroups:==> Invalid path kind 'SingleNavigation' in 'POST'
+25) microsoft.graph/app/calls/participants:==> Invalid path kind 'SingleNavigation' in 'POST'
+26) microsoft.graph/applications/policies:==> Invalid path kind 'SingleNavigation' in 'POST'
+27) microsoft.graph/privilegedRoles/settings:==> Unknown http verb PUT
+28) microsoft.graph/me/activities:==> Unknown http verb PUT
+29) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
+30) microsoft.graph/onPremisesPublishingProfiles/publishedResources/agentGroups:==> Invalid path kind 'SingleNavigation' in 'POST'
+31) microsoft.graph/me/drive/items/workbook/worksheets/range(address):==> Invalid path kind 'Operation' in 'PATCH'
+32) microsoft.graph/teams/schedule:==> Unknown http verb PUT
+33) microsoft.graph/teams/schedule/schedulingGroups:==> Unknown http verb PUT
+34) microsoft.graph/teams/schedule/shifts:==> Unknown http verb PUT
+35) microsoft.graph/servicePrincipals/synchronization/jobs/schema:==> Unknown http verb PUT
+36) microsoft.graph/applications/synchronization/templates:==> Unknown http verb PUT
+37) microsoft.graph/groups/team:==> Unknown http verb PUT
+38) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
+39) microsoft.graph/teams/schedule/timesOff:==> Unknown http verb PUT
+40) microsoft.graph/teams/schedule/timeOffReasons:==> Unknown http verb PUT
+41) microsoft.graph/me:==> Invalid path kind 'Singleton' in 'PATCH'
