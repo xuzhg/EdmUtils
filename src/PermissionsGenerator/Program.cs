@@ -30,7 +30,7 @@ namespace PermissionsProcessor
 
         static void Main()
         {
-            string BasePath = @"C:\microsoft-graph-docs";
+            string BasePath = @"C:\source\madansr7\microsoft-graph-docs";
             PermProcessor permProcessor = new PermProcessor()
             {
                 ReferencePath = BasePath + @"\concepts\permissions-reference.md"
@@ -50,9 +50,9 @@ namespace PermissionsProcessor
                     break;
             }
 
+            permProcessor.GeneratePermissionsReferenceList();
             permProcessor.AllPathsByPages();
             permProcessor.AllPermissionsByPages();
-            permProcessor.GeneratePermissionsReferenceList();
             permProcessor.MergePathPermissionData();
             Utils.SaveToFile($"apiPermissionsAndScopes-{outputFilename}.json", PermissionsModel);
             Console.WriteLine("done");
