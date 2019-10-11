@@ -50,9 +50,9 @@ namespace PermissionsProcessor
                     break;
             }
 
+            permProcessor.GeneratePermissionsReferenceList();
             permProcessor.AllPathsByPages();
             permProcessor.AllPermissionsByPages();
-            permProcessor.GeneratePermissionsReferenceList();
             permProcessor.MergePathPermissionData();
             Utils.SaveToFile($"apiPermissionsAndScopes-{outputFilename}.json", PermissionsModel);
             Console.WriteLine("done");
