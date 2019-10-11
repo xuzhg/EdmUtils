@@ -126,6 +126,7 @@ namespace PermissionsProcessor
                         var verb = Regex.Matches(apipath, verbRegexPattern);
                         t.HttpVerb = verb.First().Value.Trim();
                         var newPath = Regex.Replace(apipath, verbRegexPattern, "");
+                        newPath = Regex.Replace(newPath, "\\s", "").ToLower();
                         //if the path exits then add info
                         if (t.Application.Count > 0 & t.DelegatedPersonal.Count > 0 & t.DelegatedWork.Count > 0)
                         {
