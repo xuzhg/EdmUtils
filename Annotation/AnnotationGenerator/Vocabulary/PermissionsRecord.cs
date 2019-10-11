@@ -87,11 +87,15 @@ namespace AnnotationGenerator.Vocabulary
                 {
                     if (value.Count > 0)
                     {
-                        return String.Join(",", value);
+                        return String.Join(",", value.Select(b => "-" + b));
                     }
                 }
 
-                return null;
+                // Possible string value identifiers when specifying properties are '*', _PropertyName_, '-'_PropertyName_.
+                // Where, '*' denotes all properties are accessible,'-'_PropertyName_ excludes that specific property and
+                // _PropertyName_ explicitly provides access to the specific property.
+                // The absence of 'RestrictedProperties' denotes all properties are accessible using that scope.
+                return "*";
             };
 
             p.Scopes = scopes.Select(s => new ScopeType
