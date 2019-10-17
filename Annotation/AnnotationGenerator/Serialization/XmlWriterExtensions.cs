@@ -7,6 +7,9 @@ namespace AnnotationGenerator.Serialization
 {
     static class XmlWriterExtensions
     {
+        /// <summary>
+        /// <PropertyValue Property="PropertyName" String="PropertyValue" />
+        /// </summary>
         public static void WriteStringProperty(this XmlWriter writer, string property, string value)
         {
             if (value != null)
@@ -22,6 +25,9 @@ namespace AnnotationGenerator.Serialization
             }
         }
 
+        /// <summary>
+        /// <PropertyValue Property="PropertyName" Boolean=true/false />
+        /// </summary>
         public static void WriteBooleanProperty(this XmlWriter writer, string property, bool? value)
         {
             if (value != null)
@@ -37,6 +43,18 @@ namespace AnnotationGenerator.Serialization
             }
         }
 
+        /// <summary>
+        /// <PropertyValue Property="PropertyName" >
+        ///  <Collection>
+        ///     <Record>
+        ///       ...
+        ///     </Record>
+        ///     <Record>
+        ///        ...
+        ///     </Record>
+        /// </Collection>
+        /// </PropertyValue>
+        /// </summary>
         public static void WriteCollectionProperty<T>(this XmlWriter writer, string property, IEnumerable<T> collections) where T : IRecord
         {
             if (collections != null && collections.Any())
@@ -61,6 +79,13 @@ namespace AnnotationGenerator.Serialization
             }
         }
 
+        /// <summary>
+        /// <PropertyValue Property="PropertyName" >
+        ///  <Collection>
+        ///    WriteEachElement
+        /// </Collection>
+        /// </PropertyValue>
+        /// </summary>
         public static void WriteCollectionProperty<T>(this XmlWriter writer, string property, IEnumerable<T> collections,
             Action<XmlWriter, T> itemAction)
         {
@@ -86,6 +111,13 @@ namespace AnnotationGenerator.Serialization
             }
         }
 
+        /// <summary>
+        /// <PropertyValue Property="PropertyName" >
+        ///  <Record>
+        ///    
+        /// </Record>
+        /// </PropertyValue>
+        /// </summary>
         public static void WriteRecordProperty<T>(this XmlWriter writer, string property, T value) where T : IRecord
         {
             if (value != null)
