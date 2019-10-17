@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EdmUtil\EdmUtil.csproj" />
+    <ProjectReference Include="..\Microsoft.OData.EdmUtils\Microsoft.OData.EdmUtils.csproj" />
   </ItemGroup>
 
 </Project>

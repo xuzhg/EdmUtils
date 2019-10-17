@@ -5,10 +5,10 @@
 
 using System;
 using System.Collections.Generic;
-using Annotation;
 using AnnotationGenerator.MD;
 using AnnotationGenerator.Serialization;
 using AnnotationGenerator.Vocabulary;
+using Microsoft.OData.EdmUtils;
 
 namespace AnnotationGenerator
 {

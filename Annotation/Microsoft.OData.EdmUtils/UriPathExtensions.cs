@@ -4,8 +4,9 @@
 // ------------------------------------------------------------
 
 using System.Linq;
+using Microsoft.OData.EdmUtils.Segments;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils
 {
     public static class UriPathExtensions
     {

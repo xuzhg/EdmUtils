@@ -8,13 +8,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using Annotation;
-using Annotation.EdmUtil;
 using AnnotationGenerator.MD;
 using AnnotationGenerator.Serialization;
 using AnnotationGenerator.Terms;
 using AnnotationGenerator.Vocabulary;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils;
 
 namespace AnnotationGenerator
 {

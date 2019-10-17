@@ -5,7 +5,7 @@
 
 using Microsoft.OData.Edm;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils.Segments
 {
     /// <summary>
     /// The base class for the segment.

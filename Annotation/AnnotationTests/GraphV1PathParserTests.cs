@@ -3,9 +3,9 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
-using Annotation;
-using Annotation.EdmUtil;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils;
+using Microsoft.OData.EdmUtils.Segments;
 using Xunit;
 
 namespace AnnotationGenerator.Tests

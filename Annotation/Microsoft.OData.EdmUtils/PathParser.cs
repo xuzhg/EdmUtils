@@ -6,10 +6,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils.Commons;
+using Microsoft.OData.EdmUtils.Segments;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils
 {
     /// <summary>
     /// A parser to parse the requst Uri.

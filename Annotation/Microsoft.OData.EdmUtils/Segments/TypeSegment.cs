@@ -6,7 +6,7 @@
 using System;
 using Microsoft.OData.Edm;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils.Segments
 {
     /// <summary>
     /// A type cast segment. for example: ~/users/NS.VipUser

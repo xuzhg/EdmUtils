@@ -5,7 +5,7 @@
 
 using System.Collections.Generic;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils
 {
     public sealed class UriPathEqualityComparer : EqualityComparer<UriPath>
     {

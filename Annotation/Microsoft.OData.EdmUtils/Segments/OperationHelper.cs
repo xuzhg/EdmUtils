@@ -6,10 +6,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils.Commons;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils.Segments
 {
     public static class OperationHelper
     {

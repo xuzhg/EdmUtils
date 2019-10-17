@@ -1,8 +1,9 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using Annotation.EdmUtil;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils;
+using Microsoft.OData.EdmUtils.Segments;
 using Xunit;
 
 namespace AnnotationGenerator.Tests

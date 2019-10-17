@@ -7,8 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Annotation.EdmUtil;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils;
+using Microsoft.OData.EdmUtils.Segments;
 using Newtonsoft.Json.Linq;
 
 namespace AnnotationGenerator.MD

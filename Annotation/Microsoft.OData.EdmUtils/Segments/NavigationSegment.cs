@@ -6,7 +6,7 @@
 using System;
 using Microsoft.OData.Edm;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils.Segments
 {
     /// <summary>
     /// A navigation property segment.

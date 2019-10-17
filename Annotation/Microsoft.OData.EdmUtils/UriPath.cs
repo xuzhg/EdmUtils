@@ -3,12 +3,11 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml.XPath;
+using Microsoft.OData.EdmUtils.Segments;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils
 {
     public class UriPath// : IEquatable<UriPath>
     {

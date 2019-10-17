@@ -3,7 +3,7 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
-namespace Annotation
+namespace Microsoft.OData.EdmUtils
 {
     /// <summary>
     /// Represents the kind of a OData path.

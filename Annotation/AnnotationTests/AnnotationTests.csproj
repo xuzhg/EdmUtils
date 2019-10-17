@@ -18,11 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EdmUtil\EdmUtil.csproj" />
+    <EmbeddedResource Include="Resources\graphV1.0.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\graphV1.0.xml" />
+    <ProjectReference Include="..\Microsoft.OData.EdmUtils\Microsoft.OData.EdmUtils.csproj" />
   </ItemGroup>
 
 </Project>

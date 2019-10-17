@@ -3,13 +3,14 @@
 //  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // ------------------------------------------------------------
 
-using Microsoft.OData.Edm;
-using Microsoft.OData.Edm.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.OData.Edm;
+using Microsoft.OData.Edm.Validation;
+using Microsoft.OData.EdmUtils.Segments;
 
-namespace Annotation.EdmUtil.Commons
+namespace Microsoft.OData.EdmUtils.Commons
 {
     public static class EdmExtensions
     {

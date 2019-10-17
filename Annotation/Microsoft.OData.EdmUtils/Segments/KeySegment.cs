@@ -1,11 +1,15 @@
-﻿
+﻿// ------------------------------------------------------------
+//  Copyright (c) saxu@microsoft.com.  All rights reserved.
+//  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// ------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Annotation.EdmUtil.Commons;
 using Microsoft.OData.Edm;
+using Microsoft.OData.EdmUtils.Commons;
 
-namespace Annotation.EdmUtil
+namespace Microsoft.OData.EdmUtils.Segments
 {
     /// <summary>
     /// A key segment, for example ~/users({id})
