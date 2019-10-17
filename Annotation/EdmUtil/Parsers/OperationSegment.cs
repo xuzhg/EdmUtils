@@ -17,8 +17,19 @@ namespace Annotation.EdmUtil
         /// Initializes a new instance of <see cref="OperationSegment"/> class.
         /// </summary>
         /// <param name="operation">The wrapped Edm operation (function or action).</param>
-        /// <param name="entitySet">The wrapped entity set.</param>
+        /// <param name="entitySet">The entity set returns from the operation.</param>
         public OperationSegment(IEdmOperation operation, IEdmEntitySetBase entitySet)
+            : this(operation, entitySet, operation?.Name)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="OperationSegment"/> class.
+        /// </summary>
+        /// <param name="operation">The wrapped Edm operation (function or action).</param>
+        /// <param name="entitySet">The entity set returns from the operation.</param>
+        /// <param name="literal">The Uri string literal.</param>
+        public OperationSegment(IEdmOperation operation, IEdmEntitySetBase entitySet, string literal)
             : base(operation?.Name)
         {
             Operation = operation ?? throw new ArgumentNullException(nameof(operation));
@@ -38,14 +49,21 @@ namespace Annotation.EdmUtil
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.Operation;
 
+        /// <summary>
+        /// Gets the operation.
+        /// </summary>
         public IEdmOperation Operation { get; }
 
+        /// <inheritdoc/>
         public override bool IsSingle { get; }
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource { get; }
 
+        /// <inheritdoc/>
         public override string Target { get; }
 
         /// <summary>

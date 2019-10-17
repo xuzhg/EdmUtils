@@ -4,7 +4,6 @@
 // ------------------------------------------------------------
 
 using Microsoft.OData.Edm;
-using System.Runtime;
 
 namespace Annotation.EdmUtil
 {
@@ -16,9 +15,10 @@ namespace Annotation.EdmUtil
         /// <summary>
         /// Initializes a new instance of <see cref="PathSegment"/> class.
         /// </summary>
-        /// <param name="identifier">The segment identifier.</param>
+        /// <param name="identifier">The segment identifier, the string literal from Request Uri.</param>
         public PathSegment(string identifier)
         {
+            // It can be anything.
             Identifier = identifier;
         }
 
@@ -26,9 +26,9 @@ namespace Annotation.EdmUtil
         /// Gets the Uri string literal from Request Uri, it maybe case sensitive, and with other key patterns.
         /// </summary>
         public string Identifier { get; }
-        
+
         /// <summary>
-        /// Gets the normal uri literal
+        /// Gets the normal uri literal, that's the case insensitive Uri literal.
         /// </summary>
         public abstract string UriLiteral { get; }
 
@@ -52,9 +52,10 @@ namespace Annotation.EdmUtil
         /// </summary>
         public abstract IEdmNavigationSource NavigationSource { get; }
 
+        /// <summary>
+        /// Gets the target string of this segment.
+        /// </summary>
         public abstract string Target { get; }
-
-        
 
         /// <summary>
         /// Compare the input segment with this segment.

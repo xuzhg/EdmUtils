@@ -51,10 +51,13 @@ namespace Annotation.EdmUtil
         /// </summary>
         public override bool IsSingle { get; }
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource { get; }
 
+        /// <inheritdoc/>
         public override string Target => Property.Name;
 
         /// <summary>

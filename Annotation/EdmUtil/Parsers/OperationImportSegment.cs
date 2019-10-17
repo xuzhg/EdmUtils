@@ -19,11 +19,23 @@ namespace Annotation.EdmUtil
         /// <param name="operationImport">The wrapped Edm operation import (function import or action import).</param>
         /// <param name="navigationSource">The Edm navigation source.</param>
         public OperationImportSegment(IEdmOperationImport operationImport, IEdmNavigationSource navigationSource)
-            : base(operationImport?.Name)
+            : this(operationImport, navigationSource, operationImport?.Name)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="OperationImportSegment"/> class.
+        /// </summary>
+        /// <param name="operationImport">The wrapped Edm operation import (function import or action import).</param>
+        /// <param name="navigationSource">The Edm navigation source.</param>
+        /// <param name="literal">The Uri literal.</param>
+        public OperationImportSegment(IEdmOperationImport operationImport, IEdmNavigationSource navigationSource, string literal)
+            : base(literal)
         {
             OperationImport = operationImport ?? throw new ArgumentNullException(nameof(operationImport));
 
             NavigationSource = navigationSource;
+
             EdmType = navigationSource?.EntityType();
 
             if (operationImport.Operation.ReturnType != null)
@@ -37,14 +49,21 @@ namespace Annotation.EdmUtil
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.OpertionImport;
 
+        /// <summary>
+        /// Gets the wrappered operation import.
+        /// </summary>
         public IEdmOperationImport OperationImport { get; }
 
+        /// <inheritdoc/>
         public override bool IsSingle { get; } = false;
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource { get; }
 
+        /// <inheritdoc/>
         public override string Target { get; }
 
         /// <summary>
@@ -62,7 +81,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
-            return ReferenceEquals(OperationImport, otherOperationImportSegment.OperationImport);
+            return OperationImport.Name == otherOperationImportSegment.OperationImport.Name;
         }
     }
 }

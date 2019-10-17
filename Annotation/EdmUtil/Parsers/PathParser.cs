@@ -199,7 +199,7 @@ namespace Annotation.EdmUtil
             if (operationImport != null)
             {
                 operationImport.TryGetStaticEntitySet(model, out IEdmEntitySetBase entitySetBase);
-                path.Add(new OperationImportSegment(operationImport, entitySetBase));
+                path.Add(new OperationImportSegment(operationImport, entitySetBase, identifier));
                 if (remaining != null && operationImport.IsFunctionImport())
                 {
                     IEdmFunction function = (IEdmFunction)operationImport.Operation;
@@ -295,24 +295,27 @@ namespace Annotation.EdmUtil
             }
 
             IEdmEntityType targetEntityType;
-            if (!preSegment.EdmType.IsEntityCollectionType(out targetEntityType))
+            if (!preSegment.EdmType.TryGetEntityType(out targetEntityType))
             {
                 // key segment only apply to collection of entity
                 return false;
             }
 
-            parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> keys, out string remaining);
+            // Retrieve the key/value pairs
+            parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> retrievedkeys, out string remaining);
             var typeKeys = targetEntityType.Key().ToList();
-            if (typeKeys.Count != keys.Count)
+            if (typeKeys.Count != retrievedkeys.Count)
             {
+                // make sure the key count is same
                 return false;
             }
 
             if (typeKeys.Count == 1)
             {
-                if (keys.Keys.ElementAt(0) != String.Empty)
+                string keyName = retrievedkeys.First().Key;
+                if (keyName != String.Empty)
                 {
-                    if (typeKeys[0].Name != keys.Keys.ElementAt(0))
+                    if (typeKeys[0].Name != keyName)
                     {
                         return false;
                     }
@@ -322,7 +325,7 @@ namespace Annotation.EdmUtil
             {
                 foreach (var items in typeKeys)
                 {
-                    if (!keys.ContainsKey(items.Name))
+                    if (!retrievedkeys.ContainsKey(items.Name))
                     {
                         return false;
                     }
@@ -335,7 +338,7 @@ namespace Annotation.EdmUtil
                 throw new Exception($"Invalid key parathesis '{parenthesisExpressions}'.");
             }
 
-            path.Add(new KeySegment(keys, targetEntityType, preSegment.NavigationSource));
+            path.Add(new KeySegment(retrievedkeys, targetEntityType, preSegment.NavigationSource));
             return true;
         }
 
@@ -446,7 +449,7 @@ namespace Annotation.EdmUtil
                     targetset = operation.GetTargetEntitySet(source, model);
                 }
 
-                path.Add(new OperationSegment(operation, targetset));
+                path.Add(new OperationSegment(operation, targetset, identifier));
 
                 if (remaining != null && operation.IsFunction())
                 {

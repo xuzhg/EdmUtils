@@ -42,14 +42,21 @@ namespace Annotation.EdmUtil
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.Navigation;
 
+        /// <summary>
+        /// Gets the wrappered navigation property.
+        /// </summary>
         public IEdmNavigationProperty NavigationProperty { get; }
 
+        /// <inheritdoc/>
         public override bool IsSingle { get; }
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource { get; }
 
+        /// <inheritdoc/>
         public override string Target => NavigationProperty.Name;
 
         /// <summary>
@@ -67,7 +74,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
-            return ReferenceEquals(NavigationProperty, otherNavigationSegment.NavigationProperty);
+            return NavigationProperty.Name == otherNavigationSegment.NavigationProperty.Name;
         }
     }
 }

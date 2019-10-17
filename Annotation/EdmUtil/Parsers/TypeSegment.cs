@@ -46,16 +46,26 @@ namespace Annotation.EdmUtil
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.Type;
 
+        /// <summary>
+        /// Gets the actural type, it's resolved from the request uri.
+        /// </summary>
         public IEdmType ActualType { get; }
 
+        /// <summary>
+        /// Gets the expected type, it's from the previous segment.
+        /// </summary>
         public IEdmType ExpectedType { get; }
 
+        /// <inheritdoc/>
         public override bool IsSingle { get; }
 
+        /// <inheritdoc/>
         public override IEdmType EdmType => ActualType;
 
-        public override IEdmNavigationSource NavigationSource { get;}
+        /// <inheritdoc/>
+        public override IEdmNavigationSource NavigationSource { get; }
 
+        /// <inheritdoc/>
         public override string Target { get; }
 
         /// <summary>

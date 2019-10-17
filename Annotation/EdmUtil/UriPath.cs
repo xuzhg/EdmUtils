@@ -131,26 +131,5 @@ namespace Annotation.EdmUtil
                 }
             }
         }
-/*
-        public bool Equals(UriPath other)
-        {
-            if (other == null || this.Count != other.Count)
-            {
-                return false;
-            }
-
-            for (int i = 0; i < Count; i++)
-            {
-                PathSegment originalSegment = segments[i];
-                PathSegment otherSegment = other.Segments[i];
-
-                if (!originalSegment.Match(otherSegment))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }*/
     }
 }

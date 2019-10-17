@@ -234,7 +234,13 @@ namespace Annotation.EdmUtil.Commons
             return true;
         }
 
-        public static bool IsEntityCollectionType(this IEdmType edmType, out IEdmEntityType entityType)
+        /// <summary>
+        /// Try to get the entity type <see cref="IEdmEntityType"/> from the input <see cref="IEdmType"/>
+        /// </summary>
+        /// <param name="edmType">The input Edm Type.</param>
+        /// <param name="entityType">The output Entity Type.</param>
+        /// <returns>True/false</returns>
+        public static bool TryGetEntityType(this IEdmType edmType, out IEdmEntityType entityType)
         {
             if (edmType == null || edmType.TypeKind != EdmTypeKind.Collection)
             {

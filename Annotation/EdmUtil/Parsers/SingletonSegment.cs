@@ -38,6 +38,9 @@ namespace Annotation.EdmUtil
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.Singleton;
 
+        /// <summary>
+        /// Gets the singleton.
+        /// </summary>
         public IEdmSingleton Singleton { get; }
 
         /// <summary>
@@ -45,10 +48,13 @@ namespace Annotation.EdmUtil
         /// </summary>
         public override bool IsSingle => true;
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource => Singleton;
 
+        /// <inheritdoc/>
         public override string Target { get; }
 
         /// <summary>

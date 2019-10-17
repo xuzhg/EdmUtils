@@ -18,12 +18,8 @@ namespace Annotation.EdmUtil
         /// </summary>
         /// <param name="entitySet">The wrapped entity set.</param>
         public EntitySetSegment(IEdmEntitySet entitySet)
-            : this(entitySet, entitySet.Name)
+            : this(entitySet, entitySet?.Name)
         {
-            EntitySet = entitySet ?? throw new ArgumentNullException(nameof(entitySet));
-            EdmType = entitySet.Type; // It should be collection
-
-            Target = entitySet.Container.Namespace + "/" + entitySet.Name;
         }
 
         /// <summary>
@@ -35,6 +31,7 @@ namespace Annotation.EdmUtil
             : base(literal)
         {
             EntitySet = entitySet ?? throw new ArgumentNullException(nameof(entitySet));
+
             EdmType = entitySet.Type; // It should be collection
 
             Target = entitySet.Container.Namespace + "/" + entitySet.Name;
@@ -43,6 +40,9 @@ namespace Annotation.EdmUtil
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.EntitySet;
 
+        /// <summary>
+        /// Gets the wrappered entity set.
+        /// </summary>
         public IEdmEntitySet EntitySet { get; }
 
         /// <summary>
@@ -50,10 +50,13 @@ namespace Annotation.EdmUtil
         /// </summary>
         public override bool IsSingle => false;
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource => EntitySet;
 
+        /// <inheritdoc/>
         public override string Target { get; }
 
         /// <summary>
@@ -71,7 +74,7 @@ namespace Annotation.EdmUtil
                 return false;
             }
 
-            return ReferenceEquals(EntitySet, otherEntitySetSegment.EntitySet);
+            return EntitySet.Name == otherEntitySetSegment.EntitySet.Name;
         }
     }
 }

@@ -19,9 +19,7 @@ namespace Annotation.EdmUtil
         /// <param name="keys">The key/value pairs for the key segment.</param>
         /// <param name="entityType">The declaring entity type.</param>
         /// <param name="navigationSource">The related navigation source.</param>
-        public KeySegment(IDictionary<string, string> keys,
-            IEdmEntityType entityType,
-            IEdmNavigationSource navigationSource)
+        public KeySegment(IDictionary<string, string> keys, IEdmEntityType entityType, IEdmNavigationSource navigationSource)
             : base(keys.ToKeyValueString())
         {
             Values = keys;
@@ -30,25 +28,12 @@ namespace Annotation.EdmUtil
             NavigationSource = navigationSource;
         }
 
-        /// <summary>
-        /// Initializes a new instance of <see cref="KeySegment"/> class.
-        /// </summary>
-        /// <param name="keys">The key/value pairs for the key segment.</param>
-        /// <param name="edmEntityType">The declaring entity type.</param>
-        /// <param name="navigationSource">The related navigation source.</param>
-        public KeySegment(string keys, IEdmEntityType entityType, IEdmNavigationSource navigationSource)
-            : base(keys)
-        {
-            keys.ExtractKeyValuePairs(out IDictionary<string, string> values, out _);
-            Values = values;
-            DeclaringType = entityType;
-            EdmType = entityType;
-            NavigationSource = navigationSource;
-        }
-
         /// <inheritdoc/>
         public override SegmentKind Kind => SegmentKind.Key;
 
+        /// <summary>
+        /// Gets the key/value pairs, that's from Uri request.
+        /// </summary>
         public IDictionary<string, string> Values { get; }
 
         /// <summary>
@@ -56,12 +41,18 @@ namespace Annotation.EdmUtil
         /// </summary>
         public override bool IsSingle => true;
 
+        /// <summary>
+        /// Gets the key declaring entity type.
+        /// </summary>
         public IEdmEntityType DeclaringType { get; }
 
+        /// <inheritdoc/>
         public override IEdmType EdmType { get; }
 
+        /// <inheritdoc/>
         public override IEdmNavigationSource NavigationSource { get;}
 
+        /// <inheritdoc/>
         public override string Target => throw new NotImplementedException();
 
         /// <summary>
@@ -101,7 +92,7 @@ namespace Annotation.EdmUtil
             }
 
             // Compare the key segment using It's declaring type.
-            return ReferenceEquals(EdmType, otherKeySegment.EdmType);
+            return DeclaringType.FullTypeName() == otherKeySegment.DeclaringType.FullTypeName();
         }
     }
 }

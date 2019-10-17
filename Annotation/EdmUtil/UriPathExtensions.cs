@@ -15,7 +15,7 @@ namespace Annotation.EdmUtil
         }
 
         /// <summary>
-        /// Compare the right path is equal to the left path.
+        /// Compare whether the right path is equal to the left path.
         /// for example: ~/users/{id}   ==> A
         ///            : ~/users({id})  or ~/users({user-id})  ==> B
         /// A.EqualsTo(B) ==> true
@@ -56,7 +56,7 @@ namespace Annotation.EdmUtil
         }
 
         /// <summary>
-        /// Compare the right path is sub-set of the left path.
+        /// Compare whether the left path is sub-set of the right path.
         /// for example: ~/users   ==> A
         ///            : ~/users({id})  or ~/users({id})/Name  ==> B
         /// A.StartsWith(B) ==> false
@@ -91,6 +91,4 @@ namespace Annotation.EdmUtil
             return true;
         }
     }
-
-
 }
