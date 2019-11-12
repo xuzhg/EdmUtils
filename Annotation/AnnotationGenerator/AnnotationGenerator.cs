@@ -142,11 +142,11 @@ namespace AnnotationGenerator
                 return;
             }
 
-            string entitySetFullName = this.model.EntityContainer.FullName();
+            string entitySetContainerFullName = this.model.EntityContainer.FullName();
 
             // <Annotations Target="...">
             writer.WriteStartElement("Annotations");
-            writer.WriteAttributeString("Target", entitySetFullName);
+            writer.WriteAttributeString("Target", entitySetContainerFullName);
 
             // <Annotation Term="Org.OData.Authorization.V1.Authorizationss">
             writer.WriteStartElement("Annotation");

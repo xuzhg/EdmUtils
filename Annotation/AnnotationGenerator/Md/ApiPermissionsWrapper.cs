@@ -103,11 +103,19 @@ namespace AnnotationGenerator.MD
                 string json = File.ReadAllText(fileName);
                 JObject jObj = JObject.Parse(json);
 
-                // ApiPermissions
-                wrapper.ApiPermissions = LoadTopLevelProperty<ApiPermissionType>(jObj, "ApiPermissions");
+                JProperty property = jObj.Property("ApiPermissions");
+                if (property != null)
+                {
+                    // ApiPermissions
+                    wrapper.ApiPermissions = LoadTopLevelProperty<ApiPermissionType>(jObj, "ApiPermissions");
 
-                // PermissionSchemes
-                wrapper.PermissionsByScheme = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
+                    // PermissionSchemes
+                    wrapper.PermissionsByScheme = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
+                }
+                else
+                {
+                    wrapper.ApiPermissions = LoadPermissions(jObj);
+                }
             }
             catch (Exception ex)
             {
@@ -328,69 +336,66 @@ namespace AnnotationGenerator.MD
             return dict;
         }
 
-        private static IDictionary<string, IList<T1>> LoadTopLevelProperty<T1, T2>(JObject topLevelObject, string propertyName, Func<T2, T1> convertTo)
+        private static IDictionary<string, IList<ApiPermissionType>> LoadPermissions(JObject topLevelObject)
         {
-            JProperty property = topLevelObject.Property(propertyName);
-            if (property == null)
+            IDictionary<string, IList<ApiPermissionType>> returns =
+                new Dictionary<string, IList<ApiPermissionType>>();
+            foreach (var uriProperty in topLevelObject.Properties())
             {
-                throw new Exception($"Invalid format, Need a top level property named '{propertyName}'.");
-            }
+                JObject uriPropertyValue = uriProperty.Value as JObject;
 
-            JObject propertyValue = property.Value as JObject;
-            if (propertyValue == null)
-            {
-                throw new Exception($"Invalid format, Need an object value of the property: '{propertyName}'.");
-            }
-
-            var dict = new Dictionary<string, IList<T1>>();
-            foreach (var subProperty in propertyValue.Properties())
-            {
-                JArray array = subProperty.Value as JArray;
-                if (array == null)
+                if (uriPropertyValue == null)
                 {
-                    throw new Exception($"Invalid format, Need an array value of the property: {subProperty.Name}");
+                    throw new Exception($"Invalid format, Need a JSON Object at '{uriProperty.Name}'.");
                 }
 
-                IList<T1> subPropertyList = new List<T1>();
-                foreach (var item in array)
+                IList<ApiPermissionType> permissions = new List<ApiPermissionType>();
+                foreach (var httpMethodProperty in uriPropertyValue.Properties())
                 {
-                    JObject subPermissionsBySchemeObj = item as JObject;
-                    if (subPermissionsBySchemeObj == null)
+                    ApiPermissionType permission = new ApiPermissionType
                     {
-                        throw new Exception($"Not valid format, Need object value of array in the property: {property.Name}");
+                        HttpVerb = httpMethodProperty.Name
+                    };
+
+                    JObject httpMethodPropertyValue = httpMethodProperty.Value as JObject;
+                    if (httpMethodPropertyValue == null)
+                    {
+                        throw new Exception($"Invalid format, Need a JSON Object at '{uriProperty.Name}'\'{httpMethodProperty.Name}.");
                     }
 
-                    T2 subPermObject = subPermissionsBySchemeObj.ToObject<T2>();
-                    subPropertyList.Add(convertTo(subPermObject));
+                    foreach (var permissionProperty in httpMethodPropertyValue.Properties())
+                    {
+                        JArray permissionPropertyValue = permissionProperty.Value as JArray;
+                        if (permissionPropertyValue == null)
+                        {
+                            throw new Exception($"Invalid format, Need an array at '{uriProperty.Name}'\'{httpMethodProperty.Name}.");
+                        }
+
+                        if (permissionProperty.Name == "Application")
+                        {
+                            permission.Application = permissionPropertyValue.ToObject<List<string>>();
+                        }
+                        else if (permissionProperty.Name == "DelegatedWork")
+                        {
+                            permission.DelegatedWork = permissionPropertyValue.ToObject<List<string>>();
+                        }
+                        else if (permissionProperty.Name == "DelegatedPersonal")
+                        {
+                            permission.DelegatedPersonal = permissionPropertyValue.ToObject<List<string>>();
+                        }
+                        else
+                        {
+                            throw new Exception($"Invalid {permissionProperty.Name} at '{uriProperty.Name}'\'{httpMethodProperty.Name}.");
+                        }
+                    }
+
+                    permissions.Add(permission);
                 }
 
-                dict[subProperty.Name.Trim()] = subPropertyList;
+                returns[uriProperty.Name] = permissions;
             }
 
-            return dict;
-        }
-
-        private static ApiPermissionType ConvertTo(ApiPermissionTypeInternal permInternal)
-        {
-            ApiPermissionType wrapper = new ApiPermissionType();
-            wrapper.HttpVerb = permInternal.HttpVerb;
-
-       //     wrapper.DelegatedWork = permInternal.DelegatedWork.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
-      //      wrapper.DelegatedPersonal = permInternal.DelegatedPersonal.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
-      //      wrapper.Application = permInternal.Application.Where(d => d.Trim() != "Not supported.").Select(d => new PermissionScopeType { ScopeName = d.Trim() }).ToList();
-
-            return wrapper;
-        }
-
-        internal class ApiPermissionTypeInternal
-        {
-            public string HttpVerb { get; set; }
-
-            public IList<string> DelegatedWork { get; set; }
-
-            public IList<string> DelegatedPersonal { get; set; }
-
-            public IList<string> Application { get; set; }
+            return returns;
         }
     }
 }

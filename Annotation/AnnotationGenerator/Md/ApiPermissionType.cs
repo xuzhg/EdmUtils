@@ -27,11 +27,11 @@ namespace AnnotationGenerator.MD
     {
         public string HttpVerb { get; set; }
 
-        public IList<string> DelegatedWork { get; set; }
+        public IList<string> DelegatedWork { get; set; } = new List<string>();
 
-        public IList<string> DelegatedPersonal { get; set; }
+        public IList<string> DelegatedPersonal { get; set; } = new List<string>();
 
-        public IList<string> Application { get; set; }
+        public IList<string> Application { get; set; } = new List<string>();
 
         public IDictionary<string, HashSet<string>> DelegatedWorkRestrictedProperties { get; set; } = new Dictionary<string, HashSet<string>>();
 

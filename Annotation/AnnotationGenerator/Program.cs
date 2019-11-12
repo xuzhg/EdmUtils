@@ -57,7 +57,7 @@ namespace AnnotationGenerator
             ApiPermissionsWrapper wrapper = ApiPermissionsWrapper.LoadAll(inputArg.PermissionFileName);
             if (wrapper != null)
             {
-                Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme.Count}");
+                Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme?.Count}");
             }
             else
             {
@@ -135,8 +135,6 @@ namespace AnnotationGenerator
 
             generator.SaveAs(@"D:\temp\openapi\test_Outline.xml");
         }
-
-
 
         private static IList<InputArg> RetrieveAllDocs()
         {
