@@ -9,7 +9,7 @@ using Microsoft.OData.EdmUtils.Segments;
 
 namespace Microsoft.OData.EdmUtils
 {
-    public class UriPath// : IEquatable<UriPath>
+    public class UriPath
     {
         private string _pathLiteral;
 
@@ -18,6 +18,10 @@ namespace Microsoft.OData.EdmUtils
         /// </summary>
         private readonly IList<PathSegment> segments;
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="UriPath"/> class.
+        /// </summary>
+        /// <param name="segments">The segments.</param>
         public UriPath(IEnumerable<PathSegment> segments)
         {
             this.segments = segments.ToList();
@@ -72,7 +76,7 @@ namespace Microsoft.OData.EdmUtils
         private static PathKind CalculatePathKind(IList<PathSegment> segments)
         {
             PathSegment lastSegment = segments.Last();
-            if (lastSegment is NavigationSegment)
+            if (lastSegment.Kind == SegmentKind.Navigation)
             {
                 if (lastSegment.IsSingle)
                 {
@@ -81,15 +85,18 @@ namespace Microsoft.OData.EdmUtils
 
                 return PathKind.CollectionNavigation;
             }
-            else if (lastSegment is PropertySegment)
+
+            if (lastSegment.Kind == SegmentKind.Property)
             {
                 return PathKind.Property;
             }
-            else if (lastSegment is OperationSegment)
+
+            if (lastSegment.Kind == SegmentKind.Operation)
             {
                 return PathKind.Operation;
             }
-            else if (lastSegment.Kind == SegmentKind.Type)
+
+            if (lastSegment.Kind == SegmentKind.Type)
             {
                 return PathKind.TypeCast;
             }
@@ -98,35 +105,34 @@ namespace Microsoft.OData.EdmUtils
                 int count = segments.Count;
                 if (count == 1)
                 {
-                    if (lastSegment is EntitySetSegment)
+                    if (lastSegment.Kind == SegmentKind.EntitySet)
                     {
                         return PathKind.EntitySet;
                     }
-                    else if (lastSegment is SingletonSegment)
+                    else if (lastSegment.Kind == SegmentKind.Singleton)
                     {
                         return PathKind.Singleton;
                     }
-                    else if (lastSegment is OperationImportSegment)
+                    else if (lastSegment.Kind == SegmentKind.OperationImport)
                     {
                         return PathKind.OperationImport;
                     }
 
-                    throw new System.Exception($"Unknown path kind!");
+                    throw new System.Exception($"Unknown path kind {lastSegment.Kind} as one segment path.");
                 }
-                else if (count == 2 && lastSegment is KeySegment &&
-                    segments[0] is EntitySetSegment)
+                else if (count == 2 && lastSegment.Kind == SegmentKind.Key && segments[0].Kind == SegmentKind.EntitySet)
                 {
                     return PathKind.Entity;
                 }
                 else
                 {
                     PathSegment pre = segments[segments.Count - 2];
-                    if (pre is NavigationSegment && lastSegment is KeySegment)
+                    if (pre.Kind == SegmentKind.Navigation && lastSegment.Kind == SegmentKind.Key)
                     {
                         return PathKind.SingleNavigation;
                     }
 
-                    throw new System.Exception($"Unknown path kind!");
+                    throw new System.Exception($"Unknown path kind {lastSegment.Kind}.");
                 }
             }
         }

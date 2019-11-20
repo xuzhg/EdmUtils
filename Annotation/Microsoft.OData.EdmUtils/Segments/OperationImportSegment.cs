@@ -47,7 +47,7 @@ namespace Microsoft.OData.EdmUtils.Segments
         }
 
         /// <inheritdoc/>
-        public override SegmentKind Kind => SegmentKind.OpertionImport;
+        public override SegmentKind Kind => SegmentKind.OperationImport;
 
         /// <summary>
         /// Gets the wrappered operation import.

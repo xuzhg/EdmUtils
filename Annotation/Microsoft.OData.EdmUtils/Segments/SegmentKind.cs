@@ -35,7 +35,7 @@ namespace Microsoft.OData.EdmUtils.Segments
         /// <summary>
         /// Operation Import segment.
         /// </summary>
-        OpertionImport,
+        OperationImport,
 
         /// <summary>
         /// Key segment.

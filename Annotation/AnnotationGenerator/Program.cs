@@ -163,13 +163,13 @@ namespace AnnotationGenerator
                 FileInfo fileInfo = new FileInfo(file);
 
                 var items = fileInfo.Name.Split("-");
-                if (items.Length != 2)
+                if (items.Length == 1)
                 {
                     Console.WriteLine($"skip {fileInfo.Name} because the file name doesnot have '-'");
                     continue;
                 }
 
-                string replaced = items[1].Replace(".json", ".xml");
+                string replaced = items[items.Length - 1].Replace(".json", ".xml");
                 if (xmlDics.TryGetValue(replaced, out string value))
                 {
                     inputArgs.Add(new InputArg
@@ -179,6 +179,11 @@ namespace AnnotationGenerator
                         Output = file.Replace(".json", ".out"),
                         ErrorOutput = file.Replace(".json", ".err")
                     });
+                }
+                else
+                {
+                    Console.WriteLine($"skip {fileInfo.Name} because no related xml existing.");
+                    continue;
                 }
             }
             return inputArgs;

@@ -338,54 +338,64 @@ namespace AnnotationGenerator.MD
 
         private static IDictionary<string, IList<ApiPermissionType>> LoadPermissions(JObject topLevelObject)
         {
-            IDictionary<string, IList<ApiPermissionType>> returns =
-                new Dictionary<string, IList<ApiPermissionType>>();
+            IDictionary<string, IList<ApiPermissionType>> returns = new Dictionary<string, IList<ApiPermissionType>>();
             foreach (var uriProperty in topLevelObject.Properties())
             {
-                JObject uriPropertyValue = uriProperty.Value as JObject;
+                JArray uriPermissions = uriProperty.Value as JArray;
 
-                if (uriPropertyValue == null)
+                if (uriPermissions == null)
                 {
-                    throw new Exception($"Invalid format, Need a JSON Object at '{uriProperty.Name}'.");
+                    throw new Exception($"Invalid format, Need a JSON array at '{uriProperty.Name}'.");
                 }
 
                 IList<ApiPermissionType> permissions = new List<ApiPermissionType>();
-                foreach (var httpMethodProperty in uriPropertyValue.Properties())
+                foreach (var uriPermission in uriPermissions)
                 {
-                    ApiPermissionType permission = new ApiPermissionType
+                    JObject uriPermissionObj = uriPermission as JObject;
+                    if (uriPermissionObj == null)
                     {
-                        HttpVerb = httpMethodProperty.Name
-                    };
-
-                    JObject httpMethodPropertyValue = httpMethodProperty.Value as JObject;
-                    if (httpMethodPropertyValue == null)
-                    {
-                        throw new Exception($"Invalid format, Need a JSON Object at '{uriProperty.Name}'\'{httpMethodProperty.Name}.");
+                        throw new Exception($"Invalid format, Need a JSON object within '{uriProperty.Name}'.");
                     }
 
-                    foreach (var permissionProperty in httpMethodPropertyValue.Properties())
-                    {
-                        JArray permissionPropertyValue = permissionProperty.Value as JArray;
-                        if (permissionPropertyValue == null)
-                        {
-                            throw new Exception($"Invalid format, Need an array at '{uriProperty.Name}'\'{httpMethodProperty.Name}.");
-                        }
+                    ApiPermissionType permission = new ApiPermissionType();
 
-                        if (permissionProperty.Name == "Application")
+                    // HttpVerb
+                    JProperty httpVerbProperty = uriPermissionObj.Property("HttpVerb");
+                    if (httpVerbProperty != null)
+                    {
+                        permission.HttpVerb = httpVerbProperty.Value.ToString();
+                    }
+
+                    // DelegatedWork
+                    JProperty delegatedWorkProperty = uriPermissionObj.Property("DelegatedWork");
+                    if (delegatedWorkProperty != null)
+                    {
+                        JArray delegatedWork = delegatedWorkProperty.Value as JArray;
+                        if (delegatedWork != null)
                         {
-                            permission.Application = permissionPropertyValue.ToObject<List<string>>();
+                            permission.DelegatedWork = delegatedWork.ToObject<List<string>>();
                         }
-                        else if (permissionProperty.Name == "DelegatedWork")
+                    }
+
+                    // DelegatedPersonal
+                    JProperty delegatedPersonalProperty = uriPermissionObj.Property("DelegatedPersonal");
+                    if (delegatedPersonalProperty != null)
+                    {
+                        JArray delegatedPersonal = delegatedPersonalProperty.Value as JArray;
+                        if (delegatedPersonal != null)
                         {
-                            permission.DelegatedWork = permissionPropertyValue.ToObject<List<string>>();
+                            permission.DelegatedPersonal = delegatedPersonal.ToObject<List<string>>();
                         }
-                        else if (permissionProperty.Name == "DelegatedPersonal")
+                    }
+
+                    // Application
+                    JProperty applicationProperty = uriPermissionObj.Property("Application");
+                    if (applicationProperty != null)
+                    {
+                        JArray application = applicationProperty.Value as JArray;
+                        if (application != null)
                         {
-                            permission.DelegatedPersonal = permissionPropertyValue.ToObject<List<string>>();
-                        }
-                        else
-                        {
-                            throw new Exception($"Invalid {permissionProperty.Name} at '{uriProperty.Name}'\'{httpMethodProperty.Name}.");
+                            permission.Application = application.ToObject<List<string>>();
                         }
                     }
 
