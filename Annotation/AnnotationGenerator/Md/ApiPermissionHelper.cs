@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using AnnotationGenerator.MD;
 using AnnotationGenerator.Serialization;
 using AnnotationGenerator.Vocabulary;
+using Microsoft.OData.Edm;
+using Microsoft.OData.Edm.Vocabularies;
 using Microsoft.OData.EdmUtils;
 
 namespace AnnotationGenerator
@@ -156,5 +158,38 @@ namespace AnnotationGenerator
 
             return record;
         }
+
+        //public static IEdmRecordExpression ConvertToRecord1(KeyValuePair<string, IList<ApiPermissionsBySchemeType>> perm)
+        //{
+        //    IEdmExpression nameValue = new EdmStringConstant(perm.Key);
+        //    IEdmPropertyConstructor propertyName = new EdmPropertyConstructor("Name", nameValue);
+
+        //    IList<IEdmRecordExpression> scopes = new List<IEdmRecordExpression>();
+        //    foreach (ApiPermissionsBySchemeType schema in perm.Value)
+        //    {
+        //        IList<IEdmPropertyConstructor> scopeProperties = new List<IEdmPropertyConstructor>();
+        //        if (schema.Name != null)
+        //        {
+        //            scopeProperties.Add(new EdmPropertyConstructor("Name", new EdmStringConstant(schema.Name)));
+        //        }
+
+        //        if (schema.Grant != null)
+        //        {
+        //            scopeProperties.Add(new EdmPropertyConstructor("Grant", new EdmStringConstant(schema.Grant)));
+        //        }
+
+        //        if (schema.Description != null)
+        //        {
+        //            scopeProperties.Add(new EdmPropertyConstructor("Description", new EdmStringConstant(schema.Description)));
+        //        }
+
+        //        scopes.Add(new EdmRecordExpression(scopeProperties));
+        //    }
+
+        //    IEdmPropertyConstructor propertyScopes = new EdmPropertyConstructor("Scopes", new EdmCollectionExpression(scopes));
+
+        //    EdmRecordExpression record = new EdmRecordExpression(propertyName, propertyScopes);
+        //    return record;
+        //}
     }
 }

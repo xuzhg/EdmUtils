@@ -9,7 +9,7 @@
     <PackageReference Include="Core.Markdown" Version="0.1.128" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.12" />
     <PackageReference Include="Markdig" Version="0.14.9" />
-    <PackageReference Include="MarkdownDeep-av.NET" Version="1.5.6.5" />
+    <PackageReference Include="MarkdownDeep-av.NET" Version="1.5.25" />
     <PackageReference Include="MarkdownDeep.Gui.Gtk3" Version="1.5.7" />
     <PackageReference Include="Microsoft.DocAsCode.ECMA2Yaml" Version="1.0.669" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />

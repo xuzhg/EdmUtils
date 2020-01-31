@@ -57,7 +57,7 @@ namespace AnnotationGenerator
             ApiPermissionsWrapper wrapper = ApiPermissionsWrapper.LoadAll(inputArg.PermissionFileName);
             if (wrapper != null)
             {
-                Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme?.Count}");
+                Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionSchemes?.Count}");
             }
             else
             {
@@ -83,7 +83,7 @@ namespace AnnotationGenerator
             using (AnnotationGenerator generator = new AnnotationGenerator(inputArg.Output, edmModel))
             {
                 // for each ApiPermissionsByScheme
-                generator.Add(wrapper.PermissionsByScheme);
+                generator.Add(wrapper.PermissionSchemes);
 
                 // for each permission data
                 generator.Add(wrapper.ApiPermissionsProcessed);

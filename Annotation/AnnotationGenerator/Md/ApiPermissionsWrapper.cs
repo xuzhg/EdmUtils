@@ -47,11 +47,6 @@ namespace AnnotationGenerator.MD
         }
     }
 
-    public class PermissionSchemeItem
-    {
-
-    }
-
     /// <summary>
     /// {
     ///   "ApiPermissions": {
@@ -78,7 +73,7 @@ namespace AnnotationGenerator.MD
     {
         public IDictionary<string, IList<ApiPermissionType>> ApiPermissions { get; private set; }
 
-        public IDictionary<string, IList<ApiPermissionsBySchemeType>> PermissionsByScheme { get; private set; }
+        public IDictionary<string, IList<ApiPermissionsBySchemeType>> PermissionSchemes { get; private set; }
 
         public IDictionary<string, Exception> UriParserError { get; private set; } = new Dictionary<string, Exception>();
 
@@ -110,7 +105,7 @@ namespace AnnotationGenerator.MD
                     wrapper.ApiPermissions = LoadTopLevelProperty<ApiPermissionType>(jObj, "ApiPermissions");
 
                     // PermissionSchemes
-                    wrapper.PermissionsByScheme = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
+                    wrapper.PermissionSchemes = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
                 }
                 else
                 {
