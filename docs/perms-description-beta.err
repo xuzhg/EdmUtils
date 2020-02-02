@@ -1,695 +1,565 @@
 ***********[[Uri Parse Error]]***********
-1) /connectorGroups/{id}:==> Unknown kind of first segment: 'connectorGroups'
-2) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-3) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/containedApps/{id}:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-4) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files/{id}:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-5) /deviceAppManagement/wdacSupplementalPolicies/{id}:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-6) /deviceAppManagement/wdacSupplementalPolicies/{id}/assignments/{id}:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-7) /deviceAppManagement/wdacSupplementalPolicies/{id}/deviceStatuses/{id}:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-8) /deviceAppManagement/wdacSupplementalPolicies/{id}/deviceStatuses/{id}/policy:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-9) /deviceManagement/complianceManagementPartners/{id}:==> Unknown kind of segment: 'complianceManagementPartners', previous segment: 'deviceManagement'.
-10) /deviceManagement/deviceConfigurations/{id}/identityCertificate/assignments/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-11) /deviceManagement/deviceConfigurations/{id}/identityCertificate/deviceSettingStateSummaries/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-12) /deviceManagement/deviceConfigurations/{id}/identityCertificate/deviceStatuses/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-13) /deviceManagement/deviceConfigurations/{id}/identityCertificate/groupAssignments/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-14) /deviceManagement/deviceConfigurations/{id}/identityCertificate/microsoft.graph.androidForWorkPkcsCertificateProfile/managedDeviceCertificateStates/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-15) /deviceManagement/deviceConfigurations/{id}/identityCertificate/microsoft.graph.androidForWorkScepCertificateProfile/managedDeviceCertificateStates/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-16) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-17) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/assignments/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-18) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/deviceSettingStateSummaries/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-19) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/deviceStatuses/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-20) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/groupAssignments/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-21) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/userStatuses/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-22) /deviceManagement/deviceConfigurations/{id}/identityCertificate/userStatuses/{id}:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-23) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.androidWorkProfilePkcsCertificateProfile/managedDeviceCertificateStates/{id}:==> Unknown kind of segment: 'managedDeviceCertificateStates', previous segment: 'microsoft.graph.androidWorkProfilePkcsCertificateProfile'.
-24) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/assignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-25) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/deviceSettingStateSummaries/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-26) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/deviceStatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-27) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/groupAssignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-28) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSImportedPFXCertificateProfile/managedDeviceCertificateStates/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-29) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSPkcsCertificateProfile/managedDeviceCertificateStates/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-30) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSScepCertificateProfile/managedDeviceCertificateStates/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-31) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSScepCertificateProfile/rootCertificate:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-32) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/userStatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-33) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-34) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/assignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-35) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/deviceSettingStateSummaries/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-36) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/deviceStatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-37) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/groupAssignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-38) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/userStatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-39) /deviceManagement/deviceConfigurations/{id}/rootCertificate:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-40) /deviceManagement/deviceConfigurations/{id}/rootCertificate/assignments/{id}:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-41) /deviceManagement/deviceConfigurations/{id}/rootCertificate/deviceSettingStateSummaries/{id}:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-42) /deviceManagement/deviceConfigurations/{id}/rootCertificate/deviceStatuses/{id}:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-43) /deviceManagement/deviceConfigurations/{id}/rootCertificate/groupAssignments/{id}:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-44) /deviceManagement/deviceConfigurations/{id}/rootCertificate/userStatuses/{id}:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-45) /deviceManagement/deviceHealthScripts/{id}:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-46) /deviceManagement/deviceHealthScripts/{id}/assignments/{id}:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-47) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-48) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-49) /deviceManagement/groupPolicyMigrationReports/{id}:==> Unknown kind of segment: 'groupPolicyMigrationReports', previous segment: 'deviceManagement'.
-50) /deviceManagement/groupPolicyMigrationReports/{id}/groupPolicySettingMappings/{id}:==> Unknown kind of segment: 'groupPolicyMigrationReports', previous segment: 'deviceManagement'.
-51) /deviceManagement/reports/cachedReportConfigurations/{id}:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-52) /deviceManagement/reports/exportJobs/{id}:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-53) /deviceManagement/reports/reportSchedules/{id}:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-54) /deviceManagement/userExperienceAnalyticsDevicePerformance/{id}:==> Unknown kind of segment: 'userExperienceAnalyticsDevicePerformance', previous segment: 'deviceManagement'.
-55) /deviceManagement/userExperienceAnalyticsDeviceStartupHistory/{id}:==> Unknown kind of segment: 'userExperienceAnalyticsDeviceStartupHistory', previous segment: 'deviceManagement'.
-56) /deviceManagement/userExperienceAnalyticsRegressionSummary/manufacturerRegression/{id}:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-57) /deviceManagement/userExperienceAnalyticsRegressionSummary/modelRegression/{id}:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-58) /deviceManagement/userExperienceAnalyticsRegressionSummary/operatingSystemRegression/{id}:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-59) /drive/root/createdByUser/oAuth2Permissiongrants/{id}:==> Unknown kind of segment: 'oAuth2Permissiongrants', previous segment: 'createdByUser'.
-60) /external/connections/{id}:==> Unknown kind of first segment: 'external'
-61) /external/connections/{id}/items/{id}:==> Unknown kind of first segment: 'external'
-62) /groups/{id}/calendar/calendarPermissions/{id}:==> Unknown kind of segment: 'calendarPermissions', previous segment: 'calendar'.
-63) /identity/userFlows/{id}:==> Unknown kind of first segment: 'identity'
-64) /me/calendarGroup/calendars/{id}:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-65) /me/calendargroup/calendars/{id}/events/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-66) /me/contactFolder/{id}/childFolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactFolder', previous segment: 'me'.
-67) /me/profile:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-68) /me/profile/anniversaries/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-69) /me/profile/educationalActivities/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-70) /me/profile/emails/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-71) /me/profile/interests/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-72) /me/profile/languages/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-73) /me/profile/names/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-74) /me/profile/phones/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-75) /me/profile/positions/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-76) /me/profile/projects/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-77) /me/profile/skills/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-78) /me/profile/webAccounts/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-79) /me/profile/websites/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-80) /users/{id}/calendar/calendarPermissions/{id}:==> Unknown kind of segment: 'calendarPermissions', previous segment: 'calendar'.
-81) /users/{id}/calendarGroup/calendars/{id}:==> Unknown kind of segment: 'calendarGroup', previous segment: '{id}'.
-82) /users/{id}/calendargroup/calendars/{id}/events/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-83) /users/{id}/contactFolder/{id}/childFolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactFolder', previous segment: '{id}'.
-84) /users/{id}/events/{id}/calendar/calendarPermissions/{id}:==> Unknown kind of segment: 'calendarPermissions', previous segment: 'calendar'.
-85) /users/{id}/oAuth2Permissiongrants/{id}:==> Unknown kind of segment: 'oAuth2Permissiongrants', previous segment: '{id}'.
-86) /users/{id}/profile:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-87) /users/{id}/profile/anniversaries/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-88) /users/{id}/profile/educationalActivities/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-89) /users/{id}/profile/emails/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-90) /users/{id}/profile/interests/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-91) /users/{id}/profile/languages/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-92) /users/{id}/profile/names/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-93) /users/{id}/profile/phones/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-94) /users/{id}/profile/positions/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-95) /users/{id}/profile/projects/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-96) /users/{id}/profile/skills/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-97) /users/{id}/profile/webAccounts/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-98) /users/{id}/profile/websites/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-99) /conditionalAccess/namedLocations:==> Unknown kind of first segment: 'conditionalAccess'
-100) /conditionalAccess/namedLocations/{id}:==> Unknown kind of first segment: 'conditionalAccess'
-101) /conditionalAccess/policies:==> Unknown kind of first segment: 'conditionalAccess'
-102) /conditionalAccess/policies/{id}:==> Unknown kind of first segment: 'conditionalAccess'
-103) /connectorGroups:==> Unknown kind of first segment: 'connectorGroups'
-104) /connectorGroups/{id}/applications:==> Unknown kind of first segment: 'connectorGroups'
-105) /connectorGroups/{id}/members:==> Unknown kind of first segment: 'connectorGroups'
-106) /connectorGroups/{id}/members/{id}:==> Unknown kind of first segment: 'connectorGroups'
-107) /connectors:==> Unknown kind of first segment: 'connectors'
-108) /connectors/{id}/memberOf:==> Unknown kind of first segment: 'connectors'
-109) /deviceAppManagement/mobileApps/{id}/contentVersions:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-110) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/containedApps:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-111) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-112) /deviceAppManagement/vppTokens/getLicensesForApp:==> Sequence contains no elements
-113) /deviceAppManagement/wdacSupplementalPolicies:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-114) /deviceAppManagement/wdacSupplementalPolicies/{id}/assignments:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-115) /deviceAppManagement/wdacSupplementalPolicies/{id}/deploySummary:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-116) /deviceAppManagement/wdacSupplementalPolicies/{id}/deviceStatuses:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-117) /deviceManagement/auditEvents/getAuditActivityTypes:==> Sequence contains no elements
-118) /deviceManagement/complianceManagementPartners:==> Unknown kind of segment: 'complianceManagementPartners', previous segment: 'deviceManagement'.
-119) /deviceManagement/depOnboardingSettings/getExpiringVppTokenCount:==> Sequence contains no elements
-120) /deviceManagement/deviceConfigurations/{id}/identityCertificate:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-121) /deviceManagement/deviceConfigurations/{id}/identityCertificate/assignments:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-122) /deviceManagement/deviceConfigurations/{id}/identityCertificate/deviceSettingStateSummaries:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-123) /deviceManagement/deviceConfigurations/{id}/identityCertificate/deviceStatusOverview:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-124) /deviceManagement/deviceConfigurations/{id}/identityCertificate/deviceStatuses:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-125) /deviceManagement/deviceConfigurations/{id}/identityCertificate/groupAssignments:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-126) /deviceManagement/deviceConfigurations/{id}/identityCertificate/microsoft.graph.androidForWorkPkcsCertificateProfile/managedDeviceCertificateStates:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-127) /deviceManagement/deviceConfigurations/{id}/identityCertificate/microsoft.graph.androidForWorkScepCertificateProfile/managedDeviceCertificateStates:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-128) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/assignments:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-129) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/deviceSettingStateSummaries:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-130) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/deviceStatusOverview:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-131) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/deviceStatuses:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-132) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/groupAssignments:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-133) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/userStatusOverview:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-134) /deviceManagement/deviceConfigurations/{id}/identityCertificate/rootCertificate/userStatuses:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-135) /deviceManagement/deviceConfigurations/{id}/identityCertificate/userStatusOverview:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-136) /deviceManagement/deviceConfigurations/{id}/identityCertificate/userStatuses:==> Unknown kind of segment: 'identityCertificate', previous segment: '{id}'.
-137) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.androidWorkProfilePkcsCertificateProfile/managedDeviceCertificateStates:==> Unknown kind of segment: 'managedDeviceCertificateStates', previous segment: 'microsoft.graph.androidWorkProfilePkcsCertificateProfile'.
-138) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.iosDeviceFeaturesConfiguration/singleSignOnExtensionPkinitCertificate:==> Unknown kind of segment: 'singleSignOnExtensionPkinitCertificate', previous segment: 'microsoft.graph.iosDeviceFeaturesConfiguration'.
-139) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSDeviceFeaturesConfiguration/singleSignOnExtensionPkinitCertificate:==> Unknown kind of segment: 'singleSignOnExtensionPkinitCertificate', previous segment: 'microsoft.graph.macOSDeviceFeaturesConfiguration'.
-140) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-141) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/assignments:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-142) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/deviceSettingStateSummaries:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-143) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/deviceStatusOverview:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-144) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/deviceStatuses:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-145) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/groupAssignments:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-146) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSImportedPFXCertificateProfile/managedDeviceCertificateStates:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-147) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSPkcsCertificateProfile/managedDeviceCertificateStates:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-148) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/microsoft.graph.macOSScepCertificateProfile/managedDeviceCertificateStates:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-149) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/userStatusOverview:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-150) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/identityCertificateForClientAuthentication/userStatuses:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-151) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/assignments:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-152) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/deviceSettingStateSummaries:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-153) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/deviceStatusOverview:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-154) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/deviceStatuses:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-155) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/groupAssignments:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-156) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/userStatusOverview:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-157) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.macOSWiredNetworkConfiguration/rootCertificateForServerValidation/userStatuses:==> Unknown kind of segment: 'microsoft.graph.macOSWiredNetworkConfiguration', previous segment: '{id}'.
-158) /deviceManagement/deviceConfigurations/{id}/rootCertificate/assignments:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-159) /deviceManagement/deviceConfigurations/{id}/rootCertificate/deviceSettingStateSummaries:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-160) /deviceManagement/deviceConfigurations/{id}/rootCertificate/deviceStatusOverview:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-161) /deviceManagement/deviceConfigurations/{id}/rootCertificate/deviceStatuses:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-162) /deviceManagement/deviceConfigurations/{id}/rootCertificate/groupAssignments:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-163) /deviceManagement/deviceConfigurations/{id}/rootCertificate/userStatusOverview:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-164) /deviceManagement/deviceConfigurations/{id}/rootCertificate/userStatuses:==> Unknown kind of segment: 'rootCertificate', previous segment: '{id}'.
-165) /deviceManagement/deviceHealthScripts:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-166) /deviceManagement/deviceHealthScripts/{id}/assignments:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-167) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-168) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/getFileVaultKey:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-169) /deviceManagement/deviceHealthScripts/{id}/runSummary:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-170) /deviceManagement/groupPolicyMigrationReports:==> Unknown kind of segment: 'groupPolicyMigrationReports', previous segment: 'deviceManagement'.
-171) /deviceManagement/groupPolicyMigrationReports/{id}/groupPolicySettingMappings:==> Unknown kind of segment: 'groupPolicyMigrationReports', previous segment: 'deviceManagement'.
-172) /deviceManagement/intents/{id}/compare:==> Sequence contains no elements
-173) /deviceManagement/managementConditionStatements/getManagementConditionStatementsForPlatform:==> Sequence contains no elements
-174) /deviceManagement/managementConditions/getManagementConditionsForPlatform:==> Sequence contains no elements
-175) /deviceManagement/managementConditions/{id}/managementConditionStatements/getManagementConditionStatementsForPlatform:==> Sequence contains no elements
-176) /deviceManagement/managementConditions/{id}/managementConditionStatements/{id}/managementConditions/getManagementConditionsForPlatform:==> Sequence contains no elements
-177) /deviceManagement/reports:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-178) /deviceManagement/reports/cachedReportConfigurations:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-179) /deviceManagement/reports/exportJobs:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-180) /deviceManagement/reports/reportSchedules:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-181) /deviceManagement/resourceOperations/{id}/getScopesForUser:==> Sequence contains no elements
-182) /deviceManagement/scopedForResource:==> Sequence contains no elements
-183) /deviceManagement/templates/{id}/compare:==> Sequence contains no elements
-184) /deviceManagement/templates/{id}/migratableTo/{id}/compare:==> Sequence contains no elements
-185) /deviceManagement/userExperienceAnalyticsDevicePerformance:==> Unknown kind of segment: 'userExperienceAnalyticsDevicePerformance', previous segment: 'deviceManagement'.
-186) /deviceManagement/userExperienceAnalyticsDevicePerformance/summarizeDevicePerformanceDevices:==> Unknown kind of segment: 'userExperienceAnalyticsDevicePerformance', previous segment: 'deviceManagement'.
-187) /deviceManagement/userExperienceAnalyticsDeviceStartupHistory:==> Unknown kind of segment: 'userExperienceAnalyticsDeviceStartupHistory', previous segment: 'deviceManagement'.
-188) /deviceManagement/userExperienceAnalyticsRegressionSummary:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-189) /deviceManagement/userExperienceAnalyticsRegressionSummary/manufacturerRegression:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-190) /deviceManagement/userExperienceAnalyticsRegressionSummary/modelRegression:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-191) /deviceManagement/userExperienceAnalyticsRegressionSummary/operatingSystemRegression:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-192) /deviceManagement/userExperienceAnalyticsRegressionSummary/summarizeDeviceRegressionPerformance:==> Unknown kind of segment: 'userExperienceAnalyticsRegressionSummary', previous segment: 'deviceManagement'.
-193) /directory/deletedItems/microsoft.graph.user:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-194) /directory/deleteditems/microsoft.graph.application:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-195) /directory/deleteditems/microsoft.graph.group:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-196) /drive/root/createdByUser/trendingAround:==> Unknown kind of segment: 'trendingAround', previous segment: 'createdByUser'.
-197) /drive/root/createdByUser/workingWith:==> Unknown kind of segment: 'workingWith', previous segment: 'createdByUser'.
-198) /drive/root/lastModifiedByUser/trendingAround:==> Unknown kind of segment: 'trendingAround', previous segment: 'lastModifiedByUser'.
-199) /drive/root/lastModifiedByUser/workingWith:==> Unknown kind of segment: 'workingWith', previous segment: 'lastModifiedByUser'.
-200) /drives/{id}/items/{id}/getActivitiesByInterval(startDateTime={value},endDateTime={value},interval={value}):==> Sequence contains no elements
-201) /drives/{id}/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
-202) /drives/{id}/root:/{id}:/children:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
-203) /external/connections:==> Unknown kind of first segment: 'external'
-204) /external/connections/{id}/operations/{id}:==> Unknown kind of first segment: 'external'
-205) /external/connections/{id}/schema:==> Unknown kind of first segment: 'external'
-206) /financials/companies/{id}/trialBalance:==> Unknown kind of segment: 'trialBalance', previous segment: '{id}'.
-207) /group/{id}/settings:==> Unknown kind of first segment: 'group'
-208) /groups/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-209) /groups/{id}/drive/{id}/versions:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-210) /groups/{id}/drive/{id}/versions/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-211) /groups/{id}/drive/{id}/versions/{id}/content:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-212) /identity/userFlows:==> Unknown kind of first segment: 'identity'
-213) /locatedRiskEvents/{id}:==> Unknown kind of first segment: 'locatedRiskEvents'
-214) /me/calendarGroup/calendars:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-215) /me/calendarGroup/calendars/{id}/calendarView:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-216) /me/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-217) /me/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-218) /me/contactFolder/{id}/childFolders/{id}/.../contacts:==> Unknown kind of segment: 'contactFolder', previous segment: 'me'.
-219) /me/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-220) /me/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-221) /me/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-222) /me/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-223) /me/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-224) /me/mailFolders/{id}/childFolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
-225) /me/mailboxSettings/delegateMeetingMessageDeliveryOptions:==> Unknown kind of segment: 'delegateMeetingMessageDeliveryOptions', previous segment: 'mailboxSettings'.
-226) /me/profile/account:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-227) /me/profile/anniversaries:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-228) /me/profile/educationalActivities:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-229) /me/profile/emails:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-230) /me/profile/interests:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-231) /me/profile/languages:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-232) /me/profile/names:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-233) /me/profile/phones:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-234) /me/profile/positions:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-235) /me/profile/projects:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-236) /me/profile/skills:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-237) /me/profile/webAccounts:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-238) /me/profile/websites:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-239) /me/scopedAdministratorOf:==> Unknown kind of segment: 'scopedAdministratorOf', previous segment: 'me'.
-240) /me/trendingAround:==> Unknown kind of segment: 'trendingAround', previous segment: 'me'.
-241) /me/workingWith:==> Unknown kind of segment: 'workingWith', previous segment: 'me'.
-242) /places/microsoft.graph.room:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-243) /places/microsoft.graph.roomlist:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-244) /reports/getCredentialUsageSummary:==> Sequence contains no elements
-245) /roleManagement/{id}/roleDefinitions/{id}:==> Unknown kind of segment: '{id}', previous segment: 'roleManagement'.
-246) /sites/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-247) /sites/{id}/getActivitiesByInterval(startDateTime={value},endDateTime={value},interval={value}):==> Sequence contains no elements
-248) /sites/{id}/items/{id}/versions:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
-249) /sites/{id}/items/{id}/versions/{id}:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
-250) /sites/{id}/lists/{id}/items/{id}/getActivitiesByInterval(startDateTime={value},interval={value}):==> Sequence contains no elements
-251) /sites/{id}:/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}:'.
-252) /synchronizationProfiles/{id}:==> Unknown kind of first segment: 'synchronizationProfiles'
-253) /synchronizationProfiles/{id}/errors:==> Unknown kind of first segment: 'synchronizationProfiles'
-254) /synchronizationProfiles/{id}/profileStatus:==> Unknown kind of first segment: 'synchronizationProfiles'
-255) /user/profile/anniversaries/{id}:==> Unknown kind of first segment: 'user'
-256) /user/profile/interests/{id}:==> Unknown kind of first segment: 'user'
-257) /users/{id}/calendarGroup/calendars:==> Unknown kind of segment: 'calendarGroup', previous segment: '{id}'.
-258) /users/{id}/calendarGroup/calendars/{id}/calendarView:==> Unknown kind of segment: 'calendarGroup', previous segment: '{id}'.
-259) /users/{id}/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-260) /users/{id}/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-261) /users/{id}/contactFolder/{id}/childFolders/{id}/.../contacts:==> Unknown kind of segment: 'contactFolder', previous segment: '{id}'.
-262) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-263) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-264) /users/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-265) /users/{id}/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-266) /users/{id}/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-267) /users/{id}/mailFolders/{id}/childFolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
-268) /users/{id}/mailboxSettings/delegateMeetingMessageDeliveryOptions:==> Unknown kind of segment: 'delegateMeetingMessageDeliveryOptions', previous segment: 'mailboxSettings'.
-269) /users/{id}/profile/account:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-270) /users/{id}/profile/anniversaries:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-271) /users/{id}/profile/educationalActivities:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-272) /users/{id}/profile/emails:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-273) /users/{id}/profile/interests:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-274) /users/{id}/profile/languages:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-275) /users/{id}/profile/names:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-276) /users/{id}/profile/phones:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-277) /users/{id}/profile/positions:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-278) /users/{id}/profile/projects:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-279) /users/{id}/profile/skills:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-280) /users/{id}/profile/webAccounts:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-281) /users/{id}/profile/websites:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-282) /users/{id}/scopedAdministratorOf:==> Unknown kind of segment: 'scopedAdministratorOf', previous segment: '{id}'.
-283) /users/{id}/trendingAround:==> Unknown kind of segment: 'trendingAround', previous segment: '{id}'.
-284) /users/{id}/workingWith:==> Unknown kind of segment: 'workingWith', previous segment: '{id}'.
-285) /workbook/worksheets({id|name})/names:==> Unknown kind of first segment: 'workbook'
-286) /groups/{id}/drive/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-287) /me/profile/account/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
-288) /users/{id}/profile/account/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
-289) /app/calls/{id}/updateMetadata:==> Unknown kind of segment: 'updateMetadata', previous segment: '{id}'.
-290) /applications/{id}/removePassword:==> Unknown kind of segment: 'removePassword', previous segment: '{id}'.
-291) /deviceAppManagement/managedAppPolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
-292) /deviceAppManagement/managedAppRegistrations/{id}/appliedPolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
-293) /deviceAppManagement/managedAppRegistrations/{id}/intendedPolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
-294) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files/{id}/commit:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-295) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files/{id}/renewUpload:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-296) /deviceAppManagement/mobileApps/{id}/deviceStatuses/{id}/app/revokeAllLicenses:==> Unknown kind of segment: 'revokeAllLicenses', previous segment: 'app'.
-297) /deviceAppManagement/mobileApps/{id}/deviceStatuses/{id}/app/revokeDeviceLicense:==> Unknown kind of segment: 'revokeDeviceLicense', previous segment: 'app'.
-298) /deviceAppManagement/mobileApps/{id}/deviceStatuses/{id}/app/revokeUserLicense:==> Unknown kind of segment: 'revokeUserLicense', previous segment: 'app'.
-299) /deviceAppManagement/mobileApps/{id}/revokeAllLicenses:==> Unknown kind of segment: 'revokeAllLicenses', previous segment: '{id}'.
-300) /deviceAppManagement/mobileApps/{id}/revokeDeviceLicense:==> Unknown kind of segment: 'revokeDeviceLicense', previous segment: '{id}'.
-301) /deviceAppManagement/mobileApps/{id}/revokeUserLicense:==> Unknown kind of segment: 'revokeUserLicense', previous segment: '{id}'.
-302) /deviceAppManagement/mobileApps/{id}/userStatuses/{id}/app/revokeAllLicenses:==> Unknown kind of segment: 'revokeAllLicenses', previous segment: 'app'.
-303) /deviceAppManagement/mobileApps/{id}/userStatuses/{id}/app/revokeDeviceLicense:==> Unknown kind of segment: 'revokeDeviceLicense', previous segment: 'app'.
-304) /deviceAppManagement/mobileApps/{id}/userStatuses/{id}/app/revokeUserLicense:==> Unknown kind of segment: 'revokeUserLicense', previous segment: 'app'.
-305) /deviceAppManagement/wdacSupplementalPolicies/{id}/assign:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-306) /deviceAppManagement/wdacSupplementalPolicies/{id}/deviceStatuses/{id}/policy/assign:==> Unknown kind of segment: 'wdacSupplementalPolicies', previous segment: 'deviceAppManagement'.
-307) /deviceManagement/androidManagedStoreAccountEnterpriseSettings/approveApps:==> Unknown kind of segment: 'approveApps', previous segment: 'androidManagedStoreAccountEnterpriseSettings'.
-308) /deviceManagement/deviceConfigurations/{id}/extendFeatureUpdatesPause:==> Unknown kind of segment: 'extendFeatureUpdatesPause', previous segment: '{id}'.
-309) /deviceManagement/deviceConfigurations/{id}/extendQualityUpdatesPause:==> Unknown kind of segment: 'extendQualityUpdatesPause', previous segment: '{id}'.
-310) /deviceManagement/deviceConfigurations/{id}/groupAssignments/{id}/deviceConfiguration/extendFeatureUpdatesPause:==> Unknown kind of segment: 'extendFeatureUpdatesPause', previous segment: 'deviceConfiguration'.
-311) /deviceManagement/deviceConfigurations/{id}/groupAssignments/{id}/deviceConfiguration/extendQualityUpdatesPause:==> Unknown kind of segment: 'extendQualityUpdatesPause', previous segment: 'deviceConfiguration'.
-312) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.windowsDomainJoinConfiguration/networkAccessConfigurations/{id}/extendFeatureUpdatesPause:==> Unknown kind of segment: 'extendFeatureUpdatesPause', previous segment: '{id}'.
-313) /deviceManagement/deviceConfigurations/{id}/microsoft.graph.windowsDomainJoinConfiguration/networkAccessConfigurations/{id}/extendQualityUpdatesPause:==> Unknown kind of segment: 'extendQualityUpdatesPause', previous segment: '{id}'.
-314) /deviceManagement/deviceHealthScripts/{id}/assign:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-315) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/bypassActivationLock:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-316) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/cleanWindowsDevice:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-317) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/deleteUserFromSharedAppleDevice:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-318) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/disableLostMode:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-319) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/enableLostMode:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-320) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/locateDevice:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-321) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/logoutSharedAppleDeviceActiveUser:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-322) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/playLostModeSound:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-323) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/rebootNow:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-324) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/recoverPasscode:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-325) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/remoteLock:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-326) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/requestRemoteAssistance:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-327) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/resetPasscode:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-328) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/retire:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-329) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/revokeAppleVppLicenses:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-330) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/rotateBitLockerKeys:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-331) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/rotateFileVaultKey:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-332) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/sendCustomNotificationToCompanyPortal:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-333) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/setDeviceName:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-334) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/shutDown:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-335) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/syncDevice:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-336) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/triggerConfigurationManagerAction:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-337) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/updateWindowsDeviceAccount:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-338) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/windowsDefenderScan:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-339) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/windowsDefenderUpdateSignatures:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-340) /deviceManagement/deviceHealthScripts/{id}/deviceRunStates/{id}/managedDevice/wipe:==> Unknown kind of segment: 'deviceHealthScripts', previous segment: 'deviceManagement'.
-341) /deviceManagement/groupPolicyConfigurations/{id}/updateDefinitionValues:==> Unknown kind of segment: 'updateDefinitionValues', previous segment: '{id}'.
-342) /deviceManagement/groupPolicyMigrationReports/createMigrationReport:==> Unknown kind of segment: 'groupPolicyMigrationReports', previous segment: 'deviceManagement'.
-343) /deviceManagement/reports/getCachedReport:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-344) /deviceManagement/reports/getDeviceNonComplianceReport:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-345) /deviceManagement/reports/getDeviceNoncomplianceReports:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-346) /deviceManagement/reports/getHistoricalReport:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-347) /deviceManagement/reports/getPolicyNonComplianceMetadata:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-348) /deviceManagement/reports/getPolicyNonComplianceReport:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-349) /deviceManagement/reports/getPolicyNoncomplianceReports:==> Unknown kind of segment: 'reports', previous segment: 'deviceManagement'.
-350) /deviceManagement/windowsAutopilotDeviceIdentities/{id}/deploymentProfile/assignedDevices/{id}/updateDeviceProperties:==> Unknown kind of segment: 'updateDeviceProperties', previous segment: '{id}'.
-351) /deviceManagement/windowsAutopilotDeviceIdentities/{id}/updateDeviceProperties:==> Unknown kind of segment: 'updateDeviceProperties', previous segment: '{id}'.
-352) /drive/root:/{id}:/createUploadSession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-353) /education/classes/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-354) /education/me/classes/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-355) /education/me/delta:==> Unknown kind of segment: 'delta', previous segment: 'me'.
-356) /education/me/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-357) /education/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-358) /education/schools/{id}/users/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-359) /education/users/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-360) /education/users/{id}/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
-361) /groups/{id}/follow:==> Unknown kind of segment: 'follow', previous segment: '{id}'.
-362) /informationprotection/policy/labels/{id}/evaluateClassificationResults:==> Unknown kind of segment: 'evaluateClassificationResults', previous segment: '{id}'.
-363) /me/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-364) /me/calendargroup/calendars/{id}/events/{id}/cancel:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-365) /me/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-366) /me/calendargroup/calendars/{id}/events/{id}/dismissReminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-367) /me/calendargroup/calendars/{id}/events/{id}/forward:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-368) /me/calendargroup/calendars/{id}/events/{id}/snoozeReminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-369) /me/calendargroup/calendars/{id}/events/{id}/tentativelyAccept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-370) /servicePrincipals/{id}/addPassword:==> Unknown kind of segment: 'addPassword', previous segment: '{id}'.
-371) /servicePrincipals/{id}/createPasswordSingleSignOnCredentials:==> Unknown kind of segment: 'createPasswordSingleSignOnCredentials', previous segment: '{id}'.
-372) /servicePrincipals/{id}/deletePasswordSingleSignOnCredentials:==> Unknown kind of segment: 'deletePasswordSingleSignOnCredentials', previous segment: '{id}'.
-373) /servicePrincipals/{id}/getPasswordSingleSignOnCredentials:==> Unknown kind of segment: 'getPasswordSingleSignOnCredentials', previous segment: '{id}'.
-374) /servicePrincipals/{id}/removePassword:==> Unknown kind of segment: 'removePassword', previous segment: '{id}'.
-375) /servicePrincipals/{id}/updatePasswordSingleSignOnCredentials:==> Unknown kind of segment: 'updatePasswordSingleSignOnCredentials', previous segment: '{id}'.
-376) /sites/{id}/items/{id}/versions/{id}/restoreVersion:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
-377) /sites/{id}/page:==> Unknown kind of segment: 'page', previous segment: '{id}'.
-378) /trustFramework/keySets/{id}/generateKey:==> Unknown kind of segment: 'generateKey', previous segment: '{id}'.
-379) /trustFramework/keySets/{id}/getActiveKey:==> Unknown kind of segment: 'getActiveKey', previous segment: '{id}'.
-380) /trustFramework/keySets/{id}/uploadCertificate:==> Unknown kind of segment: 'uploadCertificate', previous segment: '{id}'.
-381) /trustFramework/keySets/{id}/uploadPkcs12:==> Unknown kind of segment: 'uploadPkcs12', previous segment: '{id}'.
-382) /trustFramework/keySets/{id}/uploadSecret:==> Unknown kind of segment: 'uploadSecret', previous segment: '{id}'.
-383) /user/profile/educationalActivities:==> Unknown kind of first segment: 'user'
-384) /user/profile/emails:==> Unknown kind of first segment: 'user'
-385) /user/profile/interests:==> Unknown kind of first segment: 'user'
-386) /users/{id}/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-387) /users/{id}/calendargroup/calendars/{id}/events/{id}/cancel:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-388) /users/{id}/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-389) /users/{id}/calendargroup/calendars/{id}/events/{id}/dismissReminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-390) /users/{id}/calendargroup/calendars/{id}/events/{id}/forward:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-391) /users/{id}/calendargroup/calendars/{id}/events/{id}/snoozeReminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-392) /users/{id}/calendargroup/calendars/{id}/events/{id}/tentativelyAccept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-393) /workbook/names/add:==> Unknown kind of first segment: 'workbook'
-394) /workbook/worksheets({id|name})/names/add:==> Unknown kind of first segment: 'workbook'
-395) /drives/{id}/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-396) /groups/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-397) /me/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-398) /me/drive/root:/FolderA/FileB.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-399) /sites/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-400) /users/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-401) /users/{id}/drive/root:/FolderA/FileB.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-402) /educationClasses/assignments/{id}/resources/{id}:==> Unknown kind of first segment: 'educationClasses'
-403) /educationClasses/assignments/{id}/submissions/{id}/resources/{id}:==> Unknown kind of first segment: 'educationClasses'
-404) /identityGovernance/entitlementManagement/accessPackageAssignmentPolicies/{id}:==> Unknown kind of first segment: 'identityGovernance'
-405) /identityGovernance/entitlementManagement/accessPackageCatalogs/{id}:==> Unknown kind of first segment: 'identityGovernance'
-406) /identityGovernance/entitlementManagement/accessPackages/{id}:==> Unknown kind of first segment: 'identityGovernance'
-407) /onPremisesPublishingProfiles/{id}/publishedResources/{id}/agentGroups{id2}:==> Unknown kind of segment: 'agentGroups{id2}', previous segment: '{id}'.
-408) /comments/{id}/replies/{id}:==> Unknown kind of first segment: 'comments'
-409) /educationClasses/assignments/{id}/submissions/{id}/resources:==> Unknown kind of first segment: 'educationClasses'
-410) /identityGovernance/entitlementManagement/accessPackageAssignmentPolicies:==> Unknown kind of first segment: 'identityGovernance'
-411) /identityGovernance/entitlementManagement/accessPackageAssignmentRequests:==> Unknown kind of first segment: 'identityGovernance'
-412) /identityGovernance/entitlementManagement/accessPackageAssignmentRequests/{id}:==> Unknown kind of first segment: 'identityGovernance'
-413) /identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles:==> Unknown kind of first segment: 'identityGovernance'
-414) /identityGovernance/entitlementManagement/accessPackageAssignments:==> Unknown kind of first segment: 'identityGovernance'
-415) /identityGovernance/entitlementManagement/accessPackageCatalogs:==> Unknown kind of first segment: 'identityGovernance'
-416) /identityGovernance/entitlementManagement/accessPackageCatalogs/{id}/accessPackageResources:==> Unknown kind of first segment: 'identityGovernance'
-417) /identityGovernance/entitlementManagement/accessPackages:==> Unknown kind of first segment: 'identityGovernance'
-418) /search:==> Unknown kind of first segment: 'search'
-419) /synchronizationProfiles:==> Unknown kind of first segment: 'synchronizationProfiles'
-420) /synchronizationProfiles/{id}/uploadUrl:==> Unknown kind of first segment: 'synchronizationProfiles'
-421) /workbook/application:==> Unknown kind of first segment: 'workbook'
-422) /workbook/comments:==> Unknown kind of first segment: 'workbook'
-423) /workbook/comments/{id}:==> Unknown kind of first segment: 'workbook'
-424) /workbook/comments/{id}/replies:==> Unknown kind of first segment: 'workbook'
-425) /workbook/names:==> Unknown kind of first segment: 'workbook'
-426) /workbook/names/{id}:==> Unknown kind of first segment: 'workbook'
-427) /workbook/names/{id}/range/BoundingRect:==> Unknown kind of first segment: 'workbook'
-428) /workbook/names/{id}/range/Cell:==> Unknown kind of first segment: 'workbook'
-429) /workbook/names/{id}/range/Column:==> Unknown kind of first segment: 'workbook'
-430) /workbook/names/{id}/range/EntireColumn:==> Unknown kind of first segment: 'workbook'
-431) /workbook/names/{id}/range/EntireRow:==> Unknown kind of first segment: 'workbook'
-432) /workbook/names/{id}/range/Intersection:==> Unknown kind of first segment: 'workbook'
-433) /workbook/names/{id}/range/LastCell:==> Unknown kind of first segment: 'workbook'
-434) /workbook/names/{id}/range/LastColumn:==> Unknown kind of first segment: 'workbook'
-435) /workbook/names/{id}/range/LastRow:==> Unknown kind of first segment: 'workbook'
-436) /workbook/names/{id}/range/OffsetRange:==> Unknown kind of first segment: 'workbook'
-437) /workbook/names/{id}/range/UsedRange:==> Unknown kind of first segment: 'workbook'
-438) /workbook/names/{id}/range/format:==> Unknown kind of first segment: 'workbook'
-439) /workbook/names/{id}/range/format/borders:==> Unknown kind of first segment: 'workbook'
-440) /workbook/names/{id}/range/format/borders(sideIndex={value}):==> Unknown kind of first segment: 'workbook'
-441) /workbook/names/{id}/range/format/fill:==> Unknown kind of first segment: 'workbook'
-442) /workbook/names/{id}/range/format/font:==> Unknown kind of first segment: 'workbook'
-443) /workbook/names/{id}/range/format/protection:==> Unknown kind of first segment: 'workbook'
-444) /workbook/tables:==> Unknown kind of first segment: 'workbook'
-445) /workbook/tables/{id}:==> Unknown kind of first segment: 'workbook'
-446) /workbook/tables/{id}/columns:==> Unknown kind of first segment: 'workbook'
-447) /workbook/tables/{id}/columns/{id}:==> Unknown kind of first segment: 'workbook'
-448) /workbook/tables/{id}/columns/{id}/range:==> Unknown kind of first segment: 'workbook'
-449) /workbook/tables/{id}/columns/{id}/range/BoundingRect:==> Unknown kind of first segment: 'workbook'
-450) /workbook/tables/{id}/columns/{id}/range/Cell:==> Unknown kind of first segment: 'workbook'
-451) /workbook/tables/{id}/columns/{id}/range/Column:==> Unknown kind of first segment: 'workbook'
-452) /workbook/tables/{id}/columns/{id}/range/EntireColumn:==> Unknown kind of first segment: 'workbook'
-453) /workbook/tables/{id}/columns/{id}/range/EntireRow:==> Unknown kind of first segment: 'workbook'
-454) /workbook/tables/{id}/columns/{id}/range/Intersection:==> Unknown kind of first segment: 'workbook'
-455) /workbook/tables/{id}/columns/{id}/range/LastCell:==> Unknown kind of first segment: 'workbook'
-456) /workbook/tables/{id}/columns/{id}/range/LastColumn:==> Unknown kind of first segment: 'workbook'
-457) /workbook/tables/{id}/columns/{id}/range/LastRow:==> Unknown kind of first segment: 'workbook'
-458) /workbook/tables/{id}/columns/{id}/range/OffsetRange:==> Unknown kind of first segment: 'workbook'
-459) /workbook/tables/{id}/columns/{id}/range/UsedRange:==> Unknown kind of first segment: 'workbook'
-460) /workbook/tables/{id}/columns/{id}/range/format:==> Unknown kind of first segment: 'workbook'
-461) /workbook/tables/{id}/columns/{id}/range/format/borders:==> Unknown kind of first segment: 'workbook'
-462) /workbook/tables/{id}/columns/{id}/range/format/borders(sideIndex={value}):==> Unknown kind of first segment: 'workbook'
-463) /workbook/tables/{id}/columns/{id}/range/format/fill:==> Unknown kind of first segment: 'workbook'
-464) /workbook/tables/{id}/columns/{id}/range/format/font:==> Unknown kind of first segment: 'workbook'
-465) /workbook/tables/{id}/columns/{id}/range/format/protection:==> Unknown kind of first segment: 'workbook'
-466) /workbook/tables/{id}/rows:==> Unknown kind of first segment: 'workbook'
-467) /workbook/tables/{id}/rows/{id}:==> Unknown kind of first segment: 'workbook'
-468) /workbook/tables/{id}/sort:==> Unknown kind of first segment: 'workbook'
-469) /workbook/tables/{id}/sort/fields/icon:==> Unknown kind of first segment: 'workbook'
-470) /workbook/worksheets:==> Unknown kind of first segment: 'workbook'
-471) /workbook/worksheets/{id}:==> Unknown kind of first segment: 'workbook'
-472) /workbook/worksheets/{id}/Cell(row={value},column={value}):==> Unknown kind of first segment: 'workbook'
-473) /workbook/worksheets/{id}/UsedRange:==> Unknown kind of first segment: 'workbook'
-474) /workbook/worksheets/{id}/charts:==> Unknown kind of first segment: 'workbook'
-475) /workbook/worksheets/{id}/charts/{id}:==> Unknown kind of first segment: 'workbook'
-476) /workbook/worksheets/{id}/charts/{id}/Image(width={value},height={value},fittingMode={value}):==> Unknown kind of first segment: 'workbook'
-477) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis:==> Unknown kind of first segment: 'workbook'
-478) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/format/font:==> Unknown kind of first segment: 'workbook'
-479) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/format/line:==> Unknown kind of first segment: 'workbook'
-480) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/title:==> Unknown kind of first segment: 'workbook'
-481) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis:==> Unknown kind of first segment: 'workbook'
-482) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/format/font:==> Unknown kind of first segment: 'workbook'
-483) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/format/line:==> Unknown kind of first segment: 'workbook'
-484) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/majorgridlines:==> Unknown kind of first segment: 'workbook'
-485) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/majorgridlines/format/line:==> Unknown kind of first segment: 'workbook'
-486) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/title:==> Unknown kind of first segment: 'workbook'
-487) /workbook/worksheets/{id}/charts/{id}/axes/valueaxis:==> Unknown kind of first segment: 'workbook'
-488) /workbook/worksheets/{id}/charts/{id}/axes/valueaxis/format/font:==> Unknown kind of first segment: 'workbook'
-489) /workbook/worksheets/{id}/charts/{id}/axes/valueaxis/majorgridlines:==> Unknown kind of first segment: 'workbook'
-490) /workbook/worksheets/{id}/charts/{id}/axes/valueaxis/minorgridlines:==> Unknown kind of first segment: 'workbook'
-491) /workbook/worksheets/{id}/charts/{id}/axes/valueaxis/title:==> Unknown kind of first segment: 'workbook'
-492) /workbook/worksheets/{id}/charts/{id}/datalabels:==> Unknown kind of first segment: 'workbook'
-493) /workbook/worksheets/{id}/charts/{id}/legend:==> Unknown kind of first segment: 'workbook'
-494) /workbook/worksheets/{id}/charts/{id}/series:==> Unknown kind of first segment: 'workbook'
-495) /workbook/worksheets/{id}/charts/{id}/series/{id}:==> Unknown kind of first segment: 'workbook'
-496) /workbook/worksheets/{id}/charts/{id}/series/{id}/points:==> Unknown kind of first segment: 'workbook'
-497) /workbook/worksheets/{id}/charts/{id}/series/{id}/points/{id}:==> Unknown kind of first segment: 'workbook'
-498) /workbook/worksheets/{id}/charts/{id}/title:==> Unknown kind of first segment: 'workbook'
-499) /workbook/worksheets/{id}/protection:==> Unknown kind of first segment: 'workbook'
-500) /workbook/worksheets/{id}/range(address={value}):==> Unknown kind of first segment: 'workbook'
-501) /workbook/worksheets/{id}/range(address={value})/BoundingRect:==> Unknown kind of first segment: 'workbook'
-502) /workbook/worksheets/{id}/range(address={value})/Cell:==> Unknown kind of first segment: 'workbook'
-503) /workbook/worksheets/{id}/range(address={value})/Column:==> Unknown kind of first segment: 'workbook'
-504) /workbook/worksheets/{id}/range(address={value})/EntireColumn:==> Unknown kind of first segment: 'workbook'
-505) /workbook/worksheets/{id}/range(address={value})/EntireRow:==> Unknown kind of first segment: 'workbook'
-506) /workbook/worksheets/{id}/range(address={value})/Intersection:==> Unknown kind of first segment: 'workbook'
-507) /workbook/worksheets/{id}/range(address={value})/LastCell:==> Unknown kind of first segment: 'workbook'
-508) /workbook/worksheets/{id}/range(address={value})/LastColumn:==> Unknown kind of first segment: 'workbook'
-509) /workbook/worksheets/{id}/range(address={value})/LastRow:==> Unknown kind of first segment: 'workbook'
-510) /workbook/worksheets/{id}/range(address={value})/OffsetRange:==> Unknown kind of first segment: 'workbook'
-511) /workbook/worksheets/{id}/range(address={value})/UsedRange:==> Unknown kind of first segment: 'workbook'
-512) /workbook/worksheets/{id}/range(address={value})/format:==> Unknown kind of first segment: 'workbook'
-513) /workbook/worksheets/{id}/range(address={value})/format/borders:==> Unknown kind of first segment: 'workbook'
-514) /workbook/worksheets/{id}/range(address={value})/format/fill:==> Unknown kind of first segment: 'workbook'
-515) /workbook/worksheets/{id}/range(address={value})/format/font:==> Unknown kind of first segment: 'workbook'
-516) /workbook/worksheets/{id}/range(address={value})/format/protection:==> Unknown kind of first segment: 'workbook'
-517) /workbook/worksheets/{id}/tables:==> Unknown kind of first segment: 'workbook'
-518) /workbook/worksheets/{id}/tables/{id}:==> Unknown kind of first segment: 'workbook'
-519) /workbook/worksheets/{id}/tables/{id}/columns:==> Unknown kind of first segment: 'workbook'
-520) /workbook/worksheets/{id}/tables/{id}/columns/{id}:==> Unknown kind of first segment: 'workbook'
-521) /workbook/worksheets/{id}/tables/{id}/rows:==> Unknown kind of first segment: 'workbook'
-522) /workbook/worksheets/{id}/tables/{id}/rows/{id}:==> Unknown kind of first segment: 'workbook'
-523) /workbook/worksheets/{id}/tables/{id}/sort:==> Unknown kind of first segment: 'workbook'
-524) /workbook/worksheets/{id}/tables/{id}/sort/fields/icon:==> Unknown kind of first segment: 'workbook'
-525) /workbook/names/{id}/range:==> Unknown kind of first segment: 'workbook'
-526) /education/classes/{id}/assignments/{id}/submissions/{id}/recall:==> Unknown kind of segment: 'recall', previous segment: '{id}'.
-527) /education/classes/{id}/assignments/{id}/submissions/{id}/release:==> Unknown kind of segment: 'release', previous segment: '{id}'.
-528) /search/query:==> Unknown kind of first segment: 'search'
-529) /synchronizationProfiles/{id}/pause:==> Unknown kind of first segment: 'synchronizationProfiles'
-530) /synchronizationProfiles/{id}/reset:==> Unknown kind of first segment: 'synchronizationProfiles'
-531) /synchronizationProfiles/{id}/resume:==> Unknown kind of first segment: 'synchronizationProfiles'
-532) /synchronizationProfiles/{id}/start:==> Unknown kind of first segment: 'synchronizationProfiles'
-533) /workbook/application/calculate:==> Unknown kind of first segment: 'workbook'
-534) /workbook/closeSession:==> Unknown kind of first segment: 'workbook'
-535) /workbook/createSession:==> Unknown kind of first segment: 'workbook'
-536) /workbook/names/{id}/Range:==> Unknown kind of first segment: 'workbook'
-537) /workbook/names/{id}/range/Row:==> Unknown kind of first segment: 'workbook'
-538) /workbook/names/{id}/range/clear:==> Unknown kind of first segment: 'workbook'
-539) /workbook/names/{id}/range/delete:==> Unknown kind of first segment: 'workbook'
-540) /workbook/names/{id}/range/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-541) /workbook/names/{id}/range/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-542) /workbook/names/{id}/range/format/borders/ItemAt:==> Unknown kind of first segment: 'workbook'
-543) /workbook/names/{id}/range/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-544) /workbook/names/{id}/range/insert:==> Unknown kind of first segment: 'workbook'
-545) /workbook/names/{id}/range/merge:==> Unknown kind of first segment: 'workbook'
-546) /workbook/names/{id}/range/sort/apply:==> Unknown kind of first segment: 'workbook'
-547) /workbook/names/{id}/range/unmerge:==> Unknown kind of first segment: 'workbook'
-548) /workbook/refreshSession:==> Unknown kind of first segment: 'workbook'
-549) /workbook/tables/$/add:==> Unknown kind of first segment: 'workbook'
-550) /workbook/tables/add:==> Unknown kind of first segment: 'workbook'
-551) /workbook/tables/{id}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
-552) /workbook/tables/{id}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
-553) /workbook/tables/{id}/Range:==> Unknown kind of first segment: 'workbook'
-554) /workbook/tables/{id}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
-555) /workbook/tables/{id}/clearFilters:==> Unknown kind of first segment: 'workbook'
-556) /workbook/tables/{id}/columns/ItemAt:==> Unknown kind of first segment: 'workbook'
-557) /workbook/tables/{id}/columns/add:==> Unknown kind of first segment: 'workbook'
-558) /workbook/tables/{id}/columns/{id}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
-559) /workbook/tables/{id}/columns/{id}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
-560) /workbook/tables/{id}/columns/{id}/Range:==> Unknown kind of first segment: 'workbook'
-561) /workbook/tables/{id}/columns/{id}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
-562) /workbook/tables/{id}/columns/{id}/delete:==> Unknown kind of first segment: 'workbook'
-563) /workbook/tables/{id}/columns/{id}/filter/apply:==> Unknown kind of first segment: 'workbook'
-564) /workbook/tables/{id}/columns/{id}/filter/clear:==> Unknown kind of first segment: 'workbook'
-565) /workbook/tables/{id}/columns/{id}/range/Row:==> Unknown kind of first segment: 'workbook'
-566) /workbook/tables/{id}/columns/{id}/range/clear:==> Unknown kind of first segment: 'workbook'
-567) /workbook/tables/{id}/columns/{id}/range/delete:==> Unknown kind of first segment: 'workbook'
-568) /workbook/tables/{id}/columns/{id}/range/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-569) /workbook/tables/{id}/columns/{id}/range/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-570) /workbook/tables/{id}/columns/{id}/range/format/borders/ItemAt:==> Unknown kind of first segment: 'workbook'
-571) /workbook/tables/{id}/columns/{id}/range/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-572) /workbook/tables/{id}/columns/{id}/range/insert:==> Unknown kind of first segment: 'workbook'
-573) /workbook/tables/{id}/columns/{id}/range/merge:==> Unknown kind of first segment: 'workbook'
-574) /workbook/tables/{id}/columns/{id}/range/sort/apply:==> Unknown kind of first segment: 'workbook'
-575) /workbook/tables/{id}/columns/{id}/range/unmerge:==> Unknown kind of first segment: 'workbook'
-576) /workbook/tables/{id}/convertToRange:==> Unknown kind of first segment: 'workbook'
-577) /workbook/tables/{id}/delete:==> Unknown kind of first segment: 'workbook'
-578) /workbook/tables/{id}/reapplyFilters:==> Unknown kind of first segment: 'workbook'
-579) /workbook/tables/{id}/rows/ItemAt:==> Unknown kind of first segment: 'workbook'
-580) /workbook/tables/{id}/rows/add:==> Unknown kind of first segment: 'workbook'
-581) /workbook/tables/{id}/rows/{id}/Range:==> Unknown kind of first segment: 'workbook'
-582) /workbook/tables/{id}/rows/{id}/delete:==> Unknown kind of first segment: 'workbook'
-583) /workbook/tables/{id}/sort/apply:==> Unknown kind of first segment: 'workbook'
-584) /workbook/tables/{id}/sort/clear:==> Unknown kind of first segment: 'workbook'
-585) /workbook/tables/{id}/sort/reapply:==> Unknown kind of first segment: 'workbook'
-586) /workbook/worksheets/:==> Unknown kind of first segment: 'workbook'
-587) /workbook/worksheets/{id}/Range:==> Unknown kind of first segment: 'workbook'
-588) /workbook/worksheets/{id}/charts/:==> Unknown kind of first segment: 'workbook'
-589) /workbook/worksheets/{id}/charts/ItemAt:==> Unknown kind of first segment: 'workbook'
-590) /workbook/worksheets/{id}/charts/add:==> Unknown kind of first segment: 'workbook'
-591) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/format/line/clear:==> Unknown kind of first segment: 'workbook'
-592) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/format/line/clear:==> Unknown kind of first segment: 'workbook'
-593) /workbook/worksheets/{id}/charts/{id}/axes/seriesaxis/majorgridlines/format/line/clear:==> Unknown kind of first segment: 'workbook'
-594) /workbook/worksheets/{id}/charts/{id}/delete:==> Unknown kind of first segment: 'workbook'
-595) /workbook/worksheets/{id}/charts/{id}/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-596) /workbook/worksheets/{id}/charts/{id}/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-597) /workbook/worksheets/{id}/charts/{id}/legend/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-598) /workbook/worksheets/{id}/charts/{id}/legend/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-599) /workbook/worksheets/{id}/charts/{id}/series/ItemAt:==> Unknown kind of first segment: 'workbook'
-600) /workbook/worksheets/{id}/charts/{id}/series/{id}/points/ItemAt:==> Unknown kind of first segment: 'workbook'
-601) /workbook/worksheets/{id}/charts/{id}/setData:==> Unknown kind of first segment: 'workbook'
-602) /workbook/worksheets/{id}/charts/{id}/setPosition:==> Unknown kind of first segment: 'workbook'
-603) /workbook/worksheets/{id}/charts/{id}/title/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-604) /workbook/worksheets/{id}/charts/{id}/title/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-605) /workbook/worksheets/{id}/delete:==> Unknown kind of first segment: 'workbook'
-606) /workbook/worksheets/{id}/protection/protect:==> Unknown kind of first segment: 'workbook'
-607) /workbook/worksheets/{id}/protection/unprotect:==> Unknown kind of first segment: 'workbook'
-608) /workbook/worksheets/{id}/range(address={value})/Row:==> Unknown kind of first segment: 'workbook'
-609) /workbook/worksheets/{id}/range(address={value})/clear:==> Unknown kind of first segment: 'workbook'
-610) /workbook/worksheets/{id}/range(address={value})/delete:==> Unknown kind of first segment: 'workbook'
-611) /workbook/worksheets/{id}/range(address={value})/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-612) /workbook/worksheets/{id}/range(address={value})/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-613) /workbook/worksheets/{id}/range(address={value})/format/borders/ItemAt:==> Unknown kind of first segment: 'workbook'
-614) /workbook/worksheets/{id}/range(address={value})/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-615) /workbook/worksheets/{id}/range(address={value})/insert:==> Unknown kind of first segment: 'workbook'
-616) /workbook/worksheets/{id}/range(address={value})/merge:==> Unknown kind of first segment: 'workbook'
-617) /workbook/worksheets/{id}/range(address={value})/sort/apply:==> Unknown kind of first segment: 'workbook'
-618) /workbook/worksheets/{id}/range(address={value})/unmerge:==> Unknown kind of first segment: 'workbook'
-619) /workbook/worksheets/{id}/tables/add:==> Unknown kind of first segment: 'workbook'
-620) /workbook/worksheets/{id}/tables/{id}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
-621) /workbook/worksheets/{id}/tables/{id}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
-622) /workbook/worksheets/{id}/tables/{id}/Range:==> Unknown kind of first segment: 'workbook'
-623) /workbook/worksheets/{id}/tables/{id}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
-624) /workbook/worksheets/{id}/tables/{id}/clearFilters:==> Unknown kind of first segment: 'workbook'
-625) /workbook/worksheets/{id}/tables/{id}/columns/ItemAt:==> Unknown kind of first segment: 'workbook'
-626) /workbook/worksheets/{id}/tables/{id}/columns/add:==> Unknown kind of first segment: 'workbook'
-627) /workbook/worksheets/{id}/tables/{id}/columns/{id}/DataBodyRange:==> Unknown kind of first segment: 'workbook'
-628) /workbook/worksheets/{id}/tables/{id}/columns/{id}/HeaderRowRange:==> Unknown kind of first segment: 'workbook'
-629) /workbook/worksheets/{id}/tables/{id}/columns/{id}/Range:==> Unknown kind of first segment: 'workbook'
-630) /workbook/worksheets/{id}/tables/{id}/columns/{id}/TotalRowRange:==> Unknown kind of first segment: 'workbook'
-631) /workbook/worksheets/{id}/tables/{id}/columns/{id}/delete:==> Unknown kind of first segment: 'workbook'
-632) /workbook/worksheets/{id}/tables/{id}/columns/{id}/filter/apply:==> Unknown kind of first segment: 'workbook'
-633) /workbook/worksheets/{id}/tables/{id}/columns/{id}/filter/clear:==> Unknown kind of first segment: 'workbook'
-634) /workbook/worksheets/{id}/tables/{id}/convertToRange:==> Unknown kind of first segment: 'workbook'
-635) /workbook/worksheets/{id}/tables/{id}/delete:==> Unknown kind of first segment: 'workbook'
-636) /workbook/worksheets/{id}/tables/{id}/reapplyFilters:==> Unknown kind of first segment: 'workbook'
-637) /workbook/worksheets/{id}/tables/{id}/rows/ItemAt:==> Unknown kind of first segment: 'workbook'
-638) /workbook/worksheets/{id}/tables/{id}/rows/add:==> Unknown kind of first segment: 'workbook'
-639) /workbook/worksheets/{id}/tables/{id}/rows/{id}/Range:==> Unknown kind of first segment: 'workbook'
-640) /workbook/worksheets/{id}/tables/{id}/rows/{id}/delete:==> Unknown kind of first segment: 'workbook'
-641) /workbook/worksheets/{id}/tables/{id}/sort/apply:==> Unknown kind of first segment: 'workbook'
-642) /workbook/worksheets/{id}/tables/{id}/sort/clear:==> Unknown kind of first segment: 'workbook'
-643) /workbook/worksheets/{id}/tables/{id}/sort/reapply:==> Unknown kind of first segment: 'workbook'
-644) /application/{id}/synchronization/templates/{id}:==> Unknown kind of first segment: 'application'
-645) /me/devices/{id}/command/{id}/responsePayload:==> Unknown kind of segment: 'command', previous segment: '{id}'.
-646) /users/{id}/devices/{id}/command/{id}/responsePayload:==> Unknown kind of segment: 'command', previous segment: '{id}'.
+1) /connectorgroups/{id}:==> Unknown kind of first segment: 'connectorgroups'
+2) /deviceappmanagement/mobileapps/{id}/contentversions/{id}:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+3) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/containedapps/{id}:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+4) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files/{id}:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+5) /deviceappmanagement/wdacsupplementalpolicies/{id}:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+6) /deviceappmanagement/wdacsupplementalpolicies/{id}/assignments/{id}:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+7) /deviceappmanagement/wdacsupplementalpolicies/{id}/devicestatuses/{id}:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+8) /deviceappmanagement/wdacsupplementalpolicies/{id}/devicestatuses/{id}/policy:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+9) /devicemanagement/compliancemanagementpartners/{id}:==> Unknown kind of segment: 'compliancemanagementpartners', previous segment: 'devicemanagement'.
+10) /devicemanagement/deviceconfigurations/{id}/identitycertificate/assignments/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+11) /devicemanagement/deviceconfigurations/{id}/identitycertificate/devicesettingstatesummaries/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+12) /devicemanagement/deviceconfigurations/{id}/identitycertificate/devicestatuses/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+13) /devicemanagement/deviceconfigurations/{id}/identitycertificate/groupassignments/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+14) /devicemanagement/deviceconfigurations/{id}/identitycertificate/microsoft.graph.androidforworkpkcscertificateprofile/manageddevicecertificatestates/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+15) /devicemanagement/deviceconfigurations/{id}/identitycertificate/microsoft.graph.androidforworkscepcertificateprofile/manageddevicecertificatestates/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+16) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+17) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/assignments/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+18) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/devicesettingstatesummaries/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+19) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/devicestatuses/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+20) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/groupassignments/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+21) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/userstatuses/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+22) /devicemanagement/deviceconfigurations/{id}/identitycertificate/userstatuses/{id}:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+23) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.androidworkprofilepkcscertificateprofile/manageddevicecertificatestates/{id}:==> Unknown kind of segment: 'manageddevicecertificatestates', previous segment: 'microsoft.graph.androidworkprofilepkcscertificateprofile'.
+24) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/assignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+25) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/devicesettingstatesummaries/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+26) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/devicestatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+27) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/groupassignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+28) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macosimportedpfxcertificateprofile/manageddevicecertificatestates/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+29) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macospkcscertificateprofile/manageddevicecertificatestates/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+30) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macosscepcertificateprofile/manageddevicecertificatestates/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+31) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macosscepcertificateprofile/rootcertificate:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+32) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/userstatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+33) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+34) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/assignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+35) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/devicesettingstatesummaries/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+36) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/devicestatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+37) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/groupassignments/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+38) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/userstatuses/{id}:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+39) /devicemanagement/deviceconfigurations/{id}/rootcertificate:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+40) /devicemanagement/deviceconfigurations/{id}/rootcertificate/assignments/{id}:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+41) /devicemanagement/deviceconfigurations/{id}/rootcertificate/devicesettingstatesummaries/{id}:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+42) /devicemanagement/deviceconfigurations/{id}/rootcertificate/devicestatuses/{id}:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+43) /devicemanagement/deviceconfigurations/{id}/rootcertificate/groupassignments/{id}:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+44) /devicemanagement/deviceconfigurations/{id}/rootcertificate/userstatuses/{id}:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+45) /devicemanagement/devicehealthscripts/{id}:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+46) /devicemanagement/devicehealthscripts/{id}/assignments/{id}:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+47) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+48) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+49) /devicemanagement/deviceshellscripts/{id}:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+50) /devicemanagement/deviceshellscripts/{id}/assignments/{id}:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+51) /devicemanagement/deviceshellscripts/{id}/devicerunstates/{id}:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+52) /devicemanagement/deviceshellscripts/{id}/groupassignments/{id}:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+53) /devicemanagement/deviceshellscripts/{id}/userrunstates/{id}:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+54) /devicemanagement/grouppolicymigrationreports/{id}:==> Unknown kind of segment: 'grouppolicymigrationreports', previous segment: 'devicemanagement'.
+55) /devicemanagement/grouppolicymigrationreports/{id}/grouppolicysettingmappings/{id}:==> Unknown kind of segment: 'grouppolicymigrationreports', previous segment: 'devicemanagement'.
+56) /devicemanagement/reports/cachedreportconfigurations/{id}:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+57) /devicemanagement/reports/exportjobs/{id}:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+58) /devicemanagement/reports/reportschedules/{id}:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+59) /devicemanagement/userexperienceanalyticsdeviceperformance/{id}:==> Unknown kind of segment: 'userexperienceanalyticsdeviceperformance', previous segment: 'devicemanagement'.
+60) /devicemanagement/userexperienceanalyticsdevicestartuphistory/{id}:==> Unknown kind of segment: 'userexperienceanalyticsdevicestartuphistory', previous segment: 'devicemanagement'.
+61) /devicemanagement/userexperienceanalyticsregressionsummary/manufacturerregression/{id}:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+62) /devicemanagement/userexperienceanalyticsregressionsummary/modelregression/{id}:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+63) /devicemanagement/userexperienceanalyticsregressionsummary/operatingsystemregression/{id}:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+64) /drive/root/createdbyuser/oauth2permissiongrants/{id}:==> Unknown kind of segment: 'oauth2permissiongrants', previous segment: 'createdbyuser'.
+65) /external/connections/{id}:==> Unknown kind of first segment: 'external'
+66) /external/connections/{id}/items/{id}:==> Unknown kind of first segment: 'external'
+67) /groupSettings/{id}:==> Unknown kind of first segment: 'groupSettings'
+68) /groups/{id}/calendar/calendarpermissions/{id}:==> Unknown kind of segment: 'calendarpermissions', previous segment: 'calendar'.
+69) /identity/userflows/{id}:==> Unknown kind of first segment: 'identity'
+70) /me/calendargroup/calendars/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+71) /me/calendargroup/calendars/{id}/events/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+72) /me/contactfolder/{id}/childfolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactfolder', previous segment: 'me'.
+73) /me/profile:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+74) /me/profile/anniversaries/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+75) /me/profile/educationalactivities/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+76) /me/profile/emails/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+77) /me/profile/interests/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+78) /me/profile/languages/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+79) /me/profile/names/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+80) /me/profile/phones/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+81) /me/profile/positions/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+82) /me/profile/projects/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+83) /me/profile/skills/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+84) /me/profile/webaccounts/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+85) /me/profile/websites/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+86) /users/{id}/calendar/calendarpermissions/{id}:==> Unknown kind of segment: 'calendarpermissions', previous segment: 'calendar'.
+87) /users/{id}/calendargroup/calendars/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+88) /users/{id}/calendargroup/calendars/{id}/events/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+89) /users/{id}/contactfolder/{id}/childfolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactfolder', previous segment: '{id}'.
+90) /users/{id}/events/{id}/calendar/calendarpermissions/{id}:==> Unknown kind of segment: 'calendarpermissions', previous segment: 'calendar'.
+91) /users/{id}/oauth2permissiongrants/{id}:==> Unknown kind of segment: 'oauth2permissiongrants', previous segment: '{id}'.
+92) /users/{id}/profile:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+93) /users/{id}/profile/anniversaries/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+94) /users/{id}/profile/educationalactivities/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+95) /users/{id}/profile/emails/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+96) /users/{id}/profile/interests/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+97) /users/{id}/profile/languages/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+98) /users/{id}/profile/names/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+99) /users/{id}/profile/phones/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+100) /users/{id}/profile/positions/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+101) /users/{id}/profile/projects/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+102) /users/{id}/profile/skills/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+103) /users/{id}/profile/webaccounts/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+104) /users/{id}/profile/websites/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+105) /conditionalaccess/namedlocations:==> Unknown kind of first segment: 'conditionalaccess'
+106) /conditionalaccess/namedlocations/{id}:==> Unknown kind of first segment: 'conditionalaccess'
+107) /conditionalaccess/policies:==> Unknown kind of first segment: 'conditionalaccess'
+108) /conditionalaccess/policies/{id}:==> Unknown kind of first segment: 'conditionalaccess'
+109) /connectorgroups:==> Unknown kind of first segment: 'connectorgroups'
+110) /connectorgroups/{id}/applications:==> Unknown kind of first segment: 'connectorgroups'
+111) /connectorgroups/{id}/members:==> Unknown kind of first segment: 'connectorgroups'
+112) /connectorgroups/{id}/members/{id}:==> Unknown kind of first segment: 'connectorgroups'
+113) /connectors:==> Unknown kind of first segment: 'connectors'
+114) /connectors/{id}/memberof:==> Unknown kind of first segment: 'connectors'
+115) /deviceappmanagement/mobileapps/{id}/contentversions:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+116) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/containedapps:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+117) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+118) /deviceappmanagement/vpptokens/getlicensesforapp:==> Sequence contains no elements
+119) /deviceappmanagement/wdacsupplementalpolicies:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+120) /deviceappmanagement/wdacsupplementalpolicies/{id}/assignments:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+121) /deviceappmanagement/wdacsupplementalpolicies/{id}/deploysummary:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+122) /deviceappmanagement/wdacsupplementalpolicies/{id}/devicestatuses:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+123) /devicemanagement/auditevents/getauditactivitytypes:==> Sequence contains no elements
+124) /devicemanagement/compliancemanagementpartners:==> Unknown kind of segment: 'compliancemanagementpartners', previous segment: 'devicemanagement'.
+125) /devicemanagement/deponboardingsettings/getexpiringvpptokencount:==> Sequence contains no elements
+126) /devicemanagement/deviceconfigurations/{id}/identitycertificate:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+127) /devicemanagement/deviceconfigurations/{id}/identitycertificate/assignments:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+128) /devicemanagement/deviceconfigurations/{id}/identitycertificate/devicesettingstatesummaries:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+129) /devicemanagement/deviceconfigurations/{id}/identitycertificate/devicestatuses:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+130) /devicemanagement/deviceconfigurations/{id}/identitycertificate/devicestatusoverview:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+131) /devicemanagement/deviceconfigurations/{id}/identitycertificate/groupassignments:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+132) /devicemanagement/deviceconfigurations/{id}/identitycertificate/microsoft.graph.androidforworkpkcscertificateprofile/manageddevicecertificatestates:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+133) /devicemanagement/deviceconfigurations/{id}/identitycertificate/microsoft.graph.androidforworkscepcertificateprofile/manageddevicecertificatestates:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+134) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/assignments:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+135) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/devicesettingstatesummaries:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+136) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/devicestatuses:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+137) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/devicestatusoverview:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+138) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/groupassignments:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+139) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/userstatuses:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+140) /devicemanagement/deviceconfigurations/{id}/identitycertificate/rootcertificate/userstatusoverview:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+141) /devicemanagement/deviceconfigurations/{id}/identitycertificate/userstatuses:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+142) /devicemanagement/deviceconfigurations/{id}/identitycertificate/userstatusoverview:==> Unknown kind of segment: 'identitycertificate', previous segment: '{id}'.
+143) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.androidworkprofilepkcscertificateprofile/manageddevicecertificatestates:==> Unknown kind of segment: 'manageddevicecertificatestates', previous segment: 'microsoft.graph.androidworkprofilepkcscertificateprofile'.
+144) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.iosdevicefeaturesconfiguration/singlesignonextensionpkinitcertificate:==> Unknown kind of segment: 'singlesignonextensionpkinitcertificate', previous segment: 'microsoft.graph.iosdevicefeaturesconfiguration'.
+145) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macosdevicefeaturesconfiguration/singlesignonextensionpkinitcertificate:==> Unknown kind of segment: 'singlesignonextensionpkinitcertificate', previous segment: 'microsoft.graph.macosdevicefeaturesconfiguration'.
+146) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+147) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/assignments:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+148) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/devicesettingstatesummaries:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+149) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/devicestatuses:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+150) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/devicestatusoverview:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+151) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/groupassignments:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+152) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macosimportedpfxcertificateprofile/manageddevicecertificatestates:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+153) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macospkcscertificateprofile/manageddevicecertificatestates:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+154) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/microsoft.graph.macosscepcertificateprofile/manageddevicecertificatestates:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+155) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/userstatuses:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+156) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/identitycertificateforclientauthentication/userstatusoverview:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+157) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/assignments:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+158) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/devicesettingstatesummaries:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+159) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/devicestatuses:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+160) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/devicestatusoverview:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+161) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/groupassignments:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+162) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/userstatuses:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+163) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.macoswirednetworkconfiguration/rootcertificateforservervalidation/userstatusoverview:==> Unknown kind of segment: 'microsoft.graph.macoswirednetworkconfiguration', previous segment: '{id}'.
+164) /devicemanagement/deviceconfigurations/{id}/rootcertificate/assignments:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+165) /devicemanagement/deviceconfigurations/{id}/rootcertificate/devicesettingstatesummaries:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+166) /devicemanagement/deviceconfigurations/{id}/rootcertificate/devicestatuses:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+167) /devicemanagement/deviceconfigurations/{id}/rootcertificate/devicestatusoverview:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+168) /devicemanagement/deviceconfigurations/{id}/rootcertificate/groupassignments:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+169) /devicemanagement/deviceconfigurations/{id}/rootcertificate/userstatuses:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+170) /devicemanagement/deviceconfigurations/{id}/rootcertificate/userstatusoverview:==> Unknown kind of segment: 'rootcertificate', previous segment: '{id}'.
+171) /devicemanagement/devicehealthscripts:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+172) /devicemanagement/devicehealthscripts/{id}/assignments:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+173) /devicemanagement/devicehealthscripts/{id}/devicerunstates:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+174) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/getfilevaultkey:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+175) /devicemanagement/devicehealthscripts/{id}/runsummary:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+176) /devicemanagement/deviceshellscripts:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+177) /devicemanagement/deviceshellscripts/{id}/assignments:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+178) /devicemanagement/deviceshellscripts/{id}/devicerunstates:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+179) /devicemanagement/deviceshellscripts/{id}/groupassignments:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+180) /devicemanagement/deviceshellscripts/{id}/runsummary:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+181) /devicemanagement/deviceshellscripts/{id}/userrunstates:==> Unknown kind of segment: 'deviceshellscripts', previous segment: 'devicemanagement'.
+182) /devicemanagement/grouppolicymigrationreports:==> Unknown kind of segment: 'grouppolicymigrationreports', previous segment: 'devicemanagement'.
+183) /devicemanagement/grouppolicymigrationreports/{id}/grouppolicysettingmappings:==> Unknown kind of segment: 'grouppolicymigrationreports', previous segment: 'devicemanagement'.
+184) /devicemanagement/intents/{id}/compare:==> Sequence contains no elements
+185) /devicemanagement/managementconditions/getmanagementconditionsforplatform:==> Sequence contains no elements
+186) /devicemanagement/managementconditions/{id}/managementconditionstatements/getmanagementconditionstatementsforplatform:==> Sequence contains no elements
+187) /devicemanagement/managementconditions/{id}/managementconditionstatements/{id}/managementconditions/getmanagementconditionsforplatform:==> Sequence contains no elements
+188) /devicemanagement/managementconditionstatements/getmanagementconditionstatementsforplatform:==> Sequence contains no elements
+189) /devicemanagement/reports:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+190) /devicemanagement/reports/cachedreportconfigurations:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+191) /devicemanagement/reports/exportjobs:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+192) /devicemanagement/reports/reportschedules:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+193) /devicemanagement/resourceoperations/{id}/getscopesforuser:==> Sequence contains no elements
+194) /devicemanagement/scopedforresource:==> Sequence contains no elements
+195) /devicemanagement/templates/{id}/compare:==> Sequence contains no elements
+196) /devicemanagement/templates/{id}/migratableto/{id}/compare:==> Sequence contains no elements
+197) /devicemanagement/userexperienceanalyticsdeviceperformance:==> Unknown kind of segment: 'userexperienceanalyticsdeviceperformance', previous segment: 'devicemanagement'.
+198) /devicemanagement/userexperienceanalyticsdeviceperformance/summarizedeviceperformancedevices:==> Unknown kind of segment: 'userexperienceanalyticsdeviceperformance', previous segment: 'devicemanagement'.
+199) /devicemanagement/userexperienceanalyticsdevicestartuphistory:==> Unknown kind of segment: 'userexperienceanalyticsdevicestartuphistory', previous segment: 'devicemanagement'.
+200) /devicemanagement/userexperienceanalyticsregressionsummary:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+201) /devicemanagement/userexperienceanalyticsregressionsummary/manufacturerregression:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+202) /devicemanagement/userexperienceanalyticsregressionsummary/modelregression:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+203) /devicemanagement/userexperienceanalyticsregressionsummary/operatingsystemregression:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+204) /devicemanagement/userexperienceanalyticsregressionsummary/summarizedeviceregressionperformance:==> Unknown kind of segment: 'userexperienceanalyticsregressionsummary', previous segment: 'devicemanagement'.
+205) /directory/deleteditems/microsoft.graph.application:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+206) /directory/deleteditems/microsoft.graph.group:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+207) /directory/deleteditems/microsoft.graph.user:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+208) /drive/root/createdbyuser/trendingaround:==> Unknown kind of segment: 'trendingaround', previous segment: 'createdbyuser'.
+209) /drive/root/createdbyuser/workingwith:==> Unknown kind of segment: 'workingwith', previous segment: 'createdbyuser'.
+210) /drive/root/lastmodifiedbyuser/trendingaround:==> Unknown kind of segment: 'trendingaround', previous segment: 'lastmodifiedbyuser'.
+211) /drive/root/lastmodifiedbyuser/workingwith:==> Unknown kind of segment: 'workingwith', previous segment: 'lastmodifiedbyuser'.
+212) /drives/{id}/items/{id}/getactivitiesbyinterval(startdatetime={value},enddatetime={value},interval={value}):==> Sequence contains no elements
+213) /drives/{id}/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
+214) /drives/{id}/root:/{id}:/children:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
+215) /external/connections:==> Unknown kind of first segment: 'external'
+216) /external/connections/{id}/operations/{id}:==> Unknown kind of first segment: 'external'
+217) /external/connections/{id}/schema:==> Unknown kind of first segment: 'external'
+218) /financials/companies/{id}/trialbalance:==> Unknown kind of segment: 'trialbalance', previous segment: '{id}'.
+219) /group/{id}/settings:==> Unknown kind of first segment: 'group'
+220) /groupSettings:==> Unknown kind of first segment: 'groupSettings'
+221) /groups/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+222) /groups/{id}/drive/{id}/versions:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+223) /groups/{id}/drive/{id}/versions/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+224) /groups/{id}/drive/{id}/versions/{id}/content:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+225) /identity/userflows:==> Unknown kind of first segment: 'identity'
+226) /informationprotection/threatassessmentrequests:==> Unknown kind of segment: 'threatassessmentrequests', previous segment: 'informationprotection'.
+227) /informationprotection/threatassessmentrequests/{id}:==> Unknown kind of segment: 'threatassessmentrequests', previous segment: 'informationprotection'.
+228) /locatedriskevents/{id}:==> Unknown kind of first segment: 'locatedriskevents'
+229) /me/calendargroup/calendars:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+230) /me/calendargroup/calendars/{id}/calendarview:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+231) /me/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+232) /me/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+233) /me/contactfolder/{id}/childfolders/{id}/.../contacts:==> Unknown kind of segment: 'contactfolder', previous segment: 'me'.
+234) /me/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+235) /me/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+236) /me/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+237) /me/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+238) /me/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+239) /me/mailboxsettings/delegatemeetingmessagedeliveryoptions:==> Unknown kind of segment: 'delegatemeetingmessagedeliveryoptions', previous segment: 'mailboxsettings'.
+240) /me/mailfolders/{id}/childfolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
+241) /me/profile/account:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+242) /me/profile/anniversaries:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+243) /me/profile/educationalactivities:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+244) /me/profile/emails:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+245) /me/profile/interests:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+246) /me/profile/languages:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+247) /me/profile/names:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+248) /me/profile/phones:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+249) /me/profile/positions:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+250) /me/profile/projects:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+251) /me/profile/skills:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+252) /me/profile/webaccounts:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+253) /me/profile/websites:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+254) /me/scopedadministratorof:==> Unknown kind of segment: 'scopedadministratorof', previous segment: 'me'.
+255) /me/trendingaround:==> Unknown kind of segment: 'trendingaround', previous segment: 'me'.
+256) /me/workingwith:==> Unknown kind of segment: 'workingwith', previous segment: 'me'.
+257) /places/microsoft.graph.room:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+258) /places/microsoft.graph.roomlist:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+259) /reports/getcredentialusagesummary:==> Sequence contains no elements
+260) /rolemanagement/devicemanagement:==> Unknown kind of segment: 'devicemanagement', previous segment: 'rolemanagement'.
+261) /rolemanagement/{id}/roledefinitions/{id}:==> Unknown kind of segment: '{id}', previous segment: 'rolemanagement'.
+262) /sites/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+263) /sites/{id}/getactivitiesbyinterval(startdatetime={value},enddatetime={value},interval={value}):==> Sequence contains no elements
+264) /sites/{id}/items/{id}/versions:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
+265) /sites/{id}/items/{id}/versions/{id}:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
+266) /sites/{id}/lists/{id}/items/{id}/getactivitiesbyinterval(startdatetime={value},interval={value}):==> Sequence contains no elements
+267) /sites/{id}:/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}:'.
+268) /synchronizationprofiles/{id}:==> Unknown kind of first segment: 'synchronizationprofiles'
+269) /synchronizationprofiles/{id}/errors:==> Unknown kind of first segment: 'synchronizationprofiles'
+270) /synchronizationprofiles/{id}/profilestatus:==> Unknown kind of first segment: 'synchronizationprofiles'
+271) /teams/{id}/channels/{id}/filesfolder:==> Unknown kind of segment: 'filesfolder', previous segment: '{id}'.
+272) /user/profile/anniversaries/{id}:==> Unknown kind of first segment: 'user'
+273) /user/profile/interests/{id}:==> Unknown kind of first segment: 'user'
+274) /users/{id}/calendargroup/calendars:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+275) /users/{id}/calendargroup/calendars/{id}/calendarview:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+276) /users/{id}/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+277) /users/{id}/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+278) /users/{id}/contactfolder/{id}/childfolders/{id}/.../contacts:==> Unknown kind of segment: 'contactfolder', previous segment: '{id}'.
+279) /users/{id}/creationType:==> Unknown kind of segment: 'creationType', previous segment: '{id}'.
+280) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+281) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+282) /users/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+283) /users/{id}/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+284) /users/{id}/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+285) /users/{id}/mailboxsettings/delegatemeetingmessagedeliveryoptions:==> Unknown kind of segment: 'delegatemeetingmessagedeliveryoptions', previous segment: 'mailboxsettings'.
+286) /users/{id}/mailfolders/{id}/childfolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
+287) /users/{id}/profile/account:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+288) /users/{id}/profile/anniversaries:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+289) /users/{id}/profile/educationalactivities:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+290) /users/{id}/profile/emails:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+291) /users/{id}/profile/interests:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+292) /users/{id}/profile/languages:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+293) /users/{id}/profile/names:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+294) /users/{id}/profile/phones:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+295) /users/{id}/profile/positions:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+296) /users/{id}/profile/projects:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+297) /users/{id}/profile/skills:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+298) /users/{id}/profile/webaccounts:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+299) /users/{id}/profile/websites:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+300) /users/{id}/scopedadministratorof:==> Unknown kind of segment: 'scopedadministratorof', previous segment: '{id}'.
+301) /users/{id}/trendingaround:==> Unknown kind of segment: 'trendingaround', previous segment: '{id}'.
+302) /users/{id}/workingwith:==> Unknown kind of segment: 'workingwith', previous segment: '{id}'.
+303) /groups/{id}/drive/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+304) /me/profile/account/{id}:==> Unknown kind of segment: 'profile', previous segment: 'me'.
+305) /users/{id}/profile/account/{id}:==> Unknown kind of segment: 'profile', previous segment: '{id}'.
+306) /app/calls/{id}/recordresponse:==> Unknown kind of segment: 'recordresponse', previous segment: '{id}'.
+307) /app/calls/{id}/updatemetadata:==> Unknown kind of segment: 'updatemetadata', previous segment: '{id}'.
+308) /app/calls/{id}/updaterecordingstatus:==> Unknown kind of segment: 'updaterecordingstatus', previous segment: '{id}'.
+309) /applications/{id}/removepassword:==> Unknown kind of segment: 'removepassword', previous segment: '{id}'.
+310) /communications/calls/{id}/recordresponse:==> Unknown kind of segment: 'recordresponse', previous segment: '{id}'.
+311) /communications/calls/{id}/updatemetadata:==> Unknown kind of segment: 'updatemetadata', previous segment: '{id}'.
+312) /communications/calls/{id}/updaterecordingstatus:==> Unknown kind of segment: 'updaterecordingstatus', previous segment: '{id}'.
+313) /deviceappmanagement/managedapppolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
+314) /deviceappmanagement/managedappregistrations/{id}/appliedpolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
+315) /deviceappmanagement/managedappregistrations/{id}/intendedpolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
+316) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files/{id}/commit:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+317) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files/{id}/renewupload:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+318) /deviceappmanagement/mobileapps/{id}/devicestatuses/{id}/app/revokealllicenses:==> Unknown kind of segment: 'revokealllicenses', previous segment: 'app'.
+319) /deviceappmanagement/mobileapps/{id}/devicestatuses/{id}/app/revokedevicelicense:==> Unknown kind of segment: 'revokedevicelicense', previous segment: 'app'.
+320) /deviceappmanagement/mobileapps/{id}/devicestatuses/{id}/app/revokeuserlicense:==> Unknown kind of segment: 'revokeuserlicense', previous segment: 'app'.
+321) /deviceappmanagement/mobileapps/{id}/revokealllicenses:==> Unknown kind of segment: 'revokealllicenses', previous segment: '{id}'.
+322) /deviceappmanagement/mobileapps/{id}/revokedevicelicense:==> Unknown kind of segment: 'revokedevicelicense', previous segment: '{id}'.
+323) /deviceappmanagement/mobileapps/{id}/revokeuserlicense:==> Unknown kind of segment: 'revokeuserlicense', previous segment: '{id}'.
+324) /deviceappmanagement/mobileapps/{id}/userstatuses/{id}/app/revokealllicenses:==> Unknown kind of segment: 'revokealllicenses', previous segment: 'app'.
+325) /deviceappmanagement/mobileapps/{id}/userstatuses/{id}/app/revokedevicelicense:==> Unknown kind of segment: 'revokedevicelicense', previous segment: 'app'.
+326) /deviceappmanagement/mobileapps/{id}/userstatuses/{id}/app/revokeuserlicense:==> Unknown kind of segment: 'revokeuserlicense', previous segment: 'app'.
+327) /deviceappmanagement/wdacsupplementalpolicies/{id}/assign:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+328) /deviceappmanagement/wdacsupplementalpolicies/{id}/devicestatuses/{id}/policy/assign:==> Unknown kind of segment: 'wdacsupplementalpolicies', previous segment: 'deviceappmanagement'.
+329) /devicemanagement/androidmanagedstoreaccountenterprisesettings/approveapps:==> Unknown kind of segment: 'approveapps', previous segment: 'androidmanagedstoreaccountenterprisesettings'.
+330) /devicemanagement/deviceconfigurations/{id}/extendfeatureupdatespause:==> Unknown kind of segment: 'extendfeatureupdatespause', previous segment: '{id}'.
+331) /devicemanagement/deviceconfigurations/{id}/extendqualityupdatespause:==> Unknown kind of segment: 'extendqualityupdatespause', previous segment: '{id}'.
+332) /devicemanagement/deviceconfigurations/{id}/groupassignments/{id}/deviceconfiguration/extendfeatureupdatespause:==> Unknown kind of segment: 'extendfeatureupdatespause', previous segment: 'deviceconfiguration'.
+333) /devicemanagement/deviceconfigurations/{id}/groupassignments/{id}/deviceconfiguration/extendqualityupdatespause:==> Unknown kind of segment: 'extendqualityupdatespause', previous segment: 'deviceconfiguration'.
+334) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.windowsdomainjoinconfiguration/networkaccessconfigurations/{id}/extendfeatureupdatespause:==> Unknown kind of segment: 'extendfeatureupdatespause', previous segment: '{id}'.
+335) /devicemanagement/deviceconfigurations/{id}/microsoft.graph.windowsdomainjoinconfiguration/networkaccessconfigurations/{id}/extendqualityupdatespause:==> Unknown kind of segment: 'extendqualityupdatespause', previous segment: '{id}'.
+336) /devicemanagement/devicehealthscripts/{id}/assign:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+337) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/bypassactivationlock:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+338) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/cleanwindowsdevice:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+339) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/deleteuserfromsharedappledevice:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+340) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/disablelostmode:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+341) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/enablelostmode:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+342) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/locatedevice:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+343) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/logoutsharedappledeviceactiveuser:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+344) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/playlostmodesound:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+345) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/rebootnow:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+346) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/recoverpasscode:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+347) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/remotelock:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+348) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/requestremoteassistance:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+349) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/resetpasscode:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+350) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/retire:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+351) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/revokeapplevpplicenses:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+352) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/rotatebitlockerkeys:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+353) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/rotatefilevaultkey:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+354) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/sendcustomnotificationtocompanyportal:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+355) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/setdevicename:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+356) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/shutdown:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+357) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/syncdevice:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+358) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/triggerconfigurationmanageraction:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+359) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/updatewindowsdeviceaccount:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+360) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/windowsdefenderscan:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+361) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/windowsdefenderupdatesignatures:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+362) /devicemanagement/devicehealthscripts/{id}/devicerunstates/{id}/manageddevice/wipe:==> Unknown kind of segment: 'devicehealthscripts', previous segment: 'devicemanagement'.
+363) /devicemanagement/grouppolicyconfigurations/{id}/updatedefinitionvalues:==> Unknown kind of segment: 'updatedefinitionvalues', previous segment: '{id}'.
+364) /devicemanagement/grouppolicymigrationreports/createmigrationreport:==> Unknown kind of segment: 'grouppolicymigrationreports', previous segment: 'devicemanagement'.
+365) /devicemanagement/reports/getcachedreport:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+366) /devicemanagement/reports/getdevicenoncompliancereport:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+367) /devicemanagement/reports/gethistoricalreport:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+368) /devicemanagement/reports/getpolicynoncompliancemetadata:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+369) /devicemanagement/reports/getpolicynoncompliancereport:==> Unknown kind of segment: 'reports', previous segment: 'devicemanagement'.
+370) /devicemanagement/windowsautopilotdeviceidentities/{id}/deploymentprofile/assigneddevices/{id}/updatedeviceproperties:==> Unknown kind of segment: 'updatedeviceproperties', previous segment: '{id}'.
+371) /devicemanagement/windowsautopilotdeviceidentities/{id}/updatedeviceproperties:==> Unknown kind of segment: 'updatedeviceproperties', previous segment: '{id}'.
+372) /drive/root:/{id}:/createuploadsession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+373) /education/classes/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+374) /education/me/classes/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+375) /education/me/delta:==> Unknown kind of segment: 'delta', previous segment: 'me'.
+376) /education/me/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+377) /education/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+378) /education/schools/{id}/users/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+379) /education/users/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+380) /education/users/{id}/schools/{id}/delta:==> Unknown kind of segment: 'delta', previous segment: '{id}'.
+381) /groups/{id}/follow:==> Unknown kind of segment: 'follow', previous segment: '{id}'.
+382) /informationprotection/policy/labels/{id}/evaluateclassificationresults:==> Unknown kind of segment: 'evaluateclassificationresults', previous segment: '{id}'.
+383) /me/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+384) /me/calendargroup/calendars/{id}/events/{id}/cancel:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+385) /me/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+386) /me/calendargroup/calendars/{id}/events/{id}/dismissreminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+387) /me/calendargroup/calendars/{id}/events/{id}/forward:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+388) /me/calendargroup/calendars/{id}/events/{id}/snoozereminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+389) /me/calendargroup/calendars/{id}/events/{id}/tentativelyaccept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+390) /serviceprincipals/{id}/addpassword:==> Unknown kind of segment: 'addpassword', previous segment: '{id}'.
+391) /serviceprincipals/{id}/createpasswordsinglesignoncredentials:==> Unknown kind of segment: 'createpasswordsinglesignoncredentials', previous segment: '{id}'.
+392) /serviceprincipals/{id}/deletepasswordsinglesignoncredentials:==> Unknown kind of segment: 'deletepasswordsinglesignoncredentials', previous segment: '{id}'.
+393) /serviceprincipals/{id}/getpasswordsinglesignoncredentials:==> Unknown kind of segment: 'getpasswordsinglesignoncredentials', previous segment: '{id}'.
+394) /serviceprincipals/{id}/removepassword:==> Unknown kind of segment: 'removepassword', previous segment: '{id}'.
+395) /serviceprincipals/{id}/updatepasswordsinglesignoncredentials:==> Unknown kind of segment: 'updatepasswordsinglesignoncredentials', previous segment: '{id}'.
+396) /sites/{id}/items/{id}/versions/{id}/restoreversion:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
+397) /trustframework/keysets/{id}/generatekey:==> Unknown kind of segment: 'generatekey', previous segment: '{id}'.
+398) /trustframework/keysets/{id}/getactivekey:==> Unknown kind of segment: 'getactivekey', previous segment: '{id}'.
+399) /trustframework/keysets/{id}/uploadcertificate:==> Unknown kind of segment: 'uploadcertificate', previous segment: '{id}'.
+400) /trustframework/keysets/{id}/uploadpkcs12:==> Unknown kind of segment: 'uploadpkcs12', previous segment: '{id}'.
+401) /trustframework/keysets/{id}/uploadsecret:==> Unknown kind of segment: 'uploadsecret', previous segment: '{id}'.
+402) /user/profile/educationalactivities:==> Unknown kind of first segment: 'user'
+403) /user/profile/emails:==> Unknown kind of first segment: 'user'
+404) /user/profile/interests:==> Unknown kind of first segment: 'user'
+405) /users/{id}/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+406) /users/{id}/calendargroup/calendars/{id}/events/{id}/cancel:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+407) /users/{id}/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+408) /users/{id}/calendargroup/calendars/{id}/events/{id}/dismissreminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+409) /users/{id}/calendargroup/calendars/{id}/events/{id}/forward:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+410) /users/{id}/calendargroup/calendars/{id}/events/{id}/snoozereminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+411) /users/{id}/calendargroup/calendars/{id}/events/{id}/tentativelyaccept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+412) /drives/{id}/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+413) /groups/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+414) /me/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+415) /me/drive/root:/foldera/fileb.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+416) /sites/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+417) /users/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+418) /users/{id}/drive/root:/foldera/fileb.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+419) /educationclasses/assignments/{id}/resources/{id}:==> Unknown kind of first segment: 'educationclasses'
+420) /educationclasses/assignments/{id}/submissions/{id}/resources/{id}:==> Unknown kind of first segment: 'educationclasses'
+421) /identitygovernance/entitlementmanagement/accesspackageassignmentpolicies/{id}:==> Unknown kind of first segment: 'identitygovernance'
+422) /identitygovernance/entitlementmanagement/accesspackagecatalogs/{id}:==> Unknown kind of first segment: 'identitygovernance'
+423) /identitygovernance/entitlementmanagement/accesspackages/{id}:==> Unknown kind of first segment: 'identitygovernance'
+424) /onpremisespublishingprofiles/{id}/publishedresources/{id}/agentgroups{id2}:==> Unknown kind of segment: 'agentgroups{id2}', previous segment: '{id}'.
+425) /teams/{id}/schedule/openshifts:==> Unknown kind of segment: 'openshifts', previous segment: 'schedule'.
+426) /teams/{id}/schedule/openshiftschangerequests:==> Unknown kind of segment: 'openshiftschangerequests', previous segment: 'schedule'.
+427) /comments/{id}/replies/{id}:==> Unknown kind of first segment: 'comments'
+428) /drives/{id}/items/{id}/workbook/names/{id}/range/boundingrect:==> Sequence contains no elements
+429) /drives/{id}/items/{id}/workbook/names/{id}/range/cell:==> Sequence contains no elements
+430) /drives/{id}/items/{id}/workbook/names/{id}/range/column:==> Sequence contains no elements
+431) /drives/{id}/items/{id}/workbook/names/{id}/range/intersection:==> Sequence contains no elements
+432) /drives/{id}/items/{id}/workbook/names/{id}/range/offsetrange:==> Sequence contains no elements
+433) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/boundingrect:==> Sequence contains no elements
+434) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/cell:==> Sequence contains no elements
+435) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/column:==> Sequence contains no elements
+436) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/intersection:==> Sequence contains no elements
+437) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/offsetrange:==> Sequence contains no elements
+438) /drives/{id}/items/{id}/workbook/tables/{id}/sort/fields/icon:==> Unknown kind of segment: 'icon', previous segment: 'fields'.
+439) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/boundingrect:==> Sequence contains no elements
+440) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/cell:==> Sequence contains no elements
+441) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/column:==> Sequence contains no elements
+442) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/intersection:==> Sequence contains no elements
+443) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/offsetrange:==> Sequence contains no elements
+444) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/sort/fields/icon:==> Unknown kind of segment: 'icon', previous segment: 'fields'.
+445) /educationclasses/assignments/{id}/submissions/{id}/resources:==> Unknown kind of first segment: 'educationclasses'
+446) /identitygovernance/entitlementmanagement/accesspackageassignmentpolicies:==> Unknown kind of first segment: 'identitygovernance'
+447) /identitygovernance/entitlementmanagement/accesspackageassignmentrequests:==> Unknown kind of first segment: 'identitygovernance'
+448) /identitygovernance/entitlementmanagement/accesspackageassignmentrequests/{id}:==> Unknown kind of first segment: 'identitygovernance'
+449) /identitygovernance/entitlementmanagement/accesspackageassignmentresourceroles:==> Unknown kind of first segment: 'identitygovernance'
+450) /identitygovernance/entitlementmanagement/accesspackageassignmentresourceroles/{id}:==> Unknown kind of first segment: 'identitygovernance'
+451) /identitygovernance/entitlementmanagement/accesspackageassignments:==> Unknown kind of first segment: 'identitygovernance'
+452) /identitygovernance/entitlementmanagement/accesspackagecatalogs:==> Unknown kind of first segment: 'identitygovernance'
+453) /identitygovernance/entitlementmanagement/accesspackagecatalogs/{id}/accesspackageresourceroles:==> Unknown kind of first segment: 'identitygovernance'
+454) /identitygovernance/entitlementmanagement/accesspackagecatalogs/{id}/accesspackageresources:==> Unknown kind of first segment: 'identitygovernance'
+455) /identitygovernance/entitlementmanagement/accesspackageresourcerequests:==> Unknown kind of first segment: 'identitygovernance'
+456) /identitygovernance/entitlementmanagement/accesspackages:==> Unknown kind of first segment: 'identitygovernance'
+457) /me/creationType:==> Unknown kind of segment: 'creationType', previous segment: 'me'.
+458) /search:==> Unknown kind of first segment: 'search'
+459) /synchronizationprofiles:==> Unknown kind of first segment: 'synchronizationprofiles'
+460) /synchronizationprofiles/{id}/uploadurl:==> Unknown kind of first segment: 'synchronizationprofiles'
+461) /drives/{id}/items/{id}/workbook/names/{id}/range/format/borders/itemat:==> Sequence contains no elements
+462) /drives/{id}/items/{id}/workbook/names/{id}/range/row:==> Sequence contains no elements
+463) /drives/{id}/items/{id}/workbook/tables/{id}/columns/itemat:==> Sequence contains no elements
+464) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+465) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/format/borders/itemat:==> Sequence contains no elements
+466) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/row:==> Sequence contains no elements
+467) /drives/{id}/items/{id}/workbook/tables/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+468) /drives/{id}/items/{id}/workbook/tables/{id}/rows/itemat:==> Sequence contains no elements
+469) /drives/{id}/items/{id}/workbook/tables/{id}/rows/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+470) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/itemat:==> Sequence contains no elements
+471) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+472) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/{id}/series/itemat:==> Sequence contains no elements
+473) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/{id}/series/{id}/points/itemat:==> Sequence contains no elements
+474) /drives/{id}/items/{id}/workbook/worksheets/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+475) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/format/borders/itemat:==> Sequence contains no elements
+476) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/row:==> Sequence contains no elements
+477) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/columns/itemat:==> Sequence contains no elements
+478) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/columns/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+479) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+480) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/rows/itemat:==> Sequence contains no elements
+481) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/rows/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+482) /education/classes/{id}/assignments/{id}/submissions/{id}/recall:==> Unknown kind of segment: 'recall', previous segment: '{id}'.
+483) /education/classes/{id}/assignments/{id}/submissions/{id}/release:==> Unknown kind of segment: 'release', previous segment: '{id}'.
+484) /identitygovernance/entitlementmanagement/accesspackages/{id}/accesspackageresourcerolescopes:==> Unknown kind of first segment: 'identitygovernance'
+485) /search/query:==> Unknown kind of first segment: 'search'
+486) /synchronizationprofiles/{id}/pause:==> Unknown kind of first segment: 'synchronizationprofiles'
+487) /synchronizationprofiles/{id}/reset:==> Unknown kind of first segment: 'synchronizationprofiles'
+488) /synchronizationprofiles/{id}/resume:==> Unknown kind of first segment: 'synchronizationprofiles'
+489) /synchronizationprofiles/{id}/start:==> Unknown kind of first segment: 'synchronizationprofiles'
+490) /teams/{id}/schedule/openshiftschangerequests/approve:==> Unknown kind of segment: 'openshiftschangerequests', previous segment: 'schedule'.
+491) /teams/{id}/schedule/openshiftschangerequests/decline:==> Unknown kind of segment: 'openshiftschangerequests', previous segment: 'schedule'.
+492) /application/{id}/synchronization/templates/{id}:==> Unknown kind of first segment: 'application'
+493) /me/devices/{id}/command/{id}/responsepayload:==> Unknown kind of segment: 'command', previous segment: '{id}'.
+494) /users/{id}/devices/{id}/command/{id}/responsepayload:==> Unknown kind of segment: 'command', previous segment: '{id}'.
 
 
 ***********[[Permission Parse Error]]***********
-1) microsoft.graph/financials/companies/customerPaymentJournals:==> Invalid path kind 'SingleNavigation' in 'POST'
-2) microsoft.graph/financials/companies/customerPaymentJournals/customerPayments:==> Invalid path kind 'SingleNavigation' in 'POST'
-3) microsoft.graph/financials/companies/journals:==> Invalid path kind 'SingleNavigation' in 'POST'
-4) microsoft.graph/financials/companies/journals/journalLines:==> Invalid path kind 'SingleNavigation' in 'POST'
-5) microsoft.graph/financials/companies/taxAreas:==> Invalid path kind 'SingleNavigation' in 'POST'
-6) microsoft.graph/me/drive/items/unfollow:==> Invalid path kind 'Operation' in 'DELETE'
-7) microsoft.graph/officeConfiguration/clientConfigurations:==> Invalid path kind 'SingleNavigation' in 'POST'
-8) microsoft.graph/trustFramework/keySets:==> Unknown http verb PUT
-9) microsoft.graph/trustFramework/policies:==> Unknown http verb PUT
-10) microsoft.graph/users/drive/items/unfollow:==> Invalid path kind 'Operation' in 'DELETE'
-11) microsoft.graph/drives/items/content:==> Unknown http verb PUT
-12) microsoft.graph/groups/drive/items/content:==> Unknown http verb PUT
-13) microsoft.graph/groups/photo:==> Unknown http verb PUT
-14) microsoft.graph/groups/team:==> Unknown http verb PUT
-15) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
-16) microsoft.graph/servicePrincipals/appRoleAssignedTo:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-17) microsoft.graph/sites/drive/items/content:==> Unknown http verb PUT
-18) microsoft.graph/users/contactFolders/contacts/photo:==> Unknown http verb PUT
-19) microsoft.graph/users/contacts/photo:==> Unknown http verb PUT
-20) microsoft.graph/users/drive/items/content:==> Unknown http verb PUT
-21) microsoft.graph/users/mailFolders/childFolders/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
-22) microsoft.graph/users/manager:==> Unknown http verb PUT
-23) microsoft.graph/users/photo:==> Unknown http verb PUT
-24) microsoft.graph/app/calls/participants:==> Invalid path kind 'SingleNavigation' in 'POST'
-25) microsoft.graph/applications/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
-26) microsoft.graph/communications/calls/participants:==> Invalid path kind 'SingleNavigation' in 'POST'
-27) microsoft.graph/me/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
-28) microsoft.graph/users/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
-29) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
-30) microsoft.graph/applications/synchronization/templates/schema:==> Unknown http verb PUT
-31) microsoft.graph/education/classes/assignments/rubric:==> Unknown http verb PUT
-32) microsoft.graph/groups/acceptedSenders:==> Invalid path kind 'CollectionNavigation' in 'DELETE'
-33) microsoft.graph/groups/rejectedSenders:==> Invalid path kind 'CollectionNavigation' in 'DELETE'
-34) microsoft.graph/me/activities:==> Unknown http verb PUT
-35) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
-36) microsoft.graph/servicePrincipals/synchronization/jobs/schema:==> Unknown http verb PUT
-37) microsoft.graph/teams/schedule/schedulingGroups:==> Unknown http verb PUT
-38) microsoft.graph/teams/schedule/shifts:==> Unknown http verb PUT
-39) microsoft.graph/teams/schedule/timeOffReasons:==> Unknown http verb PUT
-40) microsoft.graph/teams/schedule/timesOff:==> Unknown http verb PUT
-41) microsoft.graph/users/activities:==> Unknown http verb PUT
-42) microsoft.graph/users/activities/historyItems:==> Unknown http verb PUT
-43) microsoft.graph/onPremisesPublishingProfiles/agentGroups:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
-44) microsoft.graph/privilegedRoles/settings:==> Unknown http verb PUT
-45) microsoft.graph/teams/schedule:==> Unknown http verb PUT
+1) microsoft.graph/deviceManagement/deviceCompliancePolicies:==> Invalid path kind 'SingleNavigation' in 'POST'
+2) microsoft.graph/drives/items:==> Invalid path kind 'SingleNavigation' in 'POST'
+3) microsoft.graph/education/classes:==> Invalid path kind 'SingleNavigation' in 'POST'
+4) microsoft.graph/education/schools:==> Invalid path kind 'SingleNavigation' in 'POST'
+5) microsoft.graph/education/schools/users:==> Invalid path kind 'SingleNavigation' in 'POST'
+6) microsoft.graph/education/users:==> Invalid path kind 'SingleNavigation' in 'POST'
+7) microsoft.graph/financials/companies/customerPaymentJournals:==> Invalid path kind 'SingleNavigation' in 'POST'
+8) microsoft.graph/financials/companies/customerPaymentJournals/customerPayments:==> Invalid path kind 'SingleNavigation' in 'POST'
+9) microsoft.graph/financials/companies/journals:==> Invalid path kind 'SingleNavigation' in 'POST'
+10) microsoft.graph/financials/companies/journals/journalLines:==> Invalid path kind 'SingleNavigation' in 'POST'
+11) microsoft.graph/financials/companies/taxAreas:==> Invalid path kind 'SingleNavigation' in 'POST'
+12) microsoft.graph/me/drive/items/unfollow:==> Invalid path kind 'Operation' in 'DELETE'
+13) microsoft.graph/officeConfiguration/clientConfigurations:==> Invalid path kind 'SingleNavigation' in 'POST'
+14) microsoft.graph/teams/schedule/schedulingGroups:==> Unknown http verb PUT
+15) microsoft.graph/teams/schedule/shifts:==> Unknown http verb PUT
+16) microsoft.graph/teams/schedule/swapShiftsChangeRequests:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+17) microsoft.graph/teams/schedule/timeOffReasons:==> Unknown http verb PUT
+18) microsoft.graph/teams/schedule/timeOffRequests:==> Invalid path kind 'SingleNavigation' in 'POST'
+19) microsoft.graph/teams/schedule/timesOff:==> Unknown http verb PUT
+20) microsoft.graph/trustFramework/keySets:==> Unknown http verb PUT
+21) microsoft.graph/trustFramework/policies:==> Unknown http verb PUT
+22) microsoft.graph/users/drive/items/unfollow:==> Invalid path kind 'Operation' in 'DELETE'
+23) microsoft.graph/drives/items/content:==> Unknown http verb PUT
+24) microsoft.graph/education/me:==> Invalid path kind 'SingleNavigation' in 'POST'
+25) microsoft.graph/groups/drive/items/content:==> Unknown http verb PUT
+26) microsoft.graph/groups/photo:==> Unknown http verb PUT
+27) microsoft.graph/groups/team:==> Unknown http verb PUT
+28) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
+29) microsoft.graph/roleManagement:==> Invalid path kind 'Singleton' in 'PATCH'
+30) microsoft.graph/sites/drive/items/content:==> Unknown http verb PUT
+31) microsoft.graph/teams/schedule:==> Unknown http verb PUT
+32) microsoft.graph/users/contactFolders/contacts/photo:==> Unknown http verb PUT
+33) microsoft.graph/users/contacts/photo:==> Unknown http verb PUT
+34) microsoft.graph/users/drive/items/content:==> Unknown http verb PUT
+35) microsoft.graph/users/mailFolders/childFolders/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
+36) microsoft.graph/users/manager:==> Unknown http verb PUT
+37) microsoft.graph/users/photo:==> Unknown http verb PUT
+38) microsoft.graph/app/calls/participants:==> Invalid path kind 'SingleNavigation' in 'POST'
+39) microsoft.graph/applications/owners:==> Invalid path kind 'SingleNavigation' in 'POST'
+40) microsoft.graph/communications/calls/participants:==> Invalid path kind 'SingleNavigation' in 'POST'
+41) microsoft.graph/education/me/classes:==> Invalid path kind 'SingleNavigation' in 'POST'
+42) microsoft.graph/education/me/schools:==> Invalid path kind 'SingleNavigation' in 'POST'
+43) microsoft.graph/education/users/schools:==> Invalid path kind 'SingleNavigation' in 'POST'
+44) microsoft.graph/me/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
+45) microsoft.graph/users/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
+46) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
+47) microsoft.graph/applications/synchronization/templates/schema:==> Unknown http verb PUT
+48) microsoft.graph/education/classes/assignments/rubric:==> Unknown http verb PUT
+49) microsoft.graph/groups/acceptedSenders:==> Invalid path kind 'CollectionNavigation' in 'DELETE'
+50) microsoft.graph/groups/rejectedSenders:==> Invalid path kind 'CollectionNavigation' in 'DELETE'
+51) microsoft.graph/me/activities:==> Unknown http verb PUT
+52) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
+53) microsoft.graph/servicePrincipals/synchronization/jobs/schema:==> Unknown http verb PUT
+54) microsoft.graph/teamwork/workforceIntegrations:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+55) microsoft.graph/users/activities:==> Unknown http verb PUT
+56) microsoft.graph/users/activities/historyItems:==> Unknown http verb PUT
+57) microsoft.graph/drives/items/workbook/names/range()/format/borders:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+58) microsoft.graph/drives/items/workbook/tables/columns/range():==> Invalid path kind 'Operation' in 'PATCH'
+59) microsoft.graph/drives/items/workbook/tables/columns/range()/format/borders:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+60) microsoft.graph/drives/items/workbook/worksheets/range(address):==> Invalid path kind 'Operation' in 'PATCH'
+61) microsoft.graph/me/contactFolders/contacts/photo:==> Unknown http verb PUT
+62) microsoft.graph/me/contacts/photo:==> Unknown http verb PUT
+63) microsoft.graph/me/photo:==> Unknown http verb PUT
+64) microsoft.graph/onPremisesPublishingProfiles/agentGroups:==> Invalid path kind 'CollectionNavigation' in 'PATCH'
+65) microsoft.graph/privilegedRoles/settings:==> Unknown http verb PUT
+66) microsoft.graph/drives/items/workbook/names/range():==> Invalid path kind 'Operation' in 'PATCH'
+67) microsoft.graph/servicePrincipals/appRoleAssignedTo:==> Invalid path kind 'CollectionNavigation' in 'PATCH'

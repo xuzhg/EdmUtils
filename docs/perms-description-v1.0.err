@@ -1,363 +1,226 @@
 ***********[[Uri Parse Error]]***********
 1) /applications/{id}:==> Unknown kind of first segment: 'applications'
-2) /applications/{id}/extensionProperties/{id}:==> Unknown kind of first segment: 'applications'
-3) /me/calendarGroup/calendars/{id}:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
+2) /applications/{id}/extensionproperties/{id}:==> Unknown kind of first segment: 'applications'
+3) /me/calendargroup/calendars/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
 4) /me/calendargroup/calendars/{id}/events/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-5) /me/contactFolder/{id}/childFolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactFolder', previous segment: 'me'.
-6) /organization/{id}/certificateBasedAuthConfiguration/{id}:==> Unknown kind of segment: 'certificateBasedAuthConfiguration', previous segment: '{id}'.
-7) /users/{id}/calendarGroup/calendars/{id}:==> Unknown kind of segment: 'calendarGroup', previous segment: '{id}'.
+5) /me/contactfolder/{id}/childfolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactfolder', previous segment: 'me'.
+6) /organization/{id}/certificatebasedauthconfiguration/{id}:==> Unknown kind of segment: 'certificatebasedauthconfiguration', previous segment: '{id}'.
+7) /users/{id}/calendargroup/calendars/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
 8) /users/{id}/calendargroup/calendars/{id}/events/{id}:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-9) /users/{id}/contactFolder/{id}/childFolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactFolder', previous segment: '{id}'.
+9) /users/{id}/contactfolder/{id}/childfolders/{id}/.../contacts/{id}:==> Unknown kind of segment: 'contactfolder', previous segment: '{id}'.
 10) /applications:==> Unknown kind of first segment: 'applications'
-11) /applications/{id}/extensionProperties:==> Unknown kind of first segment: 'applications'
+11) /applications/{id}/extensionproperties:==> Unknown kind of first segment: 'applications'
 12) /applications/{id}/owners:==> Unknown kind of first segment: 'applications'
-13) /contacts:==> Unknown kind of first segment: 'contacts'
-14) /contacts/{id}:==> Unknown kind of first segment: 'contacts'
-15) /contacts/{id}/directReports:==> Unknown kind of first segment: 'contacts'
-16) /contacts/{id}/manager:==> Unknown kind of first segment: 'contacts'
-17) /contacts/{id}/memberOf:==> Unknown kind of first segment: 'contacts'
-18) /contacts/{id}/transitiveMemberOf:==> Unknown kind of first segment: 'contacts'
-19) /dataClassification/jobs:==> Unknown kind of first segment: 'dataClassification'
-20) /dataClassification/jobs/{id}:==> Unknown kind of first segment: 'dataClassification'
-21) /dataClassification/sensitiveTypes:==> Unknown kind of first segment: 'dataClassification'
-22) /dataClassification/sensitiveTypes/{id}:==> Unknown kind of first segment: 'dataClassification'
-23) /directory/deletedItems/microsoft.graph.group:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-24) /directory/deletedItems/microsoft.graph.user:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
-25) /drives/{id}/items/{id}/getActivitiesByInterval(startDateTime={value},endDateTime={value},interval={value}):==> Sequence contains no elements
-26) /drives/{id}/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
-27) /drives/{id}/root:/{id}:/children:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
-28) /groups/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-29) /groups/{id}/drive/{id}/versions:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-30) /groups/{id}/drive/{id}/versions/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-31) /groups/{id}/drive/{id}/versions/{id}/content:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-32) /me/calendarGroup/calendars:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-33) /me/calendarGroup/calendars/{id}/calendarView:==> Unknown kind of segment: 'calendarGroup', previous segment: 'me'.
-34) /me/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-35) /me/calendargroup/calendars/{id}/events/{id}/attachments:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-36) /me/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-37) /me/contactFolder/{id}/childFolders/{id}/.../contacts:==> Unknown kind of segment: 'contactFolder', previous segment: 'me'.
-38) /me/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-39) /me/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-40) /me/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-41) /me/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-42) /me/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-43) /me/mailFolders/{id}/childFolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
-44) /me/mailboxSettings/dateFormat:==> Unknown kind of segment: 'dateFormat', previous segment: 'mailboxSettings'.
-45) /me/mailboxSettings/timeFormat:==> Unknown kind of segment: 'timeFormat', previous segment: 'mailboxSettings'.
-46) /organization/{id}/certificateBasedAuthConfiguration:==> Unknown kind of segment: 'certificateBasedAuthConfiguration', previous segment: '{id}'.
-47) /sites/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-48) /sites/{id}/getActivitiesByInterval(startDateTime={value},endDateTime={value},interval={value}):==> Sequence contains no elements
-49) /sites/{id}/items/{id}/versions:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
-50) /sites/{id}/items/{id}/versions/{id}:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
-51) /sites/{id}/lists/{id}/items/{id}/getActivitiesByInterval(startDateTime={value},interval={value}):==> Sequence contains no elements
-52) /sites/{id}:/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}:'.
-53) /users/{id}/calendarGroup/calendars:==> Unknown kind of segment: 'calendarGroup', previous segment: '{id}'.
-54) /users/{id}/calendarGroup/calendars/{id}/calendarView:==> Unknown kind of segment: 'calendarGroup', previous segment: '{id}'.
-55) /users/{id}/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-56) /users/{id}/calendargroup/calendars/{id}/events/{id}/attachments:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-57) /users/{id}/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-58) /users/{id}/contactFolder/{id}/childFolders/{id}/.../contacts:==> Unknown kind of segment: 'contactFolder', previous segment: '{id}'.
-59) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-60) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
-61) /users/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-62) /users/{id}/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-63) /users/{id}/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-64) /users/{id}/mailFolders/{id}/childFolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
-65) /users/{id}/mailboxSettings/dateFormat:==> Unknown kind of segment: 'dateFormat', previous segment: 'mailboxSettings'.
-66) /users/{id}/mailboxSettings/timeFormat:==> Unknown kind of segment: 'timeFormat', previous segment: 'mailboxSettings'.
-67) /workbook/worksheets({id|name})/names:==> Unknown kind of first segment: 'workbook'
-68) /groups/{id}/drive/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
-69) /applications/{id}/addPassword:==> Unknown kind of first segment: 'applications'
-70) /applications/{id}/owners/{id}:==> Unknown kind of first segment: 'applications'
-71) /applications/{id}/removePassword:==> Unknown kind of first segment: 'applications'
-72) /contacts/{id}/checkMemberGroups:==> Unknown kind of first segment: 'contacts'
-73) /contacts/{id}/getMemberGroups:==> Unknown kind of first segment: 'contacts'
-74) /contacts/{id}/getMemberObjects:==> Unknown kind of first segment: 'contacts'
-75) /dataClassification/classifyFile:==> Unknown kind of first segment: 'dataClassification'
-76) /dataClassification/classifyText:==> Unknown kind of first segment: 'dataClassification'
-77) /me/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-78) /me/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-79) /me/calendargroup/calendars/{id}/events/{id}/dismissReminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-80) /me/calendargroup/calendars/{id}/events/{id}/snoozeReminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-81) /me/calendargroup/calendars/{id}/events/{id}/tentativelyAccept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
-82) /me/drive/root:/{id}:/createUploadSession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-83) /me/translateExchangeIds:==> Unknown kind of segment: 'translateExchangeIds', previous segment: 'me'.
-84) /sites/{id}/items/{id}/versions/{id}/restoreVersion:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
-85) /users/{id}/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-86) /users/{id}/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-87) /users/{id}/calendargroup/calendars/{id}/events/{id}/dismissReminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-88) /users/{id}/calendargroup/calendars/{id}/events/{id}/snoozeReminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-89) /users/{id}/calendargroup/calendars/{id}/events/{id}/tentativelyAccept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
-90) /users/{id}/drive/root:/{id}:/createUploadSession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-91) /users/{id}/translateExchangeIds:==> Unknown kind of segment: 'translateExchangeIds', previous segment: '{id}'.
-92) /workbook/names/add:==> Unknown kind of first segment: 'workbook'
-93) /workbook/worksheets({id|name})/names/add:==> Unknown kind of first segment: 'workbook'
-94) /drives/{id}/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-95) /groups/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-96) /me/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-97) /me/drive/root:/FolderA/FileB.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-98) /sites/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-99) /users/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
-100) /users/{id}/drive/root:/FolderA/FileB.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
-101) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-102) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files/{id}:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-103) /deviceManagement/auditEvents/{id}:==> Unknown kind of segment: 'auditEvents', previous segment: 'deviceManagement'.
-104) /deviceManagement/importedWindowsAutopilotDeviceIdentities/{id}:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentities', previous segment: 'deviceManagement'.
-105) /deviceManagement/importedWindowsAutopilotDeviceIdentityUploads/{id}:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentityUploads', previous segment: 'deviceManagement'.
-106) /deviceManagement/importedWindowsAutopilotDeviceIdentityUploads/{id}/deviceIdentities/{id}:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentityUploads', previous segment: 'deviceManagement'.
-107) /deviceAppManagement/mobileApps/{id}/contentVersions:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-108) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-109) /deviceManagement/auditEvents:==> Unknown kind of segment: 'auditEvents', previous segment: 'deviceManagement'.
-110) /deviceManagement/auditEvents/getAuditActivityTypes:==> Unknown kind of segment: 'auditEvents', previous segment: 'deviceManagement'.
-111) /deviceManagement/auditEvents/getAuditCategories:==> Unknown kind of segment: 'auditEvents', previous segment: 'deviceManagement'.
-112) /deviceManagement/importedWindowsAutopilotDeviceIdentities:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentities', previous segment: 'deviceManagement'.
-113) /deviceManagement/importedWindowsAutopilotDeviceIdentityUploads:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentityUploads', previous segment: 'deviceManagement'.
-114) /deviceManagement/importedWindowsAutopilotDeviceIdentityUploads/{id}/autopilotDeviceStream:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentityUploads', previous segment: 'deviceManagement'.
-115) /deviceManagement/importedWindowsAutopilotDeviceIdentityUploads/{id}/deviceIdentities:==> Unknown kind of segment: 'importedWindowsAutopilotDeviceIdentityUploads', previous segment: 'deviceManagement'.
-116) /workbook/application:==> Unknown kind of first segment: 'workbook'
-117) /workbook/comments:==> Unknown kind of first segment: 'workbook'
-118) /workbook/comments/{id}:==> Unknown kind of first segment: 'workbook'
-119) /workbook/comments/{id}/replies:==> Unknown kind of first segment: 'workbook'
-120) /workbook/comments/{id}/replies/{id}:==> Unknown kind of first segment: 'workbook'
-121) /workbook/names:==> Unknown kind of first segment: 'workbook'
-122) /workbook/names/{id}:==> Unknown kind of first segment: 'workbook'
-123) /workbook/names/{id}/range/boundingRect:==> Unknown kind of first segment: 'workbook'
-124) /workbook/names/{id}/range/cell:==> Unknown kind of first segment: 'workbook'
-125) /workbook/names/{id}/range/column:==> Unknown kind of first segment: 'workbook'
-126) /workbook/names/{id}/range/entireColumn:==> Unknown kind of first segment: 'workbook'
-127) /workbook/names/{id}/range/entireRow:==> Unknown kind of first segment: 'workbook'
-128) /workbook/names/{id}/range/format:==> Unknown kind of first segment: 'workbook'
-129) /workbook/names/{id}/range/format/borders:==> Unknown kind of first segment: 'workbook'
-130) /workbook/names/{id}/range/format/borders/{id}:==> Unknown kind of first segment: 'workbook'
-131) /workbook/names/{id}/range/format/fill:==> Unknown kind of first segment: 'workbook'
-132) /workbook/names/{id}/range/format/font:==> Unknown kind of first segment: 'workbook'
-133) /workbook/names/{id}/range/format/protection:==> Unknown kind of first segment: 'workbook'
-134) /workbook/names/{id}/range/intersection:==> Unknown kind of first segment: 'workbook'
-135) /workbook/names/{id}/range/lastCell:==> Unknown kind of first segment: 'workbook'
-136) /workbook/names/{id}/range/lastColumn:==> Unknown kind of first segment: 'workbook'
-137) /workbook/names/{id}/range/lastRow:==> Unknown kind of first segment: 'workbook'
-138) /workbook/names/{id}/range/offsetRange:==> Unknown kind of first segment: 'workbook'
-139) /workbook/names/{id}/range/usedRange:==> Unknown kind of first segment: 'workbook'
-140) /workbook/tables:==> Unknown kind of first segment: 'workbook'
-141) /workbook/tables/{id}:==> Unknown kind of first segment: 'workbook'
-142) /workbook/tables/{id}/columns:==> Unknown kind of first segment: 'workbook'
-143) /workbook/tables/{id}/columns/{id}:==> Unknown kind of first segment: 'workbook'
-144) /workbook/tables/{id}/columns/{id}/range:==> Unknown kind of first segment: 'workbook'
-145) /workbook/tables/{id}/columns/{id}/range/boundingRect:==> Unknown kind of first segment: 'workbook'
-146) /workbook/tables/{id}/columns/{id}/range/cell:==> Unknown kind of first segment: 'workbook'
-147) /workbook/tables/{id}/columns/{id}/range/column:==> Unknown kind of first segment: 'workbook'
-148) /workbook/tables/{id}/columns/{id}/range/entireColumn:==> Unknown kind of first segment: 'workbook'
-149) /workbook/tables/{id}/columns/{id}/range/entireRow:==> Unknown kind of first segment: 'workbook'
-150) /workbook/tables/{id}/columns/{id}/range/format:==> Unknown kind of first segment: 'workbook'
-151) /workbook/tables/{id}/columns/{id}/range/format/borders:==> Unknown kind of first segment: 'workbook'
-152) /workbook/tables/{id}/columns/{id}/range/format/borders/{id}:==> Unknown kind of first segment: 'workbook'
-153) /workbook/tables/{id}/columns/{id}/range/format/fill:==> Unknown kind of first segment: 'workbook'
-154) /workbook/tables/{id}/columns/{id}/range/format/font:==> Unknown kind of first segment: 'workbook'
-155) /workbook/tables/{id}/columns/{id}/range/format/protection:==> Unknown kind of first segment: 'workbook'
-156) /workbook/tables/{id}/columns/{id}/range/intersection:==> Unknown kind of first segment: 'workbook'
-157) /workbook/tables/{id}/columns/{id}/range/lastCell:==> Unknown kind of first segment: 'workbook'
-158) /workbook/tables/{id}/columns/{id}/range/lastColumn:==> Unknown kind of first segment: 'workbook'
-159) /workbook/tables/{id}/columns/{id}/range/lastRow:==> Unknown kind of first segment: 'workbook'
-160) /workbook/tables/{id}/columns/{id}/range/offsetRange:==> Unknown kind of first segment: 'workbook'
-161) /workbook/tables/{id}/columns/{id}/range/usedRange:==> Unknown kind of first segment: 'workbook'
-162) /workbook/tables/{id}/rows:==> Unknown kind of first segment: 'workbook'
-163) /workbook/tables/{id}/rows/{id}:==> Unknown kind of first segment: 'workbook'
-164) /workbook/tables/{id}/rows/{id}/range:==> Unknown kind of first segment: 'workbook'
-165) /workbook/tables/{id}/sort:==> Unknown kind of first segment: 'workbook'
-166) /workbook/tables/{id}/sort/fields/icon:==> Unknown kind of first segment: 'workbook'
-167) /workbook/worksheets:==> Unknown kind of first segment: 'workbook'
-168) /workbook/worksheets/{id}:==> Unknown kind of first segment: 'workbook'
-169) /workbook/worksheets/{id}/cell(row={value},column={value}):==> Unknown kind of first segment: 'workbook'
-170) /workbook/worksheets/{id}/charts:==> Unknown kind of first segment: 'workbook'
-171) /workbook/worksheets/{id}/charts/{id}:==> Unknown kind of first segment: 'workbook'
-172) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis:==> Unknown kind of first segment: 'workbook'
-173) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/format/font:==> Unknown kind of first segment: 'workbook'
-174) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/format/line:==> Unknown kind of first segment: 'workbook'
-175) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/title:==> Unknown kind of first segment: 'workbook'
-176) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis:==> Unknown kind of first segment: 'workbook'
-177) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/format/font:==> Unknown kind of first segment: 'workbook'
-178) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/format/line:==> Unknown kind of first segment: 'workbook'
-179) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/majorGridlines:==> Unknown kind of first segment: 'workbook'
-180) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/majorgridlines/format/line:==> Unknown kind of first segment: 'workbook'
-181) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/title:==> Unknown kind of first segment: 'workbook'
-182) /workbook/worksheets/{id}/charts/{id}/axes/valueAxis:==> Unknown kind of first segment: 'workbook'
-183) /workbook/worksheets/{id}/charts/{id}/axes/valueAxis/format/font:==> Unknown kind of first segment: 'workbook'
-184) /workbook/worksheets/{id}/charts/{id}/axes/valueAxis/majorGridlines:==> Unknown kind of first segment: 'workbook'
-185) /workbook/worksheets/{id}/charts/{id}/axes/valueAxis/minorGridlines:==> Unknown kind of first segment: 'workbook'
-186) /workbook/worksheets/{id}/charts/{id}/axes/valueAxis/title:==> Unknown kind of first segment: 'workbook'
-187) /workbook/worksheets/{id}/charts/{id}/dataLabels:==> Unknown kind of first segment: 'workbook'
-188) /workbook/worksheets/{id}/charts/{id}/image:==> Unknown kind of first segment: 'workbook'
-189) /workbook/worksheets/{id}/charts/{id}/image(width={value}):==> Unknown kind of first segment: 'workbook'
-190) /workbook/worksheets/{id}/charts/{id}/image(width={value},height={value}):==> Unknown kind of first segment: 'workbook'
-191) /workbook/worksheets/{id}/charts/{id}/image(width={value},height={value},fittingMode={value}):==> Unknown kind of first segment: 'workbook'
-192) /workbook/worksheets/{id}/charts/{id}/legend:==> Unknown kind of first segment: 'workbook'
-193) /workbook/worksheets/{id}/charts/{id}/series:==> Unknown kind of first segment: 'workbook'
-194) /workbook/worksheets/{id}/charts/{id}/series/{id}:==> Unknown kind of first segment: 'workbook'
-195) /workbook/worksheets/{id}/charts/{id}/series/{id}/points:==> Unknown kind of first segment: 'workbook'
-196) /workbook/worksheets/{id}/charts/{id}/series/{id}/points/{id}:==> Unknown kind of first segment: 'workbook'
-197) /workbook/worksheets/{id}/charts/{id}/title:==> Unknown kind of first segment: 'workbook'
-198) /workbook/worksheets/{id}/protection:==> Unknown kind of first segment: 'workbook'
-199) /workbook/worksheets/{id}/range:==> Unknown kind of first segment: 'workbook'
-200) /workbook/worksheets/{id}/range(address='<address>'/entireRow:==> Unknown kind of first segment: 'workbook'
-201) /workbook/worksheets/{id}/range(address={value}):==> Unknown kind of first segment: 'workbook'
-202) /workbook/worksheets/{id}/range(address={value})/boundingRect:==> Unknown kind of first segment: 'workbook'
-203) /workbook/worksheets/{id}/range(address={value})/cell:==> Unknown kind of first segment: 'workbook'
-204) /workbook/worksheets/{id}/range(address={value})/column:==> Unknown kind of first segment: 'workbook'
-205) /workbook/worksheets/{id}/range(address={value})/entireColumn:==> Unknown kind of first segment: 'workbook'
-206) /workbook/worksheets/{id}/range(address={value})/format:==> Unknown kind of first segment: 'workbook'
-207) /workbook/worksheets/{id}/range(address={value})/format/borders:==> Unknown kind of first segment: 'workbook'
-208) /workbook/worksheets/{id}/range(address={value})/format/borders/{id}:==> Unknown kind of first segment: 'workbook'
-209) /workbook/worksheets/{id}/range(address={value})/format/fill:==> Unknown kind of first segment: 'workbook'
-210) /workbook/worksheets/{id}/range(address={value})/format/font:==> Unknown kind of first segment: 'workbook'
-211) /workbook/worksheets/{id}/range(address={value})/format/protection:==> Unknown kind of first segment: 'workbook'
-212) /workbook/worksheets/{id}/range(address={value})/intersection:==> Unknown kind of first segment: 'workbook'
-213) /workbook/worksheets/{id}/range(address={value})/lastCell:==> Unknown kind of first segment: 'workbook'
-214) /workbook/worksheets/{id}/range(address={value})/lastColumn:==> Unknown kind of first segment: 'workbook'
-215) /workbook/worksheets/{id}/range(address={value})/lastRow:==> Unknown kind of first segment: 'workbook'
-216) /workbook/worksheets/{id}/range(address={value})/offsetRange:==> Unknown kind of first segment: 'workbook'
-217) /workbook/worksheets/{id}/range(address={value})/usedRange:==> Unknown kind of first segment: 'workbook'
-218) /workbook/worksheets/{id}/tables:==> Unknown kind of first segment: 'workbook'
-219) /workbook/worksheets/{id}/tables/{id}:==> Unknown kind of first segment: 'workbook'
-220) /workbook/worksheets/{id}/tables/{id}/columns:==> Unknown kind of first segment: 'workbook'
-221) /workbook/worksheets/{id}/tables/{id}/columns/{id}:==> Unknown kind of first segment: 'workbook'
-222) /workbook/worksheets/{id}/tables/{id}/rows:==> Unknown kind of first segment: 'workbook'
-223) /workbook/worksheets/{id}/tables/{id}/rows/{id}:==> Unknown kind of first segment: 'workbook'
-224) /workbook/worksheets/{id}/tables/{id}/rows/{id}/range:==> Unknown kind of first segment: 'workbook'
-225) /workbook/worksheets/{id}/tables/{id}/sort:==> Unknown kind of first segment: 'workbook'
-226) /workbook/worksheets/{id}/tables/{id}/sort/fields/icon:==> Unknown kind of first segment: 'workbook'
-227) /workbook/worksheets/{id}/usedRange:==> Unknown kind of first segment: 'workbook'
-228) /workbook/names/{id}/range:==> Unknown kind of first segment: 'workbook'
-229) /deviceAppManagement/managedAppPolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
-230) /deviceAppManagement/managedAppRegistrations/{id}/appliedPolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
-231) /deviceAppManagement/managedAppRegistrations/{id}/intendedPolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
-232) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files/{id}/commit:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-233) /deviceAppManagement/mobileApps/{id}/contentVersions/{id}/files/{id}/renewUpload:==> Unknown kind of segment: 'contentVersions', previous segment: '{id}'.
-234) /deviceAppManagement/targetedManagedAppConfigurations/{id}/targetApps:==> Sequence contains more than one element
-235) /workbook/application/calculate:==> Unknown kind of first segment: 'workbook'
-236) /workbook/closeSession:==> Unknown kind of first segment: 'workbook'
-237) /workbook/createSession:==> Unknown kind of first segment: 'workbook'
-238) /workbook/names/{id}/range/clear:==> Unknown kind of first segment: 'workbook'
-239) /workbook/names/{id}/range/delete:==> Unknown kind of first segment: 'workbook'
-240) /workbook/names/{id}/range/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-241) /workbook/names/{id}/range/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-242) /workbook/names/{id}/range/format/borders/itemAt:==> Unknown kind of first segment: 'workbook'
-243) /workbook/names/{id}/range/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-244) /workbook/names/{id}/range/insert:==> Unknown kind of first segment: 'workbook'
-245) /workbook/names/{id}/range/merge:==> Unknown kind of first segment: 'workbook'
-246) /workbook/names/{id}/range/row:==> Unknown kind of first segment: 'workbook'
-247) /workbook/names/{id}/range/sort/apply:==> Unknown kind of first segment: 'workbook'
-248) /workbook/names/{id}/range/unmerge:==> Unknown kind of first segment: 'workbook'
-249) /workbook/refreshSession:==> Unknown kind of first segment: 'workbook'
-250) /workbook/tables/add:==> Unknown kind of first segment: 'workbook'
-251) /workbook/tables/{id}/add:==> Unknown kind of first segment: 'workbook'
-252) /workbook/tables/{id}/clearFilters:==> Unknown kind of first segment: 'workbook'
-253) /workbook/tables/{id}/columns/add:==> Unknown kind of first segment: 'workbook'
-254) /workbook/tables/{id}/columns/itemAt:==> Unknown kind of first segment: 'workbook'
-255) /workbook/tables/{id}/columns/{id}/dataBodyRange:==> Unknown kind of first segment: 'workbook'
-256) /workbook/tables/{id}/columns/{id}/delete:==> Unknown kind of first segment: 'workbook'
-257) /workbook/tables/{id}/columns/{id}/filter/apply:==> Unknown kind of first segment: 'workbook'
-258) /workbook/tables/{id}/columns/{id}/filter/clear:==> Unknown kind of first segment: 'workbook'
-259) /workbook/tables/{id}/columns/{id}/headerRowRange:==> Unknown kind of first segment: 'workbook'
-260) /workbook/tables/{id}/columns/{id}/range/clear:==> Unknown kind of first segment: 'workbook'
-261) /workbook/tables/{id}/columns/{id}/range/delete:==> Unknown kind of first segment: 'workbook'
-262) /workbook/tables/{id}/columns/{id}/range/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-263) /workbook/tables/{id}/columns/{id}/range/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-264) /workbook/tables/{id}/columns/{id}/range/format/borders/itemAt:==> Unknown kind of first segment: 'workbook'
-265) /workbook/tables/{id}/columns/{id}/range/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-266) /workbook/tables/{id}/columns/{id}/range/insert:==> Unknown kind of first segment: 'workbook'
-267) /workbook/tables/{id}/columns/{id}/range/merge:==> Unknown kind of first segment: 'workbook'
-268) /workbook/tables/{id}/columns/{id}/range/row:==> Unknown kind of first segment: 'workbook'
-269) /workbook/tables/{id}/columns/{id}/range/sort/apply:==> Unknown kind of first segment: 'workbook'
-270) /workbook/tables/{id}/columns/{id}/range/unmerge:==> Unknown kind of first segment: 'workbook'
-271) /workbook/tables/{id}/columns/{id}/totalRowRange:==> Unknown kind of first segment: 'workbook'
-272) /workbook/tables/{id}/convertToRange:==> Unknown kind of first segment: 'workbook'
-273) /workbook/tables/{id}/dataBodyRange:==> Unknown kind of first segment: 'workbook'
-274) /workbook/tables/{id}/delete:==> Unknown kind of first segment: 'workbook'
-275) /workbook/tables/{id}/headerRowRange:==> Unknown kind of first segment: 'workbook'
-276) /workbook/tables/{id}/range:==> Unknown kind of first segment: 'workbook'
-277) /workbook/tables/{id}/reapplyFilters:==> Unknown kind of first segment: 'workbook'
-278) /workbook/tables/{id}/rows/add:==> Unknown kind of first segment: 'workbook'
-279) /workbook/tables/{id}/rows/itemAt:==> Unknown kind of first segment: 'workbook'
-280) /workbook/tables/{id}/rows/{id}/delete:==> Unknown kind of first segment: 'workbook'
-281) /workbook/tables/{id}/sort/apply:==> Unknown kind of first segment: 'workbook'
-282) /workbook/tables/{id}/sort/clear:==> Unknown kind of first segment: 'workbook'
-283) /workbook/tables/{id}/sort/reapply:==> Unknown kind of first segment: 'workbook'
-284) /workbook/tables/{id}/totalRowRange:==> Unknown kind of first segment: 'workbook'
-285) /workbook/worksheets/:==> Unknown kind of first segment: 'workbook'
-286) /workbook/worksheets/{id}/charts/:==> Unknown kind of first segment: 'workbook'
-287) /workbook/worksheets/{id}/charts/add:==> Unknown kind of first segment: 'workbook'
-288) /workbook/worksheets/{id}/charts/itemAt:==> Unknown kind of first segment: 'workbook'
-289) /workbook/worksheets/{id}/charts/{id}/axes/categoryaxis/format/line/clear:==> Unknown kind of first segment: 'workbook'
-290) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/format/line/clear:==> Unknown kind of first segment: 'workbook'
-291) /workbook/worksheets/{id}/charts/{id}/axes/seriesAxis/majorgridlines/format/line/clear:==> Unknown kind of first segment: 'workbook'
-292) /workbook/worksheets/{id}/charts/{id}/delete:==> Unknown kind of first segment: 'workbook'
-293) /workbook/worksheets/{id}/charts/{id}/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-294) /workbook/worksheets/{id}/charts/{id}/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-295) /workbook/worksheets/{id}/charts/{id}/legend/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-296) /workbook/worksheets/{id}/charts/{id}/legend/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-297) /workbook/worksheets/{id}/charts/{id}/series/itemAt:==> Unknown kind of first segment: 'workbook'
-298) /workbook/worksheets/{id}/charts/{id}/series/{id}/points/itemAt:==> Unknown kind of first segment: 'workbook'
-299) /workbook/worksheets/{id}/charts/{id}/setData:==> Unknown kind of first segment: 'workbook'
-300) /workbook/worksheets/{id}/charts/{id}/setPosition:==> Unknown kind of first segment: 'workbook'
-301) /workbook/worksheets/{id}/charts/{id}/title/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-302) /workbook/worksheets/{id}/charts/{id}/title/format/fill/setSolidColor:==> Unknown kind of first segment: 'workbook'
-303) /workbook/worksheets/{id}/delete:==> Unknown kind of first segment: 'workbook'
-304) /workbook/worksheets/{id}/protection/protect:==> Unknown kind of first segment: 'workbook'
-305) /workbook/worksheets/{id}/protection/unprotect:==> Unknown kind of first segment: 'workbook'
-306) /workbook/worksheets/{id}/range(address={value})/clear:==> Unknown kind of first segment: 'workbook'
-307) /workbook/worksheets/{id}/range(address={value})/delete:==> Unknown kind of first segment: 'workbook'
-308) /workbook/worksheets/{id}/range(address={value})/format/autofitColumns:==> Unknown kind of first segment: 'workbook'
-309) /workbook/worksheets/{id}/range(address={value})/format/autofitRows:==> Unknown kind of first segment: 'workbook'
-310) /workbook/worksheets/{id}/range(address={value})/format/borders/itemAt:==> Unknown kind of first segment: 'workbook'
-311) /workbook/worksheets/{id}/range(address={value})/format/fill/clear:==> Unknown kind of first segment: 'workbook'
-312) /workbook/worksheets/{id}/range(address={value})/insert:==> Unknown kind of first segment: 'workbook'
-313) /workbook/worksheets/{id}/range(address={value})/merge:==> Unknown kind of first segment: 'workbook'
-314) /workbook/worksheets/{id}/range(address={value})/row:==> Unknown kind of first segment: 'workbook'
-315) /workbook/worksheets/{id}/range(address={value})/sort/apply:==> Unknown kind of first segment: 'workbook'
-316) /workbook/worksheets/{id}/range(address={value})/unmerge:==> Unknown kind of first segment: 'workbook'
-317) /workbook/worksheets/{id}/tables/add:==> Unknown kind of first segment: 'workbook'
-318) /workbook/worksheets/{id}/tables/{id}/clearFilters:==> Unknown kind of first segment: 'workbook'
-319) /workbook/worksheets/{id}/tables/{id}/columns/add:==> Unknown kind of first segment: 'workbook'
-320) /workbook/worksheets/{id}/tables/{id}/columns/itemAt:==> Unknown kind of first segment: 'workbook'
-321) /workbook/worksheets/{id}/tables/{id}/columns/{id}/dataBodyRange:==> Unknown kind of first segment: 'workbook'
-322) /workbook/worksheets/{id}/tables/{id}/columns/{id}/delete:==> Unknown kind of first segment: 'workbook'
-323) /workbook/worksheets/{id}/tables/{id}/columns/{id}/filter/apply:==> Unknown kind of first segment: 'workbook'
-324) /workbook/worksheets/{id}/tables/{id}/columns/{id}/filter/clear:==> Unknown kind of first segment: 'workbook'
-325) /workbook/worksheets/{id}/tables/{id}/columns/{id}/headerRowRange:==> Unknown kind of first segment: 'workbook'
-326) /workbook/worksheets/{id}/tables/{id}/columns/{id}/range:==> Unknown kind of first segment: 'workbook'
-327) /workbook/worksheets/{id}/tables/{id}/columns/{id}/totalRowRange:==> Unknown kind of first segment: 'workbook'
-328) /workbook/worksheets/{id}/tables/{id}/convertToRange:==> Unknown kind of first segment: 'workbook'
-329) /workbook/worksheets/{id}/tables/{id}/dataBodyRange:==> Unknown kind of first segment: 'workbook'
-330) /workbook/worksheets/{id}/tables/{id}/delete:==> Unknown kind of first segment: 'workbook'
-331) /workbook/worksheets/{id}/tables/{id}/headerRowRange:==> Unknown kind of first segment: 'workbook'
-332) /workbook/worksheets/{id}/tables/{id}/range:==> Unknown kind of first segment: 'workbook'
-333) /workbook/worksheets/{id}/tables/{id}/reapplyFilters:==> Unknown kind of first segment: 'workbook'
-334) /workbook/worksheets/{id}/tables/{id}/rows/add:==> Unknown kind of first segment: 'workbook'
-335) /workbook/worksheets/{id}/tables/{id}/rows/itemAt:==> Unknown kind of first segment: 'workbook'
-336) /workbook/worksheets/{id}/tables/{id}/rows/{id}/delete:==> Unknown kind of first segment: 'workbook'
-337) /workbook/worksheets/{id}/tables/{id}/sort/apply:==> Unknown kind of first segment: 'workbook'
-338) /workbook/worksheets/{id}/tables/{id}/sort/clear:==> Unknown kind of first segment: 'workbook'
-339) /workbook/worksheets/{id}/tables/{id}/sort/reapply:==> Unknown kind of first segment: 'workbook'
-340) /workbook/worksheets/{id}/tables/{id}/totalRowRange:==> Unknown kind of first segment: 'workbook'
+13) /communications/onlinemeetings/:==> Unknown kind of first segment: 'communications'
+14) /contacts:==> Unknown kind of first segment: 'contacts'
+15) /contacts/{id}:==> Unknown kind of first segment: 'contacts'
+16) /contacts/{id}/directreports:==> Unknown kind of first segment: 'contacts'
+17) /contacts/{id}/manager:==> Unknown kind of first segment: 'contacts'
+18) /contacts/{id}/memberof:==> Unknown kind of first segment: 'contacts'
+19) /contacts/{id}/transitivememberof:==> Unknown kind of first segment: 'contacts'
+20) /dataClassification/jobs:==> Unknown kind of first segment: 'dataClassification'
+21) /dataClassification/jobs/{id}:==> Unknown kind of first segment: 'dataClassification'
+22) /dataClassification/sensitiveTypes:==> Unknown kind of first segment: 'dataClassification'
+23) /dataClassification/sensitiveTypes/{id}:==> Unknown kind of first segment: 'dataClassification'
+24) /directory/deleteditems/microsoft.graph.group:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+25) /directory/deleteditems/microsoft.graph.user:==> Unable to cast object of type 'Microsoft.OData.Edm.Csdl.CsdlSemantics.CsdlSemanticsEntityTypeDefinition' to type 'Microsoft.OData.Edm.IEdmCollectionType'.
+26) /drives/{id}/items/{id}/getactivitiesbyinterval(startdatetime={value},enddatetime={value},interval={value}):==> Sequence contains no elements
+27) /drives/{id}/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
+28) /drives/{id}/root:/{id}:/children:==> Unknown kind of segment: 'root:', previous segment: '{id}'.
+29) /group/{id}/settings:==> Unknown kind of first segment: 'group'
+30) /groups/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+31) /groups/{id}/drive/{id}/versions:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+32) /groups/{id}/drive/{id}/versions/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+33) /groups/{id}/drive/{id}/versions/{id}/content:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+34) /me/calendargroup/calendars:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+35) /me/calendargroup/calendars/{id}/calendarview:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+36) /me/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+37) /me/calendargroup/calendars/{id}/events/{id}/attachments:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+38) /me/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+39) /me/contactfolder/{id}/childfolders/{id}/.../contacts:==> Unknown kind of segment: 'contactfolder', previous segment: 'me'.
+40) /me/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+41) /me/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+42) /me/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+43) /me/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+44) /me/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+45) /me/mailboxsettings/dateformat:==> Unknown kind of segment: 'dateformat', previous segment: 'mailboxsettings'.
+46) /me/mailboxsettings/timeformat:==> Unknown kind of segment: 'timeformat', previous segment: 'mailboxsettings'.
+47) /me/mailfolders/{id}/childfolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
+48) /organization/{id}/certificatebasedauthconfiguration:==> Unknown kind of segment: 'certificatebasedauthconfiguration', previous segment: '{id}'.
+49) /sites/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+50) /sites/{id}/getactivitiesbyinterval(startdatetime={value},enddatetime={value},interval={value}):==> Sequence contains no elements
+51) /sites/{id}/items/{id}/versions:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
+52) /sites/{id}/items/{id}/versions/{id}:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
+53) /sites/{id}/lists/{id}/items/{id}/getactivitiesbyinterval(startdatetime={value},interval={value}):==> Sequence contains no elements
+54) /sites/{id}:/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}:'.
+55) /users/{id}/calendargroup/calendars:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+56) /users/{id}/calendargroup/calendars/{id}/calendarview:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+57) /users/{id}/calendargroup/calendars/{id}/events:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+58) /users/{id}/calendargroup/calendars/{id}/events/{id}/attachments:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+59) /users/{id}/calendargroup/calendars/{id}/events/{id}/instances:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+60) /users/{id}/contactfolder/{id}/childfolders/{id}/.../contacts:==> Unknown kind of segment: 'contactfolder', previous segment: '{id}'.
+61) /users/{id}/createdDateTime:==> Unknown kind of segment: 'createdDateTime', previous segment: '{id}'.
+62) /users/{id}/creationType:==> Unknown kind of segment: 'creationType', previous segment: '{id}'.
+63) /users/{id}/deviceKeys:==> Unknown kind of segment: 'deviceKeys', previous segment: '{id}'.
+64) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+65) /users/{id}/drive/items/{id}/thumbnails/{id}/{id}/content:==> Unknown kind of segment: '{id}', previous segment: '{id}'.
+66) /users/{id}/drive/root:/{id}:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+67) /users/{id}/drive/root:/{id}:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+68) /users/{id}/drive/root:/{id}:/permissions:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+69) /users/{id}/externalUserState:==> Unknown kind of segment: 'externalUserState', previous segment: '{id}'.
+70) /users/{id}/externalUserStateChangeDateTime:==> Unknown kind of segment: 'externalUserStateChangeDateTime', previous segment: '{id}'.
+71) /users/{id}/identities:==> Unknown kind of segment: 'identities', previous segment: '{id}'.
+72) /users/{id}/mailboxsettings/dateformat:==> Unknown kind of segment: 'dateformat', previous segment: 'mailboxsettings'.
+73) /users/{id}/mailboxsettings/timeformat:==> Unknown kind of segment: 'timeformat', previous segment: 'mailboxsettings'.
+74) /users/{id}/mailfolders/{id}/childfolders/{id}/.../messages/{id}/attachments/{id}:==> Unknown kind of segment: '...', previous segment: '{id}'.
+75) /users/{id}/preferredDataLocation:==> Unknown kind of segment: 'preferredDataLocation', previous segment: '{id}'.
+76) /users/{id}/refreshTokensValidFromDateTime:==> Unknown kind of segment: 'refreshTokensValidFromDateTime', previous segment: '{id}'.
+77) /groups/{id}/drive/{id}:==> Unknown kind of segment: '{id}', previous segment: 'drive'.
+78) /applications/{id}/addpassword:==> Unknown kind of first segment: 'applications'
+79) /applications/{id}/owners/{id}:==> Unknown kind of first segment: 'applications'
+80) /applications/{id}/removepassword:==> Unknown kind of first segment: 'applications'
+81) /communications/calls:==> Unknown kind of first segment: 'communications'
+82) /communications/calls/57dab8b1894c409ab240bd8beae78896/answer:==> Unknown kind of first segment: 'communications'
+83) /communications/calls/7531d31f-d10d-44de-802f-c569dbca451c/participants/invite:==> Unknown kind of first segment: 'communications'
+84) /communications/calls/ab6233a5-20b7-4c5e-bea2-ce56c9776429/participants/invite:==> Unknown kind of first segment: 'communications'
+85) /communications/calls/{id}/answer:==> Unknown kind of first segment: 'communications'
+86) /communications/calls/{id}/changescreensharingrole:==> Unknown kind of first segment: 'communications'
+87) /communications/calls/{id}/participants/invite:==> Unknown kind of first segment: 'communications'
+88) /communications/calls/{id}/recordresponse:==> Unknown kind of first segment: 'communications'
+89) /communications/calls/{id}/redirect:==> Unknown kind of first segment: 'communications'
+90) /communications/calls/{id}/subscribetotone:==> Unknown kind of first segment: 'communications'
+91) /communications/calls/{id}/transfer:==> Unknown kind of first segment: 'communications'
+92) /contacts/{id}/checkmembergroups:==> Unknown kind of first segment: 'contacts'
+93) /contacts/{id}/getmembergroups:==> Unknown kind of first segment: 'contacts'
+94) /contacts/{id}/getmemberobjects:==> Unknown kind of first segment: 'contacts'
+95) /dataClassification/classifyFile:==> Unknown kind of first segment: 'dataClassification'
+96) /dataClassification/classifyText:==> Unknown kind of first segment: 'dataClassification'
+97) /devices/{id}/checkmemberobjects:==> Unknown kind of segment: 'checkmemberobjects', previous segment: '{id}'.
+98) /groups/{id}/checkmemberobjects:==> Unknown kind of segment: 'checkmemberobjects', previous segment: '{id}'.
+99) /me/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+100) /me/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+101) /me/calendargroup/calendars/{id}/events/{id}/dismissreminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+102) /me/calendargroup/calendars/{id}/events/{id}/snoozereminder:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+103) /me/calendargroup/calendars/{id}/events/{id}/tentativelyaccept:==> Unknown kind of segment: 'calendargroup', previous segment: 'me'.
+104) /me/checkmemberobjects:==> Unknown kind of segment: 'checkmemberobjects', previous segment: 'me'.
+105) /me/drive/root:/{id}:/createuploadsession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+106) /me/translateexchangeids:==> Unknown kind of segment: 'translateexchangeids', previous segment: 'me'.
+107) /sites/{id}/items/{id}/versions/{id}/restoreversion:==> Unknown kind of segment: 'versions', previous segment: '{id}'.
+108) /users/{id}/calendargroup/calendars/{id}/events/{id}/accept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+109) /users/{id}/calendargroup/calendars/{id}/events/{id}/decline:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+110) /users/{id}/calendargroup/calendars/{id}/events/{id}/dismissreminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+111) /users/{id}/calendargroup/calendars/{id}/events/{id}/snoozereminder:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+112) /users/{id}/calendargroup/calendars/{id}/events/{id}/tentativelyaccept:==> Unknown kind of segment: 'calendargroup', previous segment: '{id}'.
+113) /users/{id}/checkmemberobjects:==> Unknown kind of segment: 'checkmemberobjects', previous segment: '{id}'.
+114) /users/{id}/drive/root:/{id}:/createuploadsession:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+115) /users/{id}/translateexchangeids:==> Unknown kind of segment: 'translateexchangeids', previous segment: '{id}'.
+116) /drives/{id}/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+117) /groups/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+118) /me/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+119) /me/drive/root:/foldera/fileb.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+120) /sites/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+121) /users/{id}/drive/items/{id}:/{id}:/content:==> Unknown kind of segment: '{id}:', previous segment: '{id}:'.
+122) /users/{id}/drive/root:/foldera/fileb.txt:/content:==> Unknown kind of segment: 'root:', previous segment: 'drive'.
+123) /deviceappmanagement/mobileapps/{id}/contentversions/{id}:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+124) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files/{id}:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+125) /devicemanagement/auditevents/{id}:==> Unknown kind of segment: 'auditevents', previous segment: 'devicemanagement'.
+126) /devicemanagement/importedwindowsautopilotdeviceidentities/{id}:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentities', previous segment: 'devicemanagement'.
+127) /devicemanagement/importedwindowsautopilotdeviceidentityuploads/{id}:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentityuploads', previous segment: 'devicemanagement'.
+128) /devicemanagement/importedwindowsautopilotdeviceidentityuploads/{id}/deviceidentities/{id}:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentityuploads', previous segment: 'devicemanagement'.
+129) /deviceappmanagement/mobileapps/{id}/contentversions:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+130) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+131) /devicemanagement/auditevents:==> Unknown kind of segment: 'auditevents', previous segment: 'devicemanagement'.
+132) /devicemanagement/auditevents/getauditactivitytypes:==> Unknown kind of segment: 'auditevents', previous segment: 'devicemanagement'.
+133) /devicemanagement/auditevents/getauditcategories:==> Unknown kind of segment: 'auditevents', previous segment: 'devicemanagement'.
+134) /devicemanagement/importedwindowsautopilotdeviceidentities:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentities', previous segment: 'devicemanagement'.
+135) /devicemanagement/importedwindowsautopilotdeviceidentityuploads:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentityuploads', previous segment: 'devicemanagement'.
+136) /devicemanagement/importedwindowsautopilotdeviceidentityuploads/{id}/autopilotdevicestream:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentityuploads', previous segment: 'devicemanagement'.
+137) /devicemanagement/importedwindowsautopilotdeviceidentityuploads/{id}/deviceidentities:==> Unknown kind of segment: 'importedwindowsautopilotdeviceidentityuploads', previous segment: 'devicemanagement'.
+138) /drives/{id}/items/{id}/workbook/names/{id}/range/boundingrect:==> Sequence contains no elements
+139) /drives/{id}/items/{id}/workbook/names/{id}/range/cell:==> Sequence contains no elements
+140) /drives/{id}/items/{id}/workbook/names/{id}/range/column:==> Sequence contains no elements
+141) /drives/{id}/items/{id}/workbook/names/{id}/range/intersection:==> Sequence contains no elements
+142) /drives/{id}/items/{id}/workbook/names/{id}/range/offsetrange:==> Sequence contains no elements
+143) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/boundingrect:==> Sequence contains no elements
+144) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/cell:==> Sequence contains no elements
+145) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/column:==> Sequence contains no elements
+146) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/intersection:==> Sequence contains no elements
+147) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/offsetrange:==> Sequence contains no elements
+148) /drives/{id}/items/{id}/workbook/tables/{id}/sort/fields/icon:==> Unknown kind of segment: 'icon', previous segment: 'fields'.
+149) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address='<address>'/entirerow:==> Invalid identifier range(address='<address>', cannot find the end character ')'
+150) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/boundingrect:==> Sequence contains no elements
+151) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/cell:==> Sequence contains no elements
+152) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/column:==> Sequence contains no elements
+153) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/intersection:==> Sequence contains no elements
+154) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/offsetrange:==> Sequence contains no elements
+155) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/sort/fields/icon:==> Unknown kind of segment: 'icon', previous segment: 'fields'.
+156) /me/createdDateTime:==> Unknown kind of segment: 'createdDateTime', previous segment: 'me'.
+157) /me/creationType:==> Unknown kind of segment: 'creationType', previous segment: 'me'.
+158) /me/deviceKeys:==> Unknown kind of segment: 'deviceKeys', previous segment: 'me'.
+159) /me/externalUserState:==> Unknown kind of segment: 'externalUserState', previous segment: 'me'.
+160) /me/externalUserStateChangeDateTime:==> Unknown kind of segment: 'externalUserStateChangeDateTime', previous segment: 'me'.
+161) /me/findRoomLists:==> Unknown kind of segment: 'findRoomLists', previous segment: 'me'.
+162) /me/findRooms:==> Unknown kind of segment: 'findRooms', previous segment: 'me'.
+163) /me/identities:==> Unknown kind of segment: 'identities', previous segment: 'me'.
+164) /me/preferredDataLocation:==> Unknown kind of segment: 'preferredDataLocation', previous segment: 'me'.
+165) /me/refreshTokensValidFromDateTime:==> Unknown kind of segment: 'refreshTokensValidFromDateTime', previous segment: 'me'.
+166) /teams/{id}/channels/{id}/members:==> Unknown kind of segment: 'members', previous segment: '{id}'.
+167) /deviceappmanagement/managedapppolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
+168) /deviceappmanagement/managedappregistrations/{id}/appliedpolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
+169) /deviceappmanagement/managedappregistrations/{id}/intendedpolicies/{id}/assign:==> Unknown kind of segment: 'assign', previous segment: '{id}'.
+170) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files/{id}/commit:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+171) /deviceappmanagement/mobileapps/{id}/contentversions/{id}/files/{id}/renewupload:==> Unknown kind of segment: 'contentversions', previous segment: '{id}'.
+172) /deviceappmanagement/targetedmanagedappconfigurations/{id}/targetapps:==> Sequence contains more than one element
+173) /drives/{id}/items/{id}/workbook/names/{id}/range/format/borders/itemat:==> Sequence contains no elements
+174) /drives/{id}/items/{id}/workbook/names/{id}/range/row:==> Sequence contains no elements
+175) /drives/{id}/items/{id}/workbook/tables/{id}/add:==> Unknown kind of segment: 'add', previous segment: '{id}'.
+176) /drives/{id}/items/{id}/workbook/tables/{id}/columns/itemat:==> Sequence contains no elements
+177) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+178) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/format/borders/itemat:==> Sequence contains no elements
+179) /drives/{id}/items/{id}/workbook/tables/{id}/columns/{id}/range/row:==> Sequence contains no elements
+180) /drives/{id}/items/{id}/workbook/tables/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+181) /drives/{id}/items/{id}/workbook/tables/{id}/rows/itemat:==> Sequence contains no elements
+182) /drives/{id}/items/{id}/workbook/tables/{id}/rows/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+183) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/itemat:==> Sequence contains no elements
+184) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+185) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/{id}/series/itemat:==> Sequence contains no elements
+186) /drives/{id}/items/{id}/workbook/worksheets/{id}/charts/{id}/series/{id}/points/itemat:==> Sequence contains no elements
+187) /drives/{id}/items/{id}/workbook/worksheets/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+188) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/format/borders/itemat:==> Sequence contains no elements
+189) /drives/{id}/items/{id}/workbook/worksheets/{id}/range(address={value})/row:==> Sequence contains no elements
+190) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/columns/itemat:==> Sequence contains no elements
+191) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/columns/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+192) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+193) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/rows/itemat:==> Sequence contains no elements
+194) /drives/{id}/items/{id}/workbook/worksheets/{id}/tables/{id}/rows/{id}/delete:==> Unknown kind of segment: 'delete', previous segment: '{id}'.
+195) /me/onlinemeetings:==> Unknown kind of segment: 'onlinemeetings', previous segment: 'me'.
+196) /users/{id}/onlinemeetings:==> Unknown kind of segment: 'onlinemeetings', previous segment: '{id}'.
 
 
 ***********[[Permission Parse Error]]***********
 1) microsoft.graph/directory/deletedItems:==> Invalid path kind 'SingleNavigation' in 'POST'
-2) microsoft.graph/drives/items/content:==> Unknown http verb PUT
-3) microsoft.graph/groups/drive/items/content:==> Unknown http verb PUT
-4) microsoft.graph/groups/photo:==> Unknown http verb PUT
-5) microsoft.graph/groups/team:==> Unknown http verb PUT
-6) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
-7) microsoft.graph/sites/drive/items/content:==> Unknown http verb PUT
-8) microsoft.graph/users/contactFolders/contacts/photo:==> Unknown http verb PUT
-9) microsoft.graph/users/contacts/photo:==> Unknown http verb PUT
-10) microsoft.graph/users/drive/items/content:==> Unknown http verb PUT
-11) microsoft.graph/users/mailFolders/childFolders/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
-12) microsoft.graph/users/manager:==> Unknown http verb PUT
-13) microsoft.graph/users/photo:==> Unknown http verb PUT
-14) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
-15) microsoft.graph/me/activities:==> Unknown http verb PUT
-16) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
-17) microsoft.graph/users/activities:==> Unknown http verb PUT
-18) microsoft.graph/users/activities/historyItems:==> Unknown http verb PUT
-19) microsoft.graph/deviceAppManagement:==> Invalid path kind 'Singleton' in 'PATCH'
+2) microsoft.graph/drives/items:==> Invalid path kind 'SingleNavigation' in 'POST'
+3) microsoft.graph/drives/items/content:==> Unknown http verb PUT
+4) microsoft.graph/groups/drive/items/content:==> Unknown http verb PUT
+5) microsoft.graph/groups/photo:==> Unknown http verb PUT
+6) microsoft.graph/groups/team:==> Unknown http verb PUT
+7) microsoft.graph/me/drive/items/content:==> Unknown http verb PUT
+8) microsoft.graph/sites/drive/items/content:==> Unknown http verb PUT
+9) microsoft.graph/users/contactFolders/contacts/photo:==> Unknown http verb PUT
+10) microsoft.graph/users/contacts/photo:==> Unknown http verb PUT
+11) microsoft.graph/users/drive/items/content:==> Unknown http verb PUT
+12) microsoft.graph/users/mailFolders/childFolders/messages/attachments:==> Invalid path kind 'SingleNavigation' in 'POST'
+13) microsoft.graph/users/manager:==> Unknown http verb PUT
+14) microsoft.graph/users/photo:==> Unknown http verb PUT
+15) microsoft.graph/appCatalogs/teamsApps:==> Unknown http verb PUT
+16) microsoft.graph/me/activities:==> Unknown http verb PUT
+17) microsoft.graph/me/activities/historyItems:==> Unknown http verb PUT
+18) microsoft.graph/users/activities:==> Unknown http verb PUT
+19) microsoft.graph/users/activities/historyItems:==> Unknown http verb PUT
+20) microsoft.graph/deviceAppManagement:==> Invalid path kind 'Singleton' in 'PATCH'
+21) microsoft.graph/drives/items/workbook/tables/columns/range():==> Invalid path kind 'Operation' in 'PATCH'
+22) microsoft.graph/drives/items/workbook/worksheets/range(address):==> Invalid path kind 'Operation' in 'PATCH'
+23) microsoft.graph/me/contactFolders/contacts/photo:==> Unknown http verb PUT
+24) microsoft.graph/me/contacts/photo:==> Unknown http verb PUT
+25) microsoft.graph/me/photo:==> Unknown http verb PUT
+26) microsoft.graph/drives/items/workbook/names/range():==> Invalid path kind 'Operation' in 'PATCH'
