@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VocabularyTemplate": {
+      "commandName": "Project",
+      "commandLineArgs": "E:\\github\\xuzhg\\EdmUtils\\docs\\graph-beta.xml"
+    }
+  }
+}
