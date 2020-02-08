@@ -1,0 +1,72 @@
+﻿<Window x:Class="EdmWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EdmWPF"
+        mc:Ignorable="d"
+        Title="OData Term" Height="650" Width="450">
+    <Border Padding="5">
+      <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="28"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <GroupBox Header="Edm Model" BorderBrush="Gray" BorderThickness="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel>
+                    <RadioButton Click="DefaultEdmModelRadioButton_Click" Margin="2, 5, 0, 0" x:Name="defaultModelButton" Content="Default Model" GroupName="EdmModelSelector"/>
+                    <Grid Margin="2, 4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                            <RadioButton x:Name="customModelButton" Click="EdmModelRadioButton_Click" Grid.Column="0" Content="Custom Model" VerticalAlignment="Center" GroupName="EdmModelSelector"/>
+                            <TextBox Grid.Column="1" x:Name="EdmFileNameTextBox" IsReadOnly="True" Margin="4, 0, 4, 0"/>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Namespace"  FontWeight="Bold" Margin="2, 4, 0, 0"/>
+                <ComboBox Margin="2, 2" x:Name="NamesapceComboBox" SelectionChanged="NamesapceComboBox_SelectionChanged" IsReadOnly="True" /> 
+                <!--<ComboBox Margin="2, 2" x:Name="NamesapceComboBox" ItemsSource="{Binding Namespaces}"/> -->
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Term Name" FontWeight="Bold" Margin="2, 4, 0, 0"/>
+                <ComboBox Margin="2, 2" x:Name="TermNameComboBox" SelectionChanged="TermNameComboBox_SelectionChanged" IsReadOnly="True" />
+                <!--<ComboBox Margin="2, 2" x:Name="TermNameComboBox" ItemsSource="{Binding TermNames}" />-->
+        </StackPanel>
+        <Grid Margin="0, 4" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <RadioButton Tag="xml" x:Name="xmlRadioBtn" Click="OutputTypeRadioButton_Click" Grid.Column="0" Content="XML" HorizontalAlignment="Center"/>
+            <RadioButton Tag="json" x:Name="jsonRadioBtn" Click="OutputTypeRadioButton_Click" Grid.Column="1" Content="JSON" HorizontalAlignment="Center"/>
+            <RadioButton Tag="yaml" x:Name="yamlRadioBtn" Click="OutputTypeRadioButton_Click" Grid.Column="2" Content="YAML" HorizontalAlignment="Center"/>
+        </Grid>
+<!--
+        <TextBox Grid.Row="4" Margin="3" x:Name="TermOutputTextBox"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding Result}"/>
+-->
+         <TextBox Grid.Row="4" Margin="3" x:Name="TermOutputTextBox"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+          
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5" 
+                HorizontalAlignment="Right">
+            <Button Content="Save" Grid.Column="1" Grid.Row="5" Width="100" Margin="3" />
+            <Button Content="Exit" Grid.Column="1" Grid.Row="5" Width="100" 
+                HorizontalAlignment="Right" Margin="3"></Button>
+        </StackPanel>
+        </Grid>
+
+    </Border>
+</Window>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdmWPF", "EdmWPF\EdmWPF.csproj", "{613C4EB6-6428-4A4E-8C56-ED7E01B3F91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdmUtil", "EdmUtil\EdmUtil.csproj", "{04D800D8-7CCE-4F91-80FB-87F724B4361B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{613C4EB6-6428-4A4E-8C56-ED7E01B3F91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613C4EB6-6428-4A4E-8C56-ED7E01B3F91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613C4EB6-6428-4A4E-8C56-ED7E01B3F91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613C4EB6-6428-4A4E-8C56-ED7E01B3F91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D800D8-7CCE-4F91-80FB-87F724B4361B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D800D8-7CCE-4F91-80FB-87F724B4361B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D800D8-7CCE-4F91-80FB-87F724B4361B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D800D8-7CCE-4F91-80FB-87F724B4361B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {810BBE07-A399-4B2D-8511-377F901C1C1F}
+	EndGlobalSection
+EndGlobal
