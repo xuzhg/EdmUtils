@@ -151,10 +151,8 @@ namespace Microsoft.OData.EdmUtils
             IList<PathSegment> path, PathParserSettings settings)
         {
             IEdmNavigationSource source = model.ResolveNavigationSource(identifier, settings.EnableCaseInsensitive);
-            IEdmEntitySet entitySet = source as IEdmEntitySet;
-            IEdmSingleton singleton = source as IEdmSingleton;
 
-            if (entitySet != null)
+            if (source is IEdmEntitySet entitySet)
             {
                 path.Add(new EntitySetSegment(entitySet, identifier));
 
@@ -169,7 +167,7 @@ namespace Microsoft.OData.EdmUtils
 
                 return true;
             }
-            else if (singleton != null)
+            else if (source is IEdmSingleton singleton)
             {
                 path.Add(new SingletonSegment(singleton, identifier));
 
@@ -194,7 +192,7 @@ namespace Microsoft.OData.EdmUtils
         {
             // split the parameter key/value pair
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> parameters, out string remaining);
-            IList<string> parameterNames = parameters == null ? null : parameters.Keys.ToList();
+            IList<string> parameterNames = parameters?.Keys.ToList();
 
             IEdmOperationImport operationImport = OperationHelper.ResolveOperationImports(identifier, parameterNames, model, settings.EnableCaseInsensitive);
             if (operationImport != null)
@@ -233,8 +231,7 @@ namespace Microsoft.OData.EdmUtils
                 return false;
             }
 
-            IEdmStructuredType structuredType = preSegment.EdmType as IEdmStructuredType;
-            if (structuredType == null)
+            if (!(preSegment.EdmType is IEdmStructuredType structuredType))
             {
                 return false;
             }
@@ -253,8 +250,7 @@ namespace Microsoft.OData.EdmUtils
                 IEdmNavigationSource navigationSource = null;
                 if (preSegment.NavigationSource != null)
                 {
-                    IEdmPathExpression bindingPath;
-                    navigationSource = preSegment.NavigationSource.FindNavigationTarget(navigationProperty, path, out bindingPath);
+                    navigationSource = preSegment.NavigationSource.FindNavigationTarget(navigationProperty, path, out _);
                 }
 
                 // Relationship between TargetMultiplicity and navigation property:
@@ -295,8 +291,7 @@ namespace Microsoft.OData.EdmUtils
                 return false;
             }
 
-            IEdmEntityType targetEntityType;
-            if (!preSegment.EdmType.TryGetEntityType(out targetEntityType))
+            if (!preSegment.EdmType.TryGetEntityType(out var targetEntityType))
             {
                 // key segment only apply to collection of entity
                 return false;
@@ -369,8 +364,7 @@ namespace Microsoft.OData.EdmUtils
                 return false;
             }
 
-            IEdmType targetEdmType = schemaType as IEdmType;
-            if (targetEdmType == null)
+            if (!(schemaType is IEdmType targetEdmType))
             {
                 return false;
             }
@@ -392,16 +386,14 @@ namespace Microsoft.OData.EdmUtils
             IEdmType actualTypeOfTheTypeSegment = targetEdmType;
             if (preSegment.EdmType.TypeKind == EdmTypeKind.Collection)
             {
-                var actualEntityTypeOfTheTypeSegment = targetEdmType as IEdmEntityType;
-                if (actualEntityTypeOfTheTypeSegment != null)
+                if (targetEdmType is IEdmEntityType actualEntityTypeOfTheTypeSegment)
                 {
                     actualTypeOfTheTypeSegment = new EdmCollectionType(new EdmEntityTypeReference(actualEntityTypeOfTheTypeSegment, isNullable));
                 }
                 else
                 {
                     // Complex collection supports type cast too.
-                    var actualComplexTypeOfTheTypeSegment = actualTypeOfTheTypeSegment as IEdmComplexType;
-                    if (actualComplexTypeOfTheTypeSegment != null)
+                    if (actualTypeOfTheTypeSegment is IEdmComplexType actualComplexTypeOfTheTypeSegment)
                     {
                         actualTypeOfTheTypeSegment = new EdmCollectionType(new EdmComplexTypeReference(actualComplexTypeOfTheTypeSegment, isNullable));
                     }
@@ -438,7 +430,7 @@ namespace Microsoft.OData.EdmUtils
 
             // operation
             parenthesisExpressions.ExtractKeyValuePairs(out IDictionary<string, string> parameters, out string remaining);
-            IList<string> parameterNames = parameters == null ? null : parameters.Keys.ToList();
+            IList<string> parameterNames = parameters?.Keys.ToList();
 
             IEdmOperation operation = OperationHelper.ResolveOperations(identifier, parameterNames, bindingType, model, settings.EnableCaseInsensitive);
             if (operation != null)
@@ -446,7 +438,7 @@ namespace Microsoft.OData.EdmUtils
                 IEdmEntitySetBase targetset = null;
                 if (operation.ReturnType != null)
                 {
-                    IEdmNavigationSource source = preSegment == null ? null : preSegment.NavigationSource;
+                    IEdmNavigationSource source = preSegment.NavigationSource;
                     targetset = operation.GetTargetEntitySet(source, model);
                 }
 
