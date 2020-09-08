@@ -160,13 +160,11 @@ namespace AnnotationGenerator
         // todo hook up to gmm here
         private static IList<InputArg> RetrieveAllDocs()
         {
-            string currentPath = "D:\\Users\\edavi\\sources\\csharp\\permisions\\EdmUtils\\docs";
+            string currentPath = Directory.GetCurrentDirectory(); 
             Console.WriteLine("CurrentDirectory:" + currentPath);
-            int start = currentPath.IndexOf(@"\Annotation\AnnotationWriter");
+            int start = currentPath.IndexOf(@"\Annotation\AnnotationGenerator");
             currentPath = currentPath.Substring(0, start + 1) + @"docs\";
-
             IList<InputArg> inputArgs = new List<InputArg>();
-            currentPath = "D:\\Users\\edavi\\sources\\csharp\\permisions\\EdmUtils\\docs";
 
             IDictionary<string, string> xmlDics = new Dictionary<string, string>();
             foreach (var xmlFile in Directory.EnumerateFiles(currentPath, "*.xml"))
