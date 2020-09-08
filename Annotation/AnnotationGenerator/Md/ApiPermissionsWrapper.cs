@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Microsoft.OData.Edm;
@@ -95,32 +96,56 @@ namespace AnnotationGenerator.MD
         /// </summary>
         /// <param name="fileName">The permissions files.</param>
         /// <returns>the ApiPermissionsWrapper</returns>
-        public static ApiPermissionsWrapper LoadAll(string fileName)
+        public static ApiPermissionsWrapper LoadFromFile(string fileName)
         {
-            ApiPermissionsWrapper wrapper = new ApiPermissionsWrapper();
             try
             {
                 string json = File.ReadAllText(fileName);
-                JObject jObj = JObject.Parse(json);
-
-                JProperty property = jObj.Property("ApiPermissions");
-                if (property != null)
-                {
-                    // ApiPermissions
-                    wrapper.ApiPermissions = LoadTopLevelProperty<ApiPermissionType>(jObj, "ApiPermissions");
-
-                    // PermissionSchemes
-                    wrapper.PermissionsByScheme = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
-                }
-                else
-                {
-                    wrapper.ApiPermissions = LoadPermissions(jObj);
-                }
+                return LoadFromString(json);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static ApiPermissionsWrapper LoadFromStream(Stream stream)
+        {
+            Debug.Assert(stream != null, "Steam should not be null");
+            try
+            {
+                string json = new StreamReader(stream).ReadToEnd();
+                return LoadFromString(json);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static ApiPermissionsWrapper LoadFromString(string json)
+        {
+            ApiPermissionsWrapper wrapper = new ApiPermissionsWrapper();
+            JObject jObj = JObject.Parse(json);
+
+            JProperty property = jObj.Property("ApiPermissions");
+            if (property != null)
+            {
+                // ApiPermissions
+                wrapper.ApiPermissions = LoadTopLevelProperty<ApiPermissionType>(jObj, "ApiPermissions");
+
+                // PermissionSchemes
+                wrapper.PermissionsByScheme = LoadTopLevelProperty<ApiPermissionsBySchemeType>(jObj, "PermissionSchemes");
+            }
+            else
+            {
+                wrapper.ApiPermissions = LoadPermissions(jObj);
             }
 
             return wrapper;
@@ -216,7 +241,7 @@ namespace AnnotationGenerator.MD
         private void TryFindPreviousPath(KeyValuePair<UriPath, IList<ApiPermissionType>> append,
             KeyValuePair<UriPath, IList<ApiPermissionType>> loopUp, string propertyName)
         {
-            foreach(var item in loopUp.Value)
+            foreach (var item in loopUp.Value)
             {
                 var sameHttpVerbs = append.Value.Where(a => a.HttpVerb == item.HttpVerb).ToList();
                 if (sameHttpVerbs.Count > 1)
@@ -233,7 +258,7 @@ namespace AnnotationGenerator.MD
 
         private void AppendTheRestrictedProperty(ApiPermissionType append, ApiPermissionType loopUp, string propertyName)
         {
-            foreach(var scope in append.DelegatedWork)
+            foreach (var scope in append.DelegatedWork)
             {
                 if (!loopUp.DelegatedWork.Any(a => a == scope))
                 {
@@ -247,7 +272,7 @@ namespace AnnotationGenerator.MD
                 }
             }
 
-            foreach(var scope in append.DelegatedPersonal)
+            foreach (var scope in append.DelegatedPersonal)
             {
                 if (!loopUp.DelegatedPersonal.Any(a => a == scope))
                 {
