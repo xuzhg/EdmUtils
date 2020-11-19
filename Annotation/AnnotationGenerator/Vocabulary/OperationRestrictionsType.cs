@@ -14,7 +14,7 @@ namespace AnnotationGenerator.Vocabulary
         public virtual void Write(XmlWriter writer)
         {
             // Permissions
-            writer.WriteCollectionProperty("Permissions", Permissions);
+            writer.WriteCollectionProperty("Permissions", Permissions, (w, t) => w.WriteRecord(t));
         }
     }
 }
