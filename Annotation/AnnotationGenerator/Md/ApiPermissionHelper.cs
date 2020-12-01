@@ -109,6 +109,7 @@ namespace AnnotationGenerator
                     record = CreateGetPermissionRecord(pathKind);
                     break;
                 case "PATCH":
+                case "PUT":
                     record = CreatePatchPermissionRecord(pathKind);
                     break;
                 case "POST":

@@ -6,18 +6,19 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Linq;
 using AnnotationGenerator.MD;
-using AnnotationGenerator.Terms;
-using AnnotationGenerator.Vocabulary;
 using Microsoft.OData.Edm;
 using Microsoft.OData.Edm.Csdl;
+using Microsoft.OData.EdmUtils;
+using Microsoft.OData.EdmUtils.Segments;
 
 namespace AnnotationGenerator
 {
     class Program
     {
-        // args[0] : the api permssion file, it's json
+        // args[0] : the api permission file, it's json
         // args[1] : the related csdl file, it's xml
         // args[2] : the output file
         static void Main(string[] args)
@@ -54,7 +55,7 @@ namespace AnnotationGenerator
         {
             // Load the permission data : Dictionary<string, PermissionType>
             Console.WriteLine($"Processing : {inputArg.PermissionFileName}");
-            ApiPermissionsWrapper wrapper = ApiPermissionsWrapper.LoadAll(inputArg.PermissionFileName);
+            ApiPermissionsWrapper wrapper = ApiPermissionsWrapper.LoadFromFile(inputArg.PermissionFileName);
             if (wrapper != null)
             {
                 Console.WriteLine($"Loaded permission successful! Totally: {wrapper.ApiPermissions.Count} + {wrapper.PermissionsByScheme?.Count}");
@@ -68,6 +69,11 @@ namespace AnnotationGenerator
             // load csdl file
             Console.WriteLine($"Processing : {inputArg.CsdlFileName}");
             IEdmModel edmModel = LoadEdmModel(inputArg.CsdlFileName);
+
+            IEdmModel workloadModel = LoadEdmModel("C:\\temp\\sample.csdl.xml");
+
+
+        
             if (edmModel != null)
             {
                 Console.WriteLine("Loaded CSDL successful!");
@@ -80,16 +86,44 @@ namespace AnnotationGenerator
 
             wrapper.Process(edmModel);
 
-            using (AnnotationGenerator generator = new AnnotationGenerator(inputArg.Output, edmModel))
+            using (AnnotationWriter annotationWriter = new AnnotationWriter(inputArg.Output, edmModel))
             {
+                AnnotationProcessor processor = new AnnotationProcessor(edmModel);
+                // these go to the entity container
+                var permissionsByScheme = processor.ProcessPermissionsBySchemeType(wrapper.PermissionsByScheme);
                 // for each ApiPermissionsByScheme
-                generator.Add(wrapper.PermissionsByScheme);
+                annotationWriter.WritePermissionByScheme(wrapper.PermissionsByScheme);
 
                 // for each permission data
-                generator.Add(wrapper.ApiPermissionsProcessed);
+                var permissionsByType = processor.ProcessPermissionsByType(wrapper.ApiPermissionsProcessed);
+
+                annotationWriter.WriteAll(permissionsByType);
+
+                foreach (var perms in wrapper.ApiPermissionsProcessed)
+                {
+                    var path = perms.Key;
+                    var url = path.GetTargetString();
+                    var last = path.LastSegment;
+                    var first = path.FirstSegment.EdmType;
+
+                    if (last.Kind is SegmentKind.Operation)
+                    {
+                        path.Segments.RemoveAt(path.Segments.Count-1);
+                        last = path.LastSegment;
+                    }
+
+                    IEdmEntitySet value;
+                 
+                    var lastitem = last.EdmType;
+
+
+                    Console.WriteLine(first.AsElementType().FullTypeName() + "-"+url+"---"+lastitem?.AsElementType()?.FullTypeName());
+
+                }
+
 
                 // for each Uri parse error:
-                OutputUriErrors(inputArg.ErrorOutput, wrapper.UriParserError, generator.PermissionsError);
+                OutputUriErrors(inputArg.ErrorOutput, wrapper.UriParserError, processor.PermissionsError);
             }
         }
 
@@ -123,33 +157,20 @@ namespace AnnotationGenerator
                 }
             }
         }
-
-        private static void GenerateTerm(AnnotationGenerator generator, ITerm term)
-        {
-            generator.Write(term);
-
-            generator.SaveAs(@"D:\temp\openapi\test.xml");
-
-            term.IsInLine = false;
-            generator.Write(term);
-
-            generator.SaveAs(@"D:\temp\openapi\test_Outline.xml");
-        }
-
+        // todo hook up to gmm here
         private static IList<InputArg> RetrieveAllDocs()
         {
-            string currentPath = Directory.GetCurrentDirectory();
+            string currentPath = Directory.GetCurrentDirectory(); 
             Console.WriteLine("CurrentDirectory:" + currentPath);
             int start = currentPath.IndexOf(@"\Annotation\AnnotationGenerator");
             currentPath = currentPath.Substring(0, start + 1) + @"docs\";
-
             IList<InputArg> inputArgs = new List<InputArg>();
 
             IDictionary<string, string> xmlDics = new Dictionary<string, string>();
             foreach (var xmlFile in Directory.EnumerateFiles(currentPath, "*.xml"))
             {
                 FileInfo fileInfo = new FileInfo(xmlFile);
-                var items = fileInfo.Name.Split("-");
+                var items = fileInfo.Name.Split('-');
 
                 // Only process the file name has '-', for example: graph-beta.xml
                 if (items.Length == 2)
@@ -162,7 +183,7 @@ namespace AnnotationGenerator
             {
                 FileInfo fileInfo = new FileInfo(file);
 
-                var items = fileInfo.Name.Split("-");
+                var items = fileInfo.Name.Split('-');
                 if (items.Length == 1)
                 {
                     Console.WriteLine($"skip {fileInfo.Name} because the file name doesnot have '-'");
@@ -187,50 +208,6 @@ namespace AnnotationGenerator
                 }
             }
             return inputArgs;
-        }
-
-        private static ITerm CreateDefaultTerm()
-        {
-            ReadRestrictions term = new ReadRestrictions();
-
-            term.Target = "Ns.Container/Users";
-            term.IsInLine = true;
-
-            ReadRestrictionsType record = new ReadRestrictionsType();
-
-            record.ReadByKeyRestrictions = new ReadByKeyRestrictions();
-
-            PermissionType permission = new PermissionType
-            {
-                SchemeName = "Delegated (work or school account)",
-                Scopes = new List<ScopeType>
-                {
-                    new ScopeType{ Scope = "User.ReadBasic.All"},
-                    new ScopeType{ Scope = "User.Read.All"},
-                    new ScopeType{ Scope = "User.ReadWrite.All"},
-                    new ScopeType{ Scope = "Directory.Read.All"},
-                    new ScopeType{ Scope = "Directory.ReadWrite.All"},
-                    new ScopeType{ Scope = "Directory.AccessAsUser.All"}
-                }
-            };
-            record.ReadByKeyRestrictions.Append(permission);
-
-            permission = new PermissionType
-            {
-                SchemeName = "Application",
-                Scopes = new List<ScopeType>
-                {
-                    new ScopeType{ Scope = "User.Read.All"},
-                    new ScopeType{ Scope = "User.ReadWrite.All"},
-                    new ScopeType{ Scope = "Directory.Read.All"},
-                    new ScopeType{ Scope = "Directory.ReadWrite.All"},
-                }
-            };
-            record.ReadByKeyRestrictions.Append(permission);
-
-            term.Records.Add(record);
-
-            return term;
         }
     }
 
