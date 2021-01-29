@@ -126,14 +126,46 @@ namespace PermissionsProcessor
                         var verb = Regex.Matches(apipath, verbRegexPattern);
                         t.HttpVerb = verb.First().Value.Trim();
                         var newPath = Regex.Replace(apipath, verbRegexPattern, "");
+                        newPath = Regex.Replace(newPath, "\\s", "").ToLower();
                         //if the path exits then add info
                         if (t.Application.Count > 0 & t.DelegatedPersonal.Count > 0 & t.DelegatedWork.Count > 0)
                         {
-                            AddOrMergePermission(t, newPath);
+                            if (PermissionsDataValidator(t))
+                            {
+                                AddOrMergePermission(t, newPath);
+                            }
                         }
                     }
                 }
             }
+        }
+
+        private bool PermissionsDataValidator(ApiPermission t)
+        {
+            foreach (var item in t.DelegatedWork)
+            {
+                if (!PermissionsModel.PermissionSchemes.DelegatedWork.Exists(i => i.Name==item) && item.ToLower()=="not supported")
+                {
+                    return false;
+                }
+            }
+
+            foreach (var item in t.DelegatedPersonal)
+            {
+                if (!PermissionsModel.PermissionSchemes.DelegatedPersonal.Exists(i => i.Name == item) && item.ToLower() == "not supported")
+                {
+                    return false;
+                }
+            }
+
+            foreach (var item in t.Application)
+            {
+                if (!PermissionsModel.PermissionSchemes.Application.Exists(i => i.Name == item) && item.ToLower() == "not supported")
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public void AllPathsByPages()
