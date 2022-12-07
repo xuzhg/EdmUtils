@@ -12,7 +12,7 @@
     <PackageReference Include="MarkdownDeep-av.NET" Version="1.5.6.5" />
     <PackageReference Include="MarkdownDeep.Gui.Gtk3" Version="1.5.7" />
     <PackageReference Include="Microsoft.DocAsCode.ECMA2Yaml" Version="1.0.669" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
